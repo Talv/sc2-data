@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Catalog>
+    <CEmoticonPack default="1">
+        <Name value="EmoticonPack/Name/##id##"/>
+        <ShortName value="EmoticonPack/Name/##id##"/>
+        <Description value="EmoticonPack/Description/##id##"/>
+        <Image TextureSheet="EmoticonPacksSheet1"/>
+        <HideAchievement value="false"/>
+    </CEmoticonPack>
+</Catalog>
