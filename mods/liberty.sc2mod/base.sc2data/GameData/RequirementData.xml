@@ -220,7 +220,7 @@
     </CRequirement>
     <CRequirement id="ArmInterceptor">
         <EditorCategories value="Race:Protoss,TechType:Unit"/>
-        <NodeArray index="Use" Link="LT2210218377CountUnitInterceptorQueuedOrBetterAtUnit9"/>
+        <NodeArray index="Use" Link="LT2210218377CountUnitInterceptorQueuedOrBetterAtUnit8"/>
     </CRequirement>
     <CRequirement id="ArmBroodlingEscort">
         <EditorCategories value="Race:Protoss,TechType:Unit"/>

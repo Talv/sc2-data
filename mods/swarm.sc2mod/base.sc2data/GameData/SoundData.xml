@@ -129,12 +129,6 @@
     </CSound>
     <!--     <CSound default="1" id="Voice">
         <ReverbBalance Room="-1500"/>
-    </CSound>
-    <CSound default="1" id="Pissed">
-        <ReverbBalance Room="-1500"/>
-    </CSound>
-    <CSound default="1" id="Ready">
-        <ReverbBalance Room="-1500"/>
     </CSound> -->
     <CSound default="1" id="VoiceDeathAlways" parent="DeathVoice">
         <Chance value="100"/>
@@ -216,9 +210,6 @@
         <SpeakerMix index="SideLeft" value="0.500000"/>
         <SpeakerMix index="SideRight" value="0.500000"/>
     </CSound>
-    <CSound default="1" id="Ambience_Map">
-        <OffsetFadeIn index="1" Time="1000"/>
-    </CSound>
     <CSound default="1" id="Ambience_Screens">
         <EditorCategories value="Race:Neutral"/>
         <Flags index="Download" value="0"/>
@@ -278,15 +269,6 @@
     <CSound default="1" id="HoS_DeathBoss" parent="WORLD">
         <Category value="Other"/>
     </CSound>
-    <CSound default="1" id="Ambience_Object" parent="WORLD">
-        <Flags index="Download" value="0"/>
-        <Category value="Doodad"/>
-        <SustainFade index="1" Time="1000" Volume="-96.000000"/>
-        <!--         <VolumeRolloffFadeIn Volume="-96.000000"/>
-        <VolumeRolloffFadeIn Time="10"/>
-        <VolumeRolloffFadeOut/>
-        <VolumeRolloffFadeOut Time="10" Volume="-96.000000"/> -->
-    </CSound>
     <CSound id="Amb_StarshipWingPieceLarge" parent="Ambience_Object">
         <EditorCategories value="Race:Neutral"/>
         <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_StandWork_00.wav" Volume="-7.300000,-7.300000" FacialGroup=""/>
@@ -309,11 +291,6 @@
         <VolumeRolloffPoints Distance="20.000000"/>
         <VolumeRolloffPoints Distance="28.000000" Volume="-96.000000"/>
     </CSound>
-    <CSound id="Colossus_Explode">
-        <Chance value="0"/>
-        <DupeHistoryCount value="15"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
     <CSound id="Diamondback_Land" parent="Spell">
         <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\Hellion_Test00.wav" FacialGroup=""/>
@@ -328,106 +305,19 @@
         <Pitch value="-5.000000,-4.000000"/>
         <Volume value="-5.000000,-1.000000"/>
     </CSound>
-
     <CSound id="FanVent_LargerRange_Loop" parent="Ambience_Object">
         <EditorCategories value="Race:Neutral"/>
         <AssetArray File="Assets\Sounds\Amb_Lab_GiganticFan_Lp.wav" FacialGroup=""/>
-        <DupeDestroyCount value="32"/>
         <LoopCount value="-1"/>
-        <ResourcePriority value="16"/>
         <SustainFade index="1" Time="2000" Volume="-96.000000"/>
         <Volume value="-7.000000,-7.000000"/>
         <VolumeRolloffPoints Distance="20.000000"/>
         <VolumeRolloffPoints Distance="26.000000" Volume="-96.000000"/>
         <Pitch value="3.000000,3.000000"/>
     </CSound>
-    <CSound id="Doodad_WaterGenerator3" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Amb_WaterGenerator_Loop.ogg" FacialGroup=""/>
-        <DupeDestroyCount value="12"/>
-        <DupeMuteCount value="8"/>
-        <LoopCount value="-1"/>
-        <Pitch value="-6.000000,-4.000000"/>
-        <Volume value="-21.000000,-21.000000"/>
-        <VolumeRolloffPoints Distance="15.000000"/>
-        <VolumeRolloffPoints Distance="22.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="GameMusicProtoss_ALL">
-        <AssetArray File="Assets\Music\ProtossSC2-06.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ProtossSC2-07.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Music_BananasInMyZerg.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Music_ZergsInTheBananaPatchH.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Broken Wings G.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Music_ProtossTakeKievH.ogg" FacialGroup=""/>
-    </CSound>
-    <CSound id="GameMusicTerran_ALL">
-        <AssetArray File="Assets\Music\MissionMusic\Music_DarkVictory_AmbientFasterTempo.ogg"/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_GS Terran8.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_GS_Terran9.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Terran6.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Terran7_Action.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Evolution_1_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Evolution_2_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Evolution_3_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Overdrive.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Space_Battle_2_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\The_Rescue_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_CutsceneMoment2.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_DangerAlert_LiveFull.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_DangerAlert_LivePitchGrain.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_DarkVictory_LiveFull.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Inspirational_LiveFull.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_LowTensionInspirationalLiveAlt.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_SadOminousLiveFull.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Titan_Full.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_TragicBattlefieldLiveFull.ogg" FacialGroup=""/>
-    </CSound>
-    <CSound id="GameMusicZerg_ALL">
-        <AssetArray File="Assets\Music\ZSwarm_Music_01.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_02.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_04.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_05.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_07.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_09.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_101.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_102.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_103.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_105.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_106.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_107.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_108.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_19.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_21.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_22.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_23.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_GS_109.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_GS_110.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Kaldir1.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Kaldir2.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Kaldir4.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Zerus_1.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Zerus_2.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Zerus_3.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_kaldir_a.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_kaldir_b.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_zerus_a.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_zerus_b.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Cities_In_Ruin_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\HOTS_Music_Zerus_Ambient.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\HOTS_Music_Zerus_Ambient2.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Onslaught_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Space_1_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Space_2_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Space_Battle_2_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\The_Rescue_FULL.ogg" FacialGroup=""/>
-    </CSound>
     <CSound id="PVoid_Music_Prologue_UI" parent="MUSIC">
         <AssetArray File="Assets\Music\Prologue_UI.ogg" FacialGroup=""/>
         <Volume value="-1.000000,-1.000000"/>
-    </CSound>
-    <CSound id="250mmStrikeCannonsMorph">
-        <AssetArray index="0" File="Assets\Sounds\Thor_MorphOn_Main.wav" FacialGroup=""/>
-        <Pitch value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="Amb_ElectricArc_Short" parent="Ambience_Object">
         <AssetArray File="Assets\Sounds\zLab_ElectricArc_1.wav" FacialGroup=""/>
@@ -471,30 +361,6 @@
         <VolumeRolloffPoints Distance="15.000000"/>
         <VolumeRolloffPoints Distance="22.000000" Volume="-96.000000"/>
     </CSound>
-    <CSound id="Doodad_SpaceTurbine_ConvulsingOven1" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_PortZionTower09Loop0.wav" LoopCount="-1"/>
-        <DupeDestroyCount value="12"/>
-        <DupeMuteCount value="6"/>
-        <Pitch value="-14.000000,-13.000000"/>
-        <Volume value="-9.000000,-9.000000"/>
-    </CSound>
-    <CSound id="Doodad_SpaceTurbine_ConvulsingOven2" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_PortZionTower09Loop1.wav" LoopCount="-1"/>
-        <DupeDestroyCount value="12"/>
-        <DupeMuteCount value="6"/>
-        <Pitch value="-11.000000,-10.000000"/>
-        <Volume value="-10.000000,-10.000000"/>
-    </CSound>
-    <CSound id="Doodad_SpaceTurbine_Pistons" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_PortZionTower09Loop2.wav" LoopCount="-1"/>
-        <DupeDestroyCount value="12"/>
-        <DupeMuteCount value="6"/>
-        <Pitch value="-9.000000,-8.000000"/>
-        <Volume value="-10.000000,-10.000000"/>
-    </CSound>
     <CSound id="Protoss_Death_Spark" parent="Combat">
         <EditorCategories value="Race:Protoss"/>
         <AssetArray File="Assets\Sounds\Protoss_Death_Sparks_01.wav" FacialGroup=""/>
@@ -515,10 +381,6 @@
         <DupeMuteCount value="3"/>
         <Pitch value="-2.000000,2.000000"/>
         <ReverbBalance Room="11"/>
-    </CSound>
-    <CSound id="250mmStrikeCannonsUnMorph">
-        <AssetArray index="0" File="Assets\Sounds\Thor_MorphOff_Main.wav" FacialGroup=""/>
-        <Pitch value="-4.000000,-4.000000"/>
     </CSound>
     <CSound id="Amb_5SpaceStationEngines2_loop" parent="Ambience_Object">
         <AssetArray File="Assets\Sounds\Doodad_HybridGenerator_02.wav" FacialGroup=""/>
@@ -562,17 +424,6 @@
         <Volume value="-9.000000,-9.000000"/>
         <VolumeRolloffPoints Distance="8.000000"/>
         <VolumeRolloffPoints Distance="10.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_SpacePlatformFan_Loop" parent="Ambience_Object">
-        <AssetArray File="Assets\Sounds\Uni\Doodad_FanVentMedium_01.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodad_FanVentMedium_02.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodad_FanVentMedium_03.ogg" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <PanLevel value="0.900000"/>
-        <Pitch value="-6.000000,-6.000000"/>
-        <Volume value="-2.000000,-2.000000"/>
-        <VolumeRolloffPoints Distance="22.000000"/>
-        <VolumeRolloffPoints Distance="28.000000" Volume="-96.000000"/>
     </CSound>
     <CSound id="Amb_ElectricArc_PowerConduit2" parent="Ambience_Object">
         <AssetArray File="Assets\Sounds\zLab_ElectricArc_1.wav" FacialGroup=""/>
@@ -630,11 +481,11 @@
         <DupeDestroyCount value="10"/>
         <DupeHistoryCount value="5"/>
         <DupeMuteCount value="6"/>
-        <Pitch value="-2.000000,2.000000"/>
+        <Pitch value="-3.000000,3.000000"/>
         <ReverbBalance Direct="-200" Room="1000"/>
-        <Volume value="-3.000000,3.000000"/>
-        <VolumeRolloffPoints Distance="5.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
+        <Volume value="-18.000000,-11.000000"/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="20.000000" Volume="-96.000000"/>
     </CSound>
     <CSound id="Amb_ElectricArc_UmojanLabElectricalArcs" parent="Ambience_Object">
         <AssetArray File="Assets\Sounds\zLab_SparksChasm_1.wav" FacialGroup=""/>
@@ -658,144 +509,12 @@
         <Volume value="-21.000000,-9.000000"/>
         <VolumeRolloffPoints Distance="5.000000"/>
         <VolumeRolloffPoints Distance="15.000000" Volume="-96.000000"/>
-        <ResourcePriority value="16"/>
         <VariationMinimum value="3"/>
-    </CSound>
-    <CSound id="Ambience_Korhal" parent="Ambience_Map">
-        <AssetArray File="Assets\Sounds\Ambience_Korhal.ogg" FacialGroup=""/>
-        <EditorCategories value="Race:Neutral"/>
-        <Volume value="-15.000000,-15.000000"/>
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_Liberty">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-        <Volume value="-9.000000,-9.000000"/>
-        <OffsetFadeIn index="1" Time="1000"/>
-    </CSound>
-    <CSound id="Ambience_MarSara">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_Meinhoff">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_Monlyth">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_NewFolsom">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_PortZion">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
     </CSound>
     <CSound id="Ambience_rain_quad_loop" parent="Ambience_Map">
         <EditorCategories value="Race:Neutral"/>
         <AssetArray File="Assets\Sounds\Ambience_rainQuad_loop.ogg" FacialGroup=""/>
         <Volume value="-16.000000,-16.000000"/>
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_Redstone">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_Shakuras">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_SteppesOfWar">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_Tarsonis">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_ToxicWastes">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_Typhon">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_Tyrador">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_Ulaan">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_Valhalla">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_Xil">
-        <SpeakerMix index="Center" value="0.100000"/>
-        <SpeakerMix index="BackLeft" value="0.700000"/>
-        <SpeakerMix index="BackRight" value="0.700000"/>
-        <SpeakerMix index="SideLeft" value="0.700000"/>
-        <SpeakerMix index="SideRight" value="0.700000"/>
-    </CSound>
-    <CSound id="Ambience_ZhakulDas">
         <SpeakerMix index="Center" value="0.100000"/>
         <SpeakerMix index="BackLeft" value="0.700000"/>
         <SpeakerMix index="BackRight" value="0.700000"/>
@@ -897,249 +616,6 @@
         <Flags index="Purgable" value="1"/>
         <Category value="Combat"/>
         <DupeDestroyCount value="5"/>
-    </CSound>
-    <!--     <CSound id="Destructible_BillboardScrollingTextDeathDebris" parent="Terran_ExplosionSmall">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray index="0" File="Assets\Sounds\Uni\Doodads\Uni_MetalDebris0.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
-        <AssetArray index="1" File="Assets\Sounds\Uni\Doodads\Uni_MetalDebris1.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
-        <AssetArray index="2" File="Assets\Sounds\Uni\Doodads\Uni_MetalDebris2.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
-        <AssetArray index="3" removed="1"/>
-        <AssetArray index="4" removed="1"/>
-        <AssetArray index="5" removed="1"/>
-        <AssetArray index="6" removed="1"/>
-        <AssetArray index="7" removed="1"/>
-        <AssetArray index="8" removed="1"/>
-        <AssetArray index="9" removed="1"/>
-        <DupeDestroyCount value="10"/>
-        <DupeMaximumMethod value="Prevent"/>
-        <DupeMuteCount value="6"/>
-        <Pitch value="3.000000,5.000000"/>
-        <Volume value="-18.000000,-17.000000"/>
-    </CSound>
-    <CSound id="Destructible_BillboardScrollingTextDeathExplo" parent="Terran_ExplosionSmall">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray index="0" File="Assets\Sounds\Doodad_CollapsibleTerranTower_DeathDebris_00.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
-        <AssetArray index="1" File="Assets\Sounds\Doodad_CollapsibleTerranTower_DeathDebris_01.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
-        <AssetArray index="2" File="Assets\Sounds\Doodad_CollapsibleTerranTower_DeathDebris_02.wav" Pitch="0.000000,0.000000" FacialGroup=""/>
-        <AssetArray index="3" removed="1"/>
-        <AssetArray index="4" removed="1"/>
-        <AssetArray index="5" removed="1"/>
-        <AssetArray index="6" removed="1"/>
-        <AssetArray index="7" removed="1"/>
-        <AssetArray index="8" removed="1"/>
-        <AssetArray index="9" removed="1"/>
-        <DupeDestroyCount value="10"/>
-        <DupeMuteCount value="6"/>
-        <Pitch value="6.000000,8.000000"/>
-        <Volume value="-11.000000,-10.000000"/>
-    </CSound> -->
-    <CSound id="Doodad_CollapsibleRockTower_Impact" parent="Death">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_CollapsibleRockTower_Impact_1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_CollapsibleRockTower_Impact_2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_CollapsibleRockTower_Impact_3.wav" FacialGroup=""/>
-        <Flags index="Download" value="0"/>
-        <Flags index="Ignorable" value="0"/>
-        <Flags index="Purgable" value="1"/>
-        <DupeDestroyCount value="5"/>
-        <Pitch value="0.000000,3.000000"/>
-        <ResourcePriority value="16"/>
-        <SustainFade index="1" Time="2000"/>
-        <Volume value="0.000000,3.000000"/>
-    </CSound>
-    <CSound id="Doodad_CollapsibleRockTower_Start" parent="Death">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_CollapsibleRockTower_Start_1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_CollapsibleRockTower_Start_2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_CollapsibleRockTower_Start_3.wav" FacialGroup=""/>
-        <Flags index="Download" value="0"/>
-        <Flags index="Ignorable" value="0"/>
-        <Flags index="Purgable" value="1"/>
-        <DupeDestroyCount value="5"/>
-        <Pitch value="3.000000,3.000000"/>
-        <ResourcePriority value="16"/>
-        <SustainFade index="1" Time="2000"/>
-        <Volume value="-3.000000,0.000000"/>
-    </CSound>
-    <CSound id="Doodad_CollapsibleTerranTower_DeathDebris" parent="Death">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Doodad_CollapsibleTerranTower_DeathDebris_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_CollapsibleTerranTower_DeathDebris_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_CollapsibleTerranTower_DeathDebris_02.wav" FacialGroup=""/>
-        <DupeDestroyCount value="6"/>
-        <DupeMuteCount value="5"/>
-        <Pitch value="-5.000000,-3.000000"/>
-        <Volume value="3.000000,6.000000"/>
-    </CSound>
-    <CSound id="Doodad_CollapsibleTerranTower_DeathExplosion" parent="Death">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Doodad_CollapsibleTerranTower_DeathExplosion_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_CollapsibleTerranTower_DeathExplosion_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_CollapsibleTerranTower_DeathExplosion_02.wav" FacialGroup=""/>
-        <DupeDestroyCount value="6"/>
-        <DupeMuteCount value="5"/>
-        <Pitch value="-1.000000,1.000000"/>
-        <Volume value="4.000000,6.000000"/>
-    </CSound>
-    <CSound id="Doodad_ExhaustVent">
-        <AssetArray index="0" File="Assets\Sounds\Uni\Doodad_FanVentMedium_01.ogg" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodad_FanVentMedium_02.ogg" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodad_FanVentMedium_03.ogg" LoopCount="-1" FacialGroup=""/>
-        <DupeDestroyCount value="24"/>
-        <DupeHistoryCount value="16"/>
-        <DupeRepeatCount value="65535"/>
-        <LoopCount value="0"/>
-    </CSound>
-    <CSound id="Doodad_ExhaustVent2" parent="Ambience_Object">
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SpacePlatformCurtain0.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SpacePlatformCurtain1.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SpacePlatformCurtain2.wav" LoopCount="-1"/>
-        <DupeMuteCount value="3"/>
-        <Pitch value="-6.500000,-5.500000"/>
-        <Volume value="-21.000000,-21.000000"/>
-    </CSound>
-    <CSound id="Doodad_FanVent">
-        <AssetArray index="0" File="Assets\Sounds\Uni\Doodad_FanVentMedium_01.ogg" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodad_FanVentMedium_02.ogg" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodad_FanVentMedium_03.ogg" LoopCount="-1" FacialGroup=""/>
-        <DupeDestroyCount value="24"/>
-        <DupeHistoryCount value="16"/>
-        <DupeRepeatCount value="65535"/>
-        <LoopCount value="0"/>
-        <Volume value="-9.000000,-9.000000"/>
-    </CSound>
-    <CSound id="Doodad_FanVentCliff">
-        <AssetArray index="0" File="Assets\Sounds\Uni\Doodad_FanVentMedium_01.ogg" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodad_FanVentMedium_02.ogg" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodad_FanVentMedium_03.ogg" LoopCount="-1" FacialGroup=""/>
-        <DupeDestroyCount value="12"/>
-        <DupeHistoryCount value="16"/>
-        <DupeRepeatCount value="65535"/>
-        <LoopCount value="0"/>
-        <Volume value="-9.000000,-9.000000"/>
-        <DupeMuteCount value="6"/>
-    </CSound>
-    <CSound id="Doodad_Floodlight_Sparks" parent="Ambience_Object">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort0.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort3.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort4.wav" FacialGroup=""/>
-        <Pitch value="3.000000,3.000000"/>
-        <Volume value="-15.000000,-9.000000"/>
-        <VolumeRolloffPoints Distance="8.000000"/>
-        <VolumeRolloffPoints Distance="22.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_MonoTrackDestroyed_Sparks" parent="Ambience_Object">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort0.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort3.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort4.wav" FacialGroup=""/>
-        <Pitch value="-4.000000,1.000000"/>
-        <Volume value="-15.000000,-9.000000"/>
-        <VolumeRolloffPoints Distance="8.000000"/>
-        <VolumeRolloffPoints Distance="22.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_ShipDock_RoboticArm01" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrane00Stage4.wav"/>
-        <Pitch value="-2.000000,2.000000"/>
-        <Volume value="-12.000000,-12.000000"/>
-    </CSound>
-    <CSound id="Doodad_ShipDock_RoboticArm02" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrane00Stage6.wav"/>
-        <Pitch value="-2.000000,2.000000"/>
-        <Volume value="-12.000000,-12.000000"/>
-    </CSound>
-    <CSound id="Doodad_ShipDock_RoboticArm03" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrane02Stage4.wav"/>
-        <Pitch value="-2.000000,2.000000"/>
-        <Volume value="-12.000000,-12.000000"/>
-    </CSound>
-    <CSound id="Doodad_ShipDock_RoboticArm04" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrane02Stage5.wav"/>
-        <Pitch value="-2.000000,2.000000"/>
-        <Volume value="-12.000000,-12.000000"/>
-    </CSound>
-    <CSound id="Doodad_ShipDock_Sparks" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort0.wav"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort1.wav"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort2.wav"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort3.wav"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort4.wav"/>
-        <DupeMuteCount value="3"/>
-        <Pitch value="-2.000000,2.000000"/>
-        <Volume value="-14.000000,-10.000000"/>
-    </CSound>
-    <CSound id="Doodad_SpacePlatformVents">
-        <AssetArray index="0" File="Assets\Sounds\Uni\Doodad_FanVentMedium_01.ogg" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodad_FanVentMedium_02.ogg" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodad_FanVentMedium_03.ogg" LoopCount="-1" FacialGroup=""/>
-        <DupeDestroyCount value="24"/>
-        <DupeHistoryCount value="16"/>
-        <DupeRepeatCount value="65535"/>
-        <LoopCount value="0"/>
-        <Volume value="-9.000000,-9.000000"/>
-    </CSound>
-    <CSound id="Hellion_AttackLaunch">
-        <DupeMuteCount value="7"/>
-        <DupeThresholdFadeTime value="50"/>
-        <Volume value="-6.000000,-5.000000"/>
-    </CSound>
-    <CSound id="ProtossTarmacDoodad_RobotArms_loop" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArmSlide_1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArmSlide_2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArmSlide_3.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArmSlide_4.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArms_Reset_.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_InPokes_1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_InPokes_2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_InPokes_3.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_LftSlide_RtPokes_1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_LftSlide_RtPokes_2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_LftSlide_RtPokes_3.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_LftSlide_RtPokes_4.wav" FacialGroup=""/>
-        <!-- <AssetArray File="Assets\Sounds\zLab_Lurker_Fx_PawScratches_1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_Lurker_Fx_PawScratches_2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_Lurker_Fx_PawScratches_3.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_Lurker_Fx_PawScratches_4.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_Lurker_Fx_PawScratches_5.wav" FacialGroup=""/> -->
-        <DupeDestroyCount value="4"/>
-        <DupeHistoryCount value="8"/>
-        <DupeMuteCount value="2"/>
-        <DupeWait value="0,1"/>
-        <LoopCount value="-1"/>
-        <LoopDelay value="0,500"/>
-        <Pitch value="-8.000000,1.000000"/>
-        <Volume value="-20.000000,-14.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="20.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabWallConsolesDeath" parent="Ambience_Object">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort0.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort3.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SparkBurstShort4.wav" FacialGroup=""/>
-        <Pitch value="-4.000000,1.000000"/>
-        <Volume value="-15.000000,-9.000000"/>
-        <VolumeRolloffPoints Distance="8.000000"/>
-        <VolumeRolloffPoints Distance="22.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_UnbuildablePlates_Death" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\PhysicsImpactSound_Rock_Heavy00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\PhysicsImpactSound_Rock_Heavy01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\PhysicsImpactSound_Rock_Heavy02.wav" FacialGroup=""/>
     </CSound>
     <CSound id="Aberration_Land" parent="Spell">
         <EditorCategories value="Race:Zerg"/>
@@ -1318,10 +794,9 @@
         <Flags index="Purgable" value="1"/>
         <Flags index="Stream" value="1"/>
         <Volume value="-9.000000,-9.000000"/>
-    </CSound>
-    <CSound id="Ambience_Haven">
-        <Volume value="-7.000000,-6.000000"/>
-        <AssetArray index="0" File="Assets\Sounds\Uni\Ambience_Haven2_quad.ogg" FacialGroup=""/>
+        <Pan value="-0.500000,0.500000"/>
+        <PositionRandomOffset value="5.000000,5.000000,0.000000"/>
+        <PositionRandomOffsetPower value="2.000000"/>
     </CSound>
     <CSound id="CleaningBot_Explode" parent="Death">
         <EditorCategories value="Race:Neutral"/>
@@ -1518,52 +993,6 @@
         <AssetArray File="Assets\Sounds\CreepTower_What_10.ogg" FacialGroup=""/>
         <Volume value="-6.000000,-6.000000"/>
     </CSound>
-    <CSound id="Doodad_GiantYagdraEgg_Death" parent="Death">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Doodad_GiantYagdraEgg_Death_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_GiantYagdraEgg_Death_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_GiantYagdraEgg_Death_02.wav" FacialGroup=""/>
-        <Flags index="Download" value="0"/>
-        <Flags index="Ignorable" value="0"/>
-        <SustainFade index="1" Time="1000"/>
-    </CSound>
-    <CSound id="Doodad_BioDomeDoodad_Spinning" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Units\Blimp\BlimpAdds_Loop.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Pitch value="-13.000000,-12.000000"/>
-        <Volume value="-19.000000,-19.000000"/>
-    </CSound>
-    <CSound id="Doodad_BioDomeHalfBuilt_Drill" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrane03.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Pitch value="-13.000000,-12.000000"/>
-        <Volume value="-19.000000,-19.000000"/>
-    </CSound>
-    <CSound id="Doodad_WaterGenerator" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Amb_WaterGenerator_Loop.ogg" FacialGroup=""/>
-        <!-- <AssetArray File="Assets\Sounds\zLab_WaterGenerator_Amb_Lp_1a.wav" FacialGroup=""/> -->
-        <DupeDestroyCount value="3"/>
-        <DupeMuteCount value="2"/>
-        <LoopCount value="-1"/>
-        <Volume value="-7.000000,-7.000000"/>
-        <Pitch value="-10.000000,-8.000000"/>
-        <VolumeRolloffPoints Distance="8.000000"/>
-        <VolumeRolloffPoints Distance="22.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_WaterGenerator2" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SuperCraneEngineLoop.wav" FacialGroup=""/>
-        <DupeDestroyCount value="12"/>
-        <DupeMuteCount value="6"/>
-        <LoopCount value="-1"/>
-        <Pitch value="2.000000,3.000000"/>
-        <Volume value="-16.000000,-16.000000"/>
-        <VolumeRolloffPoints Distance="18.000000"/>
-        <VolumeRolloffPoints Distance="25.000000" Volume="-96.000000"/>
-    </CSound>
     <CSound id="Amb_ZerusLightning_Arcs" parent="Ambience_Object">
         <EditorCategories value="Race:Neutral"/>
         <AssetArray File="Assets\Sounds\Zerus_ElectricChasm_Arc_1.wav" FacialGroup=""/>
@@ -1649,153 +1078,9 @@
     <CSound id="Coop_Transmissions_TerranAdjutant_011" parent="HoS_CoopTransmission" Subtitle="Coop_Transmissions" Speaker="TerranAdjutant" Line="00011"/>
     <CSound id="Coop_Transmissions_TerranAdjutant_012" parent="HoS_CoopTransmission" Subtitle="Coop_Transmissions" Speaker="TerranAdjutant" Line="00012"/>
     <CSound id="Coop_Transmissions_TerranAdjutant_013" parent="HoS_CoopTransmission" Subtitle="Coop_Transmissions" Speaker="TerranAdjutant" Line="00013"/>
-
-
-
-
-
-
-
-
     <CSound id="Coop_Transmissions_ProtossExecutor_017" parent="HoS_CoopTransmission" Subtitle="Coop_Transmissions" Speaker="ProtossExecutor" Line="00017"/>
     <CSound id="Coop_Transmissions_ProtossExecutor_018" parent="HoS_CoopTransmission" Subtitle="Coop_Transmissions" Speaker="ProtossExecutor" Line="00018"/>
     <CSound id="Coop_Transmissions_ProtossExecutor_019" parent="HoS_CoopTransmission" Subtitle="Coop_Transmissions" Speaker="ProtossExecutor" Line="00019"/>
-    <CSound id="Critter_Burrow">
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Critter_Unburrow">
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Doodad_CargoMover_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraConveyorBelt0.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraConveyorBelt1.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraConveyorBelt2.wav" LoopCount="-1"/>
-        <FogFadeOut/>
-        <FogFadeOut Time="1019" Volume="-96.000000"/>
-        <Volume value="-9.000000,-9.000000"/>
-        <VolumeRolloffPoints Distance="15.000000"/>
-        <VolumeRolloffPoints Distance="26.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_ColonistShipWrecked">
-        <!--         <ResourcePriority value="24"/> -->
-        <Flags index="Purgable" value="0"/>
-        <!-- needed because it's not playing in Char01 -->
-    </CSound>
-    <CSound id="Doodad_SJMineralDeposit_Death" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_SJMineralDeposit_Death_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_SJMineralDeposit_Death_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_SJMineralDeposit_Death_02.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_SJMineralDeposit_Death_03.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_SJMineralDeposit_Death_04.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_SpaceElevatorDoodad_CoverStart" parent="Other">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_SpaceElevatorDoodad_CoverStart_00.wav" FacialGroup=""/>
-        <Volume value="-3.000000,-3.000000"/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="40.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_SpaceElevatorRamp_CoverStart" parent="Other">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_SpaceElevatorRamp_CoverStart_00.wav" FacialGroup=""/>
-        <Volume value="-3.000000,-3.000000"/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="40.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_SpaceVent_StandWorkEnd" parent="Scripted_3D_World">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_SpaceVent_StandWorkEnd_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_SpaceVent_StandWorkEnd_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_SpaceVent_StandWorkEnd_02.wav" FacialGroup=""/>
-        <Flags index="Stream" value="0"/>
-        <Volume value="-9.000000,-9.000000"/>
-        <Pitch value="-3.500000,-2.500000"/>
-    </CSound>
-    <CSound id="Doodad_SpaceVent_StandWorkStart" parent="Scripted_3D_World">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_SpaceVent_StandWorkStart_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_SpaceVent_StandWorkStart_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_SpaceVent_StandWorkStart_02.wav" FacialGroup=""/>
-        <Flags index="Stream" value="0"/>
-        <Volume value="-9.000000,-9.000000"/>
-        <Pitch value="-3.500000,-2.500000"/>
-    </CSound>
-    <CSound id="Doodad_StarshipCurtain" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SpacePlatformCurtain0.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SpacePlatformCurtain1.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SpacePlatformCurtain2.wav" LoopCount="-1"/>
-        <FogFadeOut/>
-        <DupeMuteCount value="9"/>
-        <Pitch value="-0.500000,0.500000"/>
-        <Volume value="-24.000000,-24.000000"/>
-        <VolumeRolloffPoints Distance="5.000000"/>
-        <VolumeRolloffPoints Distance="12.000000" Volume="-96.000000"/>
-        <!-- <VolumeRolloffPoints Distance="27" Volume="-96.000000"/> -->
-    </CSound>
-    <CSound id="Doodad_UmojanLabRoom_Fx_RoboArm_Lft" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_LftSlide_RtPokes_1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_LftSlide_RtPokes_2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_LftSlide_RtPokes_3.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_LftSlide_RtPokes_4.wav" FacialGroup=""/>
-        <DupeDestroyCount value="4"/>
-        <DupeHistoryCount value="3"/>
-        <DupeMuteCount value="2"/>
-        <DupeWait value="0,1"/>
-        <Pitch value="-6.000000,2.000000"/>
-        <Volume value="-20.000000,-12.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabRoom_Fx_RoboArm_PokeRetract" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_InPokes_1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_InPokes_2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_InPokes_3.wav" FacialGroup=""/>
-        <DupeDestroyCount value="3"/>
-        <DupeHistoryCount value="3"/>
-        <DupeMuteCount value="3"/>
-        <Pitch value="-6.000000,1.000000"/>
-        <Volume value="-19.000000,-9.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabRoom_Fx_RoboArm_Retract" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_RetractSlide_.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_Retract_1.wav" FacialGroup=""/>
-        <DupeDestroyCount value="4"/>
-        <DupeHistoryCount value="3"/>
-        <DupeMuteCount value="2"/>
-        <DupeWait value="0,1"/>
-        <Pitch value="-6.000000,0.000000"/>
-        <Volume value="-22.000000,-12.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabRoom_Fx_RoboArm_SawPoke" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_SawPokeRetract_1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArm_SawPokeRetract_2.wav" FacialGroup=""/>
-        <DupeDestroyCount value="3"/>
-        <DupeHistoryCount value="3"/>
-        <DupeMuteCount value="3"/>
-        <Pitch value="-12.000000,-2.000000"/>
-        <Volume value="-15.000000,-6.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabRoom_Fx_RoboArm_Slides" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArmSlide_1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArmSlide_2.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArmSlide_3.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArmSlide_4.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\zLab_RoboArms_Reset_.wav" FacialGroup=""/>
-        <DupeDestroyCount value="4"/>
-        <DupeHistoryCount value="3"/>
-        <DupeMuteCount value="2"/>
-        <DupeWait value="0,1"/>
-        <Pitch value="-8.000000,1.000000"/>
-        <Volume value="-20.000000,-12.000000"/>
-    </CSound>
     <CSound id="Amb_ElectricArc_UmojanLabScienceComplex" parent="Ambience_Object">
         <AssetArray File="Assets\Sounds\zLab_SparksChasm_1.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\zLab_SparksChasm_1a.wav" FacialGroup=""/>
@@ -1807,148 +1092,6 @@
         <Volume value="-9.000000,0.000000"/>
         <VolumeRolloffPoints Distance="10.000000"/>
         <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabScienceComplex" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Amb_Lab_GiganticFan_Lp.wav" FacialGroup=""/>
-        <DupeDestroyCount value="2"/>
-        <DupeMuteCount value="2"/>
-        <LoopCount value="-1"/>
-        <Volume value="-6.000000,-6.000000"/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="40.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabScienceComplex_FanBlades" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray>
-            <File value="Assets\Sounds\zLab_GiganticFan_Groan1.wav"/>
-            <Pitch value="-3.000000,3.000000"/>
-            <Volume value="-7.000000,-4.000000"/>
-            <FacialGroup value=""/>
-        </AssetArray>
-        <AssetArray>
-            <File value="Assets\Sounds\zLab_GiganticFan_Groan2.wav"/>
-            <Pitch value="-2.000000,1.000000"/>
-            <Volume value="-1.000000,0.000000"/>
-            <FacialGroup value=""/>
-        </AssetArray>
-        <AssetArray>
-            <File value="Assets\Sounds\zLab_GiganticFan_Groan3.wav"/>
-            <Pitch value="-2.000000,1.000000"/>
-            <Volume value="-1.000000,0.000000"/>
-            <FacialGroup value=""/>
-        </AssetArray>
-        <AssetArray>
-            <File value="Assets\Sounds\zLab_GiganticFan_Groan4.wav"/>
-            <Pitch value="-2.000000,1.000000"/>
-            <Volume value="-1.000000,0.000000"/>
-            <FacialGroup value=""/>
-        </AssetArray>
-        <DupeDestroyCount value="2"/>
-        <DupeHistoryCount value="2"/>
-        <DupeMuteCount value="2"/>
-        <LoopCount value="-1"/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="50.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabTramEngines_Jet_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray>
-            <File value="Assets\Sounds\Doodad_UmojanLabTramEngines_Stand_00.wav"/>
-            <Pitch value="-12.000000,-12.000000"/>
-            <Volume value="-12.000000,-12.000000"/>
-            <FacialGroup value=""/>
-        </AssetArray>
-        <DupeDestroyCount value="1"/>
-        <DupeHistoryCount value="6"/>
-        <DupeMuteCount value="2"/>
-        <DupeRepeatCount value="1"/>
-        <LoopCount value="-1"/>
-        <OverlapTimeDelta value="50"/>
-        <Select value="Sequential"/>
-        <Volume value="-1.000000,-1.000000"/>
-        <VolumeRolloffBlend value="Linear"/>
-        <VolumeRolloffPoints Distance="11.504425"/>
-        <VolumeRolloffPoints Distance="29.203541" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_ZergSpireLarge00_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Spell_ZagaraEggCollection_Loop_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-2.000000,-2.000000"/>
-        <VolumeRolloffPoints Distance="5.000000"/>
-        <VolumeRolloffPoints Distance="14.613180" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="GameMusicProt">
-        <AssetArray File="Assets\Music\Music_ProtossTakeKievH.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ProtossSC2-06.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ProtossSC2-07.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Music_BananasInMyZerg.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Music_ZergsInTheBananaPatchH.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Broken Wings G.ogg" FacialGroup=""/>
-        <Volume value="-4.000000,-4.000000"/>
-    </CSound>
-    <CSound id="GameMusicTerr">
-        <AssetArray File="Assets\Music\ZSwarm_Music_GS Terran8.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_GS_Terran9.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Terran6.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Terran7_Action.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Evolution_1_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Evolution_2_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Evolution_3_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Overdrive.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Space_Battle_2_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\The_Rescue_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_CutsceneMoment2.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_DangerAlert_LiveFull.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_DangerAlert_LivePitchGrain.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_DarkVictory_LiveFull.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Inspirational_LiveFull.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_LowTensionInspirationalLiveAlt.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_SadOminousLiveFull.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Titan_Full.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_TragicBattlefieldLiveFull.ogg" FacialGroup=""/>
-        <Volume value="-4.000000,-4.000000"/>
-    </CSound>
-    <CSound id="GameMusicZerg">
-        <AssetArray File="Assets\Music\ZSwarm_Music_01.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_02.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_04.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_05.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_07.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_09.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_101.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_102.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_103.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_105.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_106.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_107.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_108.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_19.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_21.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_22.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_23.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_GS_109.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_GS_110.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Kaldir1.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Kaldir2.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Kaldir4.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Zerus_1.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Zerus_2.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_Zerus_3.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_kaldir_a.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_kaldir_b.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_zerus_a.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\ZSwarm_Music_zerus_b.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Cities_In_Ruin_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\HOTS_Music_Zerus_Ambient.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\HOTS_Music_Zerus_Ambient2.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Onslaught_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Space_1_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Space_2_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Space_Battle_2_FULL.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Music\The_Rescue_FULL.ogg" FacialGroup=""/>
-        <Volume value="-4.000000,-4.000000"/>
     </CSound>
     <CSound id="GlueMusicSwarmIntro" parent="MUSIC">
         <AssetArray File="Assets\Music\ZSwarm_Music_Sting1.ogg" Volume="2.000000,2.000000" FacialGroup="">
@@ -2086,8 +1229,6 @@
         <AssetArray File="Assets\Sounds\Hybrid_Temple_off00.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Hybrid_Temple_off01.wav" FacialGroup=""/>
         <Category value="Other"/>
-        <DupeDestroyCount value="32"/>
-        <ResourcePriority value="16"/>
         <SustainFade index="1" Time="2000" Volume="-96.000000"/>
         <Volume value="6.000000,6.000000"/>
         <VolumeRolloffPoints Distance="55.927475"/>
@@ -2101,16 +1242,6 @@
         <AssetArray File="Assets\Sounds\Zerg_Medium_Land01.wav" FacialGroup=""/>
         <Pitch value="-4.000000,-2.000000"/>
         <Volume value="-6.000000,-3.000000"/>
-    </CSound>
-    <CSound id="Hydralisk_Burrow">
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Hydralisk_Unburrow">
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Lurker_Burrow">
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
     </CSound>
     <CSound id="Lyote_Howl" parent="Ambience_Object" Portrait="" Subtitle="" Speaker="" Actor="" Line="">
         <EditorCategories value="Race:Neutral"/>
@@ -2133,11 +1264,6 @@
         <Chance value="25"/>
         <Pitch value="-3.000000,0.000000"/>
     </CSound>
-
-    <CSound id="Medivac_Unload">
-        <Category value="Combat"/>
-        <Volume value="-11.960000,-10.960000"/>
-    </CSound>
     <CSound id="Mule_Land" parent="Spell">
         <EditorCategories value="Race:Terran"/>
         <Category value="Combat"/>
@@ -2145,8 +1271,11 @@
         <AssetArray File="Assets\Sounds\Titan_LandingThud_01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Titan_LandingThud_02.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Titan_LandingThud_03.wav" FacialGroup=""/>
-        <Pitch value="6.000000,6.000000"/>
+        <Pitch value="3.000000,6.000000"/>
         <Volume value="-12.000000,-6.000000"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
     </CSound>
     <CSound id="Music_SilenceShort" parent="MUSIC">
         <AssetArray File="Assets\Music\MissionMusic\TempMusic.ogg" Offset="88200,88200"/>
@@ -2335,14 +1464,6 @@
         <FogFadeOut Time="6"/>
         <Mode value="2D"/>
     </CSound>
-    <CSound id="NydusWorm_Birth">
-        <OverlapTimeDelta value="1"/>
-    </CSound>
-    <CSound id="Nydus_Unburrow">
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
-        <Pitch value="0.000000,0.000000"/>
-    </CSound>
     <CSound id="Physics_MetalMedium_hits" parent="Combat">
         <EditorCategories value="Race:Neutral"/>
         <AssetArray File="Assets\Sounds\Physics_MetalMedium_hits00.wav" FacialGroup=""/>
@@ -2367,38 +1488,36 @@
     </CSound>
     <CSound id="RailGun_Impact" parent="Combat">
         <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\RailGun_Impact00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\RailGun_Impact01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\RailGun_Impact02.wav" Pitch="-2.000000,-2.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HellFire_Shotgun_Impact_05.wav" FacialGroup=""/>
         <Pitch value="-1.000000,1.000000"/>
-        <Volume value="-7.000000,-4.000000"/>
+        <Volume value="-5.000000,-5.000000"/>
+        <Spread value="20.000000"/>
+        <DupeDestroyCount value="3"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
     </CSound>
     <CSound id="RailGun_Launch" parent="Combat">
         <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\RailGun_Launch00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\RailGun_Launch01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\RailGun_Launch02.wav" Pitch="2.000000,2.000000" FacialGroup=""/>
-        <Volume value="-2.000000,3.000000"/>
+        <AssetArray File="Assets\Sounds\Eradicator_RailGun_Front_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Eradicator_RailGun_Front_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Eradicator_RailGun_Front_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Eradicator_RailGun_Front_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Eradicator_RailGun_Front_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Eradicator_RailGun_Front_06.wav" FacialGroup=""/>
+        <Volume value="-12.000000,-12.000000"/>
         <VolumeRolloffPoints Distance="15.472779"/>
         <VolumeRolloffPoints Distance="30.802292" Volume="-96.000000"/>
         <OverlapTimeDelta value="50"/>
         <Pitch value="-2.000000,2.000000"/>
-    </CSound>
-    <CSound id="Raven_Explode">
-        <DupeDestroyCount value="10"/>
+        <DupeDestroyCount value="3"/>
         <DupeMaximumMethod value="Replace"/>
-        <DupeMuteCount value="8"/>
-    </CSound>
-    <CSound id="Raven_HunterSeekerAttackImpact">
-        <AssetArray index="0" File="Assets\Sounds\Raven_SeekerMissile_Explosion_01.wav" FacialGroup=""/>
-        <AssetArray index="1" File="Assets\Sounds\Raven_SeekerMissile_Explosion_02.wav" FacialGroup=""/>
-        <AssetArray index="2" File="Assets\Sounds\Raven_SeekerMissile_Explosion_03.wav" FacialGroup=""/>
-        <AssetArray index="3" File="Assets\Sounds\Raven_SeekerMissile_Explosion_04.wav" FacialGroup=""/>
-        <AssetArray index="4" File="Assets\Sounds\Raven_SeekerMissile_Explosion_05.wav" FacialGroup=""/>
-        <AssetArray index="5" File="Assets\Sounds\Raven_SeekerMissile_Explosion_06.wav" FacialGroup=""/>
-        <Pitch value="-3.000000,3.000000"/>
-        <Volume value="1.000000,4.000000"/>
-        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
     </CSound>
     <CSound id="Robot_servo" parent="Ambience_Object">
         <EditorCategories value="Race:Terran"/>
@@ -2778,16 +1897,6 @@
         <SpeakerMix index="SideLeft" value="0.250000"/>
         <SpeakerMix index="SideRight" value="0.250000"/>
     </CSound>
-    <CSound id="UI_ConsoleIn_Zerg">
-        <AssetArray index="0" File="Assets\Sounds\UI_ZergConsoleTransition0a.wav" FacialGroup=""/>
-        <AssetArray index="1" File="Assets\Sounds\UI_ZergConsoleTransition1a.wav" FacialGroup=""/>
-        <AssetArray index="2" File="Assets\Sounds\UI_ZergConsoleTransition2a.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="UI_ConsoleOut_Zerg">
-        <AssetArray index="0" File="Assets\Sounds\UI_ZergConsoleTransition0a.wav" FacialGroup=""/>
-        <AssetArray index="1" File="Assets\Sounds\UI_ZergConsoleTransition1a.wav" FacialGroup=""/>
-        <AssetArray index="2" File="Assets\Sounds\UI_ZergConsoleTransition2a.wav" FacialGroup=""/>
-    </CSound>
     <CSound id="WarHound_Death" parent="Death">
         <EditorCategories value="Race:Terran"/>
         <AssetArray>
@@ -3118,238 +2227,6 @@
         <Volume value="-18.000000,-18.000000"/>
         <EditorCategories value="Race:Neutral"/>
     </CSound>
-    <CSound id="Doodad_DefensiveWall45GateLarge_StandWorkEnd" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_DefensiveWall45GateLarge_StandWorkEnd_00.wav" FacialGroup=""/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_DefensiveWall45GateLarge_StandWorkStart" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_DefensiveWall45GateLarge_StandWorkStart_00.wav" FacialGroup=""/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_DominionEnergyCannon_Launch" parent="Ambience_Object">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_02.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_03.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_04.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_05.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_06.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_Launch_07.wav" FacialGroup=""/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_DominionEnergyCannon_PreCast" parent="Ambience_Object">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_PreCast_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_PreCast_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_PreCast_02.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_PreCast_03.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_PreCast_04.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_PreCast_05.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_PreCast_06.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_PreCast_07.wav" FacialGroup=""/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_DominionEnergyCannon_Rotate" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_BattlecruiserGiantDock_StandUnpoweredEnd_Stage04.wav" FacialGroup=""/>
-        <Volume value="-3.000000,-3.000000"/>
-    </CSound>
-    <CSound id="Doodad_DrakkanPulseCannon_Explode" parent="Death">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_DrakkanPulseCannon_Explode_00.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_Egg_StandWork" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Doodad_Egg_StandWork_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-9.000000,-9.000000"/>
-    </CSound>
-    <CSound id="Doodad_Eggsplosion_Death" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Doodad_Eggsplosion_Death_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_Eggsplosion_Death_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_Eggsplosion_Death_02.wav" FacialGroup=""/>
-        <Pitch value="-3.000000,3.000000"/>
-    </CSound>
-    <CSound id="Doodad_ExtendingBridgeWide_StandWorkEnd" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_ExtendingBridgeWide_StandWorkEnd_00.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_ExtendingBridgeWide_StandWorkStart" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_ExtendingBridgeWide_StandWorkStart_00.wav" FacialGroup=""/>
-        <VolumeRolloffPoints Distance="18.767908"/>
-        <VolumeRolloffPoints Distance="33.667622" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_HybridCannon_AttackLaunch" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridCannon_AttackLaunch_v2_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridCannon_AttackLaunch_v2_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridCannon_AttackLaunch_v2_02.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridCannon_AttackLaunch_v2_03.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridCannon_AttackLaunch_v2_04.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridCannon_AttackLaunch_v2_05.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridCannon_AttackLaunch_v2_06.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridCannon_AttackLaunch_v2_07.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridCannon_AttackLaunch_v2_08.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridCannon_AttackLaunch_v2_09.wav" FacialGroup=""/>
-        <Flags index="Download" value="1"/>
-        <Flags index="Purgable" value="1"/>
-        <Category value="Combat"/>
-        <DupeDestroyCount value="8"/>
-        <DupeMaximumMethod value="Replace"/>
-        <SustainFade index="1" Time="500" Volume="-96.000000"/>
-        <Volume value="3.000000,5.000000"/>
-        <Pitch value="-2.000000,0.000000"/>
-    </CSound>
-    <CSound id="Doodad_HybridCannon_Servos" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrane00Stage1.wav"/>
-        <Volume value="-6.000000,-6.000000"/>
-    </CSound>
-    <CSound id="Doodad_HybridCliffGasVent_StandWork" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabGasTurret_StandWork_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <DupeDestroyCount value="48"/>
-        <DupeMuteCount value="4"/>
-        <Pitch value="-3.000000,-1.000000"/>
-        <Volume value="-6.000000,-6.000000"/>
-        <ResourcePriority value="15"/>
-    </CSound>
-    <CSound id="Doodad_HybridGenerator" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridGenerator_00.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridGenerator_01.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridGenerator_02.wav" LoopCount="-1" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_HybridHoldingCell" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridHoldingCell_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <FogFadeIn Volume="-96.000000"/>
-        <FogFadeIn Time="591"/>
-        <FogFadeOut/>
-        <FogFadeOut Time="1052" Volume="-96.000000"/>
-        <Volume value="2.000000,2.000000"/>
-        <VolumeRolloffFadeOut/>
-        <VolumeRolloffFadeOut Time="411" Volume="-96.000000"/>
-        <VolumeRolloffPoints Distance="5.292479"/>
-        <VolumeRolloffPoints Distance="27.019499" Volume="-96.000000"/>
-        <OverlapTimeDelta value="50"/>
-    </CSound>
-    <CSound id="Doodad_HybridTempleObeliskRelay00_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridTempleObeliskRelay00_Stand_00.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridTempleObeliskRelay00_Stand_01.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_HybridTempleObeliskRelay00_Stand_02.wav" LoopCount="-1" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_LandingTower" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_NewFolsomPrisonTower0.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_NewFolsomPrisonTower1.wav" LoopCount="-1"/>
-        <DupeMuteCount value="3"/>
-        <Pitch value="-1.000000,-1.000000"/>
-        <Volume value="-6.000000,-6.000000"/>
-    </CSound>
-    <CSound id="Doodad_NaturalGas" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Units\VespeneGeyser\VespeneGeyser_Ambience0.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Units\VespeneGeyser\VespeneGeyser_Ambience1.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Units\VespeneGeyser\VespeneGeyser_Ambience2.wav" LoopCount="-1"/>
-        <DupeDestroyCount value="3"/>
-        <DupeMuteCount value="2"/>
-        <Pitch value="-1.000000,1.000000"/>
-        <Volume value="-24.000000,-24.000000"/>
-        <VolumeRolloffPoints Distance="5.000000"/>
-        <VolumeRolloffPoints Distance="15.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_PopUpTurret_Burrow" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_PopUpTurret_Burrow_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PopUpTurret_Burrow_01.wav" FacialGroup=""/>
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Doodad_PopUpTurret_Unburrow" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_PopUpTurret_Unburrow_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PopUpTurret_Unburrow_01.wav" FacialGroup=""/>
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Doodad_ProtossBaseBiomassStorage" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_ProtossSanctum_Stand_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <VolumeRolloffPoints Distance="13.509749"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-        <VolumeRolloffFadeIn Volume="-96.000000"/>
-        <VolumeRolloffFadeIn Time="321"/>
-        <VolumeRolloffFadeOut/>
-        <VolumeRolloffFadeOut Time="167" Volume="-96.000000"/>
-        <Volume value="2.000000,2.000000"/>
-    </CSound>
-    <CSound id="Doodad_ProtossSanctum" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_ProtossSanctum_Stand_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="2.000000,2.000000"/>
-    </CSound>
-    <CSound id="Doodad_ProtossSummoning" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_ProtossSummoning_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-5.000000,-5.000000"/>
-    </CSound>
-    <CSound id="Doodad_ProtossWarpInPad_Alert" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_ProtossWarpInPad_Alert_00.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_ProtossWarpInPad_WarpIn" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Protoss\Obelisk\Obelisk_WarpJumpEnd.wav"/>
-        <Flags index="Download" value="1"/>
-        <Flags index="Purgable" value="1"/>
-        <Category value="Spell"/>
-        <Pitch value="0.000000,2.000000"/>
-        <SustainFade index="1" Time="500" Volume="-96.000000"/>
-        <Volume value="-6.000000,-6.000000"/>
-    </CSound>
-    <CSound id="Doodad_ShipGeneratorSmall" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Uni\Emitters\Emitter_IhanCrystal_Loop.wav" LoopTime="0,465622"/>
-        <LoopCount value="-1"/>
-        <OffsetFadeIn Volume="-96.000000"/>
-        <OffsetFadeIn Time="500"/>
-        <SustainFade index="1" Time="1000" Volume="-12.000000"/>
-        <SustainFade Time="2000" Volume="-96.000000"/>
-        <Volume value="-18.000000,-18.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="20.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_SpaceDockEngineSmall" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SuperCraneEngineLoop.wav"/>
-        <LoopCount value="-1"/>
-        <Volume value="-3.000000,-3.000000"/>
-    </CSound>
-    <CSound id="Doodad_StarshipEngine" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_StarshipEngine_Stand_00.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_StarshipEngine_Stand_01.wav" LoopCount="-1" FacialGroup=""/>
-        <Volume value="-19.000000,-19.000000"/>
-        <DupeDestroyCount value="4"/>
-        <DupeHistoryCount value="5"/>
-        <DupeMuteCount value="4"/>
-    </CSound>
     <CSound id="ExpeditionJumpGate_AmbientLoop" parent="Ambience_Object">
         <EditorCategories value="Race:Neutral"/>
         <LoopCount value="-1"/>
@@ -3368,341 +2245,6 @@
         <VolumeRolloffPoints Volume="-9.000000"/>
         <VolumeRolloffPoints Distance="4.000000" Volume="-3.000000"/>
         <VolumeRolloffPoints Distance="12.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_PowerUp" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_PowerUp_00.wav" FacialGroup=""/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="33.000000" Volume="-96.000000"/>
-        <Volume value="-1.000000,-1.000000"/>
-        <Category value="Other"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Loop" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray>
-            <File value="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Loop.wav"/>
-            <LoopCount value="-1"/>
-            <Volume value="-7.300000,-7.300000"/>
-            <FacialGroup value=""/>
-        </AssetArray>
-        <LoopCount value="-1"/>
-        <Volume value="-2.000000,-2.000000"/>
-        <VolumeRolloffFadeBlend value="Linear"/>
-        <VolumeRolloffFadeIn Volume="-96.000000"/>
-        <VolumeRolloffFadeIn Time="133"/>
-        <VolumeRolloffFadeOut/>
-        <VolumeRolloffFadeOut Time="133" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage01" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage01.wav" FacialGroup=""/>
-        <Volume value="-1.000000,-1.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="33.000000" Volume="-96.000000"/>
-        <Category value="Other"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage02" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage02.wav" FacialGroup=""/>
-        <Volume value="-1.000000,-1.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="33.000000" Volume="-96.000000"/>
-        <Category value="Other"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage03" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage03.wav" FacialGroup=""/>
-        <Volume value="-1.000000,-1.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="33.000000" Volume="-96.000000"/>
-        <Category value="Other"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage04" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage04.wav" FacialGroup=""/>
-        <Volume value="-1.000000,-1.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="33.000000" Volume="-96.000000"/>
-        <Category value="Other"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage05" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage05.wav" FacialGroup=""/>
-        <Volume value="-1.000000,-1.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="33.000000" Volume="-96.000000"/>
-        <Category value="Other"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage06" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage06.wav" FacialGroup=""/>
-        <Volume value="-1.000000,-1.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="33.000000" Volume="-96.000000"/>
-        <Category value="Other"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage07" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage07.wav" FacialGroup=""/>
-        <Volume value="-1.000000,-1.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="33.000000" Volume="-96.000000"/>
-        <Category value="Other"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage08" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_StandWorkEnd_Stage08.wav" FacialGroup=""/>
-        <Volume value="-1.000000,-1.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="33.000000" Volume="-96.000000"/>
-        <Category value="Other"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectExpeditionGateDoodad_Whoosh" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_Whoosh_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_Whoosh_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_Whoosh_02.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectExpeditionGateDoodad_Whoosh_03.wav" FacialGroup=""/>
-        <Volume value="-6.000000,0.000000"/>
-        <Pitch value="-16.000000,-2.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="33.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectHybridGasVentDoodad_StandWork" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabGasTurret_StandWork_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <DupeDestroyCount value="48"/>
-        <DupeMuteCount value="4"/>
-        <Pitch value="0.000000,2.000000"/>
-        <Volume value="-6.000000,-6.000000"/>
-        <ResourcePriority value="15"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectHybridGasVentDoodad_StandWorkEnd" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabGasTurret_StandWorkEnd_00.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectHybridGasVentDoodad_StandWorkStart" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabGasTurret_StandWorkStart_00.wav" FacialGroup=""/>
-        <VolumeRolloffPoints Distance="15.000000"/>
-        <VolumeRolloffPoints Distance="25.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_TerrazineRefinery" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_TerrazineRefinery_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-3.000000,-3.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabAlarms" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabAlarms_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-12.000000,-12.000000"/>
-        <VolumeRolloffPoints Distance="6.685237"/>
-        <VolumeRolloffPoints Distance="17.130920" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabCatwalkAnimated_StandWorkStart" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabCatwalkAnimated_StandWorkStart_00.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabCatwalkCollapsing_Death" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabCatwalkCollapsing_Death_00.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabDoorsThin_StandUnpoweredEnd" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabDoorsThin_StandUnpoweredEnd_00.wav" FacialGroup=""/>
-        <Pitch value="1.000000,1.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabDoorsThin_StandUnpoweredStart" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabDoorsThin_StandUnpoweredStart_00.wav" FacialGroup=""/>
-        <FogFadeOut/>
-        <Volume value="1.000000,1.000000"/>
-        <VolumeRolloffPoints Distance="12.000000"/>
-        <VolumeRolloffPoints Distance="25.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabDoorsWide_StandUnpoweredStart" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabDoorsWide_StandUnpoweredStart_00.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabGasTurret_StandWork" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabGasTurret_StandWork_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-6.000000,-6.000000"/>
-        <Pitch value="-3.000000,2.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabGasTurret_StandWorkEnd" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabGasTurret_StandWorkEnd_00.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabGasTurret_StandWorkStart" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabGasTurret_StandWorkStart_00.wav" FacialGroup=""/>
-    </CSound>
-    <!--     <CSound id="Doodad_UmojanLabGenerator2" parent="Ambience_Object">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\zLab_DoodadUmojanTestTube_Amb_Mn.wav"/>
-        <LoopCount value="-1"/>
-        <Pitch value="-1.000000,1.000000"/>
-        <Volume value="-2.000000,-2.000000"/>
-        <VolumeRolloffPoints Distance="12.000000"/>
-        <VolumeRolloffPoints Distance="25.000000" Volume="-96.000000"/>
-    </CSound> -->
-    <CSound id="Doodad_UmojanLabGenerator" parent="Ambience_Object">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_AvernusGateControlStand0.wav"/>
-        <LoopCount value="-1"/>
-        <Pitch value="-13.000000,-11.000000"/>
-        <Volume value="-9.000000,-9.000000"/>
-        <VolumeRolloffPoints Distance="8.000000"/>
-        <VolumeRolloffPoints Distance="22.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabHealingBot_HealEnd" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Terran\Medivac\Medivac_HealEnd.wav"/>
-        <DupeDestroyCount value="4"/>
-        <Pitch value="-1.820000,1.640000"/>
-        <Volume value="-12.000000,-12.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabHealingBot_HealLoop" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Terran\Medivac\Medivac_HealLoop.wav" LoopCount="-1"/>
-        <DupeDestroyCount value="4"/>
-        <Pitch value="-1.820000,1.640000"/>
-        <Volume value="-9.000000,-9.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabHealingBot_HealStart" parent="Spell">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Terran\Medivac\Medivac_HealStart.wav"/>
-        <DupeDestroyCount value="4"/>
-        <Pitch value="-1.820000,1.640000"/>
-        <Volume value="-12.000000,-12.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabHealingBot_PowerDown" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Construction\Protoss_PowerDownSmall0.wav"/>
-        <AssetArray File="Assets\Sounds\Protoss\SharedEffects\Construction\Protoss_PowerDownSmall1.wav"/>
-        <Flags index="Download" value="1"/>
-        <Flags index="Purgable" value="1"/>
-        <Category value="Spell"/>
-        <DupeDestroyCount value="3"/>
-        <SustainFade index="1" Time="500" Volume="-96.000000"/>
-        <Volume value="-18.000000,-18.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabHealingBot_StandWorkEnd" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabHealingBot_StandWorkEnd_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabHealingBot_StandWorkEnd_01.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabHealingBot_StandWorkStart" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabHealingBot_StandWorkStart_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabHealingBot_StandWorkStart_01.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabTramEngines_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray>
-            <File value="Assets\Sounds\Doodad_UmojanLabTramEngines_Stand_02.wav"/>
-            <LoopCount value="-1"/>
-            <Pitch value="-9.000000,-4.000000"/>
-            <Volume value="-11.000000,-11.000000"/>
-            <FacialGroup value=""/>
-        </AssetArray>
-        <AssetArray>
-            <File value="Assets\Sounds\Doodad_UmojanLabTramEngines_Stand_01.wav"/>
-            <LoopCount value="-1"/>
-            <Pitch value="3.000000,5.000000"/>
-            <Volume value="-11.000000,-9.000000"/>
-            <FacialGroup value=""/>
-        </AssetArray>
-        <DupeHistoryCount value="6"/>
-        <OverlapTimeDelta value="50"/>
-        <VolumeRolloffBlend value="Linear"/>
-        <VolumeRolloffPoints Distance="11.504425"/>
-        <VolumeRolloffPoints Distance="29.203541" Volume="-96.000000"/>
-        <Volume value="-1.000000,-1.000000"/>
-        <DupeDestroyCount value="4"/>
-        <DupeMuteCount value="4"/>
-        <DupeRepeatCount value="4"/>
-        <Select value="Sequential"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabTramEngines_StandWork" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabTramEngines_StandWork_00.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabTramEngines_StandWork_01.wav" LoopCount="-1" FacialGroup=""/>
-        <Volume value="-1.000000,-1.000000"/>
-        <DupeHistoryCount value="6"/>
-        <OverlapTimeDelta value="50"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabZergCage_StandWork" parent="Ambience_Object">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_CastanarHoldingPenStandWork0.wav"/>
-        <DupeMuteCount value="2"/>
-        <Volume value="-3.000000,-3.000000"/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabZergCrates02_StandUnpoweredEnd" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabZergCrates02_StandUnpoweredEnd_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabZergCrates02_StandUnpoweredEnd_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabZergCrates02_StandUnpoweredEnd_02.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabZergCrates02_StandUnpoweredStart" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabZergCrates02_StandUnpoweredStart_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabZergCrates02_StandUnpoweredStart_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabZergCrates02_StandUnpoweredStart_02.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabZergCrates_StandUnpoweredEnd" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabZergCrates_StandUnpoweredEnd_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabZergCrates_StandUnpoweredEnd_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabZergCrates_StandUnpoweredEnd_02.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_UmojanLabZergCrates_StandUnpoweredStart" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabZergCrates_StandUnpoweredStart_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabZergCrates_StandUnpoweredStart_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabZergCrates_StandUnpoweredStart_02.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_UmojanWallCap02_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_UmojanLabWallCap02_Stand_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-9.000000,-9.000000"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectValhallaGlassFloorDoodad" parent="Ambience_Object">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\zLab_DoodadUmojanTestTube_Amb_Mn.wav"/>
-        <LoopCount value="-1"/>
-        <Pitch value="-1.000000,0.000000"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="24.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_VolcanicSpire02" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_LavaFallSmall0.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_LavaFallSmall1.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_LavaFallSmall2.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_LavaFallSmall3.wav" LoopCount="-1"/>
-        <Volume value="-6.000000,-6.000000"/>
-        <VolumeRolloffPoints Distance="5.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-        <DupeDestroyCount value="5"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Doodad_VolcanicSpire03" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrack0.wav"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrack1.wav"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrack2.wav"/>
-        <DupeDestroyCount value="6"/>
-        <DupeMuteCount value="3"/>
-        <LoopCount value="-1"/>
-        <VolumeRolloffPoints Distance="20.000000"/>
         <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
     </CSound>
     <CSound id="Event_Korhal2_SpaceVent_Open" parent="Scripted_2D_Stereo">
@@ -4493,116 +3035,12 @@
         <Pitch value="-1.000000,0.000000"/>
         <Volume value="-1.000000,1.000000"/>
     </CSound>
-    <CSound id="Doodad_ZerusVolcano" parent="Ambience_Object">
-        <AssetArray File="Assets\Sounds\Zerus01_Volcanic_Rumble_1.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerus01_Volcanic_Rumble_2.ogg" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerus01_Volcanic_Rumble_3.ogg" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Pitch value="-1.000000,0.000000"/>
-        <Volume value="-2.000000,-2.000000"/>
-        <DupeDestroyCount value="5"/>
-        <DupeMuteCount value="3"/>
-        <Flags index="Download" value="1"/>
-        <Flags index="VariationFallback" value="0"/>
-    </CSound>
     <CSound id="Zerus01_Volcanic_Rumble_Swells" parent="Ambience_Object">
         <AssetArray File="Assets\Sounds\Zerus01_Volcanic_Rumble_1.ogg" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Zerus01_Volcanic_Rumble_2.ogg" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Zerus01_Volcanic_Rumble_3.ogg" FacialGroup=""/>
         <Pitch value="-4.000000,-2.000000"/>
         <Volume value="-2.000000,0.000000"/>
-    </CSound>
-    <CSound id="Doodad_VolcanicSpire04" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrack0.wav"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrack1.wav"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrack2.wav"/>
-        <DupeDestroyCount value="6"/>
-        <DupeMuteCount value="3"/>
-        <LoopCount value="-1"/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_ZergTowerArtilleryAttackDeath_CorrosiveBurst" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide0.wav"/>
-        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide1.wav"/>
-        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide2.wav"/>
-        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide3.wav"/>
-        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide4.wav"/>
-        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide5.wav"/>
-        <AssetArray File="Assets\Sounds\Zerg\Baneling\Baneling_Suicide6.wav"/>
-        <Flags index="Download" value="1"/>
-        <Flags index="Purgable" value="1"/>
-        <Category value="Combat"/>
-        <SustainFade index="1" Time="500" Volume="-96.000000"/>
-        <Volume value="-1.000000,-1.000000"/>
-    </CSound>
-    <CSound id="Doodad_ZergTowerArtilleryAttackDeath_Liquid" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidFalls_00.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidFalls_01.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidFalls_02.wav" LoopCount="-1" FacialGroup=""/>
-        <Volume value="-15.000000,-15.000000"/>
-        <VolumeRolloffPoints/>
-        <VolumeRolloffPoints Distance="30.973452" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_ZerusLavaGroundCrack" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrack0.wav"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrack1.wav"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_MarSaraCrack2.wav"/>
-        <DupeDestroyCount value="6"/>
-        <DupeMuteCount value="3"/>
-        <LoopCount value="-1"/>
-    </CSound>
-    <CSound id="Doodad_ZerusTarPit_Bubbles" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_02.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_03.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_04.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_05.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_06.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_07.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_08.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_09.wav" FacialGroup=""/>
-        <Pitch value="-3.000000,3.000000"/>
-        <Volume value="-14.000000,-12.000000"/>
-        <DupeDestroyCount value="5"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Doodad_ZerusTarPit_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_ZerusTarPit_Stand_00.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_ZerusTarPit_Stand_01.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_ZerusTarPit_Stand_02.wav" LoopCount="-1" FacialGroup=""/>
-        <DupeDestroyCount value="5"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Doodad_ZerusWaterfall_Dead" parent="Ambience_Object">
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_WaterfallMedium0.wav"/>
-        <DupeDestroyCount value="6"/>
-        <DupeMuteCount value="3"/>
-        <FogFadeIn Volume="-96.000000"/>
-        <FogFadeIn Time="3000"/>
-        <FogFadeOut/>
-        <FogFadeOut Time="2000" Volume="-96.000000"/>
-        <LoopCount value="-1"/>
-        <OffsetFadeIn Volume="-96.000000"/>
-        <OffsetFadeIn Time="2000"/>
-        <Volume value="-9.000000,-9.000000"/>
-        <VolumeRolloffFadeBlend value="Linear"/>
-        <VolumeRolloffPoints Distance="10.000000"/>
-        <VolumeRolloffPoints Distance="25.000000" Volume="-96.000000"/>
-        <EditorCategories value="Race:Neutral"/>
-    </CSound>
-    <CSound id="Doodad_ZhakulDasObelisk" parent="Ambience_Object">
-        <EditorCategories value="Race:Neutral"/>
-        <AssetArray File="Assets\Sounds\Doodad_ZhakulDasObelisk_00.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_ZhakulDasObelisk_01.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_ZhakulDasObelisk_02.wav" LoopCount="-1" FacialGroup=""/>
     </CSound>
     <CSound id="Feederling_Aggro" parent="Ambience_Object">
         <EditorCategories value="Race:Zerg"/>
@@ -4642,30 +3080,6 @@
         <VolumeRolloffPoints Distance="20.000000"/>
         <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
     </CSound>
-    <!--CSound id="HellionTank_Attack_NP" parent="TerranAck">
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Hellion\Hellion_NeuralParasiteAttack00.ogg" FacialAnim="Hellion_NeuralParasiteAttack00"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Hellion\Hellion_NeuralParasiteAttack01.ogg" FacialAnim="Hellion_NeuralParasiteAttack01"/>
-        <Volume value="-1.000000,-1.000000"/>
-    </CSound>
-    <CSound id="HellionTank_Death_NP" parent="TerranAck">
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Hellion\Hellion_NeuralParasiteDeath00.wav"/>
-        <Volume value="-1.000000,-1.000000"/>
-    </CSound>
-    <CSound id="HellionTank_Ready_NP" parent="TerranAck">
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Hellion\Hellion_NeuralParasiteReady00.ogg" FacialAnim="Hellion_NeuralParasiteReady00"/>
-        <Volume value="-1.000000,-1.000000"/>
-    </CSound>
-    <CSound id="HellionTank_What_NP" parent="TerranAck">
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Hellion\Hellion_NeuralParasiteWhat00.ogg" FacialAnim="Hellion_NeuralParasiteWhat00"/>
-        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Hellion\Hellion_NeuralParasiteWhat01.ogg" FacialAnim="Hellion_NeuralParasiteWhat01"/>
-        <Volume value="-1.000000,-1.000000"/>
-    </CSound-->
-    <CSound id="Nannites_Ready" parent="Ready">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Protoss\Observer\Observer_Ready00.ogg"/>
-        <AssetArray File="Assets\Sounds\Protoss\Observer\Observer_Ready01.ogg"/>
-        <Volume value="-2.000000,-2.000000"/>
-    </CSound>
     <CSound id="Nannites_What" parent="Voice">
         <EditorCategories value="Race:Protoss"/>
         <AssetArray File="Assets\Sounds\Protoss\Observer\Observer_What00.ogg"/>
@@ -4693,257 +3107,6 @@
         <AssetArray File="Assets\Sounds\Protoss\Nexus\Nexus_ChronoBoostLaunch2.wav"/>
         <Pitch value="-2.000000,2.000000"/>
         <Volume value="-9.000000,-9.000000"/>
-    </CSound>
-    <CSound id="Doodad_AcidBurst_Bubbles" parent="Ambience_Object">
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_02.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_03.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_04.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_05.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_06.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_07.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_08.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidBurst_Bubbles_09.wav" FacialGroup=""/>
-        <Volume value="-25.000000,-9.000000"/>
-        <Pitch value="-3.000000,3.000000"/>
-        <EditorCategories value="Race:Neutral"/>
-        <DupeDestroyCount value="4"/>
-        <DupeMuteCount value="4"/>
-        <!-- <DupeRepeatCount value="6"/> -->
-        <DupeWait value="5,9"/>
-    </CSound>
-    <CSound id="Doodad_AcidFalls" parent="Ambience_Object">
-        <AssetArray File="Assets\Sounds\Doodad_AcidFalls_00.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidFalls_01.wav" LoopCount="-1" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_AcidFalls_02.wav" LoopCount="-1" FacialGroup=""/>
-        <VolumeRolloffPoints Distance="5.027933"/>
-        <VolumeRolloffPoints Distance="31.424582" Volume="-96.000000"/>
-        <EditorCategories value="Race:Neutral"/>
-        <DupeDestroyCount value="4"/>
-        <DupeRepeatCount value="5"/>
-        <Volume value="-9.000000,-9.000000"/>
-    </CSound>
-    <CSound id="Doodad_CharEggSack_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_CocoonedColonists0.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_CocoonedColonists1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_CocoonedColonists2.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <DupeDestroyCount value="3"/>
-        <DupeMuteCount value="3"/>
-        <Pitch value="-3.430000,3.570000"/>
-        <Volume value="-6.170000,-6.170000"/>
-    </CSound>
-    <CSound id="Doodad_CliffGlacierCollapsing_StandWorkStart" parent="Ambience_Object">
-        <AssetArray File="Assets\Sounds\Doodad_CliffGlacierCollapsing_StandWorkStart_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_CliffGlacierCollapsing_StandWorkStart_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_CliffGlacierCollapsing_StandWorkStart_02.wav" FacialGroup=""/>
-        <EditorCategories value="Race:Neutral"/>
-        <VolumeRolloffPoints Distance="15.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_Furnace" parent="Ambience_Object">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Doodad_Furnace_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <VolumeRolloffPoints Distance="8.217271" Volume="-0.080000"/>
-        <VolumeRolloffPoints Distance="27.437326" Volume="-96.000000"/>
-        <ReverbRolloffBlend value="Linear"/>
-        <VolumeRolloffBlend value="Linear"/>
-        <Volume value="-9.000000,-9.000000"/>
-        <Pitch value="-4.000000,-4.000000"/>
-    </CSound>
-    <CSound id="Doodad_IceBridge00_StandWork" parent="Ambience_Object">
-        <AssetArray File="Assets\Sounds\Doodad_IceBridge00_StandWork_00.wav" FacialGroup=""/>
-        <EditorCategories value="Race:Neutral"/>
-    </CSound>
-    <CSound id="Doodad_IceProtossBaseArch01" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_IceProtossBaseArch_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-9.000000,-9.000000"/>
-    </CSound>
-    <CSound id="Doodad_IceProtossBaseArch02" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_IceProtossBaseArch_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-9.000000,-9.000000"/>
-    </CSound>
-    <CSound id="Doodad_IceProtossBaseArch03" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Protoss\Sentry\Sentry_GuardianShieldLoop0.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-4.000000,-4.000000"/>
-    </CSound>
-    <CSound id="Doodad_KorhalCurtain" parent="Ambience_Object">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SpacePlatformCurtain0.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SpacePlatformCurtain1.wav" LoopCount="-1"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SpacePlatformCurtain2.wav" LoopCount="-1"/>
-        <DupeMuteCount value="3"/>
-        <Pitch value="-0.500000,0.500000"/>
-        <Volume value="-21.260000,-21.260000"/>
-    </CSound>
-    <CSound id="Doodad_ProtossMobileSatellite_StandWork" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SpacePlatformMonitor0.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SpacePlatformMonitor1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_SpacePlatformMonitor2.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-26.740000,-26.740000"/>
-    </CSound>
-    <CSound id="Doodad_ProtossRadioTower_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_ProtossRadioTower_Stand_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_ProtossRadioTower_StandWorkA" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_ProtossRadioTower_StandWorkA_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_ProtossRadioTower_StandWorkB" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_ProtossRadioTower_StandWorkB_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_ProtossRadioTower_StandWorkStartA" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_ProtossRadioTower_StandWorkStartA_00.wav" FacialGroup=""/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_ProtossRadioTower_StandWorkStartB" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_ProtossRadioTower_StandWorkStartB_00.wav" FacialGroup=""/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_ProtossWeatherShield_Birth" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_ProtossWeatherShield_Birth_00.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_ProtossWeatherShield_Death" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_ProtossWeatherShield_Death_00.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_ProtossWeatherShield_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Protoss"/>
-        <AssetArray File="Assets\Sounds\Doodad_ProtossWeatherShield_Stand_00.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Pitch value="-3.000000,3.000000"/>
-    </CSound>
-    <CSound id="Doodad_PsiDecimatorWave_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Terran"/>
-        <AssetArray File="Assets\Sounds\Doodad_PsiDecimatorWave_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PsiDecimatorWave_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PsiDecimatorWave_02.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PsiDecimatorWave_03.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PsiDecimatorWave_04.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PsiDecimatorWave_05.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PsiDecimatorWave_06.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PsiDecimatorWave_07.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PsiDecimatorWave_08.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PsiDecimatorWave_09.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PsiDecimatorWave_10.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_PsiDecimatorWave_11.wav" FacialGroup=""/>
-        <OffsetFadeIn Volume="-96.000000"/>
-        <OffsetFadeIn Time="1000"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectCharNydusNestDoodad" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Effects\Zerg_ColonyInfestationLoop0.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Effects\Zerg_ColonyInfestationLoop1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Effects\Zerg_ColonyInfestationLoop2.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Pitch value="-24.689999,-24.689999"/>
-    </CSound>
-    <CSound id="Doodad_TerrainObjectCollapsingIceLargeDoodad_StandWork" parent="Ambience_Object">
-        <AssetArray File="Assets\Sounds\Doodad_TerrainObjectCollapsingIceLargeDoodad_StandWorkStart_00.wav" FacialGroup=""/>
-        <EditorCategories value="Race:Neutral"/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="35.376045" Volume="-96.000000"/>
-        <FogFadeIn Volume="-96.000000"/>
-        <FogFadeIn Time="50"/>
-    </CSound>
-    <CSound id="Doodad_ZergBuildingLarge00_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Zerg\Virophage\Virophage_Stand0.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-3.430000,-3.430000"/>
-    </CSound>
-    <CSound id="Doodad_ZergEggNest_StandA" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_CharBlisterEgg0.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_CharBlisterEgg1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Uni\Doodads\Doodad_CharBlisterEgg2.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-13.710000,-13.710000"/>
-    </CSound>
-    <CSound id="Doodad_ZergEggNest_StandB" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Effects\Zerg_ColonyInfestationLoop0.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Effects\Zerg_ColonyInfestationLoop1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Effects\Zerg_ColonyInfestationLoop2.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-    </CSound>
-    <CSound id="Doodad_ZergEggNest_StandC" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Zerg\Virophage\Virophage_Stand0.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-    </CSound>
-    <CSound id="Doodad_ZergEggNest_StartStand" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Construction\Zerg_BuildingMorphStart0.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Construction\Zerg_BuildingMorphStart1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Construction\Zerg_BuildingMorphStart2.wav" FacialGroup=""/>
-    </CSound>
-    <CSound id="Doodad_ZergTowerArtillery_CoverAttack" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Doodad_ZergTowerArtillery_CoverAttack_00.ogg" FacialGroup=""/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-    </CSound>
-    <CSound id="Doodad_ZergTowerArtillery_StandUnpoweredMorph" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Doodad_ZergTowerArtillery_StandUnpoweredMorph_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_ZergTowerArtillery_StandUnpoweredMorph_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_ZergTowerArtillery_StandUnpoweredMorph_02.wav" FacialGroup=""/>
-        <VolumeRolloffPoints Distance="20.000000"/>
-        <VolumeRolloffPoints Distance="30.000000" Volume="-96.000000"/>
-        <Category value="Other"/>
-    </CSound>
-    <CSound id="Doodad_ZergedCombs03_Stand" parent="Ambience_Object">
-        <EditorCategories value="Race:Zerg"/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Effects\Zerg_ColonyInfestationLoop0.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Effects\Zerg_ColonyInfestationLoop1.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Effects\Zerg_ColonyInfestationLoop2.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-12.340000,-12.340000"/>
-    </CSound>
-    <CSound id="Doodad_ZoneOfAnnihilation_Beam" parent="Ambience_Object">
-        <AssetArray File="Assets\Sounds\Doodad_ZoneOfAnnihilation_Beam_00.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_ZoneOfAnnihilation_Beam_01.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_ZoneOfAnnihilation_Beam_02.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_ZoneOfAnnihilation_Beam_03.wav" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Doodad_ZoneOfAnnihilation_Beam_04.wav" FacialGroup=""/>
-        <Volume value="-2.740000,-2.740000"/>
-        <OffsetFadeIn Volume="-96.000000"/>
-        <OffsetFadeIn Time="500"/>
-        <EditorCategories value="Race:Neutral"/>
-    </CSound>
-    <CSound id="Doodad_ZoneOfAnnihilation_Center" parent="Ambience_Object">
-        <AssetArray File="Assets\Sounds\Doodad_ZoneOfAnnihilation_Center.wav" FacialGroup=""/>
-        <LoopCount value="-1"/>
-        <Volume value="-3.430000,-3.430000"/>
-        <EditorCategories value="Race:Neutral"/>
     </CSound>
     <CSound id="Ambience_Albion" parent="Ambience_Map">
         <AssetArray File="Assets\Sounds\Ambience\Tilesets\Temp_Ambience_Jungle.ogg"/>
@@ -4999,9 +3162,6 @@
         <Flags index="Purgable" value="1"/>
         <Category value="Combat"/>
         <DupeDestroyCount value="5"/>
-    </CSound>
-    <CSound id="PlaceholderSoundFile">
-        <AssetArray index="0" File="Assets\Sounds\Uni\PlaceholderDialog.wav" PortraitModel="KerriganPortrait"/>
     </CSound>
     <CSound id="SetPiece_Abathur_Emerge" parent="HoS_Set">
         <EditorCategories value="Race:Zerg"/>
@@ -5303,10 +3463,6 @@
         <Pitch value="-12.000000,-12.000000"/>
         <Category value="UI"/>
         <Flags index="Stream" value="0"/>
-    </CSound>
-    <CSound id="Ultralisk_Burrow">
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
     </CSound>
     <CSound id="Uni_DeathThudLarge" parent="Death">
         <EditorCategories value="Race:Neutral"/>
@@ -6600,11 +4756,6 @@
         <DupeDestroyCount value="4"/>
         <Pitch value="-2.000000,2.000000"/>
     </CSound>
-    <CSound id="Zerg_BuildingMorphStart">
-        <AssetArray index="0" File="Assets\Sounds\Zerg_BuildingMorphStart0.wav" FacialGroup=""/>
-        <AssetArray index="1" File="Assets\Sounds\Zerg_BuildingMorphStart1.wav" FacialGroup=""/>
-        <AssetArray index="2" File="Assets\Sounds\Zerg_BuildingMorphStart2.wav" FacialGroup=""/>
-    </CSound>
     <CSound id="Zerg_FoleyGrp_Lrg" parent="Foley">
         <EditorCategories value="Race:Zerg"/>
         <AssetArray index="0" File="Assets\Sounds\ZergGrpLrg__Foley.wav" FacialGroup=""/>
@@ -6886,91 +5037,6 @@
         <Category value="Other"/>
         <Volume value="-5.000000,-5.000000"/>
     </CSound>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <CSound id="zVO_TerranWarhound_MercCommander_044" parent="HoS_TerranAck" Subtitle="zVO_TerranWarhound" Speaker="MercCommander" Line="00044"/>
     <CSound id="zVO_TerranWarhound_MercCommander_001" parent="HoS_TerranAck" Subtitle="zVO_TerranWarhound" Speaker="MercCommander" Line="00001"/>
     <CSound id="zVO_TerranWarhound_MercCommander_002" parent="HoS_TerranAck" Subtitle="zVO_TerranWarhound" Speaker="MercCommander" Line="00002"/>
@@ -7193,33 +5259,6 @@
         <HerdNode value="HerdNode_ZergSmall"/>
         <SustainFade index="1" Time="10"/>
     </CSound> -->
-    <CSound id="Zerg_BurrowLarge">
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Zerg_BurrowLoop">
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Zerg_BurrowMedium">
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Zerg_BurrowSmall">
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Zerg_UnburrowLarge">
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Zerg_UnburrowMedium">
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
-    <CSound id="Zerg_UnburrowSmall">
-        <DupeDestroyCount value="8"/>
-        <DupeMuteCount value="3"/>
-    </CSound>
     <CSound id="CreepTumor_MisslePop" parent="Ambience_Object">
         <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\CreepTumor_NewEmerge_5.wav" FacialGroup=""/>
@@ -7299,9 +5338,6 @@
         <AssetArray File="Assets\Sounds\Zerg\Egg\Egg_Death2.wav"/>
         <AssetArray File="Assets\Sounds\Zerg\Egg\Egg_Death3.wav"/>
         <AssetArray File="Assets\Sounds\Zerg\Egg\Egg_Death4.wav"/>
-    </CSound>
-    <CSound id="NydusWorm_Unload">
-        <DupeMuteCount value="2"/>
     </CSound>
     <CSound id="PhysicsImpactBase" parent="PhysicsImpact">
         <EditorCategories value="Race:Neutral"/>
@@ -8086,48 +6122,6 @@
         <DupeDestroyCount value="8"/>
         <Pitch value="-3.000000,0.000000"/>
         <Volume value="2.040000,4.040000"/>
-    </CSound>
-    <CSound id="LoadingMusic" parent="MUSIC">
-        <AssetArray>
-            <File value="Assets\Music\HOTS_Music_Zerus_Ambient.ogg"/>
-            <LoopCount value="-1"/>
-            <Offset value="100000,5000000"/>
-            <FacialGroup value=""/>
-            <SyncPoints value="11912561"/>
-            <SyncPoints value="11912561"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="Assets\Music\MissionMusic\Music_ActionScaryNoRhythmNoWinds.ogg"/>
-            <LoopCount value="-1"/>
-            <Offset value="10000,2000000"/>
-            <Pitch value="-4.000000,-4.000000"/>
-            <FacialGroup value=""/>
-            <SyncPoints value="11912561"/>
-            <SyncPoints value="11912561"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="Assets\Music\ZSwarm_Music_LoadScreen.ogg"/>
-            <LoopCount value="-1"/>
-            <LoopTime value="0,11912561"/>
-            <Offset value="2300000,7000000"/>
-            <Volume value="-2.000000,-2.000000"/>
-            <Weight value="25"/>
-            <SyncPoints value="0"/>
-            <SyncPoints value="11912561"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="Assets\Music\MissionMusic\Music_AmbientFreaky.ogg"/>
-            <LoopCount value="-1"/>
-            <Offset value="0,500000"/>
-            <Pitch value="-3.000000,-3.000000"/>
-            <Volume value="-1.000000,-1.000000"/>
-            <FacialGroup value=""/>
-            <SyncPoints value="11912561"/>
-            <SyncPoints value="11912561"/>
-        </AssetArray>
-        <OffsetFadeIn Volume="-96.000000"/>
-        <OffsetFadeIn Time="2000"/>
-        <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="FS_WaterWalk" parent="Movement">
         <AssetArray File="Assets\Sounds\FS_Water_1.wav" FacialGroup=""/>

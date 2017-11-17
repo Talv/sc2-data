@@ -1283,6 +1283,7 @@ Terrain/Name/TheVoid=The Void
 Terrain/Name/UlnarInner=Ulnar Inner
 Terrain/Name/UlnarOuter=Ulnar Outer
 Terrain/Name/UlnarPortal=Ulnar Portal
+Terrain/Name/UmojaEx3=UmojaEx3
 ThorLifeNotFull=Target unit must be damaged
 UI/HelpMenuDialogTechVoid=VOID MULTIPLAYER
 UI/MissileTankMissileRestock=Restocking Missile

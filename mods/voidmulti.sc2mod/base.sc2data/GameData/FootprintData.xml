@@ -1,11 +1,2 @@
 <?xml version="1.0" encoding="us-ascii"?>
-<Catalog>
-    <CFootprint id="OracleStasisTrap">
-        <Layers index="Check">
-            <Sets index="0">
-                <Negative index="Creep" value="0"/>
-            </Sets>
-            <Rows index="0" value="x"/>
-        </Layers>
-    </CFootprint>
-</Catalog>
+<Catalog/>

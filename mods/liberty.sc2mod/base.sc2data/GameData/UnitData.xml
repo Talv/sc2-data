@@ -11520,6 +11520,37 @@
     <CUnit id="PrimalWurmACGluescreenDummy">
         <EditorFlags index="NoPlacement" value="1"/>
     </CUnit>
+    <!--Horner ACGlueScreenDummy Units-->
+    <CUnit id="HHReaperACGluescreenDummy">
+        <EditorFlags index="NoPlacement" value="1"/>
+    </CUnit>
+    <CUnit id="HHWidowMineACGluescreenDummy">
+        <EditorFlags index="NoPlacement" value="1"/>
+    </CUnit>
+    <CUnit id="HHHellionTankACGluescreenDummy">
+        <EditorFlags index="NoPlacement" value="1"/>
+    </CUnit>
+    <CUnit id="HHWraithACGluescreenDummy">
+        <EditorFlags index="NoPlacement" value="1"/>
+    </CUnit>
+    <CUnit id="HHVikingACGluescreenDummy">
+        <EditorFlags index="NoPlacement" value="1"/>
+    </CUnit>
+    <CUnit id="HHBattlecruiserACGluescreenDummy">
+        <EditorFlags index="NoPlacement" value="1"/>
+    </CUnit>
+    <CUnit id="HHRavenACGluescreenDummy">
+        <EditorFlags index="NoPlacement" value="1"/>
+    </CUnit>
+    <CUnit id="HHBomberPlatformACGluescreenDummy">
+        <EditorFlags index="NoPlacement" value="1"/>
+    </CUnit>
+    <CUnit id="HHMercStarportACGluescreenDummy">
+        <EditorFlags index="NoPlacement" value="1"/>
+    </CUnit>
+    <CUnit id="HHMissileTurretACGluescreenDummy">
+        <EditorFlags index="NoPlacement" value="1"/>
+    </CUnit>
     <!-- Dummy Units for the AC Gluescreen End -->
     <CUnit id="MineralField750">
         <DeathRevealRadius value="3"/>

@@ -275,12 +275,6 @@
         <On Terms="Behavior.AlarakWarpIn.Disable" Send="AnimPlay Stand {} 0 -1.000000 -1.000000 0.000000"/>
     </CActorUnit>
     <CActorModel id="AlarakWarpIn" parent="ModelAnimationStyleOneShot"/>
-    <CActorSound id="Ambience_Nova06_City_Flashback" parent="SoundContinuous">
-        <EditorCategories value=""/>
-    </CActorSound>
-    <CActorDoodad id="DefendersCity_Buildings_Industrial">
-        <ModelFlags index="OutlineOccluder" value="1"/>
-    </CActorDoodad>
     <CActorDoodad id="DefendersCity_Buildings_Pipes_Tanks_Industrial">
         <ModelFlags index="OutlineOccluder" value="1"/>
     </CActorDoodad>
@@ -1293,8 +1287,6 @@
         <On Terms="Behavior.SkyHook.On" Send="Create"/>
         <Sound value="SkyHook"/>
     </CActorSound>
-    <CActorModel id="SMX3_GeneralDavisPortraitAddition" parent="CompositePortraitAddition"/>
-    <CActorPortrait id="SMX3_GeneralDavisPortrait" parent="CompositePortrait"/>
     <CActorModel id="SMX3_ReigelPortraitAddition" parent="CompositePortraitAddition"/>
     <CActorPortrait id="SMX3_ReigelPortrait" parent="CompositePortrait"/>
     <CActorPortrait id="SMX3_WranglerPortrait" parent="CompositePortrait"/>

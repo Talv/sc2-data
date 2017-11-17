@@ -304,7 +304,7 @@
         <Image Index="99"/>
     </CEmoticon>
     <CEmoticon id="stukov">
-        <Image TextureSheet="EmoticonsSheet2" Index="0"/>
+        <Image TextureSheet="EmoticonsSheet2"/>
     </CEmoticon>
     <CEmoticon id="infestedadjutant">
         <Image TextureSheet="EmoticonsSheet2" Index="1"/>
@@ -500,5 +500,13 @@
     <CEmoticon id="prestige1000">
         <Image TextureSheet="EmoticonsSheet2" Index="49"/>
         <RequiredReward value="Emoticon_Prestige1000"/>
+    </CEmoticon>
+    <CEmoticon id="smooch">
+        <Image TextureSheet="EmoticonsSheet2" Index="51"/>
+        <RequiredReward value="Emoticon_Smooch"/>
+    </CEmoticon>
+    <CEmoticon id="brokenheart">
+        <Image TextureSheet="EmoticonsSheet2" Index="52"/>
+        <RequiredReward value="Emoticon_BrokenHeart"/>
     </CEmoticon>
 </Catalog>

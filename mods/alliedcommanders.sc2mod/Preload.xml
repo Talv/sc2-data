@@ -6,6 +6,7 @@
 <Asset path="cutscenes\ui_soamission.sc2cutscene" Type="Cutscene"/>
 <Asset path="assets\portraits\terran\femalecivilian2portrait\femalecivilian2portrait.m3" Type="Model"/>
 <Asset path="assets\sounds\aberration_ready_01.ogg" Type="Sound"/>
+<Asset path="assets\textures\blastmark20_emissiveblue2.lvl0" Type="Image"/>
 <Asset path="assets\textures\xelnaga_curb_temple_emmi.dds" Type="Image"/>
 <Asset path="assets\textures\white.dds" Type="Image"/>
 <Asset path="localizeddata\sounds\vo\alarakcommander_structureovercharge02.ogg" Type="Sound"/>
@@ -43,6 +44,8 @@
 <Asset path="assets\sounds\terran\sharedeffects\fires\terran_firelarge1.wav" Type="Sound"/>
 <Asset path="assets\sounds\zerg\sharedeffects\burrowing\zerg_burrowlarge4.wav" Type="Sound"/>
 <Asset path="assets\sounds\zerg\baneling\baneling_ready2.ogg" Type="Sound"/>
+<Asset path="assets\textures\sgthammer_interior_portrait_emiss.lvl0" Type="Image"/>
+<Asset path="assets\textures\xelnaga_curb_temple_emmi.lvl0" Type="Image"/>
 <Asset path="assets\textures\tutorialresourceshighlight.dds" Type="Image"/>
 <Asset path="assets\textures\infestedcolonistportrait_static.dds" Type="Image"/>
 <Asset path="assets\sounds\zerg\ultralisk\ultralisk_attackimpact1.wav" Type="Sound"/>
@@ -67,6 +70,7 @@
 <Abil id="MutatorAmonKerriganPsiStrikeWalk"/>
 <Abil id="MutatorAmonKerriganPrimalSlash"/>
 <Abil id="MutatorAmonKerriganApocalypse"/>
+<Abil id="HornerAirFleetActivate"/>
 <Achievement id="DifficultyRecruit1"/>
 <Achievement id="DifficultySoldier1"/>
 <Achievement id="DifficultyVeteran1"/>
@@ -74,6 +78,7 @@
 <Achievement id="CommanderFenixAllChampions"/>
 <Achievement id="CommanderFenixCarrier"/>
 <Achievement id="CommanderDehakaLevelUp"/>
+<Achievement id="CommanderHornerSupply"/>
 <Actor id="SYSTEM_ActorConfig"/>
 <Actor id="PortraitActor"/>
 <Actor id="TriggerRegion"/>
@@ -86,6 +91,9 @@
 <Actor id="LaserDrillCoopBeamRegion"/>
 <Actor id="LaserDrillCoopConcentratedBeamRegion"/>
 <Actor id="MutatorLaserDrillBeamRegion"/>
+<Actor id="HHBomberAreaBombWarning"/>
+<Behavior id="PermanentlyInvulnerable"/>
+<Behavior id="PermanentlyUncommandable"/>
 <Behavior id="MULETimedLife"/>
 <Behavior id="RawVespeneGeyserGas"/>
 <Behavior id="ZergGenericDeath"/>
@@ -96,13 +104,13 @@
 <Behavior id="SOASuperShield"/>
 <Behavior id="ProtossGenericWarpInOut"/>
 <Behavior id="TimeStopImmune"/>
+<Behavior id="HHMercStarportCargoInstalled"/>
 <Behavior id="DehakaAttEssenceMastery"/>
 <Behavior id="DehakaCoopAirTargetable"/>
 <Behavior id="DehakaMassive"/>
 <Behavior id="GasWorker"/>
 <Behavior id="FenixExplode"/>
 <Behavior id="FenixProbiusProbe"/>
-<Behavior id="FenixChampionSwapBoost"/>
 <Behavior id="MutatorKarmaIncreasedDamageVet"/>
 <Behavior id="MutatorShuttleOvercharge"/>
 <Behavior id="MutatorShrunk"/>
@@ -154,6 +162,9 @@
 <Behavior id="EssenceBuff10"/>
 <Behavior id="EssenceBuff100"/>
 <Behavior id="DehakaModelSwapStun"/>
+<Behavior id="HHBomberPlatformAreaBombDisabler"/>
+<Behavior id="HHSupplyDepotInitialStun"/>
+<Behavior id="HHBomberPlatformAreaBombTopBarDummyTimer"/>
 <Effect id="CopyTargetSelectionAndControlGroups"/>
 <Effect id="GuardianShieldPersistent"/>
 <Effect id="PointDefenseDroneReleaseCreateUnit"/>
@@ -179,13 +190,18 @@
 <Effect id="DrakkenLaserDrillBFGSet"/>
 <Effect id="VespeneDroneGrantResourcesTrigger"/>
 <Effect id="FenixImmortalDetonationSearchArea"/>
+<Effect id="HHBomberAreaBombInitialSet"/>
 <Effect id="SOASuperShieldApply"/>
 <Effect id="SOATimeFreezeVisual"/>
 <Effect id="SOAMapWideChronoSearch"/>
+<Effect id="HHBomberPlatformAreaBombReturnSet"/>
+<Effect id="HHWidowMineBlossomIssueOrderSet"/>
 <Effect id="DehakaGlevigFirebreathSetAutocast"/>
 <Effect id="DehakaMurvarAcidPukeSetAutocast"/>
 <Effect id="DehakaMurvarSpawnCreepersSetAutocast"/>
 <Effect id="CancelOrderAdvancedConstructionAuto"/>
+<Effect id="RavenAnalyzeDP"/>
+<Effect id="ObserverTargetLockDP"/>
 <Effect id="FenixSoAWhirlwindSetAutocast"/>
 <Effect id="FenixVoidShieldCapacitorSetAutocast"/>
 <Effect id="MutatorTempDamageReflect"/>
@@ -237,6 +253,15 @@
 <Effect id="EssencePickupFullLM"/>
 <Effect id="DehakaConsumeEffectHealBiological"/>
 <Effect id="DehakaConsumeEffectHealOther"/>
+<Effect id="HHD8ClusterDeathSet"/>
+<Effect id="HHHellionStimDeathSet"/>
+<Effect id="HHHellionTankDeathFearSet"/>
+<Effect id="HHD8ClusterDeathSetUpgrade"/>
+<Effect id="HHWidowMineBlossomIssueOrderSetUpgrade"/>
+<Effect id="HHHellionTankDeathFearSetUpgrade"/>
+<Effect id="HHHellionStimDeathSetUpgrade"/>
+<Effect id="KillMagazine"/>
+<Effect id="ReanimateCleanupTargetBehaviorsSet"/>
 <Light id="MutatorVeryDark"/>
 <Map id="COOP_Placeholder"/>
 <Model id="StaticPortrait"/>
@@ -289,6 +314,13 @@
 <Sound id="ChristmasGiftEnemy"/>
 <Sound id="ChristmasGiftPing"/>
 <Sound id="ChristmasGiftAlly"/>
+<Sound id="HornerHan_BomberPlatformBuild"/>
+<Sound id="HornerHan_BomberPlatformReady"/>
+<Sound id="HornerHan_CallFleet"/>
+<Sound id="HornerHan_CallFleetUsed"/>
+<Sound id="HornerHan_MagMine"/>
+<Sound id="HornerHan_Spacestation"/>
+<Sound id="HornerHan_SpacestationUsed"/>
 <Sound id="MusicDehakaMaxLevel"/>
 <Sound id="DehakaCommander_ChangeReminder"/>
 <Sound id="DehakaCommander_ConstructDakrun"/>
@@ -457,11 +489,13 @@
 <Unit id="ZealotPurifierReviveCorpse"/>
 <Unit id="HybridNemesis"/>
 <Unit id="HybridBehemoth"/>
+<Unit id="HHStarport"/>
 <Unit id="SIInfestedTrooper"/>
 <Unit id="MutatorLaserDrill"/>
 <Unit id="ArchAngelCoopAssault"/>
 <Unit id="OverseerSiegeMode"/>
 <Unit id="MutatorHybridImmortal"/>
+<Unit id="HHBomber"/>
 <Unit id="MutatorPropagator"/>
 <Unit id="DehakaCoopReviveCocoonFootPrint"/>
 <Unit id="MutatorDancingOracle"/>
@@ -489,6 +523,7 @@
 <Unit id="MutatorInfestedTurkey"/>
 <Unit id="CreepTumorStukov"/>
 <Unit id="EssencePickup"/>
+<Unit id="HHScrapPickup"/>
 <Upgrade id="MasteryStukovMechAttackSpeed"/>
 <Upgrade id="MasteryAlarakUnitAttackSpeed"/>
 <Upgrade id="MasteryNovaWeaponAttackSpeed"/>

@@ -646,9 +646,7 @@
         <AffectedUnitArray value="Hellion"/>
     </CUpgrade>
     <CUpgrade id="RewardDanceOracle">
-        <Icon value="Assets\Textures\btn-unit-protoss-oracle.dds"/>
         <EffectArray Operation="Set" Reference="Unit,Oracle,TauntDuration[Dance]" Value="5"/>
         <AffectedUnitArray value="Oracle"/>
-        <LeaderAlias value=""/>
     </CUpgrade>
 </Catalog>

@@ -752,6 +752,7 @@
         <WhichUnit Value="Caster"/>
         <TargetLocation Value="TargetPoint"/>
         <TeleportFlags index="TestCliff" value="1"/>
+        <ValidatorArray value="CasterNotFungalGrowthed"/>
     </CEffectTeleport>
     <CEffectEnumArea id="TempestDisruptionBlastInitialWarningSearch">
         <EditorCategories value="Race:Terran"/>
@@ -1158,6 +1159,7 @@
         <TeleportFlags index="TestCliff" value="1"/>
         <TeleportFlags index="TestFog" value="0"/>
     </CEffectTeleport>
+    <CEffectDamage id="NexusMassRecallPreTeleportDummy"/>
     <CEffectCreatePersistent id="NexusShieldRecharge">
         <ValidatorArray value="ShieldsNotFull"/>
         <ValidatorArray value="CasterHasEnergy"/>
@@ -1325,4 +1327,5 @@
     <CEffectModifyUnit id="NexusShieldOverchargeShield">
         <VitalArray index="Shields" Change="6"/>
     </CEffectModifyUnit>
+    <CEffectDamage id="WarpPrismLoadDummy"/>
 </Catalog>

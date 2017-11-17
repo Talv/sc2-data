@@ -449,6 +449,10 @@
         <Value value="SiegeTankSieged"/>
         <Find value="0"/>
     </CValidatorUnitType>
+    <CValidatorPlayerRequirement id="HaveSmartServos">
+        <Value value="HaveSmartServos"/>
+        <Find value="1"/>
+    </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="CasterHasNexusMassRecallCasting">
         <WhichUnit Value="Caster"/>
         <Behavior value="NexusMassRecallCasting"/>

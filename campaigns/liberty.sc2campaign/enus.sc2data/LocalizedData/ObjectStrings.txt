@@ -12506,7 +12506,6 @@ Validator/Name/NotTrainEngine=Not Train Engine
 Validator/Name/OdinRepairing=Odin Repairing
 Validator/Name/OrbitalRelayUpgraded=Orbital Relay Upgraded
 Validator/Name/OrbitalRelayUpgradedAndNotUnderConstruction=Orbital Relay Upgraded And Not Under Construction
-Validator/Name/PickupCheck=Pickup Check
 Validator/Name/PickupPlayerCheck=Pickup Player Check
 Validator/Name/ProjectileAcceleratorsPurchased=Projectile Accelerators Purchased
 Validator/Name/PsiRiftUTargetFilters=Psionic Rift U TargetFilters

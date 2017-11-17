@@ -230,7 +230,6 @@
             <Unit index="0" removed="1"/>
         </InfoArray>
     </CAbilTrain>
-    <CAbilResearch id="FleetBeaconResearch"/>
     <CAbilEffectTarget id="FungalGrowth">
         <Effect index="0" value="FungalGrowthLaunchMissile"/>
         <Range index="0" value="10"/>
@@ -327,7 +326,6 @@
     <CAbilMorph id="SiegeMode">
         <CmdButtonArray index="Execute" Requirements=""/>
     </CAbilMorph>
-    <CAbilResearch id="SpireResearch"/>
     <CAbilTrain id="StargateTrain">
         <InfoArray index="Train2" Time="120" Effect="WarpInEffect">
             <Button DefaultButtonFace="Carrier" Requirements="HaveFleetBeacon"/>
@@ -376,7 +374,6 @@
         <CmdButtonArray index="On" DefaultButtonFace="EnableBuildingAttack"/>
         <CmdButtonArray index="Off" DefaultButtonFace="DisableBuildingAttack"/>
     </CAbilBehavior>
-    <CAbilTrain id="RoboticsFacilityTrain"/>
     <CAbilResearch id="LairResearch">
         <InfoArray index="Research2" Time="60"/>
     </CAbilResearch>
@@ -385,12 +382,6 @@
             <Button Requirements=""/>
         </InfoArray>
     </CAbilTrain>
-    <CAbilMorph id="MorphToHellionTank">
-        <CmdButtonArray index="Execute" Requirements="HaveArmory"/>
-    </CAbilMorph>
-    <CAbilMorph id="MorphToHellion">
-        <CmdButtonArray index="Execute" Requirements="HaveArmory"/>
-    </CAbilMorph>
     <CAbilEffectTarget id="Vortex">
         <Effect index="0" value="VortexKillSet"/>
         <TargetFilters value="Visible;Player,Ally,Massive,Structure,Missile,Stasis,Dead,Invulnerable"/>
@@ -402,7 +393,6 @@
     <CAbilEffectTarget id="WidowMineAttack">
         <AutoCastValidatorArray value="noMarkers"/>
     </CAbilEffectTarget>
-    <CAbilMorph id="WidowMineBurrow"/>
     <CAbilEffectTarget id="Yoink">
         <UseMarkerArray index="Approach" value="0"/>
     </CAbilEffectTarget>

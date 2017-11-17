@@ -986,9 +986,6 @@
         <SearchFlags index="OffsetAreaByAngle" value="0"/>
         <SearchFilters value="-;Ally,Neutral,Enemy"/>
     </CValidatorLocationEnumArea>
-    <CValidatorUnitType id="IsAutoTurret">
-        <Value value="AutoTurret"/>
-    </CValidatorUnitType>
     <CValidatorCombine id="IsWarpGateorNexus">
         <CombineArray value="IsWarpgate"/>
         <CombineArray value="IsNexus"/>

@@ -176,6 +176,12 @@
         <EntryArray Unit="VikingFighter" Reward="VikingMecha"/>
         <ProductId value="26855"/>
     </CSkinPack>
+    <!--Free to play veteran player skin-->
+    <CSkinPack id="GhostEidolonSkinPack">
+        <ShortName value="SkinPack/ShortName/GhostEidolonSkinPack"/>
+        <ReleaseDate value="11/14/2017"/>
+        <EntryArray Unit="Ghost" Reward="GhostEidolon"/>
+    </CSkinPack>
     <!-- 3.16 warchest Skins-->
     <CSkinPack id="ProbeTaldarimSkinPack">
         <ShortName value="SkinPack/ShortName/ProbeTaldarimSkinPack"/>

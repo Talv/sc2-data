@@ -17,6 +17,7 @@
     <const id="$Portraits8" value="ui_wol_achievementportraits_sheet8.dds"/>
     <const id="$Portraits9" value="ui_wol_achievementportraits_sheet9.dds"/>
     <const id="$Portraits10" value="ui_wol_achievementportraits_sheet10.dds"/>
+    <const id="$Portraits11" value="ui_wol_achievementportraits_sheet11.dds"/>
     <const id="$Achievements1" value="ui_wol_achievementicons_sheet1.dds"/>
     <const id="$Achievements2" value="ui_wol_achievementicons_sheet2.dds"/>
     <const id="$Achievements3" value="ui_wol_achievementicons_sheet3.dds"/>
@@ -152,9 +153,24 @@
         <License value="##id##"/>
     </CRewardIcon>
     <!-- Console Skins -->
-    <CRewardConsoleSkin default="1" id="CONSOLESKIN">
-        <Category File="ConsoleSkin" Tag="CSKI"/>
+    <CRewardConsoleSkin default="1" id="TERRANCONSOLESKIN">
+        <Category File="TerranConsoleSkin" Tag="TCSK"/>
         <License value="##id##"/>
+        <Race value="Terr"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardConsoleSkin>
+    <CRewardConsoleSkin default="1" id="ZERGCONSOLESKIN">
+        <Category File="ZergConsoleSkin" Tag="ZCSK"/>
+        <License value="##id##"/>
+        <Race value="Zerg"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardConsoleSkin>
+    <CRewardConsoleSkin default="1" id="PROTOSSCONSOLESKIN">
+        <Category File="ProtossConsoleSkin" Tag="PCSK"/>
+        <License value="##id##"/>
+        <Race value="Prot"/>
         <Flags index="Cloaked" value="1"/>
         <Flags index="Hidden" value="1"/>
     </CRewardConsoleSkin>
@@ -217,9 +233,6 @@
         <Category File="WarpPrismSkin" Tag="PWar"/>
         <Race value="Prot"/>
     </CRewardModel>
-    <CRewardConsoleSkin id="Abathur_ConsoleZerg" parent="CONSOLESKIN">
-        <ConsoleSkin value="Abathur_ConsoleZerg"/>
-    </CRewardConsoleSkin>
     <CRewardModel id="BroodLordSkinOff" parent="MODELDEFAULT">
         <Category File="BroodLordSkin" Tag="ZBro"/>
         <Flags index="Allowed" value="1"/>
@@ -236,6 +249,11 @@
         <Category File="BroodLordSkin" Tag="ZBro"/>
         <Race value="Zerg"/>
         <Skin value="BroodLordWebby"/>
+    </CRewardModel>
+    <CRewardModel id="BroodLordPrimal" parent="MODELDEFAULT">
+        <Category File="BroodLordSkin" Tag="ZBro"/>
+        <Race value="Zerg"/>
+        <Skin value="BroodLordPrimal"/>
     </CRewardModel>
     <CRewardModel id="HydraliskNoxious" parent="MODELDEFAULT">
         <Category File="HydraliskSkin" Tag="ZHyd"/>
@@ -2958,8 +2976,176 @@
         <ReplacementArray Catalog="Sound" From="Alert_ZergEconomyUnderAttack" To="DayNine_WorkersUnderAttackZerg"/>
         <ReplacementArray Catalog="Sound" From="Alert_TerranEconomyUnderAttack" To="DayNine_WorkersUnderAttack"/>
     </CRewardVoicePack>
-    <CRewardConsoleSkin id="ConsoleSkinDefault" parent="CONSOLESKIN">
-        <ConsoleSkin value="Dflt"/>
+    <CRewardVoicePack id="VoicePackProtossHornerHan" parent="VOICEPACKPROTOSS">
+        <License value="SC2HornerHanVoicePack"/>
+        <LargeImage value="Assets/Textures/SC2_UI_Collection_Announcers_Thumb_HanandHorner.dds"/>
+        <VoicePack value="HornerHan"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranAddOnComplete" To="HornerHanAnnouncer_AddOnComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranAddOnComplete_Prot" To="HornerHanAnnouncer_AddOnComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossAllysBaseUnderAttack" To="HornerHanAnnouncer_AllyBaseUnderAttack"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossAllyUnderAttack" To="HornerHanAnnouncer_AllyUnderAttack"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranUnacceptableLandingZone" To="HornerHanAnnouncer_BadLZ"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossBaseUnderAttack" To="HornerHanAnnouncer_BaseUnderAttack"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossBuildError" To="HornerHanAnnouncer_BuildErrorProtoss"/>
+        <ReplacementArray Catalog="Sound" From="SCV_CantBuildAlert" To="HornerHanAnnouncer_BuildErrorProtoss"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildLocationInvalid_Prot" To="HornerHanAnnouncer_BuildErrorProtoss"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCouldntReachTarget_Prot" To="HornerHanAnnouncer_BuildErrorProtoss"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildTooCloseToResources_Prot" To="HornerHanAnnouncer_BuildErrorProtoss"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossCalldownLaunch" To="HornerHanAnnouncer_CalldownLaunch"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranCommandCenterUpgradeComplete" To="HornerHanAnnouncer_CommandCenterUpgraded"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranConstructionInterrupted" To="HornerHanAnnouncer_ConstructInterrupt"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossForcesUnderAttack" To="HornerHanAnnouncer_ForcesUnderAttack"/>
+        <ReplacementArray Catalog="Sound" From="Alert_GamePaused_Prot" To="HornerHanAnnouncer_GamePaused"/>
+        <ReplacementArray Catalog="Sound" From="Alert_GameResumed_Prot" To="HornerHanAnnouncer_GameResumed"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossVespeneGeyserExhausted" To="HornerHanAnnouncer_GeyserExhausted"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantLandLocationInvalid" To="HornerHanAnnouncer_LandingInterrupt"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantLandTooCloseToResources" To="HornerHanAnnouncer_LandingInterrupt"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdFoodUsageImpossible_Prot" To="HornerHanAnnouncer_MaxSupply"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossMineralsDepleted" To="HornerHanAnnouncer_MineralsDepleted"/>
+        <ReplacementArray Catalog="Sound" From="Alert_GameStart" To="HornerHanAnnouncer_StartGame"/>
+        <ReplacementArray Catalog="Sound" From="Alert_Victory" To="HornerHanAnnouncer_EndGame"/>
+        <ReplacementArray Catalog="Sound" From="Alert_Defeat" To="HornerHanAnnouncer_GGLose"/>
+        <!-- doesnt work, neutral minerals? -->
+        <!-- Mule_Ready is robot bleep bloops from the Mule, not dialog from the Announcer -->
+        <!-- <ReplacementArray Catalog="Sound" From="Mule_Ready" To="KerriganA_MULEDeployed"/> -->
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildTooFarFromCreepSource" To="HornerHanAnnouncer_NeedCreep"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildOnThat_Prot" To="HornerHanAnnouncer_NeedGeyser"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdNotEnoughFood_Prot" To="HornerHanAnnouncer_NeedMoreFoodProtoss"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdNotEnoughVespene_Prot" To="HornerHanAnnouncer_NeedMoreGas"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdNotEnoughMinerals_Prot" To="HornerHanAnnouncer_NeedMoreMinerals"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdNotEnoughEnergy_Prot" To="HornerHanAnnouncer_NotEnoughEnergy"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranNukeReady" To="HornerHanAnnouncer_NukeReady"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildTooFarFromBuildPowerSource" To="HornerHanAnnouncer_PlaceInPowerField"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossPylonUnderAttack" To="HornerHanAnnouncer_PylonUnderAttack"/>
+        <!-- only works in void -->
+        <ReplacementArray Catalog="Sound" From="QueenReady" To="HornerHanAnnouncer_QueenDeployed"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossResearchComplete" To="HornerHanAnnouncer_ResearchComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranSalvageComplete" To="HornerHanAnnouncer_SalvageComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranThorRepairComplete" To="HornerHanAnnouncer_ThorRepaired"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergCreepTumorUnderAttack" To="HornerHanAnnouncer_TumorUnderAttack"/>
+        <!-- only works in void -->
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossUpgradeComplete" To="HornerHanAnnouncer_UpgradeComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossWarpTrainComplete" To="HornerHanAnnouncer_WarpInComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossEconomyUnderAttack" To="HornerHanAnnouncer_WorkersUnderAttackProtoss"/>
+    </CRewardVoicePack>
+    <CRewardVoicePack id="VoicePackTerranHornerHan" parent="VOICEPACKTERRAN">
+        <License value="SC2HornerHanVoicePack"/>
+        <LargeImage value="Assets/Textures/SC2_UI_Collection_Announcers_Thumb_HanandHorner.dds"/>
+        <VoicePack value="HornerHan"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranAddOnComplete" To="HornerHanAnnouncer_AddOnComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranAddOnComplete_Terr" To="HornerHanAnnouncer_AddOnComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranAllyBaseUnderAttack" To="HornerHanAnnouncer_AllyBaseUnderAttack"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranAllyUnderAttack" To="HornerHanAnnouncer_AllyUnderAttack"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranUnacceptableLandingZone" To="HornerHanAnnouncer_BadLZ"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranBaseUnderAttack" To="HornerHanAnnouncer_BaseUnderAttack"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranBuildError" To="HornerHanAnnouncer_BuildError"/>
+        <ReplacementArray Catalog="Sound" From="SCV_CantBuildAlert" To="HornerHanAnnouncer_BuildError"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildLocationInvalid" To="HornerHanAnnouncer_BuildError"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCouldntReachTarget_Terr" To="HornerHanAnnouncer_BuildError"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildTooCloseToResources" To="HornerHanAnnouncer_BuildError"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranCalldownLaunch" To="HornerHanAnnouncer_CalldownLaunch"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranCommandCenterUpgradeComplete" To="HornerHanAnnouncer_CommandCenterUpgraded"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranConstructionInterrupted" To="HornerHanAnnouncer_ConstructInterrupt"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranForcesUnderAttack" To="HornerHanAnnouncer_ForcesUnderAttack"/>
+        <ReplacementArray Catalog="Sound" From="Alert_GamePaused_Terr" To="HornerHanAnnouncer_GamePaused"/>
+        <ReplacementArray Catalog="Sound" From="Alert_GameResumed_Terr" To="HornerHanAnnouncer_GameResumed"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranVespeneGeyserExhausted" To="HornerHanAnnouncer_GeyserExhausted"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantLandLocationInvalid" To="HornerHanAnnouncer_LandingInterrupt"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantLandTooCloseToResources" To="HornerHanAnnouncer_LandingInterrupt"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdFoodUsageImpossible" To="HornerHanAnnouncer_MaxSupply"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranMineralsDepleted" To="HornerHanAnnouncer_MineralsDepleted"/>
+        <ReplacementArray Catalog="Sound" From="Alert_GameStart" To="HornerHanAnnouncer_StartGame"/>
+        <ReplacementArray Catalog="Sound" From="Alert_Victory" To="HornerHanAnnouncer_EndGame"/>
+        <ReplacementArray Catalog="Sound" From="Alert_Defeat" To="HornerHanAnnouncer_GGLose"/>
+        <!-- doesnt work, neutral minerals? -->
+        <!-- Mule_Ready is robot bleep bloops from the Mule, not dialog from the Announcer -->
+        <!-- <ReplacementArray Catalog="Sound" From="Mule_Ready" To="KerriganA_MULEDeployed"/> -->
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildTooFarFromCreepSource" To="HornerHanAnnouncer_NeedCreep"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildOnThat" To="HornerHanAnnouncer_NeedGeyser"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdNotEnoughFood" To="HornerHanAnnouncer_NeedMoreFood"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdNotEnoughVespene" To="HornerHanAnnouncer_NeedMoreGas"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdNotEnoughMinerals" To="HornerHanAnnouncer_NeedMoreMinerals"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdNotEnoughEnergy" To="HornerHanAnnouncer_NotEnoughEnergy"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranNukeReady" To="HornerHanAnnouncer_NukeReady"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildTooFarFromBuildPowerSource" To="HornerHanAnnouncer_PlaceInPowerField"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossPylonUnderAttack" To="HornerHanAnnouncer_PylonUnderAttack"/>
+        <!-- only works in void -->
+        <ReplacementArray Catalog="Sound" From="QueenReady" To="HornerHanAnnouncer_QueenDeployed"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranResearchComplete" To="HornerHanAnnouncer_ResearchComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranSalvageComplete" To="HornerHanAnnouncer_SalvageComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranThorRepairComplete" To="HornerHanAnnouncer_ThorRepaired"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergCreepTumorUnderAttack" To="HornerHanAnnouncer_TumorUnderAttack"/>
+        <!-- only works in void -->
+        <ReplacementArray Catalog="Sound" From="Alert_TerranUpgradeComplete" To="HornerHanAnnouncer_UpgradeComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranWarpTrainComplete" To="HornerHanAnnouncer_WarpInComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranEconomyUnderAttack" To="HornerHanAnnouncer_WorkersUnderAttack"/>
+    </CRewardVoicePack>
+    <CRewardVoicePack id="VoicePackZergHornerHan" parent="VOICEPACKZERG">
+        <License value="SC2HornerHanVoicePack"/>
+        <LargeImage value="Assets/Textures/SC2_UI_Collection_Announcers_Thumb_HanandHorner.dds"/>
+        <VoicePack value="HornerHan"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranAddOnComplete" To="HornerHanAnnouncer_AddOnComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranAddOnComplete_Zerg" To="HornerHanAnnouncer_AddOnComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergAllyBaseUnderAttack" To="HornerHanAnnouncer_AllyBaseUnderAttack"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergAllyUnderAttack" To="HornerHanAnnouncer_AllyUnderAttack"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranUnacceptableLandingZone" To="HornerHanAnnouncer_BadLZ"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergBaseUnderAttack" To="HornerHanAnnouncer_BaseUnderAttack"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergBuildError" To="HornerHanAnnouncer_BuildErrorZerg"/>
+        <ReplacementArray Catalog="Sound" From="SCV_CantBuildAlert" To="HornerHanAnnouncer_BuildErrorZerg"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildLocationInvalid_Zerg" To="HornerHanAnnouncer_BuildErrorZerg"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCouldntReachTarget_Zerg" To="HornerHanAnnouncer_BuildErrorZerg"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildTooCloseToResources_Zerg" To="HornerHanAnnouncer_BuildErrorZerg"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergCalldownLaunch" To="HornerHanAnnouncer_CalldownLaunch"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranCommandCenterUpgradeComplete" To="HornerHanAnnouncer_CommandCenterUpgraded"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranConstructionInterrupted" To="HornerHanAnnouncer_ConstructInterrupt"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergReasearchComplete" To="HornerHanAnnouncer_EvolutionComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergForcesUnderAttack" To="HornerHanAnnouncer_ForcesUnderAttack"/>
+        <ReplacementArray Catalog="Sound" From="Alert_GamePaused_Zerg" To="HornerHanAnnouncer_GamePaused"/>
+        <ReplacementArray Catalog="Sound" From="Alert_GameResumed_Zerg" To="HornerHanAnnouncer_GameResumed"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergVespeneGeyserExhausted" To="HornerHanAnnouncer_GeyserExhausted"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantLandLocationInvalid" To="HornerHanAnnouncer_LandingInterrupt"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantLandLocationInvalid_Zerg" To="HornerHanAnnouncer_LandingInterrupt"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantLandTooCloseToResources" To="HornerHanAnnouncer_LandingInterrupt"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdFoodUsageImpossible_Zerg" To="HornerHanAnnouncer_MaxSupply"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergMineralsDepleted" To="HornerHanAnnouncer_MineralsDepleted"/>
+        <ReplacementArray Catalog="Sound" From="Alert_GameStart" To="HornerHanAnnouncer_StartGame"/>
+        <ReplacementArray Catalog="Sound" From="Alert_Victory" To="HornerHanAnnouncer_EndGame"/>
+        <ReplacementArray Catalog="Sound" From="Alert_Defeat" To="HornerHanAnnouncer_GGLose"/>
+        <!-- doesnt work, neutral minerals? still gets race... -->
+        <!-- Mule_Ready is robot bleep bloops from the Mule, not dialog from the Announcer -->
+        <!-- <ReplacementArray Catalog="Sound" From="Mule_Ready" To="KerriganA_MULEDeployed"/> -->
+        <ReplacementArray Catalog="Sound" From="Alert_ZergUpgradeComplete" To="HornerHanAnnouncer_MutationComplete"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildTooFarFromCreepSource" To="HornerHanAnnouncer_NeedCreep"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildOnThat_Zerg" To="HornerHanAnnouncer_NeedGeyser"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdNotEnoughFood_Zerg" To="HornerHanAnnouncer_NeedMoreFoodZerg"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdNotEnoughVespene_Zerg" To="HornerHanAnnouncer_NeedMoreGas"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdNotEnoughMinerals_Zerg" To="HornerHanAnnouncer_NeedMoreMinerals"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdNotEnoughEnergy_Zerg" To="HornerHanAnnouncer_NotEnoughEnergy"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranNukeReady" To="HornerHanAnnouncer_NukeReady"/>
+        <ReplacementArray Catalog="Sound" From="e_cmdCantBuildTooFarFromBuildPowerSource" To="HornerHanAnnouncer_PlaceInPowerField"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ProtossPylonUnderAttack" To="HornerHanAnnouncer_PylonUnderAttack"/>
+        <!-- only works in void -->
+        <ReplacementArray Catalog="Sound" From="QueenReady" To="HornerHanAnnouncer_QueenDeployed"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranSalvageComplete" To="HornerHanAnnouncer_SalvageComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranThorRepairComplete" To="HornerHanAnnouncer_ThorRepaired"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergCreepTumorUnderAttack" To="HornerHanAnnouncer_TumorUnderAttack"/>
+        <!-- only works in void -->
+        <ReplacementArray Catalog="Sound" From="Alert_ZergWarpTrainComplete" To="HornerHanAnnouncer_WarpInComplete"/>
+        <ReplacementArray Catalog="Sound" From="Alert_ZergEconomyUnderAttack" To="HornerHanAnnouncer_WorkersUnderAttackZerg"/>
+        <ReplacementArray Catalog="Sound" From="Alert_TerranEconomyUnderAttack" To="HornerHanAnnouncer_WorkersUnderAttack"/>
+    </CRewardVoicePack>
+    <CRewardConsoleSkin id="ConsoleSkinTerranDefault" parent="TERRANCONSOLESKIN">
+        <ConsoleSkin value="TerranDefault"/>
+        <Flags index="Allowed" value="1"/>
+        <Flags index="Default" value="1"/>
+    </CRewardConsoleSkin>
+    <CRewardConsoleSkin id="ConsoleSkinZergDefault" parent="ZERGCONSOLESKIN">
+        <ConsoleSkin value="ZergDefault"/>
+        <Flags index="Allowed" value="1"/>
+        <Flags index="Default" value="1"/>
+    </CRewardConsoleSkin>
+    <CRewardConsoleSkin id="ConsoleSkinProtossDefault" parent="PROTOSSCONSOLESKIN">
+        <ConsoleSkin value="ProtossDefault"/>
         <Flags index="Allowed" value="1"/>
         <Flags index="Default" value="1"/>
     </CRewardConsoleSkin>
@@ -5539,6 +5725,16 @@
         <Skin value="GhostNova"/>
         <Race value="Terr"/>
     </CRewardModel>
+    <CRewardModel id="GhostEidolon" parent="MODELDEFAULT">
+        <Category File="GhostSkin" Tag="TGht"/>
+        <Flags index="Cloaked" value="1"/>
+        <IconFile value="$Icons11"/>
+        <IconCols value="9"/>
+        <IconRows value="9"/>
+        <IconSlot value="20"/>
+        <Skin value="GhostEidolon"/>
+        <Race value="Terr"/>
+    </CRewardModel>
     <CRewardModel id="SCVSkinOff" parent="MODELDEFAULT">
         <Category File="SCVSkin" Tag="TScv"/>
         <Flags index="Allowed" value="1"/>
@@ -5865,6 +6061,11 @@
         <Skin value="RavagerWebby"/>
         <Race value="Zerg"/>
     </CRewardModel>
+    <CRewardModel id="RavagerPrimal" parent="MODELDEFAULT">
+        <Category File="RavagerSkin" Tag="ZRvg"/>
+        <Race value="Zerg"/>
+        <Skin value="RavagerPrimal"/>
+    </CRewardModel>
     <CRewardModel id="UltraliskCEOff" parent="MODELDEFAULT">
         <Category File="UltraliskSkin" Tag="ZUlt"/>
         <Flags index="Allowed" value="1"/>
@@ -5902,6 +6103,11 @@
         <Skin value="QueenWebby"/>
         <Race value="Zerg"/>
     </CRewardModel>
+    <CRewardModel id="QueenPrimal" parent="MODELDEFAULT">
+        <Category File="QueenSkin" Tag="ZQun"/>
+        <Race value="Zerg"/>
+        <Skin value="QueenPrimal"/>
+    </CRewardModel>
     <CRewardModel id="InfestorSkinOff" parent="MODELDEFAULT">
         <Category File="InfestorSkin" Tag="ZInf"/>
         <Flags index="Allowed" value="1"/>
@@ -5912,6 +6118,11 @@
     <CRewardModel id="InfestorWebby" parent="MODELDEFAULT">
         <Category File="InfestorSkin" Tag="ZInf"/>
         <Skin value="InfestorWebby"/>
+        <Race value="Zerg"/>
+    </CRewardModel>
+    <CRewardModel id="InfestorPrimal" parent="MODELDEFAULT">
+        <Category File="InfestorSkin" Tag="ZInf"/>
+        <Skin value="InfestorPrimal"/>
         <Race value="Zerg"/>
     </CRewardModel>
     <CRewardModel id="SwarmHostSkinOff" parent="MODELDEFAULT">
@@ -5962,6 +6173,11 @@
         <Skin value="ViperWebby"/>
         <Race value="Zerg"/>
     </CRewardModel>
+    <CRewardModel id="ViperPrimal" parent="MODELDEFAULT">
+        <Category File="ViperSkin" Tag="ZVpr"/>
+        <Race value="Zerg"/>
+        <Skin value="ViperPrimal"/>
+    </CRewardModel>
     <CRewardModel id="OverlordSkinOff" parent="MODELDEFAULT">
         <Category File="OverlordSkin" Tag="ZOvl"/>
         <Flags index="Allowed" value="1"/>
@@ -5987,6 +6203,11 @@
         <Skin value="OverlordWebby"/>
         <Race value="Zerg"/>
     </CRewardModel>
+    <CRewardModel id="OverlordPrimal" parent="MODELDEFAULT">
+        <Category File="OverlordSkin" Tag="ZOvl"/>
+        <Race value="Zerg"/>
+        <Skin value="OverlordPrimal"/>
+    </CRewardModel>
     <CRewardModel id="OverseerSkinOff" parent="MODELDEFAULT">
         <Category File="OverseerSkin" Tag="ZOvs"/>
         <Flags index="Allowed" value="1"/>
@@ -5998,6 +6219,11 @@
         <Category File="OverseerSkin" Tag="ZOvs"/>
         <Skin value="OverSeerWebby"/>
         <Race value="Zerg"/>
+    </CRewardModel>
+    <CRewardModel id="OverseerPrimal" parent="MODELDEFAULT">
+        <Category File="OverseerSkin" Tag="ZOvs"/>
+        <Race value="Zerg"/>
+        <Skin value="OverseerPrimal"/>
     </CRewardModel>
     <CRewardModel id="ProbeSkinOff" parent="MODELDEFAULT">
         <Category File="ProbeSkin" Tag="PPrb"/>
@@ -6109,6 +6335,11 @@
     <CRewardModel id="DarkTemplarTaldarim" parent="MODELDEFAULT">
         <Category File="DarkTemplarSkin" Tag="PDTm"/>
         <Skin value="DarkTemplarTaldarim"/>
+        <Race value="Prot"/>
+    </CRewardModel>
+    <CRewardModel id="DarkTemplarPurifier" parent="MODELDEFAULT">
+        <Category File="DarkTemplarSkin" Tag="PDTm"/>
+        <Skin value="DarkTemplarPurifier"/>
         <Race value="Prot"/>
     </CRewardModel>
     <CRewardModel id="StalkerSkinOff" parent="MODELDEFAULT">
@@ -8010,7 +8241,7 @@
         <IconSlot value="15"/>
     </CRewardIcon>
     <CRewardTrophy id="Trophy_Reward" parent="TROPHY">
-        <Trophy value="MutaliskTrophy"/>
+        <Trophy value="SiegeTankTrophy"/>
     </CRewardTrophy>
     <CRewardEmoticon id="Emoticon_Skull" parent="EMOTICON">
         <Emoticon value="skull"/>
@@ -8045,6 +8276,7 @@
     <CRewardIcon id="CommanderStukov" parent="BattlePayRewardParent"/>
     <CRewardIcon id="CommanderFenix" parent="BattlePayRewardParent"/>
     <CRewardIcon id="CommanderDehaka" parent="BattlePayRewardParent"/>
+    <CRewardIcon id="CommanderHorner" parent="BattlePayRewardParent"/>
     <!-- BlizzCon 2015 Portrait -->
     <CRewardIcon id="FeatOfStrength_BlizzCon_2015" parent="ICONDEFAULT">
         <IconFile value="$Icons10"/>
@@ -9018,6 +9250,19 @@
     <CRewardEmoticon id="Emoticon_DehakaClaw" parent="EMOTICON">
         <IconSlot value="69"/>
         <Emoticon value="dehakaclaw"/>
+    </CRewardEmoticon>
+    <!-- Commander Horner Rewards -->
+    <CRewardIcon id="FeatOfStrength_CoopHorner" parent="ICONDEFAULT">
+        <IconFile value="$Achievements15"/>
+        <IconSlot value="63"/>
+    </CRewardIcon>
+    <CRewardEmoticon id="Emoticon_Smooch" parent="EMOTICON">
+        <Emoticon value="smooch"/>
+        <IconSlot value="81"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_BrokenHeart" parent="EMOTICON">
+        <Emoticon value="smooch"/>
+        <IconSlot value="82"/>
     </CRewardEmoticon>
     <!-- Achievement Icons And Portraits (Mod Maps) -->
     <!-- Aiur Chef -->
@@ -11139,6 +11384,18 @@
         <IconFile value="$Achievements15"/>
         <IconSlot value="29"/>
     </CRewardIcon>
+    <CRewardIcon id="CoopHornerLevel5" parent="ICONDEFAULT">
+        <IconFile value="$Achievements15"/>
+        <IconSlot value="53"/>
+    </CRewardIcon>
+    <CRewardIcon id="CoopHornerLevel10" parent="ICONDEFAULT">
+        <IconFile value="$Achievements15"/>
+        <IconSlot value="54"/>
+    </CRewardIcon>
+    <CRewardIcon id="CoopHornerLevel15" parent="ICONDEFAULT">
+        <IconFile value="$Achievements15"/>
+        <IconSlot value="55"/>
+    </CRewardIcon>
     <CRewardIcon id="CoopCommanderDifficultyCasual10" parent="ICONDEFAULT">
         <IconFile value="$Achievements12"/>
         <IconSlot value="21"/>
@@ -11541,6 +11798,26 @@
     <CRewardIcon id="CommanderDehakaCommanderDehaka" parent="ICONDEFAULT">
         <IconFile value="$Achievements15"/>
         <IconSlot value="21"/>
+    </CRewardIcon>
+    <CRewardIcon id="CommanderHornerSupply" parent="ICONDEFAULT">
+        <IconFile value="$Achievements15"/>
+        <IconSlot value="56"/>
+    </CRewardIcon>
+    <CRewardIcon id="CommanderHornerMagMines" parent="ICONDEFAULT">
+        <IconFile value="$Achievements15"/>
+        <IconSlot value="57"/>
+    </CRewardIcon>
+    <CRewardIcon id="CommanderHornerUltDamage" parent="ICONDEFAULT">
+        <IconFile value="$Achievements15"/>
+        <IconSlot value="58"/>
+    </CRewardIcon>
+    <CRewardIcon id="CommanderHornerBombDamage" parent="ICONDEFAULT">
+        <IconFile value="$Achievements15"/>
+        <IconSlot value="59"/>
+    </CRewardIcon>
+    <CRewardIcon id="CommanderHornerCommanderHorner" parent="ICONDEFAULT">
+        <IconFile value="$Achievements15"/>
+        <IconSlot value="60"/>
     </CRewardIcon>
     <CRewardIcon id="ProtossCampaignDifficultyCasual" parent="ICONDEFAULT">
         <IconFile value="$Achievements13"/>
@@ -12097,6 +12374,10 @@
         <IconFile value="$Portraits9"/>
         <IconSlot value="34"/>
     </CRewardPortrait>
+    <CRewardPortrait id="CommanderHornerCommanderHorner_Portrait" parent="PORTRAITTERRAN">
+        <IconFile value="$Portraits11"/>
+        <IconSlot value="3"/>
+    </CRewardPortrait>
     <CRewardPortrait id="CoopCommanderLevelUp_Portrait" parent="PORTRAITPROTOSS">
         <IconFile value="$Portraits7"/>
         <IconSlot value="20"/>
@@ -12464,7 +12745,6 @@
         <IconFile value="$Portraits10"/>
         <IconSlot value="7"/>
         <Flags index="Cloaked" value="1"/>
-        <Flags index="Hidden" value="1"/>
     </CRewardPortrait>
     <CRewardPortrait id="Portrait_WarChest_Portrait08" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
@@ -12474,7 +12754,6 @@
         <IconFile value="$Portraits10"/>
         <IconSlot value="9"/>
         <Flags index="Cloaked" value="1"/>
-        <Flags index="Hidden" value="1"/>
     </CRewardPortrait>
     <CRewardPortrait id="Portrait_WarChest_Portrait10" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
@@ -12484,7 +12763,6 @@
         <IconFile value="$Portraits10"/>
         <IconSlot value="11"/>
         <Flags index="Cloaked" value="1"/>
-        <Flags index="Hidden" value="1"/>
     </CRewardPortrait>
     <!-- War Chest BlizzCon 2017 Phase 2 Reward Portraits -->
     <CRewardPortrait id="Portrait_WarChest1_Phase2_00" parent="PORTRAITDEFAULT">
@@ -12567,6 +12845,46 @@
     <CRewardPortrait id="Portrait_WarChest1_Winner_Ty" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
         <IconSlot value="28"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest1_Winner_Dark" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits10"/>
+        <IconSlot value="29"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest1_Winner_Hero" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits10"/>
+        <IconSlot value="30"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest1_Winner_Kelazhur" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits10"/>
+        <IconSlot value="31"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest1_Winner_Nerchio" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits10"/>
+        <IconSlot value="32"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest1_Winner_Rogue" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits10"/>
+        <IconSlot value="33"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest1_Winner_Serral" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits10"/>
+        <IconSlot value="34"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest1_Winner_Snute" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits10"/>
+        <IconSlot value="35"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest1_Winner_Soo" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits11"/>
+        <IconSlot value="0"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest1_Winner_Special" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits11"/>
+        <IconSlot value="1"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest1_Winner_True" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits11"/>
+        <IconSlot value="2"/>
     </CRewardPortrait>
     <!-- WarChest Season 1 Decals -->
     <CRewardDecal id="Decal_WarChestSeason1_Terran" parent="DECALTERRAN">
@@ -12932,6 +13250,14 @@
         <IconFile value="$Achievements15"/>
         <IconSlot value="52"/>
     </CRewardIcon>
+    <CRewardIcon id="FeatOfStrength_Warchest1_WinnersPt2" parent="ICONDEFAULT">
+        <IconFile value="$Achievements15"/>
+        <IconSlot value="61"/>
+    </CRewardIcon>
+    <CRewardIcon id="FeatOfStrength_VeteranPlayer" parent="ICONDEFAULT">
+        <IconFile value="$Achievements15"/>
+        <IconSlot value="62"/>
+    </CRewardIcon>
     <!-- Ascension achievements -->
     <CRewardIcon id="Coop_AscensionLevel_91" parent="ICONDEFAULT">
         <IconFile value="$Achievements15"/>
@@ -13012,5 +13338,67 @@
     <CRewardIcon id="Coop_AscensionLevel_1000" parent="ICONDEFAULT">
         <IconFile value="$Achievements15"/>
         <IconSlot value="49"/>
+    </CRewardIcon>
+    <!-- Junker Skins -->
+    <CRewardModel id="SCVJunkerMM" parent="MODELDEFAULT">
+        <Category File="SCVSkin" Tag="TScv"/>
+        <Skin value="SCVJunker"/>
+        <Race value="Terr"/>
+    </CRewardModel>
+    <CRewardModel id="MarineJunker" parent="MODELDEFAULT">
+        <Category File="MarineSkin" Tag="TMar"/>
+        <Skin value="MarineJunker"/>
+        <Race value="Terr"/>
+    </CRewardModel>
+    <CRewardModel id="MarauderJunker" parent="MODELDEFAULT">
+        <Category File="MarauderSkin" Tag="TMrd"/>
+        <Race value="Terr"/>
+        <Skin value="MarauderJunker"/>
+    </CRewardModel>
+    <CRewardModel id="ReaperJunker" parent="MODELDEFAULT">
+        <Category File="ReaperSkin" Tag="TRpr"/>
+        <Skin value="ReaperJunker"/>
+        <Race value="Terr"/>
+    </CRewardModel>
+    <CRewardModel id="GhostJunker" parent="MODELDEFAULT">
+        <Category File="GhostSkin" Tag="TGht"/>
+        <Skin value="GhostJunker"/>
+        <Race value="Terr"/>
+    </CRewardModel>
+    <CRewardModel id="HellionJunkerMM" parent="MODELDEFAULT">
+        <Category File="HellionSkin" Tag="THel"/>
+        <Race value="Terr"/>
+        <Skin value="HellionJunker"/>
+    </CRewardModel>
+    <CRewardModel id="WidowMineJunker" parent="MODELDEFAULT">
+        <Category File="WidowMineSkin" Tag="TWid"/>
+        <Skin value="WidowMineJunker"/>
+        <Race value="Terr"/>
+    </CRewardModel>
+    <CRewardModel id="SiegeTankJunker" parent="MODELDEFAULT">
+        <Category File="SiegeTankSkin" Tag="TTnk"/>
+        <Skin value="SiegeTankJunker"/>
+        <Race value="Terr"/>
+    </CRewardModel>
+    <CRewardModel id="VikingJunker" parent="MODELDEFAULT">
+        <Category File="VikingSkin" Tag="TVik"/>
+        <Skin value="VikingJunker"/>
+        <Race value="Terr"/>
+    </CRewardModel>
+    <CRewardModel id="RavenJunker" parent="MODELDEFAULT">
+        <Category File="RavenSkin" Tag="TRvn"/>
+        <Skin value="RavenJunker"/>
+        <Race value="Terr"/>
+    </CRewardModel>
+    <CRewardModel id="BattlecruiserJunker" parent="MODELDEFAULT">
+        <Category File="BattlecruiserSkin" Tag="TBat"/>
+        <Skin value="BattlecruiserJunker"/>
+        <Race value="Terr"/>
+    </CRewardModel>
+    <!-- Free 2 Play Multiplayer License -->
+    <CRewardIcon id="F2PMultiplayerLicense" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
     </CRewardIcon>
 </Catalog>

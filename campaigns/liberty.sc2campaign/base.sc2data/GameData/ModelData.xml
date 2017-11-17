@@ -14335,11 +14335,6 @@
         <Model value="Assets\Effects\Terran\ReaperJumpLandDown\ReaperJumpLandDown.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
-    <CModel id="D8ChargeWeapon" parent="MissileFX">
-        <Occlusion value="Show"/>
-        <Model value="Assets\Effects\Terran\MagneticMineMissile\MagneticMineMissile.m3"/>
-        <EditorCategories value="Race:Terran"/>
-    </CModel>
     <CModel id="D8Charge" parent="Unit" Race="Terran">
         <SelectionLayer value="3"/>
         <Model value="Assets\Units\Terran\MagneticMine\MagneticMine.m3"/>
@@ -14839,10 +14834,6 @@
         <EditorCategories value="Race:Protoss"/>
     </CModel>
     <CModel id="ScoutAirRightAttackImpact" parent="ScoutAirLeftAttackImpact"/>
-    <CModel id="SporeCrawlerWeapon" parent="MissileFX">
-        <Model value="Assets\Effects\Zerg\SporeColonyMissile\SporeColonyMissile.m3"/>
-        <EditorCategories value="Race:Zerg"/>
-    </CModel>
     <CModel id="MercHavenChick" parent="Building" Race="Terran">
         <Model value="Assets\Effects\Terran\Holo_Stripper\Holo_Stripper.m3"/>
         <ScaleMax value="0.800000,0.800000,0.800000"/>

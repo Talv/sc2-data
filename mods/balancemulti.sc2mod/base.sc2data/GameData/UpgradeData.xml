@@ -34,7 +34,7 @@
     <CUpgrade id="ChitinousPlating"/>
     <CUpgrade id="RewardDanceGhost">
         <EffectArray Operation="Set" Reference="Unit,GhostAlternate,TauntDuration[Dance]" Value="5"/>
-        <EffectArray Operation="Set" Reference="Unit,GhostNovaternate,TauntDuration[Dance]" Value="5"/>
+        <EffectArray Operation="Set" Reference="Unit,GhostNova,TauntDuration[Dance]" Value="5"/>
         <AffectedUnitArray value="GhostAlternate"/>
         <AffectedUnitArray value="GhostNova"/>
     </CUpgrade>
@@ -531,7 +531,7 @@
         <Icon value="Assets\Textures\btn-ability-protoss-stealth-blink.dds"/>
         <Alert value="ResearchComplete"/>
         <Race value="Prot"/>
-        <ScoreAmount value="300"/>
+        <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
         <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
         <AffectedUnitArray value="DarkTemplar"/>
@@ -607,10 +607,10 @@
         <ScoreAmount value="300"/>
         <ScoreResult value="BuildOrder"/>
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
-        <EffectArray Operation="Subtract" Reference="Abil,AssaultMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="1.340000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,AssaultMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="1.010000"/>
         <EffectArray Operation="Subtract" Reference="Abil,AssaultMode,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.533000"/>
         <EffectArray Operation="Subtract" Reference="Abil,AssaultMode,InfoArray[0].SectionArray[Mover].DurationArray[Duration]" Value="0.200000"/>
-        <EffectArray Operation="Subtract" Reference="Abil,FighterMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="1.333000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,FighterMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="1.000000"/>
         <EffectArray Operation="Subtract" Reference="Abil,FighterMode,InfoArray[0].SectionArray[Collide].DurationArray[Delay]" Value="1.500000"/>
         <EffectArray Operation="Subtract" Reference="Abil,AssaultMode,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="1.340000"/>
         <EffectArray Operation="Subtract" Reference="Abil,FighterMode,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.600000"/>

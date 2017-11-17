@@ -583,7 +583,7 @@
     <CAbilMorph id="MorphToHellion">
         <AbilSetId value="HellionMode"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToHellion">
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToHellion" Requirements="HaveArmory">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <Flags index="IgnoreFacing" value="1"/>
@@ -737,7 +737,7 @@
     <CAbilMorph id="MorphToHellionTank">
         <AbilSetId value="TankMode"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="HellionTank">
+        <CmdButtonArray index="Execute" DefaultButtonFace="HellionTank" Requirements="HaveArmory">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <Flags index="IgnoreFacing" value="1"/>

@@ -169,7 +169,6 @@
         <SourceKey value="Default"/>
         <ValidateMin value="0"/>
         <TargetLocationType value="UnitOrPoint"/>
-        <SourceFailBackValue value="0"/>
     </CEffectUserData>
     <CEffectEnumArea id="taunt">
         <AreaArray Radius="4" Effect="tauntb"/>

@@ -32,7 +32,6 @@
         <AlertIcon value="Assets\Textures\btn-ability-protoss-invulnerabilityshield.dds"/>
         <EditorCategories value="Race:Protoss"/>
     </CButton>
-
     <CButton id="PermanentlyCloakedStasis">
         <Icon value="Assets\Textures\btn-upgrade-vorazun-stasiswardpermanentlycloaked.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-vorazun-stasiswardpermanentlycloaked.dds"/>
@@ -230,7 +229,6 @@
         <Icon value="Assets\Textures\Btn-unit-protoss-disruptor.dds"/>
         <AlertIcon value="Assets\Textures\Btn-unit-protoss-disruptor.dds"/>
     </CButton>
-
     <CButton id="TerranVehicleAndShipWeaponsLevel1">
         <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>

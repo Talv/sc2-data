@@ -46,8 +46,6 @@ Abil/Name/MorphToCollapsibleRockTowerDebrisRampRight=Morph To Collapsible Rock T
 Abil/Name/MorphToCollapsibleTerranTowerDebris=Morph To Collapsible Terran Tower Debris
 Abil/Name/MorphToCollapsibleTerranTowerDebrisRampLeft=Morph To Collapsible Terran Tower Debris (Ramp Left)
 Abil/Name/MorphToCollapsibleTerranTowerDebrisRampRight=Morph To Collapsible Terran Tower Debris (Ramp Right)
-Abil/Name/MorphToHellion=Morph To Hellion
-Abil/Name/MorphToHellionTank=Morph To Hellbat
 Abil/Name/MorphToMothership=Morph To Mothership
 Abil/Name/MorphToSwarmHostBurrowedMP=Burrow
 Abil/Name/MorphToSwarmHostMP=Unburrow
@@ -572,6 +570,8 @@ Button/Tooltip/CyberneticsCore=Contains weapon and armor upgrades for Protoss ai
 Button/Tooltip/CycloneMissiles=Activate the Cyclone Missiles weapon.
 Button/Tooltip/DebrisRampLeft=A barrier that can be destroyed to allow access to new areas.
 Button/Tooltip/DebrisRampRight=A barrier that can be destroyed to allow access to new areas.
+Button/Tooltip/DestructibleCityDebrisHugeDiagonalBLUR=Barrier that can be destroyed to allow access to new areas.
+Button/Tooltip/DestructibleCityDebrisHugeDiagonalULBR=Barrier that can be destroyed to allow access to new areas.
 Button/Tooltip/DestructibleIce6x6=Barrier that can be destroyed to prevent access through an area.
 Button/Tooltip/DestructibleStatue4x4=Barrier that can be destroyed to prevent access through an area.
 Button/Tooltip/DisableBuildingAttack=Prevents Banelings from automatically targeting structures. Banelings can still be explicitly ordered to attack structures.<n/><n/>Banelings deal <d ref="Effect,VolatileBurstU2,Amount"/> damage to structures.

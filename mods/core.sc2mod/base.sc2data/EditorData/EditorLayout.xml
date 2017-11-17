@@ -18438,6 +18438,11 @@
         <pos>5,194</pos>
         <text>EDSTR_PREFS_TEXTEDITSPELLCHECK</text>
     </control>
+
+    <control label="DarkEditorCheck">
+        <pos>5, 216</pos>
+        <text>EDSTR_PREFS_DARKEDITORCHECK</text>
+    </control>
 </window>
 
 <!-- Preferences - Startup -->
@@ -26014,13 +26019,6 @@
     <value label="PaneMinSize">300</value>
 
   <control label="XMLEdit">
-      <pos>2,2</pos>
-      <size>2,2</size>
-      <autoResizeX/>
-      <autoResizeY/>
-    </control>
-
-    <control label="FrameView">
       <pos>2,2</pos>
       <size>2,2</size>
       <autoResizeX/>

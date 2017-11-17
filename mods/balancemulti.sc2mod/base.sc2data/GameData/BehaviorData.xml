@@ -361,7 +361,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="DisruptorAnimationController">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
-        <Duration value="29.9"/>
+        <Duration value="19.9"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="TempestDisruptionBlastStunBehavior">
@@ -416,9 +416,10 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="RavenScramblerMissile">
         <Alignment value="Negative"/>
-        <InfoIcon value="Assets\Textures\btn-tips-terran-psishield.dds"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-interferencematrix.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Duration value="8"/>
+        <ExpireEffect value="ImmortalBarrierCDFix"/>
         <Modification>
             <ModifyFlags index="DisableAbils" value="1"/>
             <ModifyFlags index="EnableMove" value="1"/>
@@ -426,7 +427,6 @@
             <StateFlags index="SuppressCloak" value="1"/>
             <BehaviorLinkDisableArray value="ImmortalBarrierSupressed"/>
         </Modification>
-        <ExpireEffect value="ImmortalBarrierCDFix"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="RavenRepairDroneTimedLife" parent="TimedLife">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
@@ -450,12 +450,12 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-terran-ignorearmor.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Duration value="30"/>
-        <Modification LifeArmorBonus="-3"/>
         <DisplayDuration index="Self" value="1"/>
         <DisplayDuration index="Ally" value="1"/>
         <DisplayDuration index="Neutral" value="1"/>
         <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="30"/>
+        <Modification LifeArmorBonus="-3"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="ChronoBoostEnergyCost">
         <Alignment value="Positive"/>
@@ -486,6 +486,8 @@
         </Modification>
         <RemoveValidatorArray value="CasterHasNexusMassRecallCasting"/>
         <FinalEffect value="NexusMassRecallCastingRB"/>
+        <Period value="4.6"/>
+        <PeriodicEffect value="NexusMassRecallPreTeleportDummy"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="NexusMassRecallCasting">
         <InfoFlags index="Hidden" value="1"/>
@@ -555,6 +557,7 @@
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
         <FinalEffect value="ParasiticBombAB"/>
         <Duration value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="NexusShieldOvercharge">
         <InfoIcon value="Assets\Textures\btn-upgrade-karax-fortificationbarrier.dds"/>

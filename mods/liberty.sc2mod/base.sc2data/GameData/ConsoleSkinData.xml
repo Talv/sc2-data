@@ -9,16 +9,33 @@
     <CConsoleSkin id="Dflt">
         <Default value="1"/>
         <ReleaseDate value="7/27/2010"/>
-        <RequiredReward value="ConsoleSkinDefault"/>
         <MinimapPanelModel Model="@@UI/ConsoleModelMinimapPanel" Position="-1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
         <InfoPanelModel Model="@@UI/ConsoleModelInfopanel" Position="0.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
         <CommandPanelModel Model="@@UI/ConsoleModelCommandPanel" Position="1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
         <Light value="Console"/>
     </CConsoleSkin>
-    <CConsoleSkin id="TestConsoleSkin">
-        <MinimapPanelModel Model="Assets/UI/Console/Protoss/ConsoleProtoss/ConsoleProtoss_00.m3" Position="-1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
-        <InfoPanelModel Model="Assets/UI/Console/Terran/ConsoleTerran/ConsoleTerran_01.m3" Position="0.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
-        <CommandPanelModel Model="Assets/UI/Console/Zerg/ConsoleZerg/ConsoleZerg_02.m3" Position="1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+    <CConsoleSkin id="TerranDefault">
+        <ReleaseDate value="7/27/2010"/>
+        <RequiredReward value="ConsoleSkinTerranDefault"/>
+        <MinimapPanelModel Model="@@UI/ConsoleModelMinimapPanel" Position="-1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <InfoPanelModel Model="@@UI/ConsoleModelInfopanel" Position="0.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <CommandPanelModel Model="@@UI/ConsoleModelCommandPanel" Position="1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <Light value="Console"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ZergDefault">
+        <ReleaseDate value="7/27/2010"/>
+        <RequiredReward value="ConsoleSkinZergDefault"/>
+        <MinimapPanelModel Model="@@UI/ConsoleModelMinimapPanel" Position="-1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <InfoPanelModel Model="@@UI/ConsoleModelInfopanel" Position="0.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <CommandPanelModel Model="@@UI/ConsoleModelCommandPanel" Position="1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <Light value="Console"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ProtossDefault">
+        <ReleaseDate value="7/27/2010"/>
+        <RequiredReward value="ConsoleSkinProtossDefault"/>
+        <MinimapPanelModel Model="@@UI/ConsoleModelMinimapPanel" Position="-1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <InfoPanelModel Model="@@UI/ConsoleModelInfopanel" Position="0.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <CommandPanelModel Model="@@UI/ConsoleModelCommandPanel" Position="1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
         <Light value="Console"/>
     </CConsoleSkin>
     <CConsoleSkin id="Abathur_ConsoleZerg">
@@ -55,5 +72,12 @@
         <InfoPanelModel Model="Assets/UI/Console/Zerg/Zagara_ConsoleZerg/Zagara_ConsoleZerg_01.m3" Position="0.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
         <CommandPanelModel Model="Assets/UI/Console/Zerg/Zagara_ConsoleZerg/Zagara_ConsoleZerg_02.m3" Position="1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
         <Light value="Console"/>
+    </CConsoleSkin>
+    <CConsoleSkin id="ConsoleTerran_Junker">
+        <ReleaseDate value="1/1/2020"/>
+        <MinimapPanelModel Model="Assets/UI/Console/Terran/ConsoleTerran_Junker/ConsoleTerran_Junker_00.m3" Position="-1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <InfoPanelModel Model="Assets/UI/Console/Terran/ConsoleTerran_Junker/ConsoleTerran_Junker_01.m3" Position="0.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <CommandPanelModel Model="Assets/UI/Console/Terran/ConsoleTerran_Junker/ConsoleTerran_Junker_02.m3" Position="1.000000,-1.000000,0.000000" Scale="1.000000,1.000000,1.000000"/>
+        <Light value="ConsoleTerran_Junker"/>
     </CConsoleSkin>
 </Catalog>

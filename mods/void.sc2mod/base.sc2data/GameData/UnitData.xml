@@ -3122,10 +3122,11 @@
         <KillDisplay value="Never"/>
         <RankDisplay value="Never"/>
         <BehaviorArray Link="OracleStasisTrapCloak"/>
+        <Collide index="Ground" value="1"/>
         <Collide index="Structure" value="1"/>
         <Collide index="ForceField" value="1"/>
         <ShieldRegenDelay value="10"/>
-        <PlacementFootprint value="Footprint1x1CreepNormal"/>
+        <PlacementFootprint value="OracleStasisTrap"/>
         <GlossaryCategory value="Unit/Category/ProtossUnits"/>
         <GlossaryPriority value="250"/>
         <AINotifyEffect value="OracleStasisTrapActivate"/>

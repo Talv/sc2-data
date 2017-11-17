@@ -945,7 +945,6 @@
     <cmd label="AIPasteSpecial">                <key>V</key>                    <mods>CA</mods>     </cmd>
     
     <!-- UI Editor -->
-    <cmd label="UIViewFrame">                   <key>1</key>                    <mods>C</mods>      </cmd>
     <cmd label="UIToggleSyntaxHighlight">       <key>S</key>                    <mods>SA</mods>     </cmd>
     <cmd label="UIFrameAdd">                    <key>M</key>                    <mods>C</mods>      </cmd>
     <cmd label="UIFrameRemove">                 <key>R</key>                    <mods>C</mods>      </cmd>

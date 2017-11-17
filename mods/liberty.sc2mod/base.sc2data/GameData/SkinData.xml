@@ -899,6 +899,25 @@
     <CSkin id="WidowMine" parent="WidowMineBase">
         <DisplayModel value="WidowMine"/>
     </CSkin>
+    <!--Free to play veteran player skin-->
+    <CSkin id="GhostEidolon" parent="GhostBase">
+        <DisplayModel value="Ghost_Eidolon_Collection"/>
+        <ReplacementArray Catalog="Model" From="Ghost" To="Ghost_Eidolon_Collection"/>
+        <ReplacementArray Catalog="Model" From="GhostDeath" To="Ghost_Eidolon_Collection_DeathBlast"/>
+        <ReplacementArray Catalog="Model" From="GhostDeathRagdoll" To="Ghost_Eidolon_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="GhostDeathAcid" To="Ghost_Eidolon_Collection_DeathAcid"/>
+        <ReplacementArray Catalog="Model" From="GhostDeathBlast" To="Ghost_Eidolon_Collection_DeathBlast"/>
+        <ReplacementArray Catalog="Model" From="GhostDeathEviscerate" To="Ghost_Eidolon_Collection_DeathEviscerate"/>
+        <ReplacementArray Catalog="Model" From="GhostDeathFire" To="Ghost_Eidolon_Collection_DeathFire"/>
+        <!-- <ReplacementArray Catalog="Model" From="GhostPortrait" To="Ghost_Junker_Collection_Portrait"/> -->
+        <VariationIcon value="Assets\Textures\btn-unit-collection-ghost-eidolon.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Ghost,Icon" Value="Assets\Textures\btn-unit-collection-ghost-eidolon.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Ghost,AlertIcon" Value="Assets\Textures\btn-unit-collection-ghost-eidolon.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Ghost,UnitIcon" Value="Assets\Textures\btn-unit-collection-ghost-eidolon.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,Ghost,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-ghost.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Ghost,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-ghost.dds"/-->
+        <CollectionDisplayModel value="Ghost_Eidolon_Collection"/>
+    </CSkin>
     <!--Blizzcon17 Skins-->
     <CSkin id="DroneBlizzcon17" parent="DroneBase">
         <DisplayModel value="Blizzcon17_Drone"/>
@@ -947,6 +966,249 @@
         <EffectArray Operation="Set" Reference="Actor,SCV,UnitIcon" Value="Assets\Textures\btn-unit-terran-blizzcon17-scv.dds"/>
         <EffectArray Operation="Set" Reference="Actor,SCV,Wireframe.Image[0]" Value="Assets\Textures\WireFrame-Terran-Blizzcon17-SCV.dds"/>
         <EffectArray Operation="Set" Reference="Actor,SCV,GroupIcon.Image[0]" Value="Assets\Textures\WireFrame-Terran-Blizzcon17-SCV.dds"/>
+    </CSkin>
+    <!--Warchest Skin-->
+    <CSkin id="SCVJunker" parent="SCVBase">
+        <ReplacementArray Catalog="Model" From="SCVPortrait" To="SCV_Junker_Collection_Portrait"/>
+        <ReplacementArray Catalog="Model" From="SCV" To="SCV_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="SCVDeath" To="SCV_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="SCVDeathRagdoll" To="SCV_Junker_Collection_DeathRagdoll"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-scv-junker.dds"/>
+        <DisplayModel value="SCV_Junker_Collection"/>
+        <EffectArray Operation="Set" Reference="Button,SCV,Icon" Value="Assets\Textures\btn-unit-collection-scv-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,SCV,AlertIcon" Value="Assets\Textures\btn-unit-collection-scv-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SCV,UnitIcon" Value="Assets\Textures\btn-unit-collection-scv-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,SCV,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-scv.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SCV,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-scv.dds"/-->
+        <CollectionDisplayModel value="SCV_Junker_Collection"/>
+    </CSkin>
+    <CSkin id="GhostJunker" parent="GhostBase">
+        <DisplayModel value="Ghost_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="Ghost" To="Ghost_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="GhostDeath" To="Ghost_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="GhostDeathRagdoll" To="Ghost_Junker_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="GhostDeathAcid" To="Ghost_Junker_Collection_DeathAcid"/>
+        <ReplacementArray Catalog="Model" From="GhostDeathBlast" To="Ghost_Junker_Collection_DeathBlast"/>
+        <ReplacementArray Catalog="Model" From="GhostDeathEviscerate" To="Ghost_Junker_Collection_DeathEviscerate"/>
+        <ReplacementArray Catalog="Model" From="GhostDeathFire" To="Ghost_Junker_Collection_DeathFire"/>
+        <ReplacementArray Catalog="Model" From="GhostPortrait" To="Ghost_Junker_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-ghost-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Ghost,Icon" Value="Assets\Textures\btn-unit-collection-ghost-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Ghost,AlertIcon" Value="Assets\Textures\btn-unit-collection-ghost-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Ghost,UnitIcon" Value="Assets\Textures\btn-unit-collection-ghost-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,Ghost,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-ghost.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Ghost,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-ghost.dds"/-->
+        <CollectionDisplayModel value="Ghost_Junker_Collection"/>
+    </CSkin>
+    <CSkin id="MarauderJunker" parent="MarauderBase">
+        <DisplayModel value="Marauder_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="Marauder" To="Marauder_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="MarauderDeath" To="Marauder_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="MarauderDeathEviscerate" To="Marauder_Junker_Collection_DeathEviscerate"/>
+        <ReplacementArray Catalog="Model" From="MarauderDeathRagdoll" To="Marauder_Junker_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="MarauderPortrait" To="Marauder_Junker_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-marauder-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Marauder,UnitIcon" Value="Assets\Textures\btn-unit-collection-marauder-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Marauder,Icon" Value="Assets\Textures\btn-unit-collection-marauder-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Marauder,AlertIcon" Value="Assets\Textures\btn-unit-collection-marauder-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,Marauder,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-terran-marauder-collectionskin-deluxe.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Marauder,Wireframe.Image[0]" Value="Assets\Textures\wireframe-terran-marauder-collectionskin-deluxe.dds"/-->
+        <CollectionDisplayModel value="Marauder_Junker_Collection"/>
+    </CSkin>
+    <CSkin id="MarineJunker" parent="MarineBase">
+        <DisplayModel value="Marine_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="Marine" To="Marine_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="MarineDeath" To="Marine_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="MarineDeathAcid" To="Marine_Junker_Collection_DeathAcid"/>
+        <ReplacementArray Catalog="Model" From="MarineDeathBlast" To="Marine_Junker_Collection_DeathBlast"/>
+        <ReplacementArray Catalog="Model" From="MarineDeathEviscerate" To="Marine_Junker_Collection_DeathEviscerate"/>
+        <ReplacementArray Catalog="Model" From="MarineDeathFire" To="Marine_Junker_Collection_DeathFire"/>
+        <ReplacementArray Catalog="Model" From="MarineDeathRagdoll" To="Marine_Junker_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="MarinePortrait" To="Marine_CovertOps_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-marine-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Marine,AlertIcon" Value="Assets\Textures\btn-unit-collection-marine-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Marine,Icon" Value="Assets\Textures\btn-unit-collection-marine-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Marine,UnitIcon" Value="Assets\Textures\btn-unit-collection-marine-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,Marine,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-marine-mercenary.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Marine,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-marine-mercenary.dds"/-->
+        <CollectionDisplayModel value="Marine_Junker_Collection"/>
+    </CSkin>
+    <CSkin id="ReaperJunker" parent="ReaperBase">
+        <ReplacementArray Catalog="Model" From="Reaper" To="Reaper_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="ReaperDeath" To="Reaper_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="ReaperDeathRagdoll" To="Reaper_Junker_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="ReaperPortrait" To="Reaper_Junker_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-reaper-junker.dds"/>
+        <DisplayModel value="Reaper_Junker_Collection"/>
+        <EffectArray Operation="Set" Reference="Button,Reaper,Icon" Value="Assets\Textures\btn-unit-collection-reaper-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Reaper,AlertIcon" Value="Assets\Textures\btn-unit-collection-reaper-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Reaper,UnitIcon" Value="Assets\Textures\btn-unit-collection-reaper-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,Reaper,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-reaper.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Reaper,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-reaper.dds"/-->
+        <CollectionDisplayModel value="Reaper_Junker_Collection"/>
+    </CSkin>
+    <CSkin id="HellionJunkerMM" parent="HellionBase">
+        <ReplacementArray Catalog="Model" From="Hellion" To="Hellion_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="HellionDeath" To="Hellion_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="HellionTankMorph" To="Hellion_Junker_Collection_Morph"/>
+        <ReplacementArray Catalog="Model" From="HellionTank" To="Hellbat_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="HellionDeathRagdoll" To="Hellion_Junker_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="HellionTankDeath" To="Hellbat_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="HellionTankDeathRagdoll" To="Hellbat_Junker_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="HellionMorphPortrait" To="Hellion_Junker_Collection_Morph_Portrait"/>
+        <ReplacementArray Catalog="Model" From="HellionPortrait" To="Hellion_Junker_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-hellion-junker.dds"/>
+        <DisplayModel value="Hellion_Junker_Collection"/>
+        <EffectArray Operation="Set" Reference="Button,Hellion,Icon" Value="Assets\Textures\btn-unit-collection-hellion-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Hellion,AlertIcon" Value="Assets\Textures\btn-unit-collection-hellion-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Hellion,UnitIcon" Value="Assets\Textures\btn-unit-collection-hellion-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,Hellion,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-hellion.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Hellion,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-hellion.dds"/-->
+        <EffectArray Operation="Set" Reference="Button,HellionTank,Icon" Value="Assets\Textures\btn-unit-collection-hellbat-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,HellionTank,AlertIcon" Value="Assets\Textures\btn-unit-collection-hellbat-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,MorphToHellionTank,Icon" Value="Assets\Textures\btn-unit-collection-hellbat-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,MorphToHellionTank,AlertIcon" Value="Assets\Textures\btn-unit-collection-hellbat-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,MorphToHellion,Icon" Value="Assets\Textures\btn-unit-collection-hellion-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,MorphToHellion,AlertIcon" Value="Assets\Textures\btn-unit-collection-hellion-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,HellionTank,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-hellbat.dds"/-->
+        <EffectArray Operation="Set" Reference="Actor,HellionTank,UnitIcon" Value="Assets\Textures\btn-unit-collection-hellbat-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,HellionTank,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-hellbat.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,HellionTankMorphModel,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-hellbat.dds"/-->
+        <EffectArray Operation="Set" Reference="Actor,HellionTankMorphModel,UnitIcon" Value="Assets\Textures\btn-unit-collection-hellion-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,HellionTankMorphModel,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-hellbat.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,HellionMorphModel,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-hellion.dds"/-->
+        <EffectArray Operation="Set" Reference="Actor,HellionMorphModel,UnitIcon" Value="Assets\Textures\btn-unit-collection-hellion-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,HellionMorphModel,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-hellion.dds"/-->
+        <CollectionDisplayModelAlternate value="Hellbat_Junker_Collection"/>
+        <CollectionDisplayModel value="Hellion_Junker_Collection"/>
+    </CSkin>
+    <CSkin id="WidowMineJunker" parent="WidowMineBase">
+        <ReplacementArray Catalog="Model" From="WidowMine" To="WidowMine_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="WidowMineDeath" To="WidowMine_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="WidowMineBurrowDeath" To="WidowMine_Junker_Collection_Death_Burrow"/>
+        <ReplacementArray Catalog="Model" From="WidowMineDeathRagdoll" To="WidowMine_Junker_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="WidowMinePortrait" To="WidowMine_Junker_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-widowmine-junker.dds"/>
+        <DisplayModel value="WidowMine_Junker_Collection"/>
+        <EffectArray Operation="Set" Reference="Button,WidowMine,Icon" Value="Assets\Textures\btn-unit-collection-widowmine-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,WidowMine,AlertIcon" Value="Assets\Textures\btn-unit-collection-widowmine-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WidowMine,UnitIcon" Value="Assets\Textures\btn-unit-collection-widowmine-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,WidowMine,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-widowmine.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WidowMine,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-widowmine.dds"/-->
+        <CollectionDisplayModel value="WidowMine_Junker_Collection"/>
+    </CSkin>
+    <CSkin id="SiegeTankJunker" parent="SiegeTankBase">
+        <ReplacementArray Catalog="Model" From="SiegeTank" To="SiegeTank_Junker_Collection_Tank"/>
+        <ReplacementArray Catalog="Model" From="SiegeTankSieged" To="SiegeTank_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="SiegeTankDeath" To="SiegeTank_Junker_Collection_Tank_Death"/>
+        <ReplacementArray Catalog="Model" From="SiegeTankSiegedDeath" To="SiegeTank_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="SiegeTankSiegedMorph" To="SiegeTank_Junker_Collection_Morph"/>
+        <ReplacementArray Catalog="Model" From="SiegeTankDeathRagdoll" To="SiegeTank_Junker_Collection_Tank_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="SiegeTankSiegedDeathRagdoll" To="SiegeTank_Junker_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="SiegeTankPortrait" To="SiegeTank_Junker_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-tank-junker.dds"/>
+        <DisplayModel value="SiegeTank_Junker_Collection_Morph"/>
+        <EffectArray Operation="Set" Reference="Button,Unsiege,Icon" Value="Assets\Textures\btn-unit-collection-tank-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Unsiege,AlertIcon" Value="Assets\Textures\btn-unit-collection-tank-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,SiegeTank,Icon" Value="Assets\Textures\btn-unit-collection-tank-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,SiegeTank,AlertIcon" Value="Assets\Textures\btn-unit-collection-tank-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,SiegeMode,Icon" Value="Assets\Textures\btn-unit-collection-siegetank-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,SiegeMode,AlertIcon" Value="Assets\Textures\btn-unit-collection-siegetank-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,ResearchSiegeTech,Icon" Value="Assets\Textures\btn-unit-collection-siegetank-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,ResearchSiegeTech,AlertIcon" Value="Assets\Textures\btn-unit-collection-siegetank-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SiegeTank,UnitIcon" Value="Assets\Textures\btn-unit-collection-siegetank-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,SiegeTank,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-siegetank.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SiegeTank,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-siegetank.dds"/-->
+        <EffectArray Operation="Set" Reference="Actor,SiegeTankSieged,UnitIcon" Value="Assets\Textures\btn-unit-collection-siegetankstatic-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,SiegeTankSieged,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-siegetankstatic.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SiegeTankSieged,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-siegetankstatic.dds"/-->
+        <EffectArray Operation="Set" Reference="Actor,TankModeMorphModel,UnitIcon" Value="Assets\Textures\btn-unit-collection-siegetank-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SiegeModeMorphModel,UnitIcon" Value="Assets\Textures\btn-unit-collection-siegetank-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,TankModeMorphModel,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-siegetank.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SiegeModeMorphModel,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-siegetankstatic.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TankModeMorphModel,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-siegetank.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SiegeModeMorphModel,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-siegetankstatic.dds"/-->
+        <CollectionDisplayModelAlternate value="SiegeTank_Junker_Collection"/>
+        <CollectionDisplayModel value="SiegeTank_Junker_Collection_Tank"/>
+    </CSkin>
+    <CSkin id="VikingJunker" parent="VikingBase">
+        <ReplacementArray Catalog="Model" From="VikingAssault" To="VikingAssault_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="VikingAssaultDeath" To="VikingAssault_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="VikingAssaultDeathRagdoll" To="VikingAssault_Junker_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="VikingFighter" To="VikingFighter_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="VikingFighterDeath" To="VikingFighter_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="VikingFighterDeathRagdoll" To="VikingFighter_Junker_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="VikingMorph" To="Viking_Junker_Collection_Morph"/>
+        <ReplacementArray Catalog="Model" From="VikingAssaultPortrait" To="VikingAssault_Junker_Collection_Portrait"/>
+        <ReplacementArray Catalog="Model" From="VikingFighterPortrait" To="VikingFighter_Junker_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-vikingfighter-junker.dds"/>
+        <DisplayModel value="VikingAssault_Junker_Collection"/>
+        <EffectArray Operation="Set" Reference="Button,FighterMode,Icon" Value="Assets\Textures\btn-unit-collection-vikingfighter-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,VikingFighter,Icon" Value="Assets\Textures\btn-unit-collection-vikingfighter-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,VikingFighter,AlertIcon" Value="Assets\Textures\btn-unit-collection-vikingfighter-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VikingFighter,UnitIcon" Value="Assets\Textures\btn-unit-collection-vikingfighter-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,VikingFighter,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-Junker-vikingfighter.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VikingFighter,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-Junker-vikingfighter.dds"/-->
+        <EffectArray Operation="Set" Reference="Button,AssaultMode,Icon" Value="Assets\Textures\btn-unit-collection-vikingassault-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VikingAssault,UnitIcon" Value="Assets\Textures\btn-unit-collection-vikingassault-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,VikingAssault,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-Junker-vikingassault.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VikingAssault,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-Junker-vikingassault.dds"/-->
+        <EffectArray Operation="Set" Reference="Actor,AssaultMorphModel,UnitIcon" Value="Assets\Textures\btn-unit-collection-vikingassault-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,FighterMorphModel,UnitIcon" Value="Assets\Textures\btn-unit-collection-vikingfighter-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,AssaultMorphModel,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-Junker-vikingassault.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,FighterMorphModel,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-Junker-vikingfighter.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AssaultMorphModel,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-Junker-vikingassault.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,FighterMorphModel,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-Junker-vikingfighter.dds"/-->
+        <CollectionDisplayModelAlternate value="VikingAssault_Junker_Collection"/>
+        <CollectionDisplayModel value="VikingFighter_Junker_Collection"/>
+    </CSkin>
+    <CSkin id="RavenJunker" parent="RavenBase">
+        <DisplayModel value="Raven_Junker_Collection_MP"/>
+        <ReplacementArray Catalog="Model" From="Raven" To="Raven_Junker_Collection_MP"/>
+        <ReplacementArray Catalog="Model" From="RavenDeath" To="Raven_Junker_Collection_MP_Death"/>
+        <ReplacementArray Catalog="Model" From="RavenDeathRagdoll" To="Raven_Junker_Collection_MP_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="RavenPortrait" To="Raven_Junker_Collection_MP_Portrait"/>
+        <ReplacementArray Catalog="Model" From="AutoTurret" To="AutoTurret_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="AutoTurretDeath" To="AutoTurret_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="AutoTurretPlacement" To="AutoTurret_Junker_Collection_Placement"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-ravenmp-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Raven,Icon" Value="Assets\Textures\btn-unit-collection-ravenmp-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Raven,AlertIcon" Value="Assets\Textures\btn-unit-collection-ravenmp-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Raven,UnitIcon" Value="Assets\Textures\btn-unit-collection-ravenmp-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,Raven,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops_raven.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Raven,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops_raven.dds"/>
+        <EffectArray Operation="Set" Reference="Button,AutoTurret,Icon" Value="Assets\Textures\btn-unit-collection-autoturret-covertops.dds"/>
+        <EffectArray Operation="Set" Reference="Button,AutoTurret,AlertIcon" Value="Assets\Textures\btn-unit-collection-autoturret-covertops.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AutoTurret,UnitIcon" Value="Assets\Textures\btn-unit-collection-autoturret-covertops.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AutoTurret,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-autoturret.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AutoTurret,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-autoturret.dds"/>
+        <EffectArray Operation="Set" Reference="Button,PointDefenseDrone,Icon" Value="Assets\Textures\btn-unit-collection-defensivematrixdrone-covertops.dds"/>
+        <EffectArray Operation="Set" Reference="Button,PointDefenseDrone,AlertIcon" Value="Assets\Textures\btn-unit-collection-defensivematrixdrone-covertops.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PointDefenseDrone,UnitIcon" Value="Assets\Textures\btn-unit-collection-defensivematrixdrone-covertops.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PointDefenseDrone,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-defensivematrixdrone.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PointDefenseDrone,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-defensivematrixdrone.dds"/-->
+        <CollectionDisplayModel value="Raven_Junker_Collection_MP"/>
+    </CSkin>
+    <CSkin id="BattlecruiserJunker" parent="BattlecruiserBase">
+        <ReplacementArray Catalog="Model" From="Battlecruiser" To="BattleCruiser_Junker_Collection"/>
+        <ReplacementArray Catalog="Model" From="BattlecruiserDeath" To="BattleCruiser_Junker_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="BattlecruiserDeathA" To="BattleCruiser_Junker_Collection_DeathA"/>
+        <ReplacementArray Catalog="Model" From="BattlecruiserDeathRagdoll" To="BattleCruiser_Junker_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="BattlecruiserPortrait" To="BattleCruiser_Junker_Collection_Portrait"/>
+        <ReplacementArray Catalog="Model" From="BattleCruiserTacticalJump_Placement" To="BattleCruiser_Junker_Collection_TacticalJump_Placement"/>
+        <ReplacementArray Catalog="Model" From="HyperjumpLaunch" To="BattleCruiser_Junker_Collection_Hyperjump_Out"/>
+        <ReplacementArray Catalog="Model" From="HyperjumpImpact" To="BattleCruiser_Junker_Collection_Hyperjump_In"/>
+        <ReplacementArray Catalog="Model" From="HyperjumpLaunchUpgraded" To="BattleCruiser_Junker_Collection_YamatoHyperjump_Out"/>
+        <ReplacementArray Catalog="Model" From="HyperjumpImpactUpgraded" To="BattleCruiser_Junker_Collection_YamatoHyperjump_In"/>
+        <ReplacementArray Catalog="Model" From="BattleCruiserTacticalJumpYamato_Placement" To="BattleCruiser_Junker_Collection_YamatoTacticalJump_Placement"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-battlecruiser-junker.dds"/>
+        <DisplayModel value="BattleCruiser_Junker_Collection"/>
+        <EffectArray Operation="Set" Reference="Button,Battlecruiser,Icon" Value="Assets\Textures\btn-unit-collection-battlecruiser-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Battlecruiser,AlertIcon" Value="Assets\Textures\btn-unit-collection-battlecruiser-junker.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Battlecruiser,UnitIcon" Value="Assets\Textures\btn-unit-collection-battlecruiser-junker.dds"/>
+        <!--EffectArray Operation="Set" Reference="Actor,Battlecruiser,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-battlecruiser.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Battlecruiser,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-covertops-battlecruiser.dds"/-->
+        <CollectionDisplayModel value="BattleCruiser_Junker_Collection"/>
     </CSkin>
     <CSkin id="Adept" parent="AdeptBase">
         <DisplayModel value="Adept"/>
@@ -2477,5 +2739,176 @@
         <EffectArray Operation="Set" Reference="Actor,Zergling,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-zergling-mutant.dds"/>
         <EffectArray Operation="Set" Reference="Actor,Zergling,UnitIcon" Value="Assets\Textures\btn-unit-collection-zergling-mutant.dds"/>
         <CollectionDisplayModel value="ZerglingXPR"/>
+    </CSkin>
+    <CSkin id="DarkTemplarPurifier" parent="DarkTemplarBase">
+        <ReplacementArray Catalog="Model" From="DarkTemplar" To="DarkTemplar_Purifier_Collection"/>
+        <ReplacementArray Catalog="Model" From="DarkTemplarDeath" To="DarkTemplar_Purifier_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="DarkTemplarDeath00" To="DarkTemplar_Purifier_Collection_Death"/>
+        <ReplacementArray Catalog="Model" From="DarkTemplarDeath01" To="DarkTemplar_Purifier_Collection_Death"/>
+        <!--ReplacementArray Catalog="Model" From="DarkTemplarPlacement" To="DarkTemplar_TalDarim_Collection_Placement"/>
+        <ReplacementArray Catalog="Model" From="DarkTemplarWarpIn" To="DarkTemplar_Taldarim_Collection_WarpIn"/>
+        <ReplacementArray Catalog="Model" From="DarkTemplarDeathRagdoll" To="DarkTemplar_TalDarim_Collection_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="DarkTemplarPortrait" To="DarkTemplar_Taldarim_Collection_Portrait"/>
+        <ReplacementArray Catalog="Model" From="DarkTemplar2Portrait" To="DarkTemplar_Taldarim_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-taldarim-DarkTemplar.dds"/-->
+        <DisplayModel value="DarkTemplar_TalDarim_Collection"/>
+        <!--EffectArray Operation="Set" Reference="Button,DarkTemplar,AlertIcon" Value="Assets\Textures\btn-unit-collection-taldarim-DarkTemplar.dds"/>
+        <EffectArray Operation="Set" Reference="Button,DarkTemplar,Icon" Value="Assets\Textures\btn-unit-collection-taldarim-DarkTemplar.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-taldarim-DarkTemplar.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,WireframeShield.Image[0]" Value="Assets\Textures\wireframe-collection-taldarim-DarkTemplar-shield01.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,WireframeShield.Image[1]" Value="Assets\Textures\wireframe-collection-taldarim-DarkTemplar-shield02.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,WireframeShield.Image[2]" Value="Assets\Textures\wireframe-collection-taldarim-DarkTemplar-shield03.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-taldarim-DarkTemplar.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,UnitIcon" Value="Assets\Textures\btn-unit-collection-taldarim-DarkTemplar.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,WireframeVariations[0].Image[0]" Value="Assets\Textures\wireframe-collection-taldarim-darktemplar.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,WireframeVariations[1].Image[0]" Value="Assets\Textures\wireframe-collection-taldarim-darktemplar.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,WireframeShieldVariations[0].Image[0]" Value="Assets\Textures\wireframe-collection-taldarim-darktemplar-shield01.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,WireframeShieldVariations[0].Image[1]" Value="Assets\Textures\wireframe-collection-taldarim-darktemplar-shield02.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,WireframeShieldVariations[0].Image[2]" Value="Assets\Textures\wireframe-collection-taldarim-darktemplar-shield03.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,WireframeShieldVariations[1].Image[0]" Value="Assets\Textures\wireframe-collection-taldarim-darktemplar-shield01.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,WireframeShieldVariations[1].Image[1]" Value="Assets\Textures\wireframe-collection-taldarim-darktemplar-shield02.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,WireframeShieldVariations[1].Image[2]" Value="Assets\Textures\wireframe-collection-taldarim-darktemplar-shield03.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,GroupIconVariations[0].Image[0]" Value="Assets\Textures\wireframe-collection-taldarim-darktemplar.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplar,GroupIconVariations[1].Image[0]" Value="Assets\Textures\wireframe-collection-taldarim-darktemplar.dds"/>
+        <WarChestUILight value="WarChestSkinPreview_Taldarim"/-->
+        <CollectionDisplayModel value="DarkTemplar_Purifier_Collection"/>
+    </CSkin>
+    <CSkin id="BroodLordPrimal" parent="BroodLordBase">
+        <ReplacementArray Catalog="Model" From="BroodLord" To="BroodLord_CollectionSkin_Primal"/>
+        <!--ReplacementArray Catalog="Model" From="BroodLordDeath" To="BroodLordPrimal_Death"/>
+        <ReplacementArray Catalog="Model" From="BroodLordDeathRagdoll" To="BroodLordPrimal_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="BroodLordPortrait" To="BroodLordPrimal_Portrait"/-->
+        <ReplacementArray Catalog="Model" From="Broodling" To="Symbiote_CollectionSkin_Primal"/>
+        <ReplacementArray Catalog="Model" From="BroodlingEscort" To="Symbiote_CollectionSkin_Primal"/>
+        <ReplacementArray Catalog="Model" From="BroodLordWeapon" To="Symbiote_CollectionSkin_Primal"/>
+        <ReplacementArray Catalog="Model" From="BroodLordBWeapon" To="Symbiote_CollectionSkin_Primal"/>
+        <!--ReplacementArray Catalog="Model" From="BroodlingDeath" To="SymbiotePrimal_Death"/>
+        <ReplacementArray Catalog="Model" From="BroodlingDeathRagdoll" To="SymbiotePrimal_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="SymbiotePortrait" To="SymbiotePrimal_Portrait"/>
+        <ReplacementArray Catalog="Model" From="BroodlingDeathFire" To="SymbiotePrimal_DeathFire"/>
+        <ReplacementArray Catalog="Model" From="BroodlingDeathAcid" To="SymbiotePrimal_DeathAcid"/>
+        <ReplacementArray Catalog="Sound" From="BroodLord_Attack" To="BroodLord_Attack"/>
+        <ReplacementArray Catalog="Sound" From="BroodLord_Death" To="BroodLord_Death"/>
+        <ReplacementArray Catalog="Sound" From="BroodLord_Pissed" To="BroodLord_Pissed"/>
+        <ReplacementArray Catalog="Sound" From="BroodLord_Ready" To="BroodLord_Ready"/>
+        <ReplacementArray Catalog="Sound" From="BroodLord_What" To="BroodLord_What"/>
+        <ReplacementArray Catalog="Sound" From="BroodLord_Yes" To="BroodLord_Yes"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-aquatic-broodlord.dds"/-->
+        <DisplayModel value="BroodLord_CollectionSkin_Primal"/>
+        <!--EffectArray Operation="Set" Reference="Actor,BroodLord,UnitIcon" Value="Assets\Textures\btn-unit-collection-aquatic-broodlord.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,BroodLord,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-aquatic-broodlord.dds"/>
+        <EffectArray Operation="Set" Reference="Button,BroodLord,Icon" Value="Assets\Textures\btn-unit-collection-aquatic-broodlord.dds"/>
+        <EffectArray Operation="Set" Reference="Button,BroodLord,AlertIcon" Value="Assets\Textures\btn-unit-collection-aquatic-broodlord.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,BroodLord,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-aquatic-broodlord.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Broodling,UnitIcon" Value="Assets\Textures\btn-unit-collection-aquatic-symbiote.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Broodling,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-aquatic-symbiote.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Broodling,Icon" Value="Assets\Textures\btn-unit-collection-aquatic-symbiote.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Broodling,AlertIcon" Value="Assets\Textures\btn-unit-collection-aquatic-symbiote.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Broodling,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-aquatic-symbiote.dds"/-->
+        <CollectionDisplayModel value="BroodLord_CollectionSkin_Primal"/>
+    </CSkin>
+    <CSkin id="InfestorPrimal" parent="InfestorBase">
+        <ReplacementArray Catalog="Model" From="Infestor" To="Infestor_CollectionSkin_Primal"/>
+        <!--ReplacementArray Catalog="Model" From="InfestorDeath" To="Infestor_CollectionSkin_Primal_Death"/>
+        <ReplacementArray Catalog="Model" From="InfestorDeathFire" To="Infestor_CollectionSkin_Primal_DeathFire"/>
+        <ReplacementArray Catalog="Model" From="InfestorDeathAcid" To="Infestor_CollectionSkin_Primal_DeathAcid"/>
+        <ReplacementArray Catalog="Model" From="InfestorDeathRagdoll" To="Infestor_CollectionSkin_Primal_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="InfestorPortrait" To="Infestor_Primal_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-webby-infestor.dds"/-->
+        <DisplayModel value="Infestor_CollectionSkin_Primal"/>
+        <!--EffectArray Operation="Set" Reference="Button,Infestor,Icon" Value="Assets\Textures\btn-unit-collection-webby-infestor.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Infestor,AlertIcon" Value="Assets\Textures\btn-unit-collection-webby-infestor.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Infestor,UnitIcon" Value="Assets\Textures\btn-unit-collection-webby-infestor.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Infestor,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-webby-infestor.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Infestor,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-webby-infestor.dds"/>
+        <WarChestUILight value="WarChestSkinPreview_Primal"/-->
+        <CollectionDisplayModel value="Infestor_CollectionSkin_Primal"/>
+    </CSkin>
+    <CSkin id="OverlordPrimal" parent="OverlordBase">
+        <ReplacementArray Catalog="Model" From="Overlord" To="Overlord_CollectionSkin_Primal"/>
+        <!--ReplacementArray Catalog="Model" From="OverlordDeath" To="Overlord_CollectionSkin_Primal_Death"/>
+        <ReplacementArray Catalog="Model" From="OverlordDeathRagdoll" To="Overlord_CollectionSkin_Primal_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="OverlordTransport" To="OverlordTransport_CollectionSkin_Primal"/>
+        <ReplacementArray Catalog="Model" From="OverlordTransportDeath" To="OverlordTransport_CollectionSkin_Primal_Death"/>
+        <ReplacementArray Catalog="Model" From="OverlordPortrait" To="Overlord_Primal_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-webby-overlord.dds"/-->
+        <DisplayModel value="Overlord_CollectionSkin_Primal"/>
+        <!--EffectArray Operation="Set" Reference="Button,Overlord,Icon" Value="Assets\Textures\btn-unit-collection-webby-overlord.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Overlord,AlertIcon" Value="Assets\Textures\btn-unit-collection-webby-overlord.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Overlord,UnitIcon" Value="Assets\Textures\btn-unit-collection-webby-overlord.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Overlord,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-webby-overlord.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Overlord,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-webby-overlord.dds"/>
+        <EffectArray Operation="Set" Reference="Button,MorphtoOverlordTransport,Icon" Value="Assets\Textures\btn-unit-collection-webby-overlordtransport.dds"/>
+        <EffectArray Operation="Set" Reference="Button,MorphtoOverlordTransport,AlertIcon" Value="Assets\Textures\btn-unit-collection-webby-overlordtransport.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,OverlordTransport,UnitIcon" Value="Assets\Textures\btn-unit-collection-webby-overlordtransport.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,OverlordTransport,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-webby-overlordtransport.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,OverlordTransport,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-webby-overlordtransport.dds"/>
+        <WarChestUILight value="WarChestSkinPreview_Primal"/-->
+        <CollectionDisplayModel value="Overlord_CollectionSkin_Primal"/>
+    </CSkin>
+    <CSkin id="OverseerPrimal" parent="OverseerBase">
+        <ReplacementArray Catalog="Model" From="Overseer" To="Overseer_CollectionSkin_Primal"/>
+        <!--ReplacementArray Catalog="Model" From="OverseerDeath" To="Overseer_CollectionSkin_Primal_Death"/>
+        <ReplacementArray Catalog="Model" From="OverseerDeathRagdoll" To="Overseer_CollectionSkin_Primal_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="OverseerPortrait" To="Overseer_Primal_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-webby-overseer.dds"/-->
+        <DisplayModel value="OverSeer_CollectionSkin_Primal"/>
+        <!--EffectArray Operation="Set" Reference="Button,MorphToOverseer,Icon" Value="Assets\Textures\btn-unit-collection-webby-overseer.dds"/>
+        <EffectArray Operation="Set" Reference="Button,MorphToOverseer,AlertIcon" Value="Assets\Textures\btn-unit-collection-webby-overseer.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Overseer,UnitIcon" Value="Assets\Textures\btn-unit-collection-webby-overseer.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Overseer,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-webby-overseer.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Overseer,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-webby-overseer.dds"/>
+        <WarChestUILight value="WarChestSkinPreview_Primal"/-->
+        <CollectionDisplayModel value="OverSeer_CollectionSkin_Primal"/>
+    </CSkin>
+    <CSkin id="QueenPrimal" parent="QueenBase">
+        <ReplacementArray Catalog="Model" From="Queen" To="Queen_CollectionSkin_Primal"/>
+        <!--ReplacementArray Catalog="Model" From="QueenDeath" To="Queen_CollectionSkin_Primal_Death"/>
+        <ReplacementArray Catalog="Model" From="QueenDeathFire" To="Queen_CollectionSkin_Primal_DeathFire"/>
+        <ReplacementArray Catalog="Model" From="QueenDeathAcid" To="Queen_CollectionSkin_Primal_DeathAcid"/>
+        <ReplacementArray Catalog="Model" From="QueenDeathRagdoll" To="Queen_CollectionSkin_Primal_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="QueenPortrait" To="Queen_Primal_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-webby-queen.dds"/-->
+        <DisplayModel value="Queen_CollectionSkin_Primal"/>
+        <!--EffectArray Operation="Set" Reference="Button,Queen,Icon" Value="Assets\Textures\btn-unit-collection-webby-queen.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Queen,AlertIcon" Value="Assets\Textures\btn-unit-collection-webby-queen.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Queen,UnitIcon" Value="Assets\Textures\btn-unit-collection-webby-queen.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Queen,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-webby-queen.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Queen,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-webby-queen.dds"/>
+        <WarChestUILight value="WarChestSkinPreview_Primal"/-->
+        <CollectionDisplayModel value="Queen_CollectionSkin_Primal"/>
+    </CSkin>
+    <CSkin id="RavagerPrimal" parent="RavagerBase">
+        <ReplacementArray Catalog="Model" From="Ravager" To="Ravager_CollectionSkin_Primal"/>
+        <!--ReplacementArray Catalog="Model" From="RavagerDeath" To="Ravager_CollectionSkin_Primal_Death"/>
+        <ReplacementArray Catalog="Model" From="RavagerDeathAcid" To="Ravager_CollectionSkin_Primal_DeathAcid"/>
+        <ReplacementArray Catalog="Model" From="RavagerDeathFire" To="Ravager_CollectionSkin_Primal_DeathFire"/>
+        <ReplacementArray Catalog="Model" From="RavagerDeathRagdoll" To="Ravager_CollectionSkin_Primal_DeathRagdoll"/>
+        <ReplacementArray Catalog="Model" From="RavagerPortrait" To="Ravager_Primal_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-webby-ravager.dds"/-->
+        <DisplayModel value="Ravager_CollectionSkin_Primal"/>
+        <!--EffectArray Operation="Set" Reference="Button,Ravager,Icon" Value="Assets\Textures\btn-unit-collection-webby-ravager.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Ravager,AlertIcon" Value="Assets\Textures\btn-unit-collection-webby-ravager.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Ravager,UnitIcon" Value="Assets\Textures\btn-unit-collection-webby-ravager.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Ravager,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-webby-ravager.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Ravager,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-webby-ravager.dds"/>
+        <WarChestUILight value="WarChestSkinPreview_Primal"/-->
+        <CollectionDisplayModel value="Ravager_CollectionSkin_Primal"/>
+    </CSkin>
+    <CSkin id="ViperPrimal" parent="ViperBase">
+        <ReplacementArray Catalog="Model" From="Viper" To="Viper_CollectionSkin_Primal"/>
+        <!--ReplacementArray Catalog="Model" From="ViperDeath" To="Viper_CollectionSkin_Primal_Death"/>
+        <ReplacementArray Catalog="Model" From="ViperDeathRagdoll" To="Viper_CollectionSkin_Primal_Death_Ragdoll"/>
+        <ReplacementArray Catalog="Model" From="ViperPortrait" To="Viper_CollectionSkin_Primal_Portrait"/>
+        <ReplacementArray Catalog="Model" From="ViperPortrait" To="Viper_Primal_Collection_Portrait"/>
+        <VariationIcon value="Assets\Textures\btn-unit-collection-webby-viper.dds"/-->
+        <DisplayModel value="Viper_CollectionSkin_Primal"/>
+        <!--EffectArray Operation="Set" Reference="Button,Viper,Icon" Value="Assets\Textures\btn-unit-collection-webby-viper.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Viper,AlertIcon" Value="Assets\Textures\btn-unit-collection-webby-viper.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Viper,UnitIcon" Value="Assets\Textures\btn-unit-collection-webby-viper.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Viper,Wireframe.Image[0]" Value="Assets\Textures\wireframe-collection-webby-viper.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Viper,GroupIcon.Image[0]" Value="Assets\Textures\wireframe-collection-webby-viper.dds"/>
+        <WarChestUILight value="WarChestSkinPreview_Primal"/-->
+        <CollectionDisplayModel value="Viper_CollectionSkin_Primal"/>
     </CSkin>
 </Catalog>

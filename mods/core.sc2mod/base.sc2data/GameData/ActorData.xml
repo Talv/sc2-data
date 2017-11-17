@@ -1141,6 +1141,15 @@
         <On Terms="ActorCreation" Send="StatusSet InAir 0"/>
         <On Terms="UnitHeightUpdate.*.Lift" Send="StatusSet InAir 1"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="StatusSet InAir 0"/>
+        <!-- PH Behavior - do something better with this -->
+        <!--
+        <On Terms="BuildCoachHover.*.On" Send="SetTintColor 0,255,0 0.1"/>
+        <On Terms="BuildCoachHover.*.Off" Send="SetTintColor 255,255,255 1.00"/>        
+        -->
+        <On Terms="BuildCoachHover.*.On" Send="TimerKill DelayUnhighlight"/>
+        <On Terms="BuildCoachHover.*.On" Send="SetTintColor 0,255,0 0.100000"/>
+        <On Terms="BuildCoachHover.*.Off" Send="TimerSet 0.300000 DelayUnhighlight"/>
+        <On Terms="TimerExpired; TimerName DelayUnhighlight" Send="SetTintColor 255,255,255 0.500000"/>
     </CActorUnit>
     <!-- For any unit that might some day have an attack.  Probabably a good base class for all
          main tech tree units and buildings. -->
@@ -2229,6 +2238,9 @@
     </CActorSiteOpAttach>
     <CActorSiteOpAttach id="SOpAttachWeapon15">
         <AttachQuery Methods="Weapon 15"/>
+    </CActorSiteOpAttach>
+    <CActorSiteOpAttach id="SOpAttachWeapon16">
+        <AttachQuery Methods="Weapon 16"/>
     </CActorSiteOpAttach>
     <CActorSiteOpAttach id="SOpAttachWeapon21">
         <AttachQuery Methods="Weapon 21"/>

@@ -884,7 +884,6 @@
     <CEffectCreatePersistent id="BlindingCloudCP">
         <PeriodCount value="27"/>
     </CEffectCreatePersistent>
-
     <CEffectApplyBehavior id="CorruptionBombApplyDamage">
         <EditorCategories value=""/>
         <Behavior value="CorruptionBombDamage"/>
@@ -1098,8 +1097,6 @@
         <AreaArray Radius="9" Effect="MothershipMassRecallDeathRemove"/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
     </CEffectEnumArea>
-
-
     <CEffectApplyBehavior id="MothershipMassRecallApplyBehavior">
         <ValidatorArray index="0" value="NotLarvaEgg"/>
         <ValidatorArray value="NotLarva"/>
@@ -1153,7 +1150,6 @@
         <Flags index="PersistUntilDestroyed" value="0"/>
         <PeriodicEffectArray index="0" value="NeuralParasitePersistentDestroy"/>
     </CEffectCreatePersistent>
-
     <CEffectDamage id="NydusCanalAttackerDamage">
         <Amount value="10"/>
     </CEffectDamage>
@@ -1222,7 +1218,6 @@
         <AINotifyFlags index="HurtFriend" value="1"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
     </CEffectEnumArea>
-
     <CEffectApplyBehavior id="RipFieldApplyBehavior">
         <EditorCategories value="Race:Protoss"/>
         <WhichUnit Value="Caster"/>
@@ -1263,12 +1258,6 @@
         <EffectArray value="RipFieldApplyBehavior"/>
         <EffectArray value="RipFieldDamage"/>
     </CEffectSet>
-
-
-
-
-
-
     <CEffectLaunchMissile id="SeekerMissileLaunchMissile">
         <LaunchEffect value="SeekerMissileLaunchSet"/>
     </CEffectLaunchMissile>
@@ -1531,7 +1520,6 @@
         <EditorCategories value="Race:Zerg"/>
         <Behavior value="VortexKill"/>
     </CEffectApplyBehavior>
-
     <CEffectSet id="WidowMineAttack">
         <ValidatorArray index="0" value="NoMineDroneCountdown"/>
         <ValidatorArray index="1" value="NotLarva"/>
@@ -1652,9 +1640,6 @@
     <CEffectSet id="YoinkStartSet">
         <ValidatorArray value="IsNotMothershipCorePurifyNexus"/>
     </CEffectSet>
-
-
-
     <CEffectSet id="YoinkImpactSetVikingAir">
         <ValidatorArray value="IsNotPhaseShielded"/>
     </CEffectSet>

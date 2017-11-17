@@ -451,13 +451,6 @@
         </ToDInfoArray>
         <EditorCategories value="LightGroup:Tilesets"/>
     </CLight>
-    <CLight id="OraclePortrait">
-        <ToDInfoArray index="0" AmbientColor="0.129412,0.243137,0.545098">
-            <Param index="HDRExposure" value="1.480000"/>
-            <Param index="HDRBloomThreshold" value="1.950000"/>
-            <DirectionalLight index="Key" ColorMultiplier="3.055000" SpecColorMultiplier="0.490000"/>
-        </ToDInfoArray>
-    </CLight>
     <CLight id="KorhalPlatformEx2" parent="default">
         <ToDInfoArray index="0" Id="KorhalPlatformEx2" AmbientColor="0.301961,0.309804,0.309804" Colorize="1">
             <Param index="HDRExposure" value="1.600000"/>
@@ -1227,6 +1220,42 @@
             </DirectionalLight>
             <DirectionalLight index="Fill" Color="0.152941,0.341176,0.588235" ColorMultiplier="3.000000" Direction="0.556238,-0.614738,0.559193"/>
             <DirectionalLight index="Back" Color="0.874510,0.341176,0.200000" ColorMultiplier="1.738000" Direction="-0.702321,0.031401,0.711168"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:Tilesets"/>
+    </CLight>
+    <CLight id="UmojaEx3" parent="default">
+        <ToDInfoArray index="0">
+            <Id value="UmojaEx3"/>
+            <AmbientColor value="0.388235,0.423529,0.533333"/>
+            <Colorize value="1"/>
+            <UseSeparateDetailSSAO value="0"/>
+            <Param index="HDRExposure" value="1.550000"/>
+            <Param index="HDRWhitePoint" value="1.850000"/>
+            <Param index="TerrainSpecularExp" value="11.210000"/>
+            <Param index="TerrainHDRSpecular" value="3.000000"/>
+            <Param index="CreepSpecularExp" value="30.000000"/>
+            <Param index="CreepHDRSpecMultiplier" value="3.000000"/>
+            <Param index="ColorizationContrast" value="1.170000"/>
+            <Param index="ColorizationHue" value="0.132000"/>
+            <Param index="ColorizationSaturation" value="0.100000"/>
+            <Param index="ColorizationLightness" value="0.160000"/>
+            <Param index="ColorizationBlend" value="0.200000"/>
+            <Param index="AOOcclusionRadius" value="0.600000"/>
+            <Param index="AONoOcclusion" value="0.600000"/>
+            <Param index="AOFullOcclusion" value="0.050000"/>
+            <Param index="AOOcclusionPower" value="2.000000"/>
+            <Param index="AODetailOcclusionRadius" value="0.020000"/>
+            <Param index="AODetailNoOcclusion" value="0.030000"/>
+            <Param index="AODetailOcclusionPower" value="16.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="1.000000,1.000000,0.941177"/>
+                <ColorMultiplier value="1.000000"/>
+                <SpecularColor value="0.886275,0.713726,0.545098"/>
+                <SpecColorMultiplier value="1.000000"/>
+                <Direction value="0.369371,-0.593188,-0.715327"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.803922,0.678431,0.549020" ColorMultiplier="1.000000" Direction="-0.698992,-0.690745,-0.185153"/>
+            <DirectionalLight index="Back" Color="0.337255,0.439216,0.611765" ColorMultiplier="0.400000" Direction="-0.177923,0.680135,-0.711168"/>
         </ToDInfoArray>
         <EditorCategories value="LightGroup:Tilesets"/>
     </CLight>

@@ -2,6 +2,7 @@
 <Catalog>
     <CConsoleSkin default="1">
         <Name value="ConsoleSkin/Name/##id##"/>
-        <ShortName value=""/>
+        <Name value="ConsoleSkin/StoreName/##id##"/>
+        <StoreTypeName value="UI/StoreTypeName/ConsoleSkin"/>
     </CConsoleSkin>
 </Catalog>
