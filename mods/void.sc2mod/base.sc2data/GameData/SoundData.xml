@@ -129,6 +129,8 @@
         <PositionRandomOffset value="2.000000,1.000000,0.000000"/>
         <Spread value="20.000000"/>
         <Volume value="-12.000000,0.000000"/>
+        <Flags index="Download" value="1"/>
+        <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound id="Amb_WindSockFlag" parent="Ambience_Object">
         <EditorCategories value="Race:Neutral"/>
@@ -201,6 +203,29 @@
         <DupePrioritization value="Oldest"/>
         <Pitch value="-6.000000,-6.000000"/>
         <Volume value="-7.000000,-7.000000"/>
+    </CSound>
+    <CSound id="SC2_Credits_Shuffle" parent="MUSIC">
+        <AssetArray File="Assets\Music\CursedHollow_03_Virtual_Choir_converted.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\Directorate Menace B.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\Directorate Menace H.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\Cities_In_Ruin_FULL.ogg" Volume="-2.000000,-2.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Music\nDLC03_Music_CueCutscene040.ogg" Volume="1.000000,1.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Music\Evolution_1_FULL.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\zDebrief_Arc4DoW.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\HOTS_Music_Zerus_Ambient.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\The Old Directorate C.ogg" FacialGroup=""/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="0.000000,0.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+    </CSound>
+    <CSound id="SC2_Credits_Static" parent="MUSIC">
+        <AssetArray File="Assets\Music\ZSwarm_Music_Titan_Full.ogg" FacialGroup=""/>
+        <Select value="Sequential"/>
+        <SustainFade index="1" Time="500" Volume="-96.000000"/>
+        <Volume value="0.000000,0.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
     </CSound>
     <CSound id="Overseer_OversightEyeBirth" parent="Spell">
         <EditorCategories value="Race:Zerg"/>
@@ -1539,6 +1564,19 @@
         <AssetArray File="Assets\Music\nDLC01_Music_Cue10.ogg" FacialGroup=""/>
         <AssetArray File="Assets\Music\nDLC03_Music_Cue03.ogg" FacialGroup=""/>
         <AssetArray File="Assets\Music\P15Part03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\Evolution_1_FULL.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\Evolution_2_FULL.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\Evolution_3_FULL.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\Furiousity D.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\Furiousity F.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\ZSpace02MusicCutscene19_KerriganSavesRaynor.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\ZSpace02MusicEvent03_MissionIntro.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\zSM_ProtossPrisoner_Before_Exp02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\MissionMusic\TValerian03MusicIntro.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\SC1_Protoss2.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\SC1_Protoss4.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\SC1_Terran3.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\SC1_Terran4.ogg" FacialGroup=""/>
         <Volume value="-4.000000,-4.000000"/>
     </CSound>
     <CSound id="GlueMusicGeneralStartup" parent="MUSIC">
@@ -4145,6 +4183,10 @@
         <AssetArray File="Assets\Music\P05CinePart01.ogg" FacialGroup=""/>
         <AssetArray File="Assets\Music\P06CinePart01.ogg" FacialGroup=""/>
         <AssetArray File="Assets\Music\Prologue_UI.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\P16Full.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\P01Part01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\P03Full.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\P05Remix.ogg" FacialGroup=""/>
         <Volume value="-5.000000,-5.000000"/>
     </CSound>
     <CSound id="GlueMusicVoidStartupA" parent="MUSIC">

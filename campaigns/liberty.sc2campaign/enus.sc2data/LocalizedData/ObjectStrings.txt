@@ -5109,7 +5109,6 @@ Effect/Name/VortexPrepareEradicator=Vortex
 Effect/Name/VortexSearchEradicator=Vortex
 Effect/Name/Vulture=Fragmentation Grenade (Missile)
 Effect/Name/VultureSpiderMineBurrowOrder=Spider Mine (Burrow Order)
-Effect/Name/VultureSpiderMinesDamage=Spider Mines (Damage)
 Effect/Name/VultureSpiderMinesSet=Spider Mines (Set)
 Effect/Name/VultureU=Fragmentation Grenade (Damage)
 Effect/Name/WallOfFireAirDamage=Wall Of Fire (Air Damage)

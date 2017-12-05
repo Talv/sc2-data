@@ -116,6 +116,7 @@
 <Behavior id="MutatorShrunk"/>
 <Behavior id="SICivilianStructureSpawnCivilianGlobalTimerInitial"/>
 <Behavior id="SICivilianStructureSpawnCivilianGlobalTimerRebuild"/>
+<Behavior id="SIBarracksTrainTimedLife"/>
 <Behavior id="SIInfestedBunkerTrainTimedLife"/>
 <Behavior id="SIBarracksTrainTimedLifeHasBeenApplied"/>
 <Behavior id="MutatorPlagueBehaviorVisual"/>
@@ -495,6 +496,7 @@
 <Unit id="ArchAngelCoopAssault"/>
 <Unit id="OverseerSiegeMode"/>
 <Unit id="MutatorHybridImmortal"/>
+<Unit id="SIVolatileInfested"/>
 <Unit id="HHBomber"/>
 <Unit id="MutatorPropagator"/>
 <Unit id="DehakaCoopReviveCocoonFootPrint"/>

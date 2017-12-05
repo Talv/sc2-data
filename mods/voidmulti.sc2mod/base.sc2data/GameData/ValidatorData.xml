@@ -8,6 +8,9 @@
         <CombineArray value="NotLurkerCocoon"/>
         <CombineArray value="IsNotInfestedTerransEgg"/>
     </CValidatorCombine>
+    <CValidatorCombine id="LockOnGroundAirPeriodicValidators">
+        <CombineArray value="CasterDoesNotHaveScramblerMissileBehavior"/>
+    </CValidatorCombine>
     <CValidatorUnitCompareBehaviorCount id="CasterIsNotStasisWarded">
         <WhichUnit Value="Caster"/>
         <Behavior value="OracleStasisTrapTarget"/>
@@ -193,6 +196,11 @@
         <CombineArray value="ChannelSnipeCasterFilters"/>
         <CombineArray value="ChannelSnipeTargetFilters"/>
     </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="ChannelSnipeRefundValidator">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="ChannelSnipeRefund"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorCombine id="IsDefensiveStructure">
         <CombineArray value="NotStructure"/>
         <CombineArray value="IsPhotonCannon"/>
@@ -342,6 +350,11 @@
         <CooldownLink value="Abil/WidowMineAttack"/>
         <Ability value="WidowMineAttack"/>
     </CValidatorUnitCompareCooldown>
+    <CValidatorUnitCompareCooldown id="WidowMineAttackOnCooldown">
+        <CooldownLink value="Abil/WidowMineAttack"/>
+        <Ability value="WidowMineAttack"/>
+        <Compare value="NE"/>
+    </CValidatorUnitCompareCooldown>
     <CValidatorPlayerRequirement id="HasArmorPiercingUpgrade">
         <ResultNoPlayer value="Error"/>
         <Find value="1"/>
@@ -398,9 +411,9 @@
     <CValidatorUnitCompareBehaviorCount id="NotHaveScramblerMissileBehavior">
         <Behavior value="RavenScramblerMissile"/>
     </CValidatorUnitCompareBehaviorCount>
-    <CValidatorUnitCompareBehaviorCount id="CasterIsNotScramblerMissileBehavior">
-        <Behavior value="RavenScramblerMissile"/>
+    <CValidatorUnitCompareBehaviorCount id="CasterDoesNotHaveScramblerMissileBehavior">
         <WhichUnit Value="Caster"/>
+        <Behavior value="RavenScramblerMissile"/>
     </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitCompareCooldown id="BarrierOnCooldown">
         <CooldownLink value="Abil/ImmortalOverload"/>
@@ -449,10 +462,6 @@
         <Value value="SiegeTankSieged"/>
         <Find value="0"/>
     </CValidatorUnitType>
-    <CValidatorPlayerRequirement id="HaveSmartServos">
-        <Value value="HaveSmartServos"/>
-        <Find value="1"/>
-    </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="CasterHasNexusMassRecallCasting">
         <WhichUnit Value="Caster"/>
         <Behavior value="NexusMassRecallCasting"/>

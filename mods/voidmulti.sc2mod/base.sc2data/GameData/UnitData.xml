@@ -328,6 +328,8 @@
         </CardLayouts>
         <EffectArray index="Create" value="MorphToGhostAlternate"/>
         <EffectArray index="Birth" value="MorphToGhostAlternate"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="125"/>
     </CUnit>
     <CUnit id="GhostAlternate" parent="Ghost">
         <EffectArray index="Create" value="MorphToGhostNova"/>
@@ -460,7 +462,6 @@
         <SubgroupPriority value="94"/>
         <CardLayouts index="0">
             <LayoutButtons Face="BurrowedMove" Type="Passive" Row="1" Column="4"/>
-            <LayoutButtons Face="FungalGrowth" Type="AbilCmd" AbilCmd="FungalGrowth,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="NeuralParasite" Type="AbilCmd" AbilCmd="NeuralParasite,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="NeuralParasite,Cancel" Row="2" Column="3"/>
         </CardLayouts>
@@ -468,7 +469,6 @@
         <Collide index="ForceField" value="1"/>
         <Collide index="Locust" value="1"/>
         <AbilArray Link="NeuralParasite"/>
-        <AbilArray Link="FungalGrowth"/>
         <AbilArray Link="InfestorEnsnare"/>
         <Radius value="0.6875"/>
         <InnerRadius value="0.4375"/>
@@ -982,6 +982,8 @@
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
         <SubgroupPriority value="16"/>
+        <TechTreeUnlockedUnitArray index="2" value="Adept"/>
+        <TechTreeUnlockedUnitArray index="3" removed="1"/>
     </CUnit>
     <CUnit id="StarportTechLab">
         <CardLayouts index="0">
@@ -1260,7 +1262,6 @@
     </CUnit>
     <CUnit id="WidowMineBurrowed">
         <SubgroupPriority value="54"/>
-        <FlagArray index="Cloaked" value="0"/>
         <BehaviorArray Link="WidowMineBurrowedCloakingBehavior"/>
     </CUnit>
     <CUnit id="Zealot">
@@ -1823,7 +1824,7 @@
         <ShieldArmorName value="Unit/ShieldArmorName/ProtossPlasmaShields"/>
         <Sight value="9"/>
         <CostCategory value="Technology"/>
-        <CostResource index="Minerals" value="75"/>
+        <CostResource index="Minerals" value="100"/>
         <AttackTargetPriority value="11"/>
         <AbilArray Link="BuildInProgress"/>
         <AbilArray Link="ShieldBatteryRechargeChanneled"/>

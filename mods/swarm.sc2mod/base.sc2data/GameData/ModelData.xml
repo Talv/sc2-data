@@ -336,6 +336,10 @@
         <Model value="Assets\Effects\Protoss\TimeBomb\TimeBomb.m3"/>
         <EditorCategories value="Race:Protoss"/>
     </CModel>
+    <CModel id="Queen_CollectionSkin_Primal">
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
     <CModel id="Queen_CollectionSkin_Webby">
         <ScaleMax value="0.800000,0.800000,0.800000"/>
         <ScaleMin value="0.800000,0.800000,0.800000"/>
@@ -402,6 +406,10 @@
         <ScaleMin value="0.550000,0.550000,0.550000"/>
     </CModel>
     <CModel id="Thor_CovertOps_Collection_Transit">
+        <ScaleMax value="0.550000,0.550000,0.550000"/>
+        <ScaleMin value="0.550000,0.550000,0.550000"/>
+    </CModel>
+    <CModel id="Thor_Junker_Collection">
         <ScaleMax value="0.550000,0.550000,0.550000"/>
         <ScaleMin value="0.550000,0.550000,0.550000"/>
     </CModel>

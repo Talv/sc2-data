@@ -23,6 +23,15 @@
         <SelectionRadius value="0.333200"/>
         <ShadowRadius value="0.333200"/>
     </CModel>
+    <CModel id="Baneling_CollectionSkin_Webby">
+        <Model value="Assets\Units\Zerg\Baneling_CollectionSkin_Webby\Baneling_CollectionSkin_Webby.m3"/>
+    </CModel>
+    <CModel id="Baneling_CollectionSkin_WebbyDeath">
+        <Model value="Assets\Units\Zerg\Baneling_CollectionSkin_WebbyDeath\Baneling_CollectionSkin_WebbyDeath.m3"/>
+    </CModel>
+    <CModel id="Baneling_CollectionSkin_WebbyDeath_Low">
+        <Model value="Assets\Units\Zerg\Baneling_CollectionSkin_WebbyDeath\Baneling_CollectionSkin_WebbyDeath_Low.m3"/>
+    </CModel>
     <CModel id="BattleCruiser_Junker_Collection" parent="Unit" Race="Terran">
         <AttachProps Id="Ref_Weapon 01">
             <Keys index="SetA" value="0"/>
@@ -1904,6 +1913,12 @@
             <Time value="0.001000"/>
             <Payload value="HHViking_SpeedMorphToAssaultMode"/>
         </Events> -->
+        <Events>
+            <Anim value="Morph,Start,Upgrade,00"/>
+            <Name value="VikingLandShock"/>
+            <Type value="Custom"/>
+            <Time value="0.300000"/>
+        </Events>
     </CModel>
     <CModel id="WarbotDeath">
         <Events>
@@ -33552,7 +33567,7 @@
             <Anim value="Unload,00"/>
             <Name value="HH_Reaper_Drop_Land"/>
             <Type value="Sound"/>
-            <Time value="0.03000"/>
+            <Time value="0.030000"/>
             <Payload value="HH_Reaper_Drop_Land"/>
         </Events>
     </CModel>
@@ -34952,7 +34967,7 @@
             <Anim value="Unload,00"/>
             <Name value="HH_Hellion_Land"/>
             <Type value="Sound"/>
-            <Time value="0.06000"/>
+            <Time value="0.060000"/>
             <Payload value="HH_Hellion_Land"/>
         </Events>
     </CModel>
@@ -34977,7 +34992,7 @@
             <Anim value="Unload,00"/>
             <Name value="HH_Hellbat_Land"/>
             <Type value="Sound"/>
-            <Time value="0.03000"/>
+            <Time value="0.030000"/>
             <Payload value="HH_Hellbat_Land"/>
         </Events>
     </CModel>

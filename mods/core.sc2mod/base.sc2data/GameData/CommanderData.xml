@@ -10,7 +10,7 @@
         <Name value="Commander/Name/##id##"/>
         <StoreName value="Commander/Name/##id##"/>
         <Description value="Commander/Description/##id##"/>
-        <PurchaseMessage value="Commander/PurchaseMessage/##id##"/>
+        <PurchaseMessage value="UI/CampaignPurchase/InfoDialog/##id##/Description"/>
         <Details value="Commander/Details/##id##"/>
         <Portrait value="Assets\Textures\UI_commanderportrait_##id##.dds"/>
         <HomePanelImage value="Assets\Textures\ui_homepanel_commander_##id##.dds"/>

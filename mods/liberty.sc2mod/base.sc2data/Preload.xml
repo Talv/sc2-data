@@ -25,11 +25,13 @@
 <Asset path="assets\sounds\uni\ui\ui_mercenarybriefcase_hiremerc_2.wav" Type="Sound"/>
 <Asset path="assets\textures\video_ac_nova_low.ogv" Type="Movie"/>
 <Asset path="assets\textures\btn-command-stop.dds" Type="Image"/>
+<Asset path="assets\portraits\terran\smx1_hanportrait\smx1_hanportrait.m3" Type="Model"/>
 <Asset path="assets\sounds\terran\sharedeffects\fires\terran_firemedium1.wav" Type="Sound"/>
 <Asset path="assets\textures\icon-gas.dds" Type="Image"/>
 <Asset path="assets\textures\btn-border-protoss-queue-trainingslot03.dds" Type="Image"/>
 <Asset path="assets\textures\btn-border-queue-trainingslot04.dds" Type="Image"/>
 <Asset path="assets\textures\blank.dds" Type="Image"/>
+<Asset path="assets\textures\video_gamemodes_veteran_low.ogv" Type="Movie"/>
 <Asset path="assets\storymodecharacters\terran\smx3_nova_portraitanims\smx3_nova_portraitanims.m3a" Type="Animation"/>
 <Asset path="assets\textures\nukeicon7agreen.lvl0" Type="Image"/>
 <Asset path="assets\textures\video_ac_raynor_low.ogv" Type="Movie"/>
@@ -92,6 +94,7 @@
 <Asset path="assets\textures\btn-border-protoss-queue-trainingslot06-disabled.dds" Type="Image"/>
 <Asset path="assets\textures\btn-border-protoss-transportslot-empty.dds" Type="Image"/>
 <Asset path="assets\textures\btn-border-protoss-autocast.dds" Type="Image"/>
+<Asset path="assets\textures\video_gamemodes_versus_low.ogv" Type="Movie"/>
 <Asset path="assets\sounds\terran\sharedeffects\fires\terran_firemedium2.wav" Type="Sound"/>
 <Asset path="assets\textures\icon-shields.dds" Type="Image"/>
 <Asset path="assets\textures\femalecivilian1portrait_static.dds" Type="Image"/>
@@ -102,6 +105,7 @@
 <Asset path="assets\sounds\uni\ui\ui_mercenarybriefcase_selectmerc_4.wav" Type="Sound"/>
 <Asset path="assets\textures\icon-supply.dds" Type="Image"/>
 <Asset path="assets\textures\btn-border-queue-trainingslot06-disabled.dds" Type="Image"/>
+<Asset path="assets\textures\generaldavis_moebiuslab_portrait_static.dds" Type="Image"/>
 <Asset path="assets\sounds\zerg\sharedeffects\explosions\zerg_explosionsmall2.wav" Type="Sound"/>
 <Asset path="assets\sounds\zerg\sharedeffects\explosions\zerg_explosionmedium6.wav" Type="Sound"/>
 <Asset path="assets\textures\ui_btn_aicommand_commandcard_detection.dds" Type="Image"/>
@@ -155,6 +159,7 @@
 <Asset path="assets\portraits\terran\donnyvermillion_portrait_coop\donnyvermillion_portrait_coop.m3" Type="Model"/>
 <Asset path="assets\textures\btn-building-zerg-hatchery.dds" Type="Image"/>
 <Asset path="assets\textures\btn-border-transportslot-filled-4slots.dds" Type="Image"/>
+<Asset path="assets\textures\video_gamemodes_campaign_low.ogv" Type="Movie"/>
 <Asset path="assets\textures\plasmaflame1_red.dds" Type="Image"/>
 <Asset path="assets\sounds\zerg\noxiousturret\noxiousturret_attackimpact6.wav" Type="Sound"/>
 <Asset path="assets\sounds\zerg\sharedeffects\explosions\zerg_explosionsmall0.wav" Type="Sound"/>
@@ -229,6 +234,7 @@
 <Asset path="assets\textures\btn-border-protoss-equipment.dds" Type="Image"/>
 <Asset path="assets\ui\feedback\aoepretargetunitprotoss\aoepretargetunitprotoss.m3" Type="Model"/>
 <Asset path="assets\ui\glues\mainmenuspace\mainmenuspace.m3" Type="Model"/>
+<Asset path="assets\textures\video_gamemodes_coop_low.ogv" Type="Movie"/>
 <Asset path="assets\sounds\terran\sharedeffects\explosions\terran_explosionmedium8.wav" Type="Sound"/>
 <Asset path="assets\textures\progress-queue.lvl0" Type="Image"/>
 <Asset path="assets\textures\btn-minimap-toggleallies.dds" Type="Image"/>

@@ -17,7 +17,9 @@
         <SearchFilters value="Ground;Neutral,Structure,Missile,Dead,Hidden"/>
         <AreaArray Radius="2" Effect="UnitKnockbackBy2"/>
     </CEffectEnumArea>
-    <CEffectDamage id="FungalGrowthSearchDummy"/>
+    <CEffectDamage id="FungalGrowthSearchDummy">
+        <AreaArray index="0" Radius="2.25" Fraction="1"/>
+    </CEffectDamage>
     <CEffectCreatePersistent id="GuardianShieldPersistent">
         <PeriodicValidator value="NotHaveScramblerMissileBehavior"/>
     </CEffectCreatePersistent>
@@ -50,8 +52,7 @@
         <ValidatorArray value="IsNotInfestedTerransEgg"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="OracleWeaponDamage">
-        <ArmorReduction value="1"/>
-        <Kind value="Ranged"/>
+        <AttributeBonus index="Light" value="7"/>
     </CEffectDamage>
     <CEffectSet id="ParasiticBombInitialSet">
         <EffectArray index="1" value="ParasiticBombInitialDelayAB"/>
@@ -489,6 +490,7 @@
         <EditorCategories value="Race:Terran"/>
         <EffectArray value="ChannelSnipeCreatePersistent"/>
         <EffectArray value="ChannelSnipeCombat"/>
+        <EffectArray value="ChannelSnipeRefund"/>
         <EffectArray value="ChannelSnipeCombatBeamDummy"/>
     </CEffectSet>
     <CEffectCreatePersistent id="ChannelSnipeCreatePersistent">
@@ -511,9 +513,14 @@
         <EditorCategories value="Race:Terran"/>
         <WhichUnit Value="Caster"/>
     </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="ChannelSnipeRefund">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+    </CEffectApplyBehavior>
     <CEffectSet id="ChannelSnipeDamageSet">
         <EditorCategories value="Race:Terran"/>
         <EffectArray value="ChannelSnipeDamage"/>
+        <EffectArray value="ChannelSnipeRefundRB"/>
         <EffectArray value="ChannelSnipeCombatRB"/>
     </CEffectSet>
     <CEffectApplyBehavior id="ChannelSnipeCombatBeamDummy">
@@ -827,7 +834,7 @@
         <Behavior value="ParasiticBombInitialDelay"/>
     </CEffectApplyBehavior>
     <CEffectEnumArea id="FungalGrowthSearch">
-        <AreaArray index="0" Radius="2.5" Effect="FungalGrowthSet"/>
+        <AreaArray index="0" Radius="2.25" Effect="FungalGrowthSet"/>
     </CEffectEnumArea>
     <CEffectSet id="FungalGrowthSet">
         <EffectArray index="1" value="FungalGrowthSlowMovementApplyBehavior"/>
@@ -1328,4 +1335,20 @@
         <VitalArray index="Shields" Change="6"/>
     </CEffectModifyUnit>
     <CEffectDamage id="WarpPrismLoadDummy"/>
+    <CEffectModifyUnit id="ChannelSnipeEnergyRefund">
+        <EditorCategories value="Race:Terran"/>
+        <VitalArray index="Energy" Change="50"/>
+        <ImpactUnit Value="Caster"/>
+        <ValidatorArray value="ChannelSnipeRefundValidator"/>
+    </CEffectModifyUnit>
+    <CEffectSet id="ChannelSnipeRefundSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="ChannelSnipeEnergyRefund"/>
+        <EffectArray value="ChannelSnipeRefundRB"/>
+    </CEffectSet>
+    <CEffectRemoveBehavior id="ChannelSnipeRefundRB">
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+        <BehaviorLink value="ChannelSnipeRefund"/>
+    </CEffectRemoveBehavior>
 </Catalog>

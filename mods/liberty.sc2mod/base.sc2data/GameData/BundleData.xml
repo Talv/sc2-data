@@ -128,6 +128,7 @@
         <Flags index="ShowDynamicProductContent" value="1"/>
         <Flags index="IsFeatured" value="1"/>
         <Flags index="IsFeaturedLarge" value="0"/>
+        <Flags index="SuppressDiscount" value="1"/>
         <TileTexture value="Assets\Textures\sc2_ui_collection_featured_tileitem_small_novacovertops.dds"/>
         <MediumTileTexture value="Assets\Textures\sc2_ui_collection_featured_tileitem_medium_novacovertops.dds"/>
         <LargeTileTexture value="Assets\Textures\sc2_ui_collection_featured_tileitem_large_novacovertops.dds"/>
@@ -477,5 +478,236 @@
         <GameContentArray value="SkinPack,OverSeerWebbySkinPack"/>
         <GameContentArray value="PortraitPack,WarChestSeason1_ZergColor"/>
         <GameContentArray value="DecalPack,WarChestSeason1_Zerg"/>
+    </CBundle>
+    <!-- WarChest Season 2 Protoss Bundles -->
+    <CBundle id="WarChestSeason2ProtossStarterBundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,ProbePurifierSkinPack"/>
+        <GameContentArray value="ConsoleSkin,Fenix_ConsoleProtoss"/>
+        <GameContentArray value="PortraitPack,WarChestSeason2_ProtossInk"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier1Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,ZealotPurifierSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier2Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,AdeptPurifierSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier3Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,StalkerPurifierSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier4Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,DarkTemplarPurifierSkinPack"/>
+        <GameContentArray value="EmoticonPack,WarChestProtoss_HearNoEvil"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier5Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,HighTemplarPurifierSkinPack"/>
+        <GameContentArray value="EmoticonPack,WarChestProtoss_SpeakNoEvil"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier6Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,SentryPurifierSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier7Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,ImmortalPurifierSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier8Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,OraclePurifierSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier9Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,DisruptorPurifierSkinPack"/>
+        <GameContentArray value="EmoticonPack,WarChestProtoss_SeeNoEvil"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier10Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,ColossusPurifierBSkinPack"/>
+        <GameContentArray value="SkinPack,ObserverPurifierSkinPack"/>
+        <GameContentArray value="SprayPack,WarChestProtoss_MyLifeForIron"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier11Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,PhoenixPurifierSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier12Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,VoidRayPurifierSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier13Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,WarpPrismPurifierSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier14Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,MothershipPurifierSkinPack"/>
+        <GameContentArray value="SprayPack,WarChestProtoss_GLHFProtoss"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ProtossTier15Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,CarrierPurifierSkinPack"/>
+        <GameContentArray value="SkinPack,TempestPurifierSkinPack"/>
+        <GameContentArray value="PortraitPack,WarChestSeason2_ProtossColor"/>
+    </CBundle>
+    <!-- WarChest Season 2 Terran Bundles -->
+    <CBundle id="WarChestSeason2TerranStarterBundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,SCVJunkerMMSkinPack"/>
+        <GameContentArray value="ConsoleSkin,ConsoleTerran_Junker"/>
+        <GameContentArray value="PortraitPack,WarChestSeason2_TerranInk"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier1Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,MarineJunkerSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier2Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,MarauderJunkerSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier3Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,GhostJunkerSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier4Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,ReaperJunkerSkinPack"/>
+        <GameContentArray value="EmoticonPack,WarChestTerran_Lying"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier5Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,MedivacJunkerSkinPack"/>
+        <GameContentArray value="EmoticonPack,WarChestTerran_Sick"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier6Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,HellionJunkerMMSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier7Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,CycloneJunkerSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier8Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,WidowMineJunkerSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier9Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,SiegeTankJunkerSkinPack"/>
+        <GameContentArray value="EmoticonPack,WarChestTerran_Explode"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier10Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,ThorJunkerSkinPack"/>
+        <GameContentArray value="EmoticonPack,WarChestTerran_Joker"/>
+        <GameContentArray value="EmoticonPack,WarChestTerran_Mule"/>
+        <GameContentArray value="SprayPack,WarChestTerran_JunkerJoker"/>
+        <GameContentArray value="SprayPack,WarChestTerran_QueenOfHearts"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier11Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,BansheeJunkerSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier12Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,VikingJunkerSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier13Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,LiberatorJunkerSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier14Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,RavenJunkerSkinPack"/>
+        <GameContentArray value="SprayPack,WarChestTerran_AceOfSpades"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2TerranTier15Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,BattlecruiserJunkerSkinPack"/>
+        <GameContentArray value="EmoticonPack,WarChestTerran_RaynorSkull"/>
+        <GameContentArray value="EmoticonPack,WarChestTerran_Hardcore"/>
+        <GameContentArray value="EmoticonPack,WarChestTerran_Cowboy"/>
+        <GameContentArray value="PortraitPack,WarChestSeason2_TerranColor"/>
+    </CBundle>
+    <!-- WarChest Season 2 Zerg Bundles -->
+    <CBundle id="WarChestSeason2ZergStarterBundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,DronePrimalSkinPack"/>
+        <GameContentArray value="ConsoleSkin,Dehaka_ConsoleZerg"/>
+        <GameContentArray value="PortraitPack,WarChestSeason2_ZergInk"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier1Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,ZerglingPrimalSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier2Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,HydraliskPrimalSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier3Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,RoachPrimalSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier4Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,BanelingPrimalSkinPack"/>
+        <GameContentArray value="EmoticonPack,WarChestZerg_Salute"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier5Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,QueenPrimalSkinPack"/>
+        <GameContentArray value="EmoticonPack,WarChestZerg_Drool"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier6Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,RavagerPrimalSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier7Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,SwarmHostPrimalSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier8Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,InfestorPrimalSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier9Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,LurkerPrimalSkinPack"/>
+        <GameContentArray value="EmoticonPack,WarChestZerg_Scream"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier10Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,UltraliskPrimalSkinPack"/>
+        <GameContentArray value="EmoticonPack,WarChestZerg_Creep"/>
+        <GameContentArray value="EmoticonPack,WarChestZerg_Rush"/>
+        <GameContentArray value="SprayPack,WarChestZerg_JurassicBones"/>
+        <GameContentArray value="SprayPack,WarChestZerg_ZergRush"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier11Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,OverlordPrimalSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier12Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,MutaliskPrimalSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier13Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,CorruptorPrimalSkinPack"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier14Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,ViperPrimalSkinPack"/>
+        <GameContentArray value="SprayPack,WarChestZerg_SweetEssence"/>
+    </CBundle>
+    <CBundle id="WarChestSeason2ZergTier15Bundle">
+        <ReleaseDate Month="12" Year="2017"/>
+        <GameContentArray value="SkinPack,BroodLordPrimalSkinPack"/>
+        <GameContentArray value="SkinPack,OverSeerPrimalSkinPack"/>
+        <GameContentArray value="PortraitPack,WarChestSeason2_ZergColor"/>
     </CBundle>
 </Catalog>

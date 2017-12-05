@@ -3007,9 +3007,17 @@
         <CombineArray value="MineralField"/>
         <CombineArray value="MineralField750"/>
     </CValidatorCombine>
+    <CValidatorCombine id="HaveGhostAlternateorGhostJunker">
+        <CombineArray value="HaveGhostAlternate"/>
+        <CombineArray value="HaveGhostJunker"/>
+    </CValidatorCombine>
     <CValidatorPlayerRequirement id="HaveGhostAlternate">
         <Find value="1"/>
         <Value value="HaveGhostAlternate"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveGhostJunker">
+        <Find value="1"/>
+        <Value value="HaveGhostJunker"/>
     </CValidatorPlayerRequirement>
     <CValidatorPlayerCompareRace id="RaceIsZerg">
         <Value value="Zerg"/>

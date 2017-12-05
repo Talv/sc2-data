@@ -4563,36 +4563,47 @@ void libCOMI_gf_CM_HornerStatUpdate (int lp_player) {
         lv_factionScore = MinF(lv_factionMaxStacks, lv_factionScore);
         lv_factionBonusLifeMulti = (lv_itBonusLifeMulti*lv_factionScore*lv_bonusMulti);
         lv_factionBonusAtkSpeedMulti = (lv_itBonusAtkSpeedMulti*lv_factionScore*lv_bonusMulti);
-        auto9045C56D_userType = libCOMI_gv_cM_HornerStatUserType;
-        auto9045C56D_i = 1;
-        for ( ; auto9045C56D_i <= UserDataInstanceCount(auto9045C56D_userType) ; auto9045C56D_i += 1 ) {
-            lv_itInstanceStat = UserDataInstance(auto9045C56D_userType, auto9045C56D_i);
-            lv_itStatFaction = UserDataGetUserInstance(libCOMI_gv_cM_HornerStatUserType, lv_itInstanceStat, "Faction", 1);
-            if ((lv_itStatFaction != lv_itInstanceFaction)) {
-                lv_itStatUnitType = UserDataGetUnit(libCOMI_gv_cM_HornerStatUserType, lv_itInstanceStat, "Unit", 1);
-                if ((lv_itBonusLifeMulti != 0.0)) {
-                    libCOMI_gf_CatalogFieldValueAdditiveBonus(c_gameCatalogUnit, lv_itStatUnitType, "LifeMax", lp_player, "MSO", lv_factionBonusLifeMulti, false);
-                    libCOMI_gf_CatalogFieldValueAdditiveBonus(c_gameCatalogUnit, lv_itStatUnitType, "LifeStart", lp_player, "MSO", lv_factionBonusLifeMulti, false);
-                }
-
-                CatalogFieldValueModify(c_gameCatalogEffect, "HornerMSOHealthDisplayDummy", "Amount", lp_player, FixedToString(lv_factionBonusLifeMulti, 2), c_upgradeOperationSet);
-                if ((lv_itBonusAtkSpeedMulti != 0.0)) {
-                    autoE55E46B6_catalog = c_gameCatalogUnit;
-                    autoE55E46B6_entry = lv_itStatUnitType;
-                    autoE55E46B6_field = "WeaponArray";
-                    autoE55E46B6_scopeField = "Link";
-                    autoE55E46B6_player = lp_player;
-                    autoE55E46B6_i = 0;
-                    for ( ; autoE55E46B6_i <= CatalogFieldValueCount(c_gameCatalogUnit,autoE55E46B6_entry,autoE55E46B6_field,autoE55E46B6_player)-1 ; autoE55E46B6_i += 1 ) {
-                        lv_itWeapons = CatalogFieldValueGet(c_gameCatalogUnit,autoE55E46B6_entry,autoE55E46B6_field+"["+IntToString(autoE55E46B6_i)+"]."+autoE55E46B6_scopeField,autoE55E46B6_player);
-                        libCOMI_gf_CatalogFieldValueAdditiveBonus(c_gameCatalogWeapon, lv_itWeapons, "Period", lp_player, "MSO", lv_factionBonusAtkSpeedMulti, true);
+        if ((TechTreeUpgradeCount(lp_player, "HHSOBuff", c_techCountCompleteOnly) == 1)) {
+            auto9045C56D_userType = libCOMI_gv_cM_HornerStatUserType;
+            auto9045C56D_i = 1;
+            for ( ; auto9045C56D_i <= UserDataInstanceCount(auto9045C56D_userType) ; auto9045C56D_i += 1 ) {
+                lv_itInstanceStat = UserDataInstance(auto9045C56D_userType, auto9045C56D_i);
+                lv_itStatFaction = UserDataGetUserInstance(libCOMI_gv_cM_HornerStatUserType, lv_itInstanceStat, "Faction", 1);
+                if ((lv_itStatFaction != lv_itInstanceFaction)) {
+                    lv_itStatUnitType = UserDataGetUnit(libCOMI_gv_cM_HornerStatUserType, lv_itInstanceStat, "Unit", 1);
+                    if ((lv_itBonusLifeMulti != 0.0)) {
+                        libCOMI_gf_CatalogFieldValueAdditiveBonus(c_gameCatalogUnit, lv_itStatUnitType, "LifeMax", lp_player, "MSO", lv_factionBonusLifeMulti, false);
+                        libCOMI_gf_CatalogFieldValueAdditiveBonus(c_gameCatalogUnit, lv_itStatUnitType, "LifeStart", lp_player, "MSO", lv_factionBonusLifeMulti, false);
                     }
-                    CatalogFieldValueModify(c_gameCatalogEffect, "HornerMSOAttackSpeedDisplayDummy", "Amount", lp_player, FixedToString(lv_factionBonusAtkSpeedMulti, c_fixedPrecisionAny), c_upgradeOperationSet);
+
+                    CatalogFieldValueModify(c_gameCatalogEffect, "HornerMSOHealthDisplayDummy", "Amount", lp_player, FixedToString(lv_factionBonusLifeMulti, 2), c_upgradeOperationSet);
+                    if ((lv_itBonusAtkSpeedMulti != 0.0)) {
+                        autoE55E46B6_catalog = c_gameCatalogUnit;
+                        autoE55E46B6_entry = lv_itStatUnitType;
+                        autoE55E46B6_field = "WeaponArray";
+                        autoE55E46B6_scopeField = "Link";
+                        autoE55E46B6_player = lp_player;
+                        autoE55E46B6_i = 0;
+                        for ( ; autoE55E46B6_i <= CatalogFieldValueCount(c_gameCatalogUnit,autoE55E46B6_entry,autoE55E46B6_field,autoE55E46B6_player)-1 ; autoE55E46B6_i += 1 ) {
+                            lv_itWeapons = CatalogFieldValueGet(c_gameCatalogUnit,autoE55E46B6_entry,autoE55E46B6_field+"["+IntToString(autoE55E46B6_i)+"]."+autoE55E46B6_scopeField,autoE55E46B6_player);
+                            libCOMI_gf_CatalogFieldValueAdditiveBonus(c_gameCatalogWeapon, lv_itWeapons, "Period", lp_player, "MSO", lv_factionBonusAtkSpeedMulti, true);
+                        }
+                        CatalogFieldValueModify(c_gameCatalogEffect, "HornerMSOAttackSpeedDisplayDummy", "Amount", lp_player, FixedToString(lv_factionBonusAtkSpeedMulti, c_fixedPrecisionAny), c_upgradeOperationSet);
+                        if ((TechTreeUpgradeCount(lp_player, "HHWidowMineDeathBlossom", c_techCountCompleteOnly) == 1)) {
+                            libNtve_gf_CatalogFieldValueSetAsReal(c_gameCatalogAbil, "HHWidowMineBurrowedAttack", "Cost[" + IntToString(0) + "].Cooldown.TimeUse", lp_player, (20.0 * (1.0 - (0.01 * lv_factionBonusAtkSpeedMulti))));
+                            libNtve_gf_CatalogFieldValueSetAsReal(c_gameCatalogBehavior, "HHWidowMineAnimationController", "Duration", lp_player, (20.0 * (1.0 - (0.01 * lv_factionBonusAtkSpeedMulti))));
+                        }
+                        else {
+                            libNtve_gf_CatalogFieldValueModifyBasedOnDefaultValue(c_gameCatalogAbil, "HHWidowMineBurrowedAttack", "Cost[" + IntToString(0) + "].Cooldown.TimeUse", lp_player, (1.0 - (0.01 * lv_factionBonusAtkSpeedMulti)), c_upgradeOperationMultiply);
+                            libNtve_gf_CatalogFieldValueModifyBasedOnDefaultValue(c_gameCatalogBehavior, "HHWidowMineAnimationController", "Duration", lp_player, (1.0 - (0.01 * lv_factionBonusAtkSpeedMulti)), c_upgradeOperationMultiply);
+                        }
+                    }
+
                 }
 
             }
-
         }
+
     }
 }
 
@@ -12602,8 +12613,7 @@ bool libCOMI_gt_CM_Abathur_TriggersInit_Func (bool testConds, bool runActions) {
     TriggerEnable(libCOMI_gt_CM_DebugAbathurBiomassLost, true);
     TriggerEnable(libCOMI_gt_CM_Abathur_MeleeBonusUpgrade, true);
     TriggerEnable(libCOMI_gt_CM_Abathur_ToxicNest, true);
-    TriggerEnable(libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchAbilityCast, true);
-    TriggerEnable(libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchWeaponCast, true);
+    TriggerEnable(libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchCast, true);
     TriggerEnable(libCOMI_gt_CM_Abathur_ToxicNestDeathFailsafe, true);
     TriggerEnable(libCOMI_gt_BanelingScourgeLocusts, true);
     TriggerEnable(libCOMI_gt_BanelingScourgeBiomassDrop, true);
@@ -13205,47 +13215,9 @@ void libCOMI_gt_CM_Abathur_ToxicNest_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: CM_Abathur_SwarmHostLocustLaunchAbilityCast
+// Trigger: CM_Abathur_SwarmHostLocustLaunchCast
 //--------------------------------------------------------------------------------------------------
-bool libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchAbilityCast_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    fixed lv_cooldown;
-    fixed lv_multiplier;
-
-    // Automatic Variable Declarations
-    // Variable Initialization
-
-    // Conditions
-    if (testConds) {
-        if (!((TechTreeUpgradeCount(EventPlayer(), "AbathurCommander", c_techCountCompleteOnly) == 1))) {
-            return false;
-        }
-    }
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    lv_cooldown = UnitWeaponPeriod(EventUnit(), 1);
-    lv_multiplier = UnitWeaponSpeedMultiplier(EventUnit(), 1);
-    UnitAbilityReset(EventUnit(), AbilityCommand("LocustLaunch", 0), c_spendLocationUnit);
-    UnitModifyCooldown(EventUnit(), "Abil/LocustLaunch", ((lv_cooldown * lv_multiplier) / 16.0), c_cooldownOperationSet);
-    UnitBehaviorSetDurationRemaining(EventUnit(), "SwarmHostEggAnimation", ((lv_cooldown * lv_multiplier) / 16.0));
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchAbilityCast_Init () {
-    libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchAbilityCast = TriggerCreate("libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchAbilityCast_Func");
-    TriggerEnable(libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchAbilityCast, false);
-    TriggerAddEventUnitAbility(libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchAbilityCast, null, AbilityCommand("LocustLaunch", 0), c_unitAbilStageExecute, false);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: CM_Abathur_SwarmHostLocustLaunchWeaponCast
-//--------------------------------------------------------------------------------------------------
-bool libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchWeaponCast_Func (bool testConds, bool runActions) {
+bool libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchCast_Func (bool testConds, bool runActions) {
     // Variable Declarations
     fixed lv_cooldown;
     fixed lv_multiplier;
@@ -13274,10 +13246,11 @@ bool libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchWeaponCast_Func (bool testConds,
 }
 
 //--------------------------------------------------------------------------------------------------
-void libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchWeaponCast_Init () {
-    libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchWeaponCast = TriggerCreate("libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchWeaponCast_Func");
-    TriggerEnable(libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchWeaponCast, false);
-    TriggerAddEventPlayerEffectUsed(libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchWeaponCast, c_playerAny, "LocustWeaponCreateSet");
+void libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchCast_Init () {
+    libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchCast = TriggerCreate("libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchCast_Func");
+    TriggerEnable(libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchCast, false);
+    TriggerAddEventPlayerEffectUsed(libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchCast, c_playerAny, "LocustCreateSet");
+    TriggerAddEventPlayerEffectUsed(libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchCast, c_playerAny, "LocustWeaponCreateSet");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -17344,23 +17317,34 @@ void libCOMI_gt_CM_Horner_ScrapPickup_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: CM_HornerStatUpdate
+// Trigger: CM_Horner_SupplyAchievement
 //--------------------------------------------------------------------------------------------------
-bool libCOMI_gt_CM_HornerStatUpdate_Func (bool testConds, bool runActions) {
+bool libCOMI_gt_CM_Horner_SupplyAchievement_Func (bool testConds, bool runActions) {
     // Variable Declarations
     int lv_player;
 
     // Automatic Variable Declarations
     // Variable Initialization
-    lv_player = EventPlayer();
+    lv_player = UnitGetOwner(EventUnitCreatedUnit());
+
+    // Conditions
+    if (testConds) {
+        if (!((PlayerCommander(lv_player) == "Horner"))) {
+            return false;
+        }
+
+        if (!(((UnitGetType(EventUnitCreatedUnit()) == "HHReaper") || (UnitGetType(EventUnitCreatedUnit()) == "HHWidowMine") || (UnitGetType(EventUnitCreatedUnit()) == "HHHellion") || (UnitGetType(EventUnitCreatedUnit()) == "HHHellionTank") || (UnitGetType(EventUnitCreatedUnit()) == "HHMercStarportUpgraded") || (UnitGetType(EventUnitCreatedUnit()) == "HHMercStarportNoArmy") || (UnitGetType(EventUnitCreatedUnit()) == "HHBomberPlatform") || (UnitGetType(EventUnitCreatedUnit()) == "HHViking_SpawnerUnit") || (UnitGetType(EventUnitCreatedUnit()) == "HHWraith_SpawnerUnit") || (UnitGetType(EventUnitCreatedUnit()) == "HHRaven_SpawnerUnit") || (UnitGetType(EventUnitCreatedUnit()) == "HHBattlecruiser_SpawnerUnit")))) {
+            return false;
+        }
+    }
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    libCOMI_gf_CM_HornerStatUpdate(EventPlayer());
-    if ((PlayerCommander(lv_player) == "Horner") && (libCOMI_gv_miraFactionSupply[EventPlayer()] >= 80.0) && (libCOMI_gv_mattFactionSupply[EventPlayer()] >= 40.0) && ((libCOMI_gf_DifficultyLevelForPlayerCoop(lv_player) == 3) || (libCOMI_gf_DifficultyLevelForPlayerCoop(lv_player) == 4))) {
+    libCOMI_gf_CM_HornerStatUpdate(lv_player);
+    if (((libCOMI_gf_DifficultyLevelForPlayerCoop(lv_player) == 3) || (libCOMI_gf_DifficultyLevelForPlayerCoop(lv_player) == 4)) && ((libCOMI_gv_miraFactionSupply[lv_player] >= 80.0) && (libCOMI_gv_mattFactionSupply[lv_player] >= 40.0))) {
         AchievementAward(lv_player, "CommanderHornerSupply");
     }
 
@@ -17368,10 +17352,10 @@ bool libCOMI_gt_CM_HornerStatUpdate_Func (bool testConds, bool runActions) {
 }
 
 //--------------------------------------------------------------------------------------------------
-void libCOMI_gt_CM_HornerStatUpdate_Init () {
-    libCOMI_gt_CM_HornerStatUpdate = TriggerCreate("libCOMI_gt_CM_HornerStatUpdate_Func");
-    TriggerEnable(libCOMI_gt_CM_HornerStatUpdate, false);
-    TriggerAddEventPlayerEffectUsed(libCOMI_gt_CM_HornerStatUpdate, c_playerAny, "TheHornersStatUpdate");
+void libCOMI_gt_CM_Horner_SupplyAchievement_Init () {
+    libCOMI_gt_CM_Horner_SupplyAchievement = TriggerCreate("libCOMI_gt_CM_Horner_SupplyAchievement_Func");
+    TriggerEnable(libCOMI_gt_CM_Horner_SupplyAchievement, false);
+    TriggerAddEventUnitCreated(libCOMI_gt_CM_Horner_SupplyAchievement, null, null, null);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -17861,6 +17845,10 @@ bool libCOMI_gt_CM_Horner_BomberPlatform_Individual_TargetSelected_Func (bool te
                 UnitIssueOrder(lv_bomber, OrderTargetingPoint(AbilityCommand("move", 0), lv_bomberTargetPoint), c_orderQueueReplace);
             }
 
+            if (((lv_bomberTargetIsUnit == false))) {
+                UnitIssueOrder(lv_bomber, OrderTargetingPoint(AbilityCommand("move", 0), lv_bomberTargetPoint), c_orderQueueReplace);
+            }
+
             if (((DistanceBetweenPoints(UnitGetPosition(lv_bomber), lv_bomberTargetPoint) < 20.0) && (lv_bomberDiveSoundPlayed == false))) {
                 libNtve_gf_SendActorMessageToUnit(lv_bomber, "Signal DiveSoundStart");
                 lv_bomberDiveSoundPlayed = true;
@@ -17992,7 +17980,7 @@ bool libCOMI_gt_CM_Horner_TriggersInit_Func (bool testConds, bool runActions) {
     TriggerEnable(libCOMI_gt_CM_Horner_BomberPlatform_BomberRebuilt, true);
     TriggerEnable(libCOMI_gt_CM_Horner_BomberPlatform_TopBar_TargetSelected, true);
     TriggerEnable(libCOMI_gt_CM_Horner_BomberPlatform_Individual_TargetSelected, true);
-    TriggerEnable(libCOMI_gt_CM_HornerStatUpdate, true);
+    TriggerEnable(libCOMI_gt_CM_Horner_SupplyAchievement, true);
     if ((TechTreeUpgradeCount(libCOOC_gf_CC_PlayerOfCommanderInGroupFirst("TerranHorner", libCOOC_gf_CC_PlayersOfCommander("TerranHorner")), "HHScrapPickup", c_techCountQueuedOrBetter) == 1)) {
         TriggerEnable(libCOMI_gt_CM_Horner_ScrapDrop, true);
         TriggerEnable(libCOMI_gt_CM_Horner_ScrapPickup, true);
@@ -20030,6 +20018,7 @@ bool libCOMI_gt_CM_Stukov_TriggersInit_Func (bool testConds, bool runActions) {
     TriggerEnable(libCOMI_gt_CM_Stukov_HordeWaveInteruptionReissueOrder, true);
     TriggerEnable(libCOMI_gt_CM_Stukov_RallyPlaced, true);
     TriggerEnable(libCOMI_gt_CM_Stukov_RallyToUnitDies, true);
+    TriggerEnable(libCOMI_gt_CM_Stukov_InfestedSiegeTankDeath, true);
     return true;
 }
 
@@ -20260,6 +20249,48 @@ void libCOMI_gt_CM_Stukov_UnitCostRefund_Init () {
     libCOMI_gt_CM_Stukov_UnitCostRefund = TriggerCreate("libCOMI_gt_CM_Stukov_UnitCostRefund_Func");
     TriggerEnable(libCOMI_gt_CM_Stukov_UnitCostRefund, false);
     TriggerAddEventPlayerEffectUsed(libCOMI_gt_CM_Stukov_UnitCostRefund, c_playerAny, "CocoonCreateLM");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Stukov_InfestedSiegeTankDeath
+//--------------------------------------------------------------------------------------------------
+bool libCOMI_gt_CM_Stukov_InfestedSiegeTankDeath_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_stackCount;
+
+    // Automatic Variable Declarations
+    int auto7F872E61_ae;
+    const int auto7F872E61_ai = 1;
+
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitHasBehavior2(EventUnit(), "StukovInfestedSiegeTankAmmo") == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_stackCount = UnitBehaviorCount(EventUnit(), "StukovInfestedSiegeTankAmmo");
+    auto7F872E61_ae = lv_stackCount;
+    lv_stackCount = 1;
+    for ( ; ( (auto7F872E61_ai >= 0 && lv_stackCount <= auto7F872E61_ae) || (auto7F872E61_ai < 0 && lv_stackCount >= auto7F872E61_ae) ) ; lv_stackCount += auto7F872E61_ai ) {
+        libNtve_gf_CreateUnitsWithDefaultFacing(1, "SIVolatileInfested", 0, EventPlayer(), UnitGetPosition(EventUnit()));
+        UnitBehaviorAddPlayer(UnitLastCreated(), "SIBarracksTrainTimedLife", EventPlayer(), 1);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libCOMI_gt_CM_Stukov_InfestedSiegeTankDeath_Init () {
+    libCOMI_gt_CM_Stukov_InfestedSiegeTankDeath = TriggerCreate("libCOMI_gt_CM_Stukov_InfestedSiegeTankDeath_Func");
+    TriggerEnable(libCOMI_gt_CM_Stukov_InfestedSiegeTankDeath, false);
+    TriggerAddEventUnitDied(libCOMI_gt_CM_Stukov_InfestedSiegeTankDeath, null);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -24625,8 +24656,7 @@ void libCOMI_InitTriggers () {
     libCOMI_gt_CM_Abathur_BiomassScaler_Init();
     libCOMI_gt_CM_Abathur_Enemy_Death_Create_Locusts_Init();
     libCOMI_gt_CM_Abathur_ToxicNest_Init();
-    libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchAbilityCast_Init();
-    libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchWeaponCast_Init();
+    libCOMI_gt_CM_Abathur_SwarmHostLocustLaunchCast_Init();
     libCOMI_gt_CM_Alarak_Sacrific_Scale_Init();
     libCOMI_gt_CM_AlarakLightningStrikes_FlashOn_Init();
     libCOMI_gt_CM_AlarakLightningStrikes_FlashOff_Init();
@@ -24718,7 +24748,7 @@ void libCOMI_InitTriggers () {
     libCOMI_gt_CM_Horner_ScrapDrop_Init();
     libCOMI_gt_CM_Horner_ScrapDropForSwannWreckage_Init();
     libCOMI_gt_CM_Horner_ScrapPickup_Init();
-    libCOMI_gt_CM_HornerStatUpdate_Init();
+    libCOMI_gt_CM_Horner_SupplyAchievement_Init();
     libCOMI_gt_CM_Horner_StarportCreateTechLabOrder_Init();
     libCOMI_gt_CM_Horner_StarportCreateTechLabStart_Init();
     libCOMI_gt_CM_Horner_StarportCreateTechLabFinish_Init();
@@ -24788,6 +24818,7 @@ void libCOMI_InitTriggers () {
     libCOMI_gt_CM_Stukov_InfestedBunkerRegister_Init();
     libCOMI_gt_CM_Stukov_InfestedBunkerInitialSpawn_Init();
     libCOMI_gt_CM_Stukov_UnitCostRefund_Init();
+    libCOMI_gt_CM_Stukov_InfestedSiegeTankDeath_Init();
     libCOMI_gt_ResourcePickupAllyNew_Init();
     libCOMI_gt_CM_SoATargetingForceOff_Init();
     libCOMI_gt_CM_SoATargetingDeactivated_Init();

@@ -250,6 +250,11 @@
         <InfoIcon value="Assets\Textures\btn-ability-terran-snipe-color.dds"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <DamageResponse Chance="1" Handled="ChannelSnipeCombatRB"/>
+        <FinalEffect value="ChannelSnipeRefundSet"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ChannelSnipeRefund">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="PurificationNovaTargettedCaster"/>
     <CBehaviorBuff id="PurificationNovaTargettedTarget">
@@ -260,8 +265,9 @@
         <RemoveValidatorArray value="CasterIsNotGravitonBeamed"/>
         <RemoveValidatorArray value="CasterIsNotMothershipCoreRecalling"/>
         <RemoveValidatorArray value="CasterIsNotMothershipRecalling"/>
-        <RemoveValidatorArray value="CasterIsNotScramblerMissileBehavior"/>
+        <RemoveValidatorArray value="CasterDoesNotHaveScramblerMissileBehavior"/>
         <PeriodicEffect value="PurificationNovaPeriodicSet"/>
+        <PeriodCount value="23"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="TimeWarpProduction">
         <Modification TimeScale="1.15" AttackSpeedMultiplier="0.85"/>
@@ -376,10 +382,9 @@
     <CBehaviorBuff id="WidowMineBurrowedCloakingBehavior">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <DisableValidatorArray value="WidowMineAttackNotOnCooldown"/>
+        <DisableValidatorArray value="WidowMineAttackOnCooldown"/>
         <Modification>
-            <StateFlags index="Bury" value="1"/>
-            <StateFlags index="Cloak" value="1"/>
+            <StateFlags index="SuppressCloak" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="Detector13p75" parent="Detector">

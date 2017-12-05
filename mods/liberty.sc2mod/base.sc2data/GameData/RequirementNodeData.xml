@@ -542,6 +542,11 @@
         <Count Link="GhostMoebiusReactor" State="QueuedOrBetter"/>
         <Flags index="TechTreeCheat" value="0"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeGhostSkinJunkerCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="GhostSkinJunker" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeGlialReconstitutionQueuedOrBetter">
         <Count Link="GlialReconstitution" State="QueuedOrBetter"/>
         <Flags index="TechTreeCheat" value="0"/>

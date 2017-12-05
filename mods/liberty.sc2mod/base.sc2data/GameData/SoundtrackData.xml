@@ -347,6 +347,13 @@
         </CueArray>
         <Delay value="120,180"/>
     </CSoundtrack>
+    <CSoundtrack id="Music_Takeover_ReBrand" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="CS_MainMenu_ReBrand_TO_Music"/>
+        </CueArray>
+        <Flags index="Continuous" value="0"/>
+        <Next value="Music_Takeover_ReBrand_BG"/>
+    </CSoundtrack>
     <CSoundtrack id="Music_Takeover_Abathur">
         <CueArray>
             <MasterLayer Sound="Music_Takeover_Abathur"/>
@@ -488,6 +495,12 @@
             <SlaveLayers/>
             <SlaveLayers/>
             <SlaveLayers/>
+        </CueArray>
+        <Flags index="Continuous" value="0"/>
+    </CSoundtrack>
+    <CSoundtrack id="Music_Takeover_ReBrand_BG" parent="Music">
+        <CueArray>
+            <MasterLayer Sound="CS_MainMenu_ReBrand_BG_Music"/>
         </CueArray>
         <Flags index="Continuous" value="0"/>
     </CSoundtrack>

@@ -263,7 +263,6 @@
     </CModel>
     <CModel id="RavenRepairDronePlacement" parent="Placement" Race="Terran">
         <Model value="Assets\Units\Terran\Repair_Drone_MP_Placement\Repair_Drone_MP_Placement.m3"/>
-        <LowQualityModel value="AutoTurret"/>
     </CModel>
     <CModel id="RavenRepairDroneHealBeam" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Terran\NanoRepairBeam\NanoRepairBeam.m3"/>
@@ -394,5 +393,17 @@
         <EditorCategories value="Race:Protoss"/>
         <ScaleMax value="3.000000,3.000000,3.000000"/>
         <ScaleMin value="3.000000,3.000000,3.000000"/>
+    </CModel>
+    <CModel id="Aiur_Temple_GroundDoor">
+        <Flags index="ShowCreepEngulfmentEvenOnLow" value="1"/>
+    </CModel>
+    <CModel id="SnowRefinery_RockRampSmall">
+        <Flags index="ShowCreepEngulfmentEvenOnLow" value="1"/>
+    </CModel>
+    <CModel id="SnowRefinery_RockRamps">
+        <Flags index="ShowCreepEngulfmentEvenOnLow" value="1"/>
+    </CModel>
+    <CModel id="SnowRefinery_RockRamps_Medium">
+        <Flags index="ShowCreepEngulfmentEvenOnLow" value="1"/>
     </CModel>
 </Catalog>

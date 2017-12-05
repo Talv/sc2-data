@@ -6237,4 +6237,10 @@
         <Value value="1"/>
         <Behavior value="HHYamatoShots"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="CoopUnitCloakingValidators">
+        <Type value="And"/>
+        <CombineArray value="IsNotDarkPylon"/>
+        <CombineArray value="IsNotShakurasTemple"/>
+        <CombineArray value="NotMothership"/>
+    </CValidatorCombine>
 </Catalog>

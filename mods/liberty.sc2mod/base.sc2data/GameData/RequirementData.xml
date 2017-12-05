@@ -3,6 +3,9 @@
     <CRequirement id="HaveGhostAlternate">
         <NodeArray index="Show" Link="CountUpgradeGhostAlternateCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="HaveGhostJunker">
+        <NodeArray index="Show" Link="CountUpgradeGhostSkinJunkerCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="GhostHoldingFire">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
         <NodeArray index="Show" Link="CountBehaviorGhostHoldFireBCompleteOnlyAtUnit"/>

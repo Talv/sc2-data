@@ -3134,6 +3134,7 @@
         <ReplacementArray Catalog="Sound" From="Alert_ZergEconomyUnderAttack" To="HornerHanAnnouncer_WorkersUnderAttackZerg"/>
         <ReplacementArray Catalog="Sound" From="Alert_TerranEconomyUnderAttack" To="HornerHanAnnouncer_WorkersUnderAttack"/>
     </CRewardVoicePack>
+    <!-- Console skin defaults -->
     <CRewardConsoleSkin id="ConsoleSkinTerranDefault" parent="TERRANCONSOLESKIN">
         <ConsoleSkin value="TerranDefault"/>
         <Flags index="Allowed" value="1"/>
@@ -3148,6 +3149,16 @@
         <ConsoleSkin value="ProtossDefault"/>
         <Flags index="Allowed" value="1"/>
         <Flags index="Default" value="1"/>
+    </CRewardConsoleSkin>
+    <!-- Console skins -->
+    <CRewardConsoleSkin id="ConsoleSkinProtossFenix" parent="PROTOSSCONSOLESKIN">
+        <ConsoleSkin value="Fenix_ConsoleProtoss"/>
+    </CRewardConsoleSkin>
+    <CRewardConsoleSkin id="ConsoleSkinTerranHorner" parent="TERRANCONSOLESKIN">
+        <ConsoleSkin value="ConsoleTerran_Junker"/>
+    </CRewardConsoleSkin>
+    <CRewardConsoleSkin id="ConsoleSkinZergDehaka" parent="ZERGCONSOLESKIN">
+        <ConsoleSkin value="Dehaka_ConsoleZerg"/>
     </CRewardConsoleSkin>
     <!-- Decal Defaults -->
     <CRewardDecal id="Decal_Terran_0009_01" parent="DECALTERRAN">
@@ -5720,7 +5731,7 @@
         <IconCols value="9"/>
         <IconRows value="9"/>
         <IconSlot value="65"/>
-        <Upgrades value="GhostSkinNova"/>
+        <Upgrades value="GhostAlternate"/>
         <Model value="Nova"/>
         <Skin value="GhostNova"/>
         <Race value="Terr"/>
@@ -5769,6 +5780,11 @@
         <Skin value="HellionJunker"/>
         <License value="SC2SkinJunkerHellion"/>
         <Race value="Terr"/>
+    </CRewardModel>
+    <CRewardModel id="HellionJunker" parent="MODELDEFAULT">
+        <Category File="HellionSkin" Tag="THel"/>
+        <Race value="Terr"/>
+        <Skin value="HellionJunker"/>
     </CRewardModel>
     <CRewardModel id="HellionCovertOps" parent="MODELDEFAULT">
         <Category File="HellionSkin" Tag="THel"/>
@@ -5827,6 +5843,11 @@
         <Skin value="BansheeCovertOps"/>
         <Race value="Terr"/>
     </CRewardModel>
+    <CRewardModel id="BansheeJunker" parent="MODELDEFAULT">
+        <Category File="BansheeSkin" Tag="TBsh"/>
+        <Race value="Terr"/>
+        <Skin value="BansheeJunker"/>
+    </CRewardModel>
     <CRewardModel id="LiberatorSkinOff" parent="MODELDEFAULT">
         <Category File="LiberatorSkin" Tag="TLib"/>
         <Flags index="Allowed" value="1"/>
@@ -5838,6 +5859,11 @@
         <Category File="LiberatorSkin" Tag="TLib"/>
         <Skin value="LiberatorCovertOps"/>
         <Race value="Terr"/>
+    </CRewardModel>
+    <CRewardModel id="LiberatorJunker" parent="MODELDEFAULT">
+        <Category File="LiberatorSkin" Tag="TLib"/>
+        <Race value="Terr"/>
+        <Skin value="LiberatorJunker"/>
     </CRewardModel>
     <CRewardModel id="RavenSkinOff" parent="MODELDEFAULT">
         <Category File="RavenSkin" Tag="TRvn"/>
@@ -5863,6 +5889,11 @@
         <Skin value="BattlecruiserCovertOps"/>
         <Race value="Terr"/>
     </CRewardModel>
+    <CRewardModel id="CycloneJunker" parent="MODELDEFAULT">
+        <Category File="CycloneSkin" Tag="TCyc"/>
+        <Race value="Terr"/>
+        <Skin value="CycloneJunker"/>
+    </CRewardModel>
     <CRewardModel id="CycloneCovertOps" parent="MODELDEFAULT">
         <Category File="CycloneSkin" Tag="TCyc"/>
         <Skin value="CycloneCovertOps"/>
@@ -5879,6 +5910,11 @@
         <Category File="GhostSkin" Tag="TGht"/>
         <Skin value="GhostCovertOps"/>
         <Race value="Terr"/>
+    </CRewardModel>
+    <CRewardModel id="MedivacJunker" parent="MODELDEFAULT">
+        <Category File="MedivacSkin" Tag="TMed"/>
+        <Race value="Terr"/>
+        <Skin value="MedivacJunker"/>
     </CRewardModel>
     <CRewardModel id="MedivacCovertOps" parent="MODELDEFAULT">
         <Category File="MedivacSkin" Tag="TMed"/>
@@ -5897,6 +5933,11 @@
         <Skin value="ThorCovertOps"/>
         <Race value="Terr"/>
     </CRewardModel>
+    <CRewardModel id="ThorJunker" parent="MODELDEFAULT">
+        <Category File="ThorSkin" Tag="THOR"/>
+        <Race value="Terr"/>
+        <Skin value="ThorJunker"/>
+    </CRewardModel>
     <CRewardModel id="VikingCovertOps" parent="MODELDEFAULT">
         <Category File="VikingSkin" Tag="TVik"/>
         <Skin value="VikingCovertOps"/>
@@ -5904,6 +5945,9 @@
     </CRewardModel>
     <CRewardModel id="WarpPrismNerazim" parent="WarpPrismSkinBase">
         <Skin value="WarpPrismNerazim"/>
+    </CRewardModel>
+    <CRewardModel id="WarpPrismPurifier" parent="WarpPrismSkinBase">
+        <Skin value="WarpPrismPurifier"/>
     </CRewardModel>
     <CRewardModel id="WidowMineCovertOps" parent="MODELDEFAULT">
         <Category File="WidowMineSkin" Tag="TWid"/>
@@ -5950,6 +5994,11 @@
         <Skin value="DroneWebby"/>
         <Race value="Zerg"/>
     </CRewardModel>
+    <CRewardModel id="DronePrimal" parent="MODELDEFAULT">
+        <Category File="DroneSkin" Tag="ZDrn"/>
+        <Race value="Zerg"/>
+        <Skin value="DronePrimal"/>
+    </CRewardModel>
     <CRewardModel id="DroneBlizzcon17" parent="MODELDEFAULT">
         <Category File="DroneSkin" Tag="ZDrn"/>
         <Flags index="Cloaked" value="1"/>
@@ -5985,6 +6034,11 @@
         <Skin value="ZerglingWebby"/>
         <Race value="Zerg"/>
     </CRewardModel>
+    <CRewardModel id="ZerglingPrimal" parent="MODELDEFAULT">
+        <Category File="ZerglingSkin" Tag="ZLng"/>
+        <Skin value="ZerglingPrimal"/>
+        <Race value="Zerg"/>
+    </CRewardModel>
     <CRewardModel id="BanelingSkinOff" parent="MODELDEFAULT">
         <Category File="BanelingSkin" Tag="ZBnl"/>
         <Flags index="Allowed" value="1"/>
@@ -5996,6 +6050,11 @@
         <Category File="BanelingSkin" Tag="ZBnl"/>
         <Skin value="BanelingWebby"/>
         <Race value="Zerg"/>
+    </CRewardModel>
+    <CRewardModel id="BanelingPrimal" parent="MODELDEFAULT">
+        <Category File="BanelingSkin" Tag="ZBnl"/>
+        <Race value="Zerg"/>
+        <Skin value="BanelingPrimal"/>
     </CRewardModel>
     <CRewardModel id="RoachSkinOff" parent="MODELDEFAULT">
         <Category File="RoachSkin" Tag="ZRch"/>
@@ -6015,6 +6074,11 @@
         <Race value="Zerg"/>
         <Skin value="RoachWebby"/>
     </CRewardModel>
+    <CRewardModel id="RoachPrimal" parent="MODELDEFAULT">
+        <Category File="RoachSkin" Tag="ZRch"/>
+        <Race value="Zerg"/>
+        <Skin value="RoachPrimal"/>
+    </CRewardModel>
     <CRewardModel id="HydraliskSkinOff" parent="MODELDEFAULT">
         <Category File="HydraliskSkin" Tag="ZHyd"/>
         <Flags index="Allowed" value="1"/>
@@ -6031,6 +6095,11 @@
         <Skin value="HydraliskWebby"/>
         <Race value="Zerg"/>
     </CRewardModel>
+    <CRewardModel id="HydraliskPrimal" parent="MODELDEFAULT">
+        <Category File="HydraliskSkin" Tag="ZHyd"/>
+        <Race value="Zerg"/>
+        <Skin value="HydraliskPrimal"/>
+    </CRewardModel>
     <CRewardModel id="LurkerSkinOff" parent="MODELDEFAULT">
         <Category File="LurkerSkin" Tag="ZLkr"/>
         <Flags index="Allowed" value="1"/>
@@ -6042,6 +6111,11 @@
         <Category File="LurkerSkin" Tag="ZLkr"/>
         <Skin value="LurkerWebby"/>
         <Race value="Zerg"/>
+    </CRewardModel>
+    <CRewardModel id="LurkerPrimal" parent="MODELDEFAULT">
+        <Category File="LurkerSkin" Tag="ZLkr"/>
+        <Race value="Zerg"/>
+        <Skin value="LurkerPrimal"/>
     </CRewardModel>
     <CRewardModel id="RavagerSkinOff" parent="MODELDEFAULT">
         <Category File="RavagerSkin" Tag="ZRvg"/>
@@ -6091,6 +6165,11 @@
         <Skin value="UltraliskWebby"/>
         <Race value="Zerg"/>
     </CRewardModel>
+    <CRewardModel id="UltraliskPrimal" parent="MODELDEFAULT">
+        <Category File="UltraliskSkin" Tag="ZUlt"/>
+        <Race value="Zerg"/>
+        <Skin value="UltraliskPrimal"/>
+    </CRewardModel>
     <CRewardModel id="QueenSkinOff" parent="MODELDEFAULT">
         <Category File="QueenSkin" Tag="ZQun"/>
         <Flags index="Allowed" value="1"/>
@@ -6137,6 +6216,11 @@
         <Skin value="SwarmHostWebby"/>
         <Race value="Zerg"/>
     </CRewardModel>
+    <CRewardModel id="SwarmHostPrimal" parent="MODELDEFAULT">
+        <Category File="SwarmHostSkin" Tag="ZSwH"/>
+        <Race value="Zerg"/>
+        <Skin value="SwarmHostPrimal"/>
+    </CRewardModel>
     <CRewardModel id="MutaliskSkinOff" parent="MODELDEFAULT">
         <Category File="MutaliskSkin" Tag="ZMut"/>
         <Flags index="Allowed" value="1"/>
@@ -6149,6 +6233,11 @@
         <Skin value="MutaliskWebby"/>
         <Race value="Zerg"/>
     </CRewardModel>
+    <CRewardModel id="MutaliskPrimal" parent="MODELDEFAULT">
+        <Category File="MutaliskSkin" Tag="ZMut"/>
+        <Race value="Zerg"/>
+        <Skin value="MutaliskPrimal"/>
+    </CRewardModel>
     <CRewardModel id="CorruptorSkinOff" parent="MODELDEFAULT">
         <Category File="CorruptorSkin" Tag="ZCor"/>
         <Flags index="Allowed" value="1"/>
@@ -6160,6 +6249,11 @@
         <Category File="CorruptorSkin" Tag="ZCor"/>
         <Skin value="CorruptorWebby"/>
         <Race value="Zerg"/>
+    </CRewardModel>
+    <CRewardModel id="CorruptorPrimal" parent="MODELDEFAULT">
+        <Category File="CorruptorSkin" Tag="ZCor"/>
+        <Race value="Zerg"/>
+        <Skin value="CorruptorPrimal"/>
     </CRewardModel>
     <CRewardModel id="ViperSkinOff" parent="MODELDEFAULT">
         <Category File="ViperSkin" Tag="ZVpr"/>
@@ -6237,6 +6331,11 @@
         <Skin value="ProbeTaldarim"/>
         <Race value="Prot"/>
     </CRewardModel>
+    <CRewardModel id="ProbePurifier" parent="MODELDEFAULT">
+        <Category File="ProbeSkin" Tag="PPrb"/>
+        <Race value="Prot"/>
+        <Skin value="ProbePurifier"/>
+    </CRewardModel>
     <CRewardModel id="ProbeBlizzcon17" parent="MODELDEFAULT">
         <Category File="ProbeSkin" Tag="PPrb"/>
         <Flags index="Cloaked" value="1"/>
@@ -6273,6 +6372,11 @@
         <Skin value="ZealotTaldarim"/>
         <Race value="Prot"/>
     </CRewardModel>
+    <CRewardModel id="ZealotPurifier" parent="MODELDEFAULT">
+        <Category File="ZealotSkin" Tag="PZlt"/>
+        <Race value="Prot"/>
+        <Skin value="ZealotPurifier"/>
+    </CRewardModel>
     <CRewardModel id="AdeptCEOff" parent="MODELDEFAULT">
         <Category File="AdeptSkin" Tag="PAdp"/>
         <Flags index="Allowed" value="1"/>
@@ -6301,6 +6405,12 @@
         <Skin value="AdeptTaldarim"/>
         <Model value="Adept_Taldarim_Collection"/>
     </CRewardModel>
+    <CRewardModel id="AdeptPurifier" parent="MODELDEFAULT">
+        <Category File="AdeptSkin" Tag="PAdp"/>
+        <Race value="Prot"/>
+        <Skin value="AdeptPurifier"/>
+        <Model value="Adept_Purifier_Collection"/>
+    </CRewardModel>
     <CRewardModel id="SentrySkinOff" parent="MODELDEFAULT">
         <Category File="SentrySkin" Tag="PSnt"/>
         <Flags index="Allowed" value="1"/>
@@ -6313,6 +6423,11 @@
         <Skin value="SentryTaldarim"/>
         <Race value="Prot"/>
     </CRewardModel>
+    <CRewardModel id="SentryPurifier" parent="MODELDEFAULT">
+        <Category File="SentrySkin" Tag="PSnt"/>
+        <Race value="Prot"/>
+        <Skin value="SentryPurifier"/>
+    </CRewardModel>
     <CRewardModel id="HighTemplarSkinOff" parent="MODELDEFAULT">
         <Category File="HighTemplarSkin" Tag="PHTm"/>
         <Flags index="Allowed" value="1"/>
@@ -6324,6 +6439,11 @@
         <Category File="HighTemplarSkin" Tag="PHTm"/>
         <Skin value="HighTemplarTaldarim"/>
         <Race value="Prot"/>
+    </CRewardModel>
+    <CRewardModel id="HighTemplarPurifier" parent="MODELDEFAULT">
+        <Category File="HighTemplarSkin" Tag="PHTm"/>
+        <Race value="Prot"/>
+        <Skin value="HighTemplarPurifier"/>
     </CRewardModel>
     <CRewardModel id="DarkTemplarSkinOff" parent="MODELDEFAULT">
         <Category File="DarkTemplarSkin" Tag="PDTm"/>
@@ -6360,6 +6480,11 @@
         <Skin value="StalkerTaldarim"/>
         <Race value="Prot"/>
     </CRewardModel>
+    <CRewardModel id="StalkerPurifier" parent="MODELDEFAULT">
+        <Category File="StalkerSkin" Tag="PStk"/>
+        <Race value="Prot"/>
+        <Skin value="StalkerPurifier"/>
+    </CRewardModel>
     <CRewardModel id="ImmortalSkinOff" parent="MODELDEFAULT">
         <Category File="ImmortalSkin" Tag="PImm"/>
         <Flags index="Allowed" value="1"/>
@@ -6377,6 +6502,11 @@
         <Category File="ImmortalSkin" Tag="PImm"/>
         <Skin value="ImmortalTaldarim"/>
         <Race value="Prot"/>
+    </CRewardModel>
+    <CRewardModel id="ImmortalPurifier" parent="MODELDEFAULT">
+        <Category File="ImmortalSkin" Tag="PImm"/>
+        <Race value="Prot"/>
+        <Skin value="ImmortalPurifier"/>
     </CRewardModel>
     <CRewardModel id="ColossusCEOff" parent="MODELDEFAULT">
         <Category File="ColossusSkin" Tag="PCls"/>
@@ -6412,6 +6542,11 @@
         <Race value="Prot"/>
         <Skin value="ColossusTaldarim"/>
     </CRewardModel>
+    <CRewardModel id="ColossusPurifier" parent="MODELDEFAULT">
+        <Category File="ColossusSkin" Tag="PCls"/>
+        <Race value="Prot"/>
+        <Skin value="ColossusPurifier"/>
+    </CRewardModel>
     <CRewardModel id="PhoenixSkinOff" parent="MODELDEFAULT">
         <Category File="PhoenixSkin" Tag="PPhx"/>
         <Flags index="Allowed" value="1"/>
@@ -6423,6 +6558,11 @@
         <Category File="PhoenixSkin" Tag="PPhx"/>
         <Skin value="PhoenixTaldarim"/>
         <Race value="Prot"/>
+    </CRewardModel>
+    <CRewardModel id="PhoenixPurifier" parent="MODELDEFAULT">
+        <Category File="PhoenixSkin" Tag="PPhx"/>
+        <Race value="Prot"/>
+        <Skin value="PhoenixPurifier"/>
     </CRewardModel>
     <CRewardModel id="VoidRaySkinOff" parent="MODELDEFAULT">
         <Category File="VoidRaySkin" Tag="PVry"/>
@@ -6439,6 +6579,11 @@
         <Category File="VoidRaySkin" Tag="PVry"/>
         <Skin value="VoidRayTaldarim"/>
         <Race value="Prot"/>
+    </CRewardModel>
+    <CRewardModel id="VoidRayPurifier" parent="MODELDEFAULT">
+        <Category File="VoidRaySkin" Tag="PVry"/>
+        <Race value="Prot"/>
+        <Skin value="VoidRayPurifier"/>
     </CRewardModel>
     <CRewardModel id="CarrierSkinOff" parent="MODELDEFAULT">
         <Category File="CarrierSkin" Tag="PCar"/>
@@ -6457,6 +6602,11 @@
         <Skin value="CarrierTaldarim"/>
         <Race value="Prot"/>
     </CRewardModel>
+    <CRewardModel id="CarrierPurifier" parent="MODELDEFAULT">
+        <Category File="CarrierSkin" Tag="PCar"/>
+        <Race value="Prot"/>
+        <Skin value="CarrierPurifier"/>
+    </CRewardModel>
     <CRewardModel id="MothershipSkinOff" parent="MODELDEFAULT">
         <Category File="MothershipSkin" Tag="PMth"/>
         <Flags index="Allowed" value="1"/>
@@ -6468,6 +6618,11 @@
         <Category File="MothershipSkin" Tag="PMth"/>
         <Skin value="MothershipTaldarim"/>
         <Race value="Prot"/>
+    </CRewardModel>
+    <CRewardModel id="MothershipPurifier" parent="MODELDEFAULT">
+        <Category File="MothershipSkin" Tag="PMth"/>
+        <Race value="Prot"/>
+        <Skin value="MothershipPurifier"/>
     </CRewardModel>
     <CRewardModel id="MothershipCoreTaldarim" parent="MODELDEFAULT">
         <Skin value="MothershipCoreTaldarim"/>
@@ -6484,6 +6639,11 @@
         <Category File="ObserverSkin" Tag="PObs"/>
         <Skin value="ObserverTaldarim"/>
         <Race value="Prot"/>
+    </CRewardModel>
+    <CRewardModel id="ObserverPurifier" parent="MODELDEFAULT">
+        <Category File="ObserverSkin" Tag="PObs"/>
+        <Race value="Prot"/>
+        <Skin value="ObserverPurifier"/>
     </CRewardModel>
     <CRewardModel id="PylonSkinOff" parent="PylonSkinBase">
         <Flags index="Allowed" value="1"/>
@@ -8244,7 +8404,7 @@
         <Trophy value="SiegeTankTrophy"/>
     </CRewardTrophy>
     <CRewardEmoticon id="Emoticon_Skull" parent="EMOTICON">
-        <Emoticon value="skull"/>
+        <Emoticon value="notskull"/>
         <IconSlot value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_Minerals" parent="EMOTICON">
@@ -8478,6 +8638,11 @@
         <IconFile value="$Portraits6"/>
         <IconSlot value="30"/>
     </CRewardPortrait>
+    <!-- World of WarCraft 7.0 Collectors Edition Rewards -->
+    <CRewardIcon id="FeatOfStrength_WoW8_CE" parent="ICONDEFAULT">
+        <IconFile value="$Achievements15"/>
+        <IconSlot value="64"/>
+    </CRewardIcon>
     <!-- 2016 Season 1 Rewards -->
     <CRewardIcon id="FeatOfStrength_S116Katowice" parent="ICONDEFAULT">
         <IconFile value="$Icons10"/>
@@ -9542,6 +9707,9 @@
         <Flags index="Default" value="1"/>
         <Skin value="PhotonCannon"/>
     </CRewardModel>
+    <CRewardModel id="DisruptorPurifier" parent="DisruptorSkinBase">
+        <Skin value="DisruptorPurifier"/>
+    </CRewardModel>
     <CRewardModel id="DisruptorTaldarim" parent="DisruptorSkinBase">
         <Skin value="DisruptorTaldarim"/>
     </CRewardModel>
@@ -9552,6 +9720,9 @@
     </CRewardModel>
     <CRewardModel id="ArchonTaldarim" parent="ArchonSkinBase">
         <Skin value="ArchonTaldarim"/>
+    </CRewardModel>
+    <CRewardModel id="ArchonPurifier" parent="ArchonSkinBase">
+        <Skin value="ArchonPurifier"/>
     </CRewardModel>
     <CRewardModel id="ArchonSkinOff" parent="ArchonSkinBase">
         <Flags index="Allowed" value="1"/>
@@ -9581,6 +9752,9 @@
         <Flags index="Allowed" value="1"/>
         <Flags index="Default" value="1"/>
         <Skin value="Gateway"/>
+    </CRewardModel>
+    <CRewardModel id="OraclePurifier" parent="OracleSkinBase">
+        <Skin value="OraclePurifier"/>
     </CRewardModel>
     <CRewardModel id="OracleTaldarim" parent="OracleSkinBase">
         <Skin value="OracleTaldarim"/>
@@ -9616,6 +9790,9 @@
         <Flags index="Allowed" value="1"/>
         <Flags index="Default" value="1"/>
         <Skin value="Stargate"/>
+    </CRewardModel>
+    <CRewardModel id="TempestPurifier" parent="TempestSkinBase">
+        <Skin value="TempestPurifier"/>
     </CRewardModel>
     <CRewardModel id="TempestTaldarim" parent="TempestSkinBase">
         <Skin value="TempestTaldarim"/>
@@ -12569,34 +12746,42 @@
     <CRewardSpray id="Decal_Spray_0004_01" parent="SPRAYDEFAULT">
         <IconFile value="$Sprays1"/>
         <IconSlot value="3"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardSpray>
     <CRewardSpray id="Decal_Spray_0005_01" parent="SPRAYDEFAULT">
         <IconFile value="$Sprays1"/>
         <IconSlot value="4"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardSpray>
     <CRewardSpray id="Decal_Spray_0006_01" parent="SPRAYDEFAULT">
         <IconFile value="$Sprays1"/>
         <IconSlot value="5"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardSpray>
     <CRewardSpray id="Decal_Spray_0007_01" parent="SPRAYDEFAULT">
         <IconFile value="$Sprays1"/>
         <IconSlot value="6"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardSpray>
     <CRewardSpray id="Decal_Spray_0008_01" parent="SPRAYDEFAULT">
         <IconFile value="$Sprays1"/>
         <IconSlot value="7"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardSpray>
     <CRewardSpray id="Decal_Spray_0009_01" parent="SPRAYDEFAULT">
         <IconFile value="$Sprays1"/>
         <IconSlot value="8"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardSpray>
     <CRewardSpray id="Decal_Spray_0010_01" parent="SPRAYDEFAULT">
         <IconFile value="$Sprays1"/>
         <IconSlot value="9"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardSpray>
     <CRewardSpray id="Decal_Spray_0011_01" parent="SPRAYDEFAULT">
         <IconFile value="$Sprays1"/>
         <IconSlot value="10"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardSpray>
     <CRewardSpray id="Decal_Spray_0012_01" parent="SPRAYDEFAULT">
         <Flags index="Allowed" value="1"/>
@@ -12702,14 +12887,63 @@
         <IconFile value="$Sprays1"/>
         <IconSlot value="30"/>
     </CRewardSpray>
+    <!-- War Chest 2 Sprays-->
+    <CRewardSpray id="Decal_Spray_0032_01" parent="SPRAYDEFAULT">
+        <IconFile value="$Sprays1"/>
+        <IconSlot value="31"/>
+    </CRewardSpray>
+    <CRewardSpray id="Decal_Spray_0033_01" parent="SPRAYDEFAULT">
+        <IconFile value="$Sprays1"/>
+        <IconSlot value="32"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardSpray>
+    <CRewardSpray id="Decal_Spray_0034_01" parent="SPRAYDEFAULT">
+        <IconFile value="$Sprays1"/>
+        <IconSlot value="33"/>
+    </CRewardSpray>
+    <CRewardSpray id="Decal_Spray_0035_01" parent="SPRAYDEFAULT">
+        <IconFile value="$Sprays1"/>
+        <IconSlot value="34"/>
+    </CRewardSpray>
+    <CRewardSpray id="Decal_Spray_0036_01" parent="SPRAYDEFAULT">
+        <IconFile value="$Sprays1"/>
+        <IconSlot value="35"/>
+    </CRewardSpray>
+    <CRewardSpray id="Decal_Spray_0037_01" parent="SPRAYDEFAULT">
+        <IconFile value="$Sprays1"/>
+        <IconSlot value="36"/>
+    </CRewardSpray>
+    <CRewardSpray id="Decal_Spray_0038_01" parent="SPRAYDEFAULT">
+        <IconFile value="$Sprays1"/>
+        <IconSlot value="37"/>
+    </CRewardSpray>
+    <CRewardSpray id="Decal_Spray_0039_01" parent="SPRAYDEFAULT">
+        <IconFile value="$Sprays1"/>
+        <IconSlot value="38"/>
+    </CRewardSpray>
+    <CRewardSpray id="Decal_Spray_0040_01" parent="SPRAYDEFAULT">
+        <IconFile value="$Sprays1"/>
+        <IconSlot value="39"/>
+    </CRewardSpray>
+    <!-- WoW 8.0 Sprays -->
+    <CRewardSpray id="Decal_Spray_0041_01" parent="SPRAYDEFAULT">
+        <IconFile value="$Sprays1"/>
+        <IconSlot value="40"/>
+    </CRewardSpray>
+    <CRewardSpray id="Decal_Spray_0042_01" parent="SPRAYDEFAULT">
+        <IconFile value="$Sprays1"/>
+        <IconSlot value="41"/>
+    </CRewardSpray>
     <!-- Spray Defaults -->
     <CRewardSprayUseDecal id="SprayUseDecal_Off" parent="SPRAYUSEDECAL"/>
     <CRewardSprayUseDecal id="SprayUseDecal_On" parent="SPRAYUSEDECAL">
         <Enabled value="1"/>
     </CRewardSprayUseDecal>
-    <!-- War Chest Portraits -->
+    <!-- War Chest Portraits Season 1 -->
     <CRewardPortrait id="Portrait_WarChest_Portrait00" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardPortrait>
     <CRewardPortrait id="Portrait_WarChest_Portrait01" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
@@ -12720,6 +12954,7 @@
     <CRewardPortrait id="Portrait_WarChest_Portrait02" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
         <IconSlot value="2"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardPortrait>
     <CRewardPortrait id="Portrait_WarChest_Portrait03" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
@@ -12730,6 +12965,7 @@
     <CRewardPortrait id="Portrait_WarChest_Portrait04" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
         <IconSlot value="4"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardPortrait>
     <CRewardPortrait id="Portrait_WarChest_Portrait05" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
@@ -12740,6 +12976,7 @@
     <CRewardPortrait id="Portrait_WarChest_Portrait06" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
         <IconSlot value="6"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardPortrait>
     <CRewardPortrait id="Portrait_WarChest_Portrait07" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
@@ -12749,6 +12986,7 @@
     <CRewardPortrait id="Portrait_WarChest_Portrait08" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
         <IconSlot value="8"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardPortrait>
     <CRewardPortrait id="Portrait_WarChest_Portrait09" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
@@ -12758,11 +12996,37 @@
     <CRewardPortrait id="Portrait_WarChest_Portrait10" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
         <IconSlot value="10"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardPortrait>
     <CRewardPortrait id="Portrait_WarChest_Portrait11" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits10"/>
         <IconSlot value="11"/>
         <Flags index="Cloaked" value="1"/>
+    </CRewardPortrait>
+    <!-- War Chest Portraits Season 2 -->
+    <CRewardPortrait id="Portrait_WarChest_Portrait12" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits11"/>
+        <IconSlot value="4"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest_Portrait13" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits11"/>
+        <IconSlot value="5"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest_Portrait14" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits11"/>
+        <IconSlot value="6"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest_Portrait15" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits11"/>
+        <IconSlot value="7"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest_Portrait16" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits11"/>
+        <IconSlot value="8"/>
+    </CRewardPortrait>
+    <CRewardPortrait id="Portrait_WarChest_Portrait17" parent="PORTRAITDEFAULT">
+        <IconFile value="$Portraits11"/>
+        <IconSlot value="9"/>
     </CRewardPortrait>
     <!-- War Chest BlizzCon 2017 Phase 2 Reward Portraits -->
     <CRewardPortrait id="Portrait_WarChest1_Phase2_00" parent="PORTRAITDEFAULT">
@@ -12876,7 +13140,6 @@
     </CRewardPortrait>
     <CRewardPortrait id="Portrait_WarChest1_Winner_Soo" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits11"/>
-        <IconSlot value="0"/>
     </CRewardPortrait>
     <CRewardPortrait id="Portrait_WarChest1_Winner_Special" parent="PORTRAITDEFAULT">
         <IconFile value="$Portraits11"/>
@@ -12886,13 +13149,14 @@
         <IconFile value="$Portraits11"/>
         <IconSlot value="2"/>
     </CRewardPortrait>
-    <!-- WarChest Season 1 Decals -->
+    <!-- War Chest Season 1 Decals -->
     <CRewardDecal id="Decal_WarChestSeason1_Terran" parent="DECALTERRAN">
         <Texture value="Decal_Terran_0076_01"/>
         <IconFile value="$Decals4"/>
         <IconSlot value="32"/>
         <Description value="Reward/Description/WarChestSeason1TerranDecal"/>
         <DescriptionUnearned value="Reward/DescriptionUnearned/WarChestSeason1TerranDecal"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardDecal>
     <CRewardDecal id="Decal_WarChestSeason1_Protoss" parent="DECALPROTOSS">
         <Texture value="Decal_Protoss_0076_01"/>
@@ -12900,6 +13164,7 @@
         <IconSlot value="33"/>
         <Description value="Reward/Description/WarChestSeason1ProtossDecal"/>
         <DescriptionUnearned value="Reward/DescriptionUnearned/WarChestSeason1ProtossDecal"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardDecal>
     <CRewardDecal id="Decal_WarChestSeason1_Zerg" parent="DECALZERG">
         <Texture value="Decal_Zerg_0076_01"/>
@@ -12907,73 +13172,155 @@
         <IconSlot value="34"/>
         <Description value="Reward/Description/WarChestSeason1ZergDecal"/>
         <DescriptionUnearned value="Reward/DescriptionUnearned/WarChestSeason1ZergDecal"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardDecal>
-    <!-- WarChest Season 1 Emoticons -->
+    <!-- War Chest Season 1 Emoticons -->
     <CRewardEmoticon id="Emoticon_Gift" parent="EMOTICON">
         <Emoticon value="gift"/>
         <IconSlot value="42"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_Cheese" parent="EMOTICON">
         <Emoticon value="cheese"/>
         <IconSlot value="43"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_Survivor" parent="EMOTICON">
         <Emoticon value="survivor"/>
         <IconSlot value="44"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_RestInPieces" parent="EMOTICON">
         <Emoticon value="rip"/>
         <IconSlot value="45"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_StinkyTofu" parent="EMOTICON">
         <Emoticon value="stinkytofu"/>
         <IconSlot value="46"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_Kappa" parent="EMOTICON">
         <Emoticon value="kappa"/>
         <IconSlot value="47"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_TeaTime" parent="EMOTICON">
         <Emoticon value="teatime"/>
         <IconSlot value="48"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_FingersCrossed" parent="EMOTICON">
         <Emoticon value="fingerscrossed"/>
         <IconSlot value="49"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_FeelsGoodMarine" parent="EMOTICON">
         <Emoticon value="feelsgood"/>
         <IconSlot value="50"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_FistBump" parent="EMOTICON">
         <Emoticon value="fistbump"/>
         <IconSlot value="51"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_Turtle" parent="EMOTICON">
         <Emoticon value="turtle"/>
         <IconSlot value="52"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_Baited" parent="EMOTICON">
         <Emoticon value="baited"/>
         <IconSlot value="53"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_Applause" parent="EMOTICON">
         <Emoticon value="applause"/>
         <IconSlot value="54"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_WTF" parent="EMOTICON">
         <Emoticon value="wtf"/>
         <IconSlot value="55"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_QQ" parent="EMOTICON">
         <Emoticon value="qq"/>
         <IconSlot value="56"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
     <CRewardEmoticon id="Emoticon_Peace" parent="EMOTICON">
         <Emoticon value="peace"/>
         <IconSlot value="57"/>
+        <Flags index="Cloaked" value="1"/>
     </CRewardEmoticon>
-    <!-- WarChest Season 1 Skin Licenses -->
+    <!-- War Chest Season 2 Emoticons -->
+    <CRewardEmoticon id="Emoticon_HearNoEvil" parent="EMOTICON">
+        <Emoticon value="nohear"/>
+        <IconSlot value="42"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_SpeakNoEvil" parent="EMOTICON">
+        <Emoticon value="nospeak"/>
+        <IconSlot value="43"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_SeeNoEvil" parent="EMOTICON">
+        <Emoticon value="nosee"/>
+        <IconSlot value="44"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_Salute" parent="EMOTICON">
+        <Emoticon value="salute"/>
+        <IconSlot value="45"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_Drool" parent="EMOTICON">
+        <Emoticon value="drool"/>
+        <IconSlot value="46"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_Scream" parent="EMOTICON">
+        <Emoticon value="scream"/>
+        <IconSlot value="47"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_Creep" parent="EMOTICON">
+        <Emoticon value="creep"/>
+        <IconSlot value="48"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_Rush" parent="EMOTICON">
+        <Emoticon value="rush"/>
+        <IconSlot value="49"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_Lying" parent="EMOTICON">
+        <Emoticon value="lying"/>
+        <IconSlot value="50"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_Sick" parent="EMOTICON">
+        <Emoticon value="sick"/>
+        <IconSlot value="51"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_Explode" parent="EMOTICON">
+        <Emoticon value="explode"/>
+        <IconSlot value="52"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_Joker" parent="EMOTICON">
+        <Emoticon value="joker"/>
+        <IconSlot value="53"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_Mule" parent="EMOTICON">
+        <Emoticon value="mule"/>
+        <IconSlot value="54"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_RaynorSkull" parent="EMOTICON">
+        <Emoticon value="skull"/>
+        <IconSlot value="55"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_Hardcore" parent="EMOTICON">
+        <Emoticon value="hard"/>
+        <IconSlot value="56"/>
+    </CRewardEmoticon>
+    <CRewardEmoticon id="Emoticon_Cowboy" parent="EMOTICON">
+        <Emoticon value="cowboy"/>
+        <IconSlot value="57"/>
+    </CRewardEmoticon>
+    <!-- War Chest Season 1 Skin Licenses -->
     <CRewardIcon id="SC2SkinDSFBanshee" parent="LICENSE">
         <IconFile value="$Icons10"/>
         <Flags index="Cloaked" value="1"/>
@@ -13229,9 +13576,265 @@
         <Flags index="Cloaked" value="1"/>
         <Flags index="Hidden" value="1"/>
     </CRewardIcon>
+    <!-- War Chest Season 2 Skin Licenses -->
+    <CRewardIcon id="SC2SkinMercBanshee" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercBattlecruiser" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercCyclone" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercGhost" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercHellion" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercLiberator" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercMarauder" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercMarine" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercMedivac" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercRaven" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercReaper" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercSCV" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercSiegeTank" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercThor" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercViking" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinMercWidowMine" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalBaneling" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalBroodLord" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalCorruptor" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalDrone" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalHydralisk" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalInfestor" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalMutalisk" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalOverlord" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalQueen" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalRavager" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalRoach" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalUltralisk" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalViper" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalZergling" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalLurker" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalSwarmHost" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPrimalOverseer" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierAdept" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierCarrier" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierColossus" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierDarkTemplar" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierDisruptor" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierHighTemplar" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierImmortal" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierMothership" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierObserver" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierOracle" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierPhoenix" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierProbe" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierSentry" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierStalker" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierTempest" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierVoidRay" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierWarpPrism" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
+    <CRewardIcon id="SC2SkinPurifierZealot" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
+    </CRewardIcon>
     <CRewardIcon id="FeatOfStrength_Olimoleague2017" parent="ICONDEFAULT">
         <IconFile value="$Icons11"/>
-        <IconSlot value="16"/>
+        <IconSlot value="21"/>
     </CRewardIcon>
     <CRewardIcon id="WarChestS1CrossPromotionLicense" parent="LICENSE">
         <IconFile value="$Icons10"/>
@@ -13257,6 +13860,11 @@
     <CRewardIcon id="FeatOfStrength_VeteranPlayer" parent="ICONDEFAULT">
         <IconFile value="$Achievements15"/>
         <IconSlot value="62"/>
+    </CRewardIcon>
+    <CRewardIcon id="WarChestS2CoopStimpack" parent="LICENSE">
+        <IconFile value="$Icons10"/>
+        <Flags index="Cloaked" value="1"/>
+        <Flags index="Hidden" value="1"/>
     </CRewardIcon>
     <!-- Ascension achievements -->
     <CRewardIcon id="Coop_AscensionLevel_91" parent="ICONDEFAULT">
@@ -13342,13 +13950,13 @@
     <!-- Junker Skins -->
     <CRewardModel id="SCVJunkerMM" parent="MODELDEFAULT">
         <Category File="SCVSkin" Tag="TScv"/>
-        <Skin value="SCVJunker"/>
         <Race value="Terr"/>
+        <Skin value="SCVJunker"/>
     </CRewardModel>
     <CRewardModel id="MarineJunker" parent="MODELDEFAULT">
         <Category File="MarineSkin" Tag="TMar"/>
-        <Skin value="MarineJunker"/>
         <Race value="Terr"/>
+        <Skin value="MarineJunker"/>
     </CRewardModel>
     <CRewardModel id="MarauderJunker" parent="MODELDEFAULT">
         <Category File="MarauderSkin" Tag="TMrd"/>
@@ -13357,43 +13965,44 @@
     </CRewardModel>
     <CRewardModel id="ReaperJunker" parent="MODELDEFAULT">
         <Category File="ReaperSkin" Tag="TRpr"/>
-        <Skin value="ReaperJunker"/>
         <Race value="Terr"/>
+        <Skin value="ReaperJunker"/>
     </CRewardModel>
     <CRewardModel id="GhostJunker" parent="MODELDEFAULT">
         <Category File="GhostSkin" Tag="TGht"/>
-        <Skin value="GhostJunker"/>
         <Race value="Terr"/>
+        <Skin value="GhostJunker"/>
+        <Upgrades value="GhostSkinJunker"/>
     </CRewardModel>
     <CRewardModel id="HellionJunkerMM" parent="MODELDEFAULT">
         <Category File="HellionSkin" Tag="THel"/>
         <Race value="Terr"/>
-        <Skin value="HellionJunker"/>
+        <Skin value="HellionJunkerMM"/>
     </CRewardModel>
     <CRewardModel id="WidowMineJunker" parent="MODELDEFAULT">
         <Category File="WidowMineSkin" Tag="TWid"/>
-        <Skin value="WidowMineJunker"/>
         <Race value="Terr"/>
+        <Skin value="WidowMineJunker"/>
     </CRewardModel>
     <CRewardModel id="SiegeTankJunker" parent="MODELDEFAULT">
         <Category File="SiegeTankSkin" Tag="TTnk"/>
-        <Skin value="SiegeTankJunker"/>
         <Race value="Terr"/>
+        <Skin value="SiegeTankJunker"/>
     </CRewardModel>
     <CRewardModel id="VikingJunker" parent="MODELDEFAULT">
         <Category File="VikingSkin" Tag="TVik"/>
-        <Skin value="VikingJunker"/>
         <Race value="Terr"/>
+        <Skin value="VikingJunker"/>
     </CRewardModel>
     <CRewardModel id="RavenJunker" parent="MODELDEFAULT">
         <Category File="RavenSkin" Tag="TRvn"/>
-        <Skin value="RavenJunker"/>
         <Race value="Terr"/>
+        <Skin value="RavenJunker"/>
     </CRewardModel>
     <CRewardModel id="BattlecruiserJunker" parent="MODELDEFAULT">
         <Category File="BattlecruiserSkin" Tag="TBat"/>
-        <Skin value="BattlecruiserJunker"/>
         <Race value="Terr"/>
+        <Skin value="BattlecruiserJunker"/>
     </CRewardModel>
     <!-- Free 2 Play Multiplayer License -->
     <CRewardIcon id="F2PMultiplayerLicense" parent="LICENSE">

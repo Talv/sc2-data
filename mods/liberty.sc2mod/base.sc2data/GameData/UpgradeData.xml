@@ -1982,6 +1982,11 @@
         <AffectedUnitArray value="Ghost"/>
         <LeaderAlias value=""/>
     </CUpgrade>
+    <CUpgrade id="GhostSkinJunker">
+        <Flags index="UpgradeCheat" value="0"/>
+        <AffectedUnitArray value="Ghost"/>
+        <LeaderAlias value=""/>
+    </CUpgrade>
     <CUpgrade id="ZerglingSkin">
         <Icon value="Assets\Textures\btn-unit-zerg-zergling.dds"/>
         <LeaderAlias value=""/>

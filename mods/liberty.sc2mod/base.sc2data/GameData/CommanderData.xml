@@ -98,6 +98,7 @@
         <ProductId value="20909"/>
         <Race value="Terr"/>
         <LevelAchievementId value="91475322854429"/>
+        <ConsoleSkin value="ConsoleTerran_Construction"/>
         <UnitArray Unit="HellbatACGluescreenDummy"/>
         <UnitArray Unit="GoliathACGluescreenDummy"/>
         <UnitArray Unit="SiegeTankACGluescreenDummy"/>
@@ -358,6 +359,7 @@
         <StoreName value="Commander/StoreName/Abathur"/>
         <AttributeId value="Abat"/>
         <LevelAchievementId value="91475325739484"/>
+        <ConsoleSkin value="Abathur_ConsoleZerg"/>
         <ProductId value="22042"/>
         <Race value="Zerg"/>
         <FeaturedImagePath value="Assets/Textures/SC2_UI_Collection_Featured_Bundle_Commander_Abathur.dds"/>
@@ -804,6 +806,7 @@
             <Bucket value="2"/>
         </MasteryTalentArray>
         <LevelAchievementId value="91475322146808"/>
+        <ConsoleSkin value="Nova_ConsoleTerran"/>
         <FeaturedImagePath value="Assets/Textures/SC2_UI_Collection_Featured_Bundle_Commander_Nova.dds"/>
         <FeaturedDescription value="Commander/Details/Nova"/>
         <StoreTypeName value="UI/StoreTypeName/CommanderFemale"/>
@@ -1061,6 +1064,7 @@
         <CommanderAbilArray Button="CommanderTraitFenixSolariteDragoonSuit"/>
         <CommanderAbilArray Button="CommanderTraitFenixChampionAI"/>
         <LevelAchievementId value="91475336371133"/>
+        <ConsoleSkin value="Fenix_ConsoleProtoss"/>
         <FeaturedDescription value="Commander/Details/Fenix"/>
         <FeaturedImagePath value="Assets/Textures/SC2_UI_Collection_Featured_Bundle_Commander_Fenix.dds"/>
     </CCommander>
@@ -1272,6 +1276,7 @@
         <AttributeId value="Horn"/>
         <FeaturedImagePath value="Assets\Textures\sc2_ui_collection_featured_bundle_commander_hanandhorner.dds"/>
         <LevelAchievementId value="91475322650438"/>
+        <ConsoleSkin value="ConsoleTerran_Junker"/>
         <Portrait value="Assets\Textures\UI_CommanderPortrait_HanandHorner.dds"/>
         <TraitIcon value="Assets\Textures\SC2_UI_Coop_Detail_Background_HanandHorner.dds"/>
         <LearnMoreBackgroundImage value="Assets\Textures\UI_Battlenet_Glue_Campaign_Purchase_Logo_HanandHorner.dds"/>
@@ -1284,6 +1289,7 @@
         <LearnMoreBodyText1 value="UI/CampaignPurchase/InfoDialog/HanandHorner/Standard/Item1/Description"/>
         <LearnMoreBodyText2 value="UI/CampaignPurchase/InfoDialog/HanandHorner/Standard/Item2/Description"/>
         <LearnMoreBodyText3 value="UI/CampaignPurchase/InfoDialog/HanandHorner/Standard/Item3/Description"/>
+        <PurchaseMessage value="UI/CampaignPurchase/InfoDialog/HanandHorner/Description"/>
     </CCommander>
     <CCommander id="Random">
         <TraitIcon value="assets\textures\sc2_ui_versus_detail_iconbackground_random.dds"/>

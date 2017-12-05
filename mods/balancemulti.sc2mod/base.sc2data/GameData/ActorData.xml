@@ -977,8 +977,8 @@
         <On Terms="Behavior.PurificationNovaTargettedCaster.On" Send="Create PurificationNovaBirth"/>
         <On Terms="Behavior.PurificationNovaTargettedCaster.On" Send="AnimBracketStart Purification Stand,Work,Start Stand,Work Stand,Work,End"/>
         <On Terms="Behavior.PurificationNovaTargettedCaster.Off" Send="AnimBracketStop Purification"/>
-        <On Terms="Behavior.DisruptorAnimationController.On" Send="AnimBracketStart Cover Cover,Start Cover Cover,End"/>
-        <On Terms="Behavior.DisruptorAnimationController.Off" Send="AnimBracketStop Cover"/>
+        <On Terms="Behavior.DisruptorAnimationController.Create" Send="AnimBracketStart Cover Cover,Start Cover Cover,End"/>
+        <On Terms="Behavior.DisruptorAnimationController.Destroy" Send="AnimBracketStop Cover"/>
     </CActorUnit>
     <CActorModel id="ChannelSnipeLaunchSquib" parent="ModelAnimationStyleOneShot">
         <Flags index="SuppressCreationErrors" value="1"/>
@@ -989,6 +989,8 @@
     </CActorModel>
     <CActorRange id="ChannelSnipeRange" parent="RangeAbil" abil="ChannelSnipe">
         <Range value="10.000000"/>
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
     </CActorRange>
     <CActorAction id="ChannelSnipe" parent="GenericAttack" effectAttack="ChannelSnipeDamage">
         <LaunchSiteOps Ops="SOpAttachHarnessStationary"/>
@@ -1771,7 +1773,10 @@
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachOverhead"/>
     </CActorModel>
-    <CActorRange id="RavenShredderMissileRange" parent="RangeAbil" abil="RavenShredderMissile"/>
+    <CActorRange id="RavenShredderMissileRange" parent="RangeAbil" abil="RavenShredderMissile">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
     <CActorMissile id="RavenShredderMissileAttackMissile" parent="GenericAttackMissile" unitName="RavenShredderMissileWeapon">
         <On Terms="MotionPhaseStart; MotionPhase 1" Send="Create RavenShredderMissileTrackingBeam"/>
         <On Terms="MotionPhaseStart; MotionPhase" Send="Create RavenShredderMissileLaunchSound"/>
@@ -1792,7 +1797,6 @@
     </CActorBeamSimple>
     <CActorSound id="RavenShredderMissile_Travel_AS" parent="SoundContinuous">
         <Sound value="RavenShredderMissile_Travel_Loop"/>
-        <Inherits index="Visibility" value="1"/>
     </CActorSound>
     <CActorSound id="RavenShredderMissileTargetLock" parent="SoundOneShot">
         <Sound value="Raven_HunterSeekerTargetLock"/>
@@ -1826,15 +1830,12 @@
     </CActorModel>
     <CActorSound id="RavenShredderMissileFailSound" parent="SoundOneShot">
         <Sound value="Terran_ExplosionSmall"/>
-        <Inherits index="Visibility" value="1"/>
     </CActorSound>
     <CActorSound id="RavenShredderMissileFizzleSound" parent="SoundOneShot">
         <Sound value="Raven_HunterSeekerMissileFizzle"/>
-        <Inherits index="Visibility" value="1"/>
     </CActorSound>
     <CActorSound id="RavenShredderMissileSadSound" parent="SoundOneShot">
         <Sound value="Raven_HunterSeekerMissileSad"/>
-        <Inherits index="Visibility" value="1"/>
     </CActorSound>
     <CActorModel id="RavenShredderMissileAttackImpactModel" parent="ModelAnimationStyleOneShot">
         <On Terms="Effect.RavenShredderMissileDamage.Start" Target="_Unit" Send="Create"/>
@@ -1845,7 +1846,6 @@
     <CActorSound id="Raven_HunterSeekerAttackImpact_AS" parent="SoundOneShot">
         <!--On Terms="Effect.RavenShredderMissileDamage.Start" Send="Create"/>-->
         <Sound value="Raven_HunterSeekerAttackImpact"/>
-        <Inherits index="Visibility" value="1"/>
     </CActorSound>
     <CActorSimple id="RavenShredderMissileImpactArmorReductionTint">
         <On Terms="Behavior.RavenShredderMissileArmorReduction.On" Send="Create"/>
@@ -2088,8 +2088,6 @@
         </GroupIcon>
         <HeroIcon value="Assets\Textures\btn-building-protoss-shieldbattery.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-armor-protoss-buildingplating.dds"/>
-        <SoundArray index="Ready" value="ShieldBattery_Ready"/>
-        <SoundArray index="What" value="ShieldBattery_What"/>
         <SoundArray index="Construction" value="Protoss_ConstructionWhat"/>
         <UnitIcon value="Assets\Textures\btn-building-protoss-shieldbattery.dds"/>
         <Wireframe>
@@ -2212,4 +2210,7 @@
         <On Terms="WeaponStart.InfestedGuassRifle.AttackStart" Send="AnimBracketStart Attack Attack"/>
         <Remove Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
     </CActorUnit>
+    <CActorDoodad id="SpacePlatformSign">
+        <On Terms="ActorCreation; ModelVariation 9" Send="Create SoundEmitter Doodad_SpacePlatformSign_SuperNova"/>
+    </CActorDoodad>
 </Catalog>

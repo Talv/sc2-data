@@ -188,6 +188,7 @@
         <EffectArray Reference="Effect,SIVolatileInfestedExplodeDummyLinks,AttributeBonus[Structure]" Value="1"/>
         <EditorCategories value="Race:Zerg,UpgradeType:AttackBonus"/>
         <AffectedUnitArray value="Broodling"/>
+        <AffectedUnitArray value="StukovInfestBroodling"/>
         <AffectedUnitArray value="SIInfestedCivilian"/>
         <AffectedUnitArray value="SIInfestedCivilianBurrowed"/>
         <AffectedUnitArray value="SIInfestedMarine"/>
@@ -225,6 +226,8 @@
         <!-- Broodling -->
         <EffectArray Reference="Unit,Broodling,LifeArmor" Value="1.000000"/>
         <EffectArray Reference="Unit,Broodling,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,StukovInfestBroodling,LifeArmor" Value="1.000000"/>
+        <EffectArray Reference="Unit,StukovInfestBroodling,LifeArmorLevel" Value="1"/>
         <!--  SISCV -->
         <EffectArray Reference="Unit,SISCV,LifeArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,SISCV,LifeArmor" Value="1"/>
@@ -1185,6 +1188,7 @@
         <Name value="Upgrade/Name/ZergGroundArmorsLevel1"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level1.dds"/>
         <EffectArray Operation="Set" Reference="Actor,Broodling,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StukovInfestBroodling,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level1.dds"/>
         <EffectArray Operation="Set" Reference="Actor,SISCV,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
         <EffectArray Operation="Set" Reference="Actor,SIInfestedCivilian,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
         <EffectArray Operation="Set" Reference="Actor,SIInfestedMarine,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
@@ -1196,6 +1200,7 @@
         <Name value="Upgrade/Name/ZergGroundArmorsLevel2"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level2.dds"/>
         <EffectArray Operation="Set" Reference="Actor,Broodling,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StukovInfestBroodling,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level2.dds"/>
         <EffectArray Operation="Set" Reference="Actor,SISCV,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
         <EffectArray Operation="Set" Reference="Actor,SIInfestedCivilian,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
         <EffectArray Operation="Set" Reference="Actor,SIInfestedMarine,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
@@ -1207,6 +1212,7 @@
         <Name value="Upgrade/Name/ZergGroundArmorsLevel3"/>
         <Icon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level3.dds"/>
         <EffectArray Operation="Set" Reference="Actor,Broodling,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StukovInfestBroodling,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level3.dds"/>
         <EffectArray Operation="Set" Reference="Actor,SISCV,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
         <EffectArray Operation="Set" Reference="Actor,SIInfestedCivilian,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
         <EffectArray Operation="Set" Reference="Actor,SIInfestedMarine,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
@@ -12841,11 +12847,11 @@
     <CUpgrade id="MasteryHornerMagMineUpgrades">
         <Flags index="UpgradeCheat" value="0"/>
         <!--This display dummy effect is used to display the Mastery Tooltip. Make sure to update this value if you change the upgrade-->
-        <EffectArray Reference="Effect,MasteryHornerMagMineUpgradesDisplayDummy,Amount" Value="0.4"/>
+        <EffectArray Reference="Effect,MasteryHornerMagMineUpgradesDisplayDummy,Amount" Value="0.5"/>
         <EffectArray Reference="Effect,MasteryHornerMagMineUpgradesArmingDisplayDummy,Amount" Value="0.15"/>
         <EffectArray Reference="Effect,MasteryHornerMagMineUpgradesChargeCountDummy,Amount" Value="1"/>
-        <EffectArray Operation="Subtract" Reference="Abil,HHTrainTopBar,InfoArray[Build1].Charge.TimeUse" Value="0.400000"/>
-        <EffectArray Operation="Subtract" Reference="Abil,HHTrainTopBar,InfoArray[Build1].Charge.TimeStart" Value="0.400000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,HHTrainTopBar,InfoArray[Build1].Charge.TimeUse" Value="0.500000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,HHTrainTopBar,InfoArray[Build1].Charge.TimeStart" Value="0.500000"/>
         <EffectArray Operation="Subtract" Reference="Abil,HHMagPrepMorph,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="0.150000"/>
         <EffectArray Operation="Subtract" Reference="Abil,HHMagPrepMorph,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="0.150000"/>
         <EffectArray Reference="Abil,HHTrainTopBar,InfoArray[Build1].Charge.CountMax" Value="1"/>

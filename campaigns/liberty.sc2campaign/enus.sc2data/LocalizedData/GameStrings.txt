@@ -2217,6 +2217,7 @@ Effect/EditorSuffix/ToxicGasCloudDamage=(Damage)
 Effect/EditorSuffix/ToxicGasCloudPersistent=(Create Persistent)
 Effect/EditorSuffix/ToxicGasCloudSearch=(Search Area)
 Effect/Name/HyperionAU=Hyperion
+Effect/Name/VultureSpiderMinesDamage=Spider Mines (Damage)
 Error/CannotTargetResources=Can't Target Resources
 ItemClass/Name/Ammo=Ammo
 ItemClass/Name/Axe=Axe

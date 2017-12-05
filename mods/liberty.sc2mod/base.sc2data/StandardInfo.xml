@@ -349,5 +349,11 @@
         <Value>AssetFile;Assets\UI\Cursors\WayPointConfirm_Void\WayPointConfirm_Void.m3</Value>
         <Value>AssetFile;Assets\UI\Feedback\WayPointRally\WayPointRally.m3</Value>
         <Value>AssetFile;Assets\Textures\waypointline.dds</Value>
+        <Value>AssetFile;Assets\Portraits\Terran\SMX1_HanPortrait\SMX1_HanPortrait.m3</Value>
+        <Value>AssetFile;Assets\Textures\generaldavis_moebiuslab_portrait_static.dds</Value>
+        <Value>AssetFile;Assets\Textures\video_gamemodes_veteran_LOW.ogv</Value>
+        <Value>AssetFile;Assets\Textures\video_gamemodes_campaign_LOW.ogv</Value>
+        <Value>AssetFile;Assets\Textures\video_gamemodes_coop_LOW.ogv</Value>
+        <Value>AssetFile;Assets\Textures\video_gamemodes_versus_LOW.ogv</Value>
     </Preload>
 </DocInfo>

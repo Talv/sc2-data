@@ -847,7 +847,9 @@
     <CModel id="Aiur_Temple_GroundDecal" parent="Doodad">
         <VariationCount value="7"/>
     </CModel>
-    <CModel id="Aiur_Temple_GroundDoor" parent="Doodad"/>
+    <CModel id="Aiur_Temple_GroundDoor" parent="Doodad">
+        <Flags index="ShowCreepEngulfmentEvenOnLow" value="1"/>
+    </CModel>
     <CModel id="Aiur_Temple_Inlay" parent="Doodad">
         <Flags index="ShowCreepEngulfmentEvenOnLow" value="1"/>
         <VariationCount value="5"/>
@@ -1046,6 +1048,14 @@
         <VariationCount value="7"/>
     </CModel>
     <CModel id="Atmospheric_Spores" parent="Doodad"/>
+    <CModel id="Baneling_Primal_Collection_Death" parent="UnitDeath" Race="Zerg">
+        <LowQualityModel value="Baneling_Primal_Collection_Death_Low"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="Baneling_Primal_Collection_Death_Low" parent="UnitDeath" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Baneling_Primal_Collection_Death\Baneling_Primal_Collection_Death_Low.m3"/>
+        <Occlusion value="Show"/>
+    </CModel>
     <CModel id="BarrelPhysics" parent="Doodad"/>
     <CModel id="BattleStation_BridgeSeats" parent="Doodad">
         <Flags index="VariationFallback" value="0"/>
@@ -1242,6 +1252,30 @@
     <CModel id="CargoMover" parent="Doodad">
         <Flags index="VariationFallback" value="0"/>
         <VariationCount value="6"/>
+    </CModel>
+    <CModel id="Carrier_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <PhysicsDeathMotionFactor value="1.500000,0.500000"/>
+    </CModel>
+    <CModel id="Carrier_Purifier_Collection_WarpIn_Stargate" parent="Unit" Race="Protoss">
+        <Flags index="Wait" value="0"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow13"/>
+        <Priority value="24"/>
+        <Radius value="1.375000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.750000"/>
+        <SelectionRadius value="1.718700"/>
+        <ShadowRadius value="1.718700"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraLow13"/>
+        <UnitGlossaryCamera value="Star2CameraLow13"/>
     </CModel>
     <CModel id="CerberusConstructionLarge" parent="Doodad">
         <RadiusLoose value="9.000000"/>
@@ -2756,6 +2790,13 @@
     </CModel>
     <CModel id="DT_Fire_Large" parent="Doodad"/>
     <CModel id="DT_Fire_Medium" parent="Doodad"/>
+    <CModel id="DarkTemplar_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <PhysicsForceFactor value="2.000000"/>
+    </CModel>
+    <CModel id="DarkTemplar_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss">
+        <Image value="Assets\Textures\darktemplar_purifier_collection_static.dds"/>
+    </CModel>
+    <CModel id="DarkTemplar_Purifier_Collection_WarpIn" parent="Unit" Race="Protoss"/>
     <CModel id="DeadPrimalisk" parent="Doodad"/>
     <CModel id="DecalSpace" parent="Doodad">
         <Flags index="VariationFallback" value="0"/>
@@ -4174,6 +4215,30 @@
         <Flags index="VariationFallback" value="0"/>
         <RadiusLoose value="1.500000"/>
         <VariationCount value="8"/>
+    </CModel>
+    <CModel id="Interceptor_Purifier_Collection" parent="Unit" Race="Protoss">
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow03"/>
+        <Radius value="0.250000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.294000"/>
+        <ShadowRadius value="0.294000"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraLow03"/>
+        <UnitGlossaryCamera value="Star2CameraLow03"/>
+    </CModel>
+    <CModel id="Interceptor_Purifier_Collection_Death" parent="UnitDeath" Race="Protoss">
+        <LowQualityModel value="ProtossSmallUnitDeathLow"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.250000"/>
+        <SelectionRadius value="0.588100"/>
+        <ShadowRadius value="0.588100"/>
+        <VariationCount value="2"/>
+    </CModel>
+    <CModel id="Interceptor_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <PhysicsDeathMotionFactor value="1.300000,0.700000"/>
+        <VariationCount value="2"/>
     </CModel>
     <CModel id="InvisibleWalkablePlatform16x16" parent="Doodad">
         <Model value="Assets\Doodads\InvisibleWalkablePlatform\InvisibleWalkablePlatform.m3"/>
@@ -6029,12 +6094,25 @@
     <CModel id="Moopy" parent="Doodad">
         <VariationCount value="13"/>
     </CModel>
+    <CModel id="MothershipCore_Purifier_Collection" parent="Unit" Race="Protoss">
+        <Priority value="24"/>
+    </CModel>
+    <CModel id="MothershipCore_Purifier_Collection_Morph_Addition" parent="RacePersistentSpellFX" Race="Protoss"/>
+    <CModel id="MothershipCore_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss">
+        <Model value="Assets\Portraits\Protoss\Mothership_Purifier_Collection_Portrait\Mothership_Purifier_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\mothership_purifier_collection_static.dds"/>
+    </CModel>
+    <CModel id="MothershipCore_Taldarim_Collection_Portrait" parent="Portrait" Race="Protoss">
+        <Model value="Assets\Portraits\Protoss\Mothership_Taldarim_Collection_Portrait\Mothership_Taldarim_Collection_Portrait.m3"/>
+        <Image value="Assets\Textures\Mothership_Taldarim_Collection_Portrait_Static.dds"/>
+    </CModel>
     <CModel id="Nanocloud_Currents" parent="Doodad">
         <VariationCount value="4"/>
     </CModel>
     <CModel id="NorthernLights" parent="Doodad"/>
     <CModel id="Nova_Chase_BackgroundBuildings" parent="Doodad"/>
     <CModel id="NukeTowerWarfield" parent="Doodad"/>
+    <CModel id="Observer_Taldarim_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss"/>
     <CModel id="OilPuddle" parent="Doodad">
         <VariationCount value="5"/>
     </CModel>
@@ -6265,6 +6343,7 @@
     </CModel>
     <CModel id="PowerSupplyWarfield" parent="Doodad"/>
     <CModel id="PrisonShip" parent="Doodad"/>
+    <CModel id="Probe_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss"/>
     <CModel id="ProtossBaseArch" parent="Doodad">
         <Flags index="VariationFallback" value="0"/>
         <VariationCount value="4"/>
@@ -7798,6 +7877,12 @@
         <ShadowRadius value="1.176200"/>
         <SquibTypeDefault value="Metal"/>
     </CModel>
+    <CModel id="Reaper_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\Reaper_HornerHan_Portrait\Reaper_HornerHan_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\ReaperPortrait.fxa"/>
+        <Image value="Assets\Textures\reaper_hornerhan_portrait_static.dds"/>
+        <Lighting value="Reaper_HornerHan_Portrait"/>
+    </CModel>
     <CModel id="Reentry_Fire" parent="Doodad">
         <Model value="Assets\Effects\Neutral\Reentry_Fire\Reentry_Fire.m3"/>
     </CModel>
@@ -8064,6 +8149,7 @@
     <CModel id="SecurityGrid" parent="Doodad">
         <VariationCount value="2"/>
     </CModel>
+    <CModel id="Sentry_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss"/>
     <CModel id="ShadowCore_AsteroidBase_DockingBay" parent="Doodad">
         <VariationCount value="2"/>
     </CModel>
@@ -9090,11 +9176,16 @@
         <Flags index="VariationFallback" value="0"/>
         <VariationCount value="4"/>
     </CModel>
-    <CModel id="SnowRefinery_RockRampSmall" parent="Doodad"/>
+    <CModel id="SnowRefinery_RockRampSmall" parent="Doodad">
+        <Flags index="ShowCreepEngulfmentEvenOnLow" value="1"/>
+    </CModel>
     <CModel id="SnowRefinery_RockRamps" parent="Doodad">
+        <Flags index="ShowCreepEngulfmentEvenOnLow" value="1"/>
         <VariationCount value="2"/>
     </CModel>
-    <CModel id="SnowRefinery_RockRamps_Medium" parent="Doodad"/>
+    <CModel id="SnowRefinery_RockRamps_Medium" parent="Doodad">
+        <Flags index="ShowCreepEngulfmentEvenOnLow" value="1"/>
+    </CModel>
     <CModel id="SnowRefinery_SnowDrift" parent="Doodad">
         <Flags index="VariationFallback" value="0"/>
         <VariationCount value="5"/>
@@ -9692,6 +9783,28 @@
     </CModel>
     <CModel id="SpearOfAdun_Temple" parent="Doodad"/>
     <CModel id="SpearofAdun_Hologram" parent="Doodad"/>
+    <CModel id="Stalker_Deluxe_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Stalker_Explode_Ragdoll_Fall_Body"/>
+            <Type value="Sound"/>
+            <Time value="0.600000"/>
+            <Payload value="Stalker_Explode_Ragdoll_Fall_Body"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Stalker_Explode_Ragdoll_Fall_Impact"/>
+            <Type value="Sound"/>
+            <Time value="0.600000"/>
+            <Payload value="Stalker_Explode_Ragdoll_Fall_Impact"/>
+        </Events>
+    </CModel>
+    <CModel id="Stalker_Taldarim_Collection_BlinkOut" parent="RaceOneShotSpellFX" Race="Protoss">
+        <ScaleMax value="0.690000,0.690000,0.690000"/>
+        <ScaleMin value="0.690000,0.690000,0.690000"/>
+        <SelectionRadius value="0.833200"/>
+        <ShadowRadius value="0.833200"/>
+    </CModel>
     <CModel id="StarShipAdun_Alarm" parent="Doodad"/>
     <CModel id="StarShipAdun_Broken_Debris" parent="Doodad">
         <VariationCount value="9"/>
@@ -10465,6 +10578,46 @@
         <VariationCount value="4"/>
     </CModel>
     <CModel id="TheVoid_XelNaga_Vision_Temple_Corrupted" parent="Doodad"/>
+    <CModel id="Thor_CovertOps_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Terran"/>
+    <CModel id="Thor_Junker_Collection_Death_Morph" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\Thor_Junker_Collection_DeathMorph\Thor_Junker_Collection_DeathMorph.m3"/>
+        <LowQualityModel value="ThorDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionMedium"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.100000"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,00"/>
+            <Name value="Uni_DeathFXincidentallFire"/>
+            <Type value="Sound"/>
+            <Time value="1.500000"/>
+            <Payload value="Uni_DeathFXincidentallFire"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <Radius value="1.400000"/>
+    </CModel>
+    <CModel id="Thor_Junker_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Terran"/>
     <CModel id="TramBackground" parent="Doodad"/>
     <CModel id="TramCar" parent="Doodad"/>
     <CModel id="TramCarBackground" parent="Doodad"/>
@@ -11398,6 +11551,7 @@
     <CModel id="Vespene_Crack_Pick_UP" parent="Doodad"/>
     <CModel id="Vespene_Pump" parent="Doodad"/>
     <CModel id="Vespene_Pump_Small" parent="Doodad"/>
+    <CModel id="Viper_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
     <CModel id="VoidRay_TalDarim_Nova04" parent="Doodad"/>
     <CModel id="Void_Amon_Cliff_Effect" parent="Doodad">
         <VariationCount value="2"/>
@@ -12233,6 +12387,8 @@
             <Time value="0.977000"/>
             <Payload value="Metal_Basic_Impact"/>
         </Events>
+        <LowQualityModel value="TerranSmallUnitDeathLow"/>
+        <Occlusion value="Show"/>
     </CModel>
     <CModel id="HellionHellbat_Tank_Junkers_Deluxe_Collection_Death" parent="UnitDeath" Race="Terran">
         <Events>
@@ -12305,6 +12461,8 @@
             <Time value="1.014000"/>
             <Payload value="Metal_Basic_Impact"/>
         </Events>
+        <LowQualityModel value="TerranSmallUnitDeathLow"/>
+        <Occlusion value="Show"/>
     </CModel>
     <CModel id="HellionMorph_Junker_Portrait" parent="FXAPortrait" Race="Terran">
         <FacialController value="LocalizedData\Facial\HellionPortrait.fxa"/>
@@ -12506,7 +12664,7 @@
     <CModel id="Stalker_Deluxe_Collection_BlinkIn" parent="RaceOneShotSpellFX" Race="Protoss"/>
     <CModel id="Stalker_Deluxe_Collection_BlinkOut" parent="RaceOneShotSpellFX" Race="Protoss"/>
     <CModel id="Stalker_Deluxe_Collection_Death" parent="UnitDeath" Race="Protoss">
-        <LowQualityModel value="ProtossMediumUnitDeathLow"/>
+        <LowQualityModel value="ProtossMediumUnitDeathLowAndSound"/>
         <Occlusion value="Show"/>
         <Events>
             <Anim value="Death,00"/>
@@ -13409,6 +13567,9 @@
         <LowQualityModel value="ProtossSpiritDeathLow"/>
         <SelectionRadius value="0.555400"/>
         <ShadowRadius value="0.555400"/>
+    </CModel>
+    <CModel id="Zealot_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <PhysicsForceFactor value="2.000000"/>
     </CModel>
     <CModel id="Zealot_Purifier_Collection_Placement" parent="Placement" Race="Protoss">
         <Model value="Assets\Units\Protoss\Zealot_Purifier_Collection_Placement\Zealot_Purifier_Collection_Placement.m3"/>
@@ -15310,7 +15471,7 @@
         <SelectionOffset value="0.000000,0.000000,-0.700000"/>
         <ShadowRadius value="0.941000"/>
     </CModel>
-    <CModel id="RavenPortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="RavenPortrait" parent="Portrait" Race="Terran"/>
     <CModel id="ProtossBuildingBirthLow" parent="Building" Race="Protoss">
         <Model value="Assets\Buildings\Protoss\ProtossBuild\ProtossBuild_Low.m3"/>
         <Radius value="1.000000"/>
@@ -15370,6 +15531,14 @@
         <ScaleMin value="1.500000,1.500000,1.500000"/>
         <SelectionRadius value="0.333200"/>
         <ShadowRadius value="0.333200"/>
+    </CModel>
+    <CModel id="ProtossMediumUnitDeathLowAndSound" parent="ProtossMediumUnitDeathLow">
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossExplosionMedium"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
     </CModel>
     <CModel id="ProtossSpiritDeathLow" parent="UnitDeath" Race="Protoss">
         <Model value="Assets\Effects\Protoss\ProtossSpiritDeath\ProtossSpiritDeath_Low.m3"/>
@@ -15455,7 +15624,7 @@
         <EditorCategories value="Race:Neutral"/>
     </CModel>
     <CModel id="WayPointConfirmation_TeamColor" parent="UI">
-        <Model value="Assets/UI/Feedback/WayPointConfirmation_TeamColor/WayPointConfirmation_TeamColor.m3"/>
+        <Model value="Assets\UI\Feedback\WayPointConfirm_TeamColor\WayPointConfirm_TeamColor.m3"/>
         <EditorCategories value="Race:Neutral"/>
     </CModel>
     <CModel id="WayPointMove_TeamColor" parent="UI">
@@ -17114,14 +17283,16 @@
     <CModel id="MutaliskPortrait" parent="Portrait" Race="Zerg"/>
     <CModel id="AdjutantPortrait" parent="FXAPortrait" Race="Terran"/>
     <CModel id="AdjutantPortrait_L" parent="FXAPortrait" Race="Terran"/>
-    <CModel id="AdeptPortrait" parent="Portrait" Race="Protoss"/>
+    <CModel id="AdeptPortrait" parent="Portrait" Race="Protoss">
+        <Model value="Assets\Portraits\Protoss\AdeptEx2Portrait\AdeptEx2Portrait.m3"/>
+    </CModel>
     <CModel id="CarrierPortrait" parent="Portrait" Race="Protoss"/>
     <CModel id="ImmortalPortrait" parent="Portrait" Race="Protoss"/>
     <CModel id="VoidRayPortrait" parent="Portrait" Race="Protoss"/>
     <CModel id="ColossusDeath" parent="UnitDeath" Race="Protoss">
         <Model value="Assets\Units\Protoss\ColossusDeathEx1\ColossusDeathEx1.m3"/>
         <Occlusion value="Show"/>
-        <LowQualityModel value="ProtossLargeUnitDeathLow"/>
+        <LowQualityModel value="ProtossLargeUnitDeathLowAndSound"/>
         <VariationCount value="2"/>
         <Events>
             <Anim value="Death,00"/>
@@ -17801,7 +17972,7 @@
     <CModel id="ImmortalDeath" parent="UnitDeath" Race="Protoss">
         <Model value="Assets\Units\Protoss\ImmortalDeathEx1\ImmortalDeathEx1.m3"/>
         <Occlusion value="Show"/>
-        <LowQualityModel value="ProtossMediumUnitDeathLow"/>
+        <LowQualityModel value="ProtossMediumUnitDeathLowAndSound"/>
         <VariationCount value="2"/>
         <Events>
             <Variation value="0"/>
@@ -18308,7 +18479,7 @@
     </CModel>
     <CModel id="StalkerDeath" parent="UnitDeath" Race="Protoss">
         <Occlusion value="Show"/>
-        <LowQualityModel value="ProtossMediumUnitDeathLow"/>
+        <LowQualityModel value="ProtossMediumUnitDeathLowAndSound"/>
         <Model value="Assets\Units\Protoss\StalkerDeathEx1\StalkerDeathEx1.m3"/>
         <Events>
             <Anim value="Death,00"/>
@@ -19926,6 +20097,43 @@
         <Radius value="1.000000"/>
         <ShadowRadius value="1.250000"/>
         <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="Thor_CovertOps_Collection_Death_Morph" parent="UnitDeath" Race="Terran">
+        <LowQualityModel value="ThorDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionMedium"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.100000"/>
+        </Events>
+        <Events>
+            <Variation value="1"/>
+            <Anim value="Death,00"/>
+            <Name value="Uni_DeathFXincidentallFire"/>
+            <Type value="Sound"/>
+            <Time value="1.500000"/>
+            <Payload value="Uni_DeathFXincidentallFire"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <Radius value="1.400000"/>
     </CModel>
     <CModel id="VikingAssaultPortrait" parent="FXAPortrait" Race="Terran">
         <Model value="Assets\Portraits\Terran\VikingPortrait\VikingPortrait.m3"/>
@@ -30248,13 +30456,13 @@
     </CModel>
     <CModel id="SMShadowbox" parent="SMSET">
         <Model value="Assets\StoryModeSets\Terran\SM_Shadowbox\SM_Shadowbox.m3"/>
-        <OptionalAnims value="Assets\StoryModeCharacters\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue05.m3a"/>
-        <OptionalAnims value="Assets\StoryModeCharacters\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue06a.m3a"/>
-        <OptionalAnims value="Assets\StoryModeCharacters\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue06c.m3a"/>
-        <OptionalAnims value="Assets\StoryModeCharacters\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue11.m3a"/>
-        <OptionalAnims value="Assets\StoryModeCharacters\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue14.m3a"/>
-        <OptionalAnims value="Assets\StoryModeCharacters\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue16.m3a"/>
-        <OptionalAnims value="Assets\StoryModeCharacters\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue17.m3a"/>
+        <OptionalAnims value="Assets\StoryModeSets\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue05.m3a"/>
+        <OptionalAnims value="Assets\StoryModeSets\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue06a.m3a"/>
+        <OptionalAnims value="Assets\StoryModeSets\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue06c.m3a"/>
+        <OptionalAnims value="Assets\StoryModeSets\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue11.m3a"/>
+        <OptionalAnims value="Assets\StoryModeSets\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue14.m3a"/>
+        <OptionalAnims value="Assets\StoryModeSets\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue16.m3a"/>
+        <OptionalAnims value="Assets\StoryModeSets\Terran\SM_Shadowbox_Dialogue05\SM_Shadowbox_Dialogue17.m3a"/>
     </CModel>
     <CModel id="NeuralParasiteTentacleLaunchHostModel" parent="OneShotSpellFX">
         <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
@@ -31049,7 +31257,7 @@
         <Model value="Assets\Units\Protoss\Immortal_CollectionSkin_Adun_WarpIn\Immortal_CollectionSkin_Adun_WarpIn.m3"/>
     </CModel>
     <CModel id="Immortal_CollectionSkin_Adun_Death" parent="UnitDeath" Race="Protoss">
-        <LowQualityModel value="ProtossMediumUnitDeathLow"/>
+        <LowQualityModel value="ProtossMediumUnitDeathLowAndSound"/>
         <Occlusion value="Show"/>
         <Events>
             <Anim value="Death,00"/>
@@ -31436,7 +31644,9 @@
         <Model value="Assets\Effects\Terran\VikingMechaAssaultWeaponLaunch\VikingMechaAssaultWeaponLaunch.m3"/>
         <EditorCategories value="Race:Terran"/>
     </CModel>
-    <CModel id="Baneling_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Baneling_Primal_Collection_Portrait" parent="Portrait" Race="Zerg">
+        <Image value="Assets\Textures\banleing_primal_collection_portrait_static.dds"/>
+    </CModel>
     <CModel id="Dakrun_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
     <CModel id="Drone_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
     <CModel id="Glevig_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
@@ -31448,6 +31658,7 @@
     <CModel id="Ravasaur_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
     <CModel id="Roach_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
     <CModel id="SwarmHost_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Corruptor_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
     <CModel id="SwarmHostSpawn_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
     <CModel id="Tyrannozor_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
     <CModel id="Ultralisk_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
@@ -31543,6 +31754,7 @@
     <CModel id="Blizzcon17_SCV_DeathRagdoll" parent="UnitDeathRagdoll" Race="Terran"/>
     <!--Free to play veteran player skin-->
     <CModel id="Ghost_Eidolon_Collection" parent="Unit" Race="Terran">
+        <RequiredAnims value="Assets\Units\Terran\Ghost_SwarmAnims\Ghost_SwarmAnims.m3a"/>
         <Occlusion value="Show"/>
         <PlanetPanelCamera value="Star2CameraHigh04"/>
         <Radius value="0.375000"/>
@@ -31569,6 +31781,7 @@
         <LowQualityModel value="TerranBloodDeathLow"/>
         <Occlusion value="Show"/>
     </CModel>
+    <CModel id="Ghost_Eidolon_Collection_Portrait" parent="Portrait" Race="Terran"/>
     <!--Warchest 2 Skin-->
     <CModel id="Ghost_Junker_Collection" parent="Unit" Race="Terran">
         <Occlusion value="Show"/>
@@ -31579,6 +31792,7 @@
         <SquibTypeDefault value="Flesh"/>
         <TechPurchaseCamera value="TechPurchaseGhost"/>
         <UnitGlossaryCamera value="Star2CameraHigh04"/>
+        <RequiredAnims value="Assets\Units\Terran\Ghost_SwarmAnims\Ghost_SwarmAnims.m3a"/>
     </CModel>
     <CModel id="Ghost_Junker_Collection_Death" parent="UnitDeath" Race="Terran">
         <LowQualityModel value="TerranBloodDeathLow"/>
@@ -31600,6 +31814,11 @@
     <CModel id="Ghost_Junker_Collection_DeathFire" parent="UnitDeath" Race="Terran">
         <LowQualityModel value="TerranBloodDeathLow"/>
         <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="Ghost_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\Ghost_HornerHan_Portrait\Ghost_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\ghost_hornerhan_portrait_static.dds"/>
+        <FacialController value="LocalizedData\Facial\GhostFemale_Portrait.fxa"/>
     </CModel>
     <CModel id="Marauder_Junker_Collection" parent="Unit" Race="Terran">
         <AttachProps Id="Ref_Weapon Right">
@@ -31639,9 +31858,7 @@
         <UnitGlossaryCamera value="Star2CameraMid04"/>
     </CModel>
     <CModel id="Marauder_Junker_Collection_Death" parent="UnitDeath" Race="Terran">
-        <Model value="Assets\Units\Terran\MarauderDeath\MarauderDeath.m3"/>
         <LowQualityModel value="TerranSmallUnitDeathLow"/>
-        <Lighting value="MarauderDeath"/>
         <Occlusion value="Show"/>
     </CModel>
     <CModel id="Marauder_Junker_Collection_DeathEviscerate" parent="UnitDeath" Race="Terran">
@@ -31685,6 +31902,8 @@
     </CModel>
     <CModel id="Marauder_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
         <FacialController value="LocalizedData\Facial\MarauderPortrait.fxa"/>
+        <Model value="Assets\Portraits\Terran\Marauder_HornerHan_Portrait\Marauder_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\marauder_hornerhan_portrait_static.dds"/>
     </CModel>
     <CModel id="Marine_Junker_Collection_Death" parent="UnitDeath" Race="Terran">
         <LowQualityModel value="TerranBloodDeathLow"/>
@@ -31712,6 +31931,8 @@
     <CModel id="Marine_Junker_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Terran"/>
     <CModel id="Marine_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
         <FacialController value="LocalizedData\Facial\MarinePortrait.fxa"/>
+        <Model value="Assets\Portraits\Terran\Marine_HornerHan_Portrait\Marine_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\marine_hornerhan_portrait_static.dds"/>
     </CModel>
     <CModel id="Raven_Junker_Collection_MP" parent="Unit" Race="Terran">
         <Occlusion value="Show"/>
@@ -31734,7 +31955,11 @@
     <CModel id="Raven_Junker_Collection_MP_DeathRagdoll" parent="UnitDeathRagdoll" Race="Terran">
         <!--Model value="Assets\Units\Terran\Raven_Junker_Collection_MP_DeathRagdoll\Raven_Junker_Collection_MP_DeathRagdoll.m3"/-->
     </CModel>
-    <CModel id="Raven_Junker_Collection_MP_Portrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="Raven_Junker_Collection_MP_Portrait" parent="Portrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\Raven_HornerHan_Portrait\Raven_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\raven_hornerhan_portrait_static.dds"/>
+        <Lighting value="Raven_HornerHan_Portrait"/>
+    </CModel>
     <CModel id="AutoTurret_Junker_Collection" parent="Unit" Race="Terran">
         <AttachProps Id="Ref_Hardpoint">
             <Keys index="Turret" value="0"/>
@@ -31844,12 +32069,16 @@
     </CModel>
     <CModel id="VikingFighter_Junker_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Terran"/>
     <CModel id="VikingFighter_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
-        <Model value="Assets\Portraits\Terran\Viking_Junker_Collection_Portrait\Viking_Junker_Collection_Portrait.m3"/>
+        <Model value="Assets\Portraits\Terran\Viking_HornerHan_Portrait\Viking_HornerHan_Portrait.m3"/>
         <FacialController value="LocalizedData\Facial\VikingAssaultPortrait.fxa"/>
+        <Image value="Assets\Textures\vikingfighter_hornerhan_portrait_static.dds"/>
+        <Lighting value="VikingFighter_HornerHan_Portrait"/>
     </CModel>
     <CModel id="VikingAssault_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
-        <Model value="Assets\Portraits\Terran\Viking_Junker_Collection_Portrait\Viking_Junker_Collection_Portrait.m3"/>
+        <Model value="Assets\Portraits\Terran\Viking_HornerHan_Portrait\Viking_HornerHan_Portrait.m3"/>
         <FacialController value="LocalizedData\Facial\VikingAssaultPortrait.fxa"/>
+        <Image value="Assets\Textures\vikingassault_hornerhan_portrait_static.dds"/>
+        <Lighting value="VikingAssault_HornerHan_Portrait"/>
     </CModel>
     <CModel id="AssimilatorTerrazine" parent="Building" Race="Protoss">
         <Model value="Assets\Buildings\Protoss\Assimilator\Assimilator.m3"/>
@@ -34057,7 +34286,6 @@
     <CModel id="ZerglingUpgradeXPR" parent="ZerglingXPR">
         <Model value="Assets\Units\Zerg\ZerglingXPRewardUpgrade\ZerglingXPRewardUpgrade.m3"/>
     </CModel>
-    <CModel id="Adept_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss"/>
     <CModel id="Adept" parent="Unit" Race="Protoss">
         <Occlusion value="Show"/>
         <SquibTypeDefault value="Metal"/>
@@ -34108,6 +34336,11 @@
     </CModel>
     <CModel id="AdeptProtossSpiritDeathModel" parent="OneShotSpellFX">
         <Model value="Assets\Effects\Protoss\ProtossSpiritDeath_Ex2\ProtossSpiritDeath_Ex2.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="AdeptPurifierExplosionDeathModel" parent="OneShotSpellFX">
+        <Model value="Assets\Doodads\DOM_Explosion_Med\DOM_Explosion_Med.m3"/>
         <EditorCategories value="Race:Protoss"/>
         <Occlusion value="Show"/>
     </CModel>
@@ -34180,6 +34413,22 @@
     <CModel id="Adept_Taldarim_Collection_DeathRagdoll" parent="AdeptDeathRagdoll">
         <Model value="Assets\Units\Protoss\Adept_Taldarim_Collection_DeathRagdoll\Adept_Taldarim_Collection_DeathRagdoll.m3"/>
     </CModel>
+    <CModel id="Adept_Purifier_Collection" parent="Adept">
+        <Model value="Assets\Units\Protoss\Adept_Purifier_Collection\Adept_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="Adept_Purifier_Collection_Death" parent="AdeptDeath">
+        <Model value="Assets\Units\Protoss\Adept_Purifier_Collection_Death\Adept_Purifier_Collection_Death.m3"/>
+        <LowQualityModel value="DOM_Explosion_Med"/>
+    </CModel>
+    <CModel id="Adept_Purifier_Collection_DeathRagdoll" parent="AdeptDeathRagdoll">
+        <Model value="Assets\Units\Protoss\Adept_Purifier_Collection_DeathRagdoll\Adept_Purifier_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Adept_Purifier_Collection_WarpIn" parent="Unit" Race="Protoss">
+        <LowQualityModel value="ProtossUnitBirth"/>
+        <Occlusion value="Show"/>
+        <Priority value="16"/>
+    </CModel>
+    <CModel id="Adept_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss"/>
     <CModel id="Archon_Taldarim_Collection" parent="Archon">
         <Model value="Assets\Units\Protoss\Archon_Taldarim_Collection\Archon_Taldarim_Collection.m3"/>
         <LowQualityModel value=""/>
@@ -34197,7 +34446,9 @@
     <CModel id="Assimilator_Taldarim_Collection_Death" parent="AssimilatorDeath" Race="Protoss">
         <Model value="Assets\Buildings\Protoss\Assimilator_Taldarim_Collection_Death\Assimilator_Taldarim_Collection_Death.m3"/>
     </CModel>
-    <CModel id="Adjutant_CovertOps_Collection_Portrait" parent="FXAPortrait"/>
+    <CModel id="Adjutant_CovertOps_Collection_Portrait" parent="FXAPortrait" Race="Terran">
+        <FacialController value="LocalizedData\Facial\AdjutantPortrait.fxa"/>
+    </CModel>
     <CModel id="AutoTurret_CovertOps_Collection" parent="AutoTurret">
         <Model value="Assets\Units\Terran\AutoTurret_CovertOps_Collection\AutoTurret_CovertOps_Collection.m3"/>
     </CModel>
@@ -34217,6 +34468,15 @@
         <Model value="Assets\Units\Zerg\Baneling_CollectionSkin_WebbyDeath_Low_MP\Baneling_CollectionSkin_WebbyDeath_Low_MP.m3"/>
     </CModel>
     <CModel id="Baneling_Webby_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Baneling_CollectionSkin_Primal" parent="Baneling">
+        <Model value="Assets\Units\Zerg\Baneling_Primal_Collection\Baneling_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="Baneling_CollectionSkin_PrimalDeath" parent="BanelingDeath">
+        <Model value="Assets\Units\Zerg\Baneling_Primal_Collection_Death\Baneling_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Baneling_CollectionSkin_PrimalDeath_Low" parent="BanelingDeathLow">
+        <Model value="Assets\Units\Zerg\Baneling_Primal_Collection_Death\Baneling_Primal_Collection_Death_Low.m3"/>
+    </CModel>
     <CModel id="Banshee_CovertOps_Collection_Portrait" parent="FXAPortrait" Race="Terran">
         <FacialController value="LocalizedData\Facial\BansheePortrait.fxa"/>
     </CModel>
@@ -34239,6 +34499,20 @@
     </CModel>
     <CModel id="Banshee_CovertsOps_Collection_DeathRagdoll" parent="BansheeDeathRagdoll">
         <Model value="Assets\Units\Terran\Banshee_CovertsOps_Collection_DeathRagdoll\Banshee_CovertsOps_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Banshee_Junker_Collection" parent="Banshee">
+        <Model value="Assets\Units\Terran\Banshee_Junker_Collection\Banshee_Junker_Collection.m3"/>
+    </CModel>
+    <CModel id="Banshee_Junker_Collection_Death" parent="BansheeDeath">
+        <Model value="Assets\Units\Terran\Banshee_Junker_Collection_Death\Banshee_Junker_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Banshee_Junker_Collection_DeathRagdoll" parent="BansheeDeathRagdoll">
+        <Model value="Assets\Units\Terran\Banshee_Junker_Collection_DeathRagdoll\Banshee_Junker_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Banshee_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
+        <FacialController value="LocalizedData\Facial\BansheePortrait.fxa"/>
+        <Model value="Assets\Portraits\Terran\Banshee_HornerHan_Portrait\Banshee_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\banshee_hornerhan_portrait_static.dds"/>
     </CModel>
     <CModel id="BattleCruiser_CovertOps_Collection_Hyperjump_In" parent="RaceImpactFX" Race="Terran">
         <Flags index="Wait" value="1"/>
@@ -34320,19 +34594,206 @@
     <CModel id="Carrier_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss">
         <Image value="Assets\Textures\Carrier_Purifier_Collection_static.dds"/>
     </CModel>
-    <CModel id="Carrier_TalDarim_Collection" parent="Carrier">
-        <Model value="Assets\Units\Protoss\Carrier_TalDarim_Collection\Carrier_TalDarim_Collection.m3"/>
+    <CModel id="Carrier_Taldarim_Collection" parent="Unit" Race="Protoss">
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow11"/>
+        <Radius value="1.375000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.750000"/>
+        <SelectionRadius value="1.718700"/>
+        <ShadowRadius value="1.718700"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraLow11"/>
+        <UnitGlossaryCamera value="Star2CameraLow11"/>
     </CModel>
     <CModel id="Carrier_Taldarim_Collection_WarpIn" parent="CarrierWarpIn">
         <Model value="Assets\Units\Protoss\Carrier_Taldarim_Collection_WarpIn\Carrier_Taldarim_Collection_WarpIn.m3"/>
     </CModel>
-    <CModel id="Carrier_TalDarim_Collection_Death" parent="CarrierDeath">
-        <Model value="Assets\Units\Protoss\Carrier_TalDarim_Collection_Death\Carrier_TalDarim_Collection_Death.m3"/>
+    <CModel id="Carrier_Taldarim_Collection_Death" parent="UnitDeath" Race="Protoss">
+        <LowQualityModel value="CarrierDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.190000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.400000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.600000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.720000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="1.040000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.780000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.140000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.270000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.430000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.770000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="ProtossExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="ProtossPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.140000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="ProtossExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.210000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion01"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion02"/>
+            <Type value="Sound"/>
+            <Time value="0.360000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion03"/>
+            <Type value="Sound"/>
+            <Time value="0.660000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Explosion04"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="FinalExplosion"/>
+            <Type value="Sound"/>
+            <Time value="1.950000"/>
+            <Payload value="Protoss_ExplosionLarge"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion01"/>
+            <Type value="Sound"/>
+            <Time value="0.200000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion02"/>
+            <Type value="Sound"/>
+            <Time value="0.360000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion03"/>
+            <Type value="Sound"/>
+            <Time value="0.660000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="Explosion04"/>
+            <Type value="Sound"/>
+            <Time value="0.800000"/>
+            <Payload value="Protoss_ExplosionSmall"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="FinalExplosion"/>
+            <Type value="Sound"/>
+            <Time value="1.460000"/>
+            <Payload value="Protoss_ExplosionLarge"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="FinalExplosion"/>
+            <Type value="Sound"/>
+            <Time value="0.270000"/>
+            <Payload value="Protoss_ExplosionLarge"/>
+        </Events>
+        <Occlusion value="Show"/>
     </CModel>
-    <CModel id="Carrier_TalDarim_Collection_Death_Ragdoll" parent="CarrierDeathRagdoll">
-        <Model value="Assets\Units\Protoss\Carrier_TalDarim_Collection_DeathRagdoll\Carrier_TalDarim_Collection_DeathRagdoll.m3"/>
+    <CModel id="Carrier_Taldarim_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="ProtossExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.100000"/>
+        </Events>
+        <PhysicsDeathMotionFactor value="1.500000,0.500000"/>
     </CModel>
     <CModel id="Carrier_Taldarim_Collection_Portrait" parent="Portrait" Race="Protoss"/>
+    <CModel id="Carrier_Purifier_Collection" parent="Carrier">
+        <Model value="Assets\Units\Protoss\Carrier_Purifier_Collection\Carrier_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="Carrier_Purifier_Collection_WarpIn" parent="CarrierWarpIn">
+        <Model value="Assets\Units\Protoss\Carrier_Purifier_Collection_WarpIn\Carrier_Purifier_Collection_WarpIn.m3"/>
+    </CModel>
+    <CModel id="Carrier_Purifier_Collection_Death" parent="CarrierDeath">
+        <Model value="Assets\Units\Protoss\Carrier_Purifier_Collection_Death\Carrier_Purifier_Collection_Death.m3"/>
+    </CModel>
     <CModel id="Executor_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss">
         <Image value="Assets\Textures\Executor_Purifier_Collection_static.dds"/>
     </CModel>
@@ -34368,7 +34829,7 @@
         <UnitGlossaryCamera value="Star2CameraHigher22"/>
     </CModel>
     <CModel id="Colossus_Taldarim_Collection_Death" parent="UnitDeath" Race="Protoss">
-        <LowQualityModel value="ProtossLargeUnitDeathLow"/>
+        <LowQualityModel value="ProtossLargeUnitDeathLowAndSound"/>
         <Events>
             <Anim value="Death,00"/>
             <Name value="Colossus_Explode_Small"/>
@@ -34563,12 +35024,35 @@
         </Events>
     </CModel>
     <CModel id="Colossus_Taldarim_Collection_Portrait" parent="Portrait" Race="Protoss"/>
+    <CModel id="Colossus_Purifier_Collection" parent="Colossus">
+        <Model value="Assets\Units\Protoss\Colossus_Purifier_Collection\Colossus_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="Colossus_Purifier_Collection_Death" parent="ColossusDeath">
+        <Model value="Assets\Units\Protoss\Colossus_Purifier_Collection_Death\Colossus_Purifier_Collection_Death.m3"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="Colossus_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Colossus_Explode_Ragdoll_A"/>
+            <Type value="Sound"/>
+            <Time value="0.507000"/>
+            <Payload value="Colossus_Explode_Ragdoll_A"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="Colossus_Explode_Ragdoll_B"/>
+            <Type value="Sound"/>
+            <Time value="1.167000"/>
+            <Payload value="Colossus_Explode_Ragdoll_B"/>
+        </Events>
+    </CModel>
     <CModel id="Colossus_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss">
         <Image value="Assets\Textures\Colossus_Purifier_Collection_static.dds"/>
     </CModel>
     <CModel id="ColossusCEDeath" parent="UnitDeath" Race="Protoss">
         <Model value="Assets\Units\Protoss\Colossus_Purifier_Death\Colossus_Purifier_Death.m3"/>
-        <LowQualityModel value="ProtossLargeUnitDeathLow"/>
+        <LowQualityModel value="ProtossLargeUnitDeathLowAndSound"/>
         <Occlusion value="Show"/>
         <Flags index="TeenSafe" value="1"/>
         <Events>
@@ -34826,7 +35310,7 @@
     </CModel>
     <CModel id="ColossusTaldarimMPDeath" parent="UnitDeath" Race="Protoss">
         <Model value="Assets\Units\Protoss\Colossus_Taldarim_MP_Death\Colossus_Taldarim_MP_Death.m3"/>
-        <LowQualityModel value="ProtossLargeUnitDeathLow"/>
+        <LowQualityModel value="ProtossLargeUnitDeathLowAndSound"/>
         <Occlusion value="Show"/>
         <Flags index="TeenSafe" value="1"/>
     </CModel>
@@ -34862,7 +35346,7 @@
         <UnitGlossaryCamera value="Star2CameraHigher22"/>
     </CModel>
     <CModel id="Colossus_Taldarim_MP_Death" parent="UnitDeath" Race="Protoss">
-        <LowQualityModel value="ProtossLargeUnitDeathLow"/>
+        <LowQualityModel value="ProtossLargeUnitDeathLowAndSound"/>
         <Flags index="TeenSafe" value="1"/>
         <Occlusion value="Show"/>
         <Events>
@@ -35071,6 +35555,15 @@
         <Model value="Assets\Units\Zerg\Corruptor_CollectionSkin_Webby_DeathRagdoll\Corruptor_CollectionSkin_Webby_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="Corruptor_Webby_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Corruptor_CollectionSkin_Primal" parent="Corruptor">
+        <Model value="Assets\Units\Zerg\Corruptor_Primal_Collection\Corruptor_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="Corruptor_CollectionSkin_Primal_Death" parent="CorruptorDeath">
+        <Model value="Assets\Units\Zerg\Corruptor_Primal_Collection_Death\Corruptor_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Corruptor_CollectionSkin_Primal_DeathRagdoll" parent="CorruptorDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Corruptor_Primal_Collection_DeathRagdoll\Corruptor_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
     <CModel id="CycloneTargetingBeam" parent="PersistentSpellFX">
         <Model value="Assets\Effects\Terran\Cyclone_TargetingBeam\Cyclone_TargetingBeam.m3"/>
         <EditorCategories value="Race:Terran"/>
@@ -35133,22 +35626,52 @@
         <Flags index="Facial" value="1"/>
         <FacialController value="LocalizedData\Facial\CycloneEx2_Portrait.fxa"/>
     </CModel>
+    <CModel id="Cyclone_Junker_Collection" parent="Cyclone">
+        <Model value="Assets\Units\Terran\Cyclone_Junker_Collection\Cyclone_Junker_Collection.m3"/>
+    </CModel>
+    <CModel id="Cyclone_Junker_Collection_Death" parent="UnitDeath" Race="Terran">
+        <LowQualityModel value="TerranLargeUnitDeathLow"/>
+        <Occlusion value="Show"/>
+        <VariationCount value="3"/>
+    </CModel>
+    <CModel id="Cyclone_Junker_Collection_DeathRagdoll" parent="CycloneDeathRagdoll">
+        <Model value="Assets\Units\Terran\Cyclone_Junker_Collection_DeathRagdoll\Cyclone_Junker_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Cyclone_Junker_Collection_Portrait" parent="Portrait" Race="Terran">
+        <Flags index="Facial" value="1"/>
+        <FacialController value="LocalizedData\Facial\CycloneEx2_Portrait.fxa"/>
+        <Model value="Assets\Portraits\Terran\Cyclone_HornerHan_Portrait\Cyclone_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\cyclone_hornerhan_portrait_static.dds"/>
+    </CModel>
     <CModel id="DarkTemplarDeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
         <Model value="Assets\Units\Protoss\DarkTemplarDeathRagdoll\DarkTemplarDeathRagdoll_01.m3"/>
         <!-- We can totally throttle his physics, b/c he fades out, so it'll make his death look
              more violent w/out his ragdoll flying across the screen in a visible way. -->
         <PhysicsForceFactor value="2.000000"/>
     </CModel>
-    <CModel id="DarkTemplar_TalDarim_Collection" parent="DarkTemplar">
-        <Model value="Assets\Units\Protoss\DarkTemplar_TalDarim_Collection\DarkTemplar_TalDarim_Collection.m3"/>
-        <VariationCount value="1"/>
+    <CModel id="DarkTemplar_Taldarim_Collection" parent="Unit" Race="Protoss">
+        <RequiredAnims value="Assets\Units\Protoss\DarkTemplar_00_SwarmAnims\DarkTemplar_00_SwarmAnims.m3a"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid05"/>
+        <Radius value="0.400000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="LightArmor"/>
+        <TechPurchaseCamera value="Star2CameraMid05"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
     </CModel>
-    <CModel id="DarkTemplar_TalDarim_Collection_Placement" parent="DarkTemplarPlacement">
-        <Model value="Assets\Units\Protoss\DarkTemplar_TalDarim_Collection_Placement\DarkTemplar_TalDarim_Collection_Placement.m3"/>
+    <CModel id="DarkTemplar_Taldarim_Collection_Placement" parent="Unit" Race="Protoss">
+        <Occlusion value="Show"/>
+        <Radius value="-1.000000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.588100"/>
+        <ShadowRadius value="0.588100"/>
     </CModel>
     <CModel id="DarkTemplar_Taldarim_Collection_WarpIn" parent="Unit" Race="Protoss">
         <LowQualityModel value="DarkTemplarWarpInLow"/>
-        <Flags index="Wait" value="0"/>
         <Occlusion value="Show"/>
         <ScaleMax value="0.850000,0.850000,0.850000"/>
         <ScaleMin value="0.850000,0.850000,0.850000"/>
@@ -35157,19 +35680,19 @@
     </CModel>
     <CModel id="DarkTemplar_Taldarim_Collection_Portrait" parent="Portrait" Race="Protoss"/>
     <CModel id="DarkTemplar2_Taldarim_Collection_Portrait" parent="DarkTemplar2Portrait">
-        <Model value="Assets\Units\Protoss\DarkTemplar_Taldarim_Collection_Portrait\DarkTemplar_Taldarim_Collection_Portrait.m3"/>
+        <Model value="Assets\Portraits\Protoss\DarkTemplar_Taldarim_Collection_Portrait\DarkTemplar_Taldarim_Collection_Portrait.m3"/>
         <Image value="Assets\Textures\DarkTemplar_Taldarim_Collection_Portrait_Static.dds"/>
     </CModel>
-    <CModel id="DarkTemplar_TalDarim_Collection_Death" parent="DarkTemplarDeath">
+    <CModel id="DarkTemplar_Taldarim_Collection_Death" parent="DarkTemplarDeath">
         <Model value="Assets\Units\Protoss\DarkTemplar_TalDarim_Collection_Death\DarkTemplar_TalDarim_Collection_Death.m3"/>
     </CModel>
-    <CModel id="DarkTemplar_TalDarim_Collection_Death00" parent="DarkTemplarDeath00">
+    <CModel id="DarkTemplar_Taldarim_Collection_Death00" parent="DarkTemplarDeath00">
         <Model value="Assets\Units\Protoss\DarkTemplar_TalDarim_Collection_Death\DarkTemplar_TalDarim_Collection_Death.m3"/>
     </CModel>
-    <CModel id="DarkTemplar_TalDarim_Collection_Death01" parent="DarkTemplarDeath01">
+    <CModel id="DarkTemplar_Taldarim_Collection_Death01" parent="DarkTemplarDeath01">
         <Model value="Assets\Units\Protoss\DarkTemplar_TalDarim_Collection_Death\DarkTemplar_TalDarim_Collection_Death.m3"/>
     </CModel>
-    <CModel id="DarkTemplar_TalDarim_Collection_DeathRagdoll" parent="DarkTemplarDeathRagdoll"/>
+    <CModel id="DarkTemplar_Taldarim_Collection_DeathRagdoll" parent="DarkTemplarDeathRagdoll"/>
     <CModel id="DisruptorDeath" parent="UnitDeath" Race="Protoss">
         <Model value="Assets\Units\Protoss\Disruptor\Disruptor.m3"/>
         <LowQualityModel value="ProtossMediumUnitDeathLow"/>
@@ -35207,6 +35730,14 @@
         <ScaleMin value="0.500000,0.500000,0.500000"/>
         <Model value="Assets\Units\Terran\TargetingDronePlacement\TargetingDronePlacement.m3"/>
     </CModel>
+    <CModel id="Disruptor_Purifier_Collection" parent="Disruptor">
+        <Model value="Assets\Units\Protoss\Disruptor_Purifier_Collection\Disruptor_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="Disruptor_Purifier_Collection_Death" parent="DisruptorDeath">
+        <Model value="Assets\Units\Protoss\Disruptor_Purifier_Collection\Disruptor_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="Disruptor_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss"/>
+    <CModel id="Disruptor_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss"/>
     <CModel id="Drone_CollectionSkin_Webby" parent="Drone">
         <Model value="Assets\Units\Zerg\Drone_CollectionSkin_Webby\Drone_CollectionSkin_Webby.m3"/>
     </CModel>
@@ -35223,6 +35754,21 @@
         <Model value="Assets\Units\Zerg\Drone_CollectionSkin_Webby_DeathRagdoll\Drone_CollectionSkin_Webby_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="Drone_Webby_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Drone_CollectionSkin_Primal" parent="Drone">
+        <Model value="Assets\Units\Zerg\Drone_Primal_Collection\Drone_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="Drone_CollectionSkin_Primal_Death" parent="DroneDeath">
+        <Model value="Assets\Units\Zerg\Drone_Primal_Collection_Death\Drone_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Drone_CollectionSkin_Primal_DeathFire" parent="DroneDeathFire">
+        <Model value="Assets\Units\Zerg\Drone_Primal_Collection_DeathFire\Drone_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="Drone_CollectionSkin_Primal_DeathAcid" parent="DroneDeathAcid">
+        <Model value="Assets\Units\Zerg\Drone_Primal_Collection_DeathAcid\Drone_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="Drone_CollectionSkin_Primal_DeathRagdoll" parent="DroneDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Drone_Primal_Collection_DeathRagdoll\Drone_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
     <CModel id="DefensiveMatrixDrone_CovertOps_Collection" parent="PointDefenseDrone">
         <Model value="Assets\Units\Terran\DefensiveMatrixDrone_CovertOps_Collection\DefensiveMatrixDrone_CovertOps_Collection.m3"/>
     </CModel>
@@ -35309,7 +35855,7 @@
     <CModel id="Ghost_CovertOps_Collection_Death_Fire" parent="GhostDeathFire">
         <Model value="Assets\Units\Terran\Ghost_CovertOps_Collection_Death_Fire\Ghost_CovertOps_Collection_Death_Fire.m3"/>
     </CModel>
-    <CModel id="Ghost_CovertOps_Collection_Portrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="Ghost_CovertOps_Collection_Portrait" parent="Portrait" Race="Terran"/>
     <CModel id="Hellion_BlackOps" parent="Hellion">
         <Model value="Assets\Units\Terran\Hellion_BlackOps\Hellion_BlackOps.m3"/>
     </CModel>
@@ -35369,10 +35915,10 @@
         <Model value="Assets\Units\Terran\Hellbat_CovertOps_Collection_DeathRagdoll\Hellbat_CovertOps_Collection_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="Hellion_Junker_Collection" parent="Hellion">
-        <Model value="Assets\Units\Terran\Hellion_Junker_Collection\Hellion_Junker_Collection.m3"/>
+        <Model value="Assets\Units\Terran\Hellion_Junker_Collection_MP\Hellion_Junker_Collection_MP.m3"/>
     </CModel>
     <CModel id="Hellion_Junker_Collection_Morph" parent="HellionTankMorph">
-        <Model value="Assets\Units\Terran\Hellbatmorph_Junker_Collection\Hellbatmorph_Junker_Collection.m3"/>
+        <Model value="Assets\Units\Terran\HellionHellbat_Junker_Collection_Morph_MP\HellionHellbat_Junker_Collection_Morph_MP.m3"/>
     </CModel>
     <CModel id="Hellion_Junker_Collection_Death" parent="HellionDeath">
         <Model value="Assets\Units\Terran\Hellion_Junker_Collection_Death\Hellion_Junker_Collection_Death.m3"/>
@@ -35382,10 +35928,15 @@
     </CModel>
     <CModel id="Hellion_Junker_Collection_Morph_Portrait" parent="FXAPortrait" Race="Terran">
         <FacialController value="LocalizedData\Facial\HellionPortrait.fxa"/>
-        <Image value="Assets\Textures\hellionmorph_covertops_collection_portrait_static.dds"/>
+        <Image value="Assets\Textures\hellbat_hornerhan_portrait_static.dds"/>
+        <Model value="Assets\Portraits\Terran\Hellion_HornerHan_Portrait\Hellion_HornerHan_Portrait.m3"/>
+        <Lighting value="Hellion_HornerHan_Portrait"/>
     </CModel>
     <CModel id="Hellion_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
         <FacialController value="LocalizedData\Facial\HellionPortrait.fxa"/>
+        <Model value="Assets\Portraits\Terran\Hellion_HornerHan_Portrait\Hellion_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\hellion_hornerhan_portrait_static.dds"/>
+        <Lighting value="Hellion_HornerHan_Portrait"/>
     </CModel>
     <CModel id="Hellbat_Junker_Collection" parent="HellionTank">
         <Model value="Assets\Units\Terran\Hellbat_Junker_Collection\Hellbat_Junker_Collection.m3"/>
@@ -35401,6 +35952,35 @@
              more violent w/out his ragdoll flying across the screen in a visible way. -->
         <PhysicsForceFactor value="2.000000"/>
     </CModel>
+    <CModel id="HighTemplar_Purifier_Collection" parent="HighTemplar">
+        <Model value="Assets\Units\Protoss\HighTemplar_Purifier_Collection\HighTemplar_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="HighTemplar_Purifier_Collection_Placement" parent="HighTemplarPlacement">
+        <Model value="Assets\Units\Protoss\HighTemplar_Purifier_Collection_Placement\HighTemplar_Purifier_Collection_Placement.m3"/>
+    </CModel>
+    <CModel id="HighTemplar_Purifier_Collection_WarpIn" parent="HighTemplarWarpIn">
+        <Model value="Assets\Units\Protoss\HighTemplar_Purifier_Collection_WarpIn\HighTemplar_Purifier_Collection_WarpIn.m3"/>
+    </CModel>
+    <CModel id="HighTemplar_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss">
+        <Image value="Assets\Textures\hightemplar_purifier_collection_static.dds"/>
+    </CModel>
+    <CModel id="HighTemplar_Purifier_Collection_Death" parent="HighTemplarDeath">
+        <Model value="Assets\Units\Protoss\HighTemplar_Purifier_Collection_Death\HighTemplar_Purifier_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="HighTemplar_Purifier_Collection_DeathRagdoll" parent="HighTemplarDeathRagdoll">
+        <Model value="Assets\Units\Protoss\HighTemplar_Purifier_Collection_DeathRagdoll\HighTemplar_Purifier_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="HighTemplar_Purifier_Collection_Shadow" parent="HighTemplarShadow">
+        <Model value="Assets\Units\Protoss\HighTemplar_Purifier_Collection_ShadowTrail\HighTemplar_Purifier_Collection_ShadowTrail.m3"/>
+    </CModel>
+    <CModel id="Archon_Purifier_Collection" parent="Archon">
+        <Model value="Assets\Units\Protoss\Archon_Purifier_Collection\Archon_Purifier_Collection.m3"/>
+        <LowQualityModel value=""/>
+    </CModel>
+    <CModel id="Archon_Purifier_Collection_Death" parent="ArchonDeath">
+        <Model value="Assets\Units\Protoss\Archon_Purifier_Collection_Death\Archon_Purifier_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Archon_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss"/>
     <CModel id="HighTemplar_Taldarim_Collection" parent="HighTemplar">
         <Model value="Assets\Units\Protoss\HighTemplar_Taldarim_Collection\HighTemplar_Taldarim_Collection.m3"/>
     </CModel>
@@ -35450,6 +36030,21 @@
         <Model value="Assets\Units\Zerg\Hydralisk_Collection_Webby_DeathRagdoll\Hydralisk_Collection_Webby_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="Hydralisk_Webby_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Hydralisk_Collection_Primal" parent="Hydralisk">
+        <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection\Hydralisk_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="Hydralisk_Collection_Primal_Death" parent="HydraliskDeath">
+        <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection_Death\Hydralisk_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Hydralisk_Collection_Primal_DeathFire" parent="HydraliskDeathFire">
+        <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection_DeathFire\Hydralisk_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="Hydralisk_Collection_Primal_DeathAcid" parent="HydraliskDeathAcid">
+        <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection_DeathAcid\Hydralisk_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="Hydralisk_Collection_Primal_DeathRagdoll" parent="HydraliskDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Hydralisk_Primal_Collection_DeathRagdoll\Hydralisk_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
     <CModel id="Hydralisk_PremiumSkin_Noxious" parent="Hydralisk">
         <Model value="Assets\Units\Zerg\Hydralisk_PremiumSkin_Noxious\Hydralisk_PremiumSkin_Noxious.m3"/>
     </CModel>
@@ -35498,7 +36093,7 @@
         <UnitGlossaryCamera value="Star2CameraHigh08"/>
     </CModel>
     <CModel id="Immortal_Purifier_Collection_Death" parent="UnitDeath" Race="Protoss">
-        <LowQualityModel value="ProtossMediumUnitDeathLow"/>
+        <LowQualityModel value="ProtossMediumUnitDeathLowAndSound"/>
         <Events>
             <Variation value="0"/>
             <Anim value="Death,00"/>
@@ -35626,6 +36221,7 @@
         <ScaleMin value="0.900000,0.900000,0.900000"/>
         <SelectionRadius value="0.866400"/>
         <ShadowRadius value="0.866400"/>
+        <Model value="Assets\Units\Protoss\Immortal_Purifier_Collection_Placement\Immortal_Purifier_Collection_Placement.m3"/>
     </CModel>
     <CModel id="Immortal_Purifier_Collection_WarpIn" parent="Unit" Race="Protoss">
         <LowQualityModel value="ProtossUnitBirth"/>
@@ -35656,7 +36252,7 @@
         <Image value="Assets\Textures\immortal_taldarim_collection_static.dds"/>
     </CModel>
     <CModel id="Immortal_Taldarim_Collection_Death" parent="UnitDeath" Race="Protoss">
-        <LowQualityModel value="ProtossMediumUnitDeathLow"/>
+        <LowQualityModel value="ProtossMediumUnitDeathLowAndSound"/>
         <Events>
             <Variation value="0"/>
             <Anim value="Death,00"/>
@@ -35818,13 +36414,30 @@
         <Model value="Assets\Effects\Protoss\InterceptorMissile\InterceptorMissile.m3"/>
         <EditorCategories value="Race:Protoss"/>
     </CModel>
-    <CModel id="InterceptorTalDarim_Collection" parent="Interceptor">
-        <Model value="Assets\Units\Protoss\Interceptor_TalDarim_Collection\Interceptor_TalDarim_Collection.m3"/>
+    <CModel id="Interceptor_Taldarim_Collection" parent="Unit" Race="Protoss">
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow03"/>
+        <Radius value="0.250000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.294000"/>
+        <ShadowRadius value="0.294000"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraLow03"/>
+        <UnitGlossaryCamera value="Star2CameraLow03"/>
     </CModel>
-    <CModel id="InterceptorTalDarim_Collection_Death" parent="InterceptorDeath">
-        <Model value="Assets\Units\Protoss\Interceptor_TalDarim_Collection_Death\Interceptor_TalDarim_Collection_Death.m3"/>
+    <CModel id="Interceptor_Taldarim_Collection_Death" parent="UnitDeath" Race="Protoss">
+        <LowQualityModel value="ProtossSmallUnitDeathLow"/>
+        <Occlusion value="Show"/>
+        <Radius value="0.250000"/>
+        <SelectionRadius value="0.588100"/>
+        <ShadowRadius value="0.588100"/>
+        <VariationCount value="2"/>
     </CModel>
-    <CModel id="InterceptorTalDarim_Collection_Death_Ragdoll" parent="InterceptorDeathRagdoll"/>
+    <CModel id="Interceptor_Taldarim_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <PhysicsDeathMotionFactor value="1.300000,0.700000"/>
+        <VariationCount value="2"/>
+    </CModel>
     <CModel id="Liberator" parent="Unit" Race="Terran">
         <AttachProps Id="Ref_Weapon 01">
             <Keys index="SetA" value="0"/>
@@ -35989,6 +36602,26 @@
     <CModel id="Liberator_CovertOps_Collection_Portrait" parent="FXAPortrait" Race="Terran">
         <FacialController value="LocalizedData\Facial\LiberatorEx2_Portrait.fxa"/>
     </CModel>
+    <CModel id="Liberator_Junker_Collection" parent="Liberator">
+        <Model value="Assets\Units\Terran\Liberator_Junker_Collection\Liberator_Junker_Collection.m3"/>
+    </CModel>
+    <CModel id="LiberatorAG_Junker_Collection" parent="LiberatorAG">
+        <Model value="Assets\Units\Terran\Liberator_Junker_Collection\Liberator_Junker_Collection.m3"/>
+    </CModel>
+    <CModel id="Liberator_Junker_Collection_Death" parent="LiberatorDeath">
+        <Model value="Assets\Units\Terran\Liberator_Junker_Collection_Death\Liberator_Junker_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Liberator_Junker_Collection_Morph_Death" parent="LiberatorMorph_Death">
+        <Model value="Assets\Units\Terran\LiberatorMorph_Junker_Collection_Death\LiberatorMorph_Junker_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Liberator_Junker_Collection_DeathRagdoll" parent="LiberatorDeathRagdoll">
+        <Model value="Assets\Units\Terran\Liberator_Junker_Collection_DeathRagdoll\Liberator_Junker_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Liberator_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
+        <FacialController value="LocalizedData\Facial\LiberatorEx2_Portrait.fxa"/>
+        <Model value="Assets\Portraits\Terran\Liberator_HornerHan_Portrait\Liberator_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\liberator_hornerhan_portrait_static.dds"/>
+    </CModel>
     <CModel id="LocustMPFlying" parent="Unit" Race="Zerg">
         <Model value="Assets\Units\Zerg\SwarmHostSpawnFlyer\SwarmHostSpawnFlyer.m3"/>
         <Events>
@@ -36079,6 +36712,22 @@
         <Model value="Assets\Units\Zerg\Lurker_CollectionSkin_Webby_DeathRagdoll\Lurker_CollectionSkin_Webby_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="Lurker_Webby_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Lurker_CollectionSkin_Primal" parent="LurkerMP">
+        <Model value="Assets\Units\Zerg\Lurker_Primal_Collection\Lurker_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="Lurker_CollectionSkin_Primal_Death" parent="LurkerMPDeath">
+        <Model value="Assets\Units\Zerg\Lurker_Primal_Collection_Death\Lurker_Primal_Collection_Death.m3"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="Lurker_CollectionSkin_Primal_Death_Fire" parent="LurkerMPDeathFire">
+        <Model value="Assets\Units\Zerg\Lurker_Primal_Collection_DeathFire\Lurker_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="Lurker_CollectionSkin_Primal_Death_Acid" parent="LurkerMPDeathAcid">
+        <Model value="Assets\Units\Zerg\Lurker_Primal_Collection_DeathAcid\Lurker_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="Lurker_CollectionSkin_Primal_DeathRagdoll" parent="LurkerMPDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Lurker_Primal_Collection_DeathRagdoll\Lurker_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
     <CModel id="Marauder_BlackOps" parent="Unit" Race="Terran">
         <RequiredAnims value="Assets\Units\Terran\Marauder_SwarmAnims\Marauder_SwarmAnims.m3a"/>
         <RequiredAnims value="Assets\Units\Terran\Marauder_VoidAnims\Marauder_VoidAnims.m3a"/>
@@ -36305,16 +36954,42 @@
     <CModel id="Medivac_CovertOps_Collection_Portrait" parent="FXAPortrait" Race="Terran">
         <FacialController value="LocalizedData\Facial\MedivacPortrait.fxa"/>
     </CModel>
-    <CModel id="MotherShipCore_Taldarim_Collection_Morph_Addition" parent="RacePersistentSpellFX" Race="Protoss"/>
-    <CModel id="Mothership_TalDarim_Collection" parent="Mothership">
+    <CModel id="Medivac_Junker_Collection" parent="Medivac">
+        <Model value="Assets\Units\Terran\Medivac_Junker_Collection\Medivac_Junker_Collection.m3"/>
+    </CModel>
+    <CModel id="Medivac_Junker_Collection_DeathRagdoll" parent="MedivacDeathRagdoll">
+        <Model value="Assets\Units\Terran\Medivac_Junker_Collection_Death_Ragdoll\Medivac_Junker_Collection_Death_Ragdoll.m3"/>
+    </CModel>
+    <CModel id="Medivac_Junker_Collection_Death" parent="MedivacDeath">
+        <Model value="Assets\Units\Terran\Medivac_Junker_Collection_Death\Medivac_Junker_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Medivac_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
+        <FacialController value="LocalizedData\Facial\MedivacPortrait.fxa"/>
+        <Model value="Assets\Portraits\Terran\Medivac_HornerHan_Portrait\Medivac_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\medivac_hornerhan_portrait_static.dds"/>
+    </CModel>
+    <CModel id="MothershipCore_Taldarim_Collection_Morph_Addition" parent="RacePersistentSpellFX" Race="Protoss"/>
+    <CModel id="Mothership_Taldarim_Collection" parent="Mothership">
         <Model value="Assets\Units\Protoss\Mothership_TalDarim_Collection\Mothership_TalDarim_Collection.m3"/>
     </CModel>
     <CModel id="Mothership_Taldarim_Collection_Portrait" parent="Portrait" Race="Protoss"/>
-    <CModel id="Mothership_TalDarim_Collection_Death" parent="MothershipDeath">
+    <CModel id="Mothership_Taldarim_Collection_Death" parent="MothershipDeath">
         <Model value="Assets\Units\Protoss\Mothership_TalDarim_Collection_Death\Mothership_TalDarim_Collection_Death.m3"/>
     </CModel>
     <CModel id="Mothership_Taldarim_Collection_DeathRagdoll" parent="MothershipDeathRagdoll">
         <Model value="Assets\Units\Protoss\Mothership_Taldarim_Collection_DeathRagdoll\Mothership_Taldarim_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Mothership_Purifier_Collection" parent="Mothership">
+        <Model value="Assets\Units\Protoss\Mothership_Purifier_Collection\Mothership_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="Mothership_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss">
+        <Image value="Assets\Textures\mothership_purifier_collection_static.dds"/>
+    </CModel>
+    <CModel id="Mothership_Purifier_Collection_Death" parent="MothershipDeath">
+        <Model value="Assets\Units\Protoss\Mothership_Purifier_Collection_Death\Mothership_Purifier_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Mothership_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <PhysicsDeathMotionFactor value="2.000000,0.600000"/>
     </CModel>
     <CModel id="Mutalisk_CollectionSkin_Webby" parent="Mutalisk">
         <Model value="Assets\Units\Zerg\Mutalisk_CollectionSkin_Webby\Mutalisk_CollectionSkin_Webby.m3"/>
@@ -36327,6 +37002,17 @@
         <PhysicsDeathMotionFactor value="1.200000,0.200000"/>
     </CModel>
     <CModel id="Mutalisk_Webby_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Mutalisk_CollectionSkin_Primal" parent="Mutalisk">
+        <Model value="Assets\Units\Zerg\Mutalisk_Primal_Collection\Mutalisk_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="Mutalisk_CollectionSkin_Primal_Death" parent="MutaliskDeath">
+        <Model value="Assets\Units\Zerg\Mutalisk_Primal_Collection_Death\Mutalisk_Primal_Collection_Death.m3"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="Mutalisk_CollectionSkin_Primal_DeathRagdoll" parent="UnitDeathRagdoll" Race="Zerg">
+        <PhysicsDeathMotionFactor value="1.200000,0.200000"/>
+        <Model value="Assets\Units\Zerg\Mutalisk_Primal_Collection_DeathRagdoll\Mutalisk_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
     <CModel id="Observer_Taldarim_Collection_WarpIn" parent="Unit" Race="Protoss">
         <Lighting value="ObserverWarpIn"/>
         <Occlusion value="Show"/>
@@ -36384,6 +37070,23 @@
             <Time value="0.300000"/>
             <Payload value="ObserverDeathFire"/>
         </Events>
+    </CModel>
+    <CModel id="Observer_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <PhysicsDeathMotionFactor value="1.200000,0.200000"/>
+    </CModel>
+    <CModel id="Observer_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss"/>
+    <CModel id="Observer_Purifier_Collection_WarpIn" parent="Unit" Race="Protoss">
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow05"/>
+        <Radius value="0.400000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.350000"/>
+        <SelectionRadius value="0.470200"/>
+        <ShadowRadius value="0.470200"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraLow05"/>
+        <UnitGlossaryCamera value="Star2CameraLow05"/>
     </CModel>
     <CModel id="Oracle_Taldarim_Collection_WarpIn_Stargate" parent="Unit" Race="Protoss">
         <Occlusion value="Show"/>
@@ -36541,6 +37244,39 @@
     </CModel>
     <CModel id="Oracle_Taldarim_Collection_Death_Walk" parent="OracleDeathWalk" Race="Protoss">
         <Model value="Assets\Units\Protoss\Oracle_Taldarim_Collection_Death_Walk\Oracle_Taldarim_Collection_Death_Walk.m3"/>
+    </CModel>
+    <CModel id="Oracle_Purifier_Collection" parent="Oracle">
+        <Model value="Assets\Units\Protoss\Oracle_Purifier_Collection\Oracle_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="Oracle_Purifier_Collection_Death" parent="OracleDeath" Race="Protoss">
+        <Model value="Assets\Units\Protoss\Oracle_Purifier_Collection_Death\Oracle_Purifier_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Oracle_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <PhysicsDeathMotionFactor value="1.200000,0.200000"/>
+    </CModel>
+    <CModel id="Oracle_Purifier_Collection_Death_Walk" parent="OracleDeathWalk" Race="Protoss">
+        <Model value="Assets\Units\Protoss\Oracle_Purifier_Collection_DeathWalk\Oracle_Purifier_Collection_DeathWalk.m3"/>
+    </CModel>
+    <CModel id="Oracle_Purifier_Collection_Death_Morph" parent="OracleDeathMorph" Race="Protoss">
+        <Model value="Assets\Units\Protoss\Oracle_Purifier_Collection_DeathMorph\Oracle_Purifier_Collection_DeathMorph.m3"/>
+    </CModel>
+    <CModel id="Oracle_Purifier_Collection_DeathMorphRagdoll" parent="OracleMorphDeathRagdoll">
+        <Model value="Assets\Units\Protoss\Oracle_Purifier_Collection_DeathMorphRagdoll\Oracle_Purifier_Collection_DeathMorphRagdoll.m3"/>
+    </CModel>
+    <CModel id="Oracle_Purifier_Collection_WarpIn_Stargate" parent="Unit" Race="Protoss">
+        <Occlusion value="Show"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.750000"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="OraclePurifierPortrait" parent="Portrait" Race="Protoss">
+        <Model value="Assets\Portraits\Protoss\Oracle_Purifier_Collection_Portrait\Oracle_Purifier_Collection_Portrait.m3"/>
+        <Lighting value="Oracle_Purifier_Portrait"/>
+        <Image value="Assets\Textures\oracle_purifier_collection_portrait_static.dds"/>
     </CModel>
     <CModel id="OverlordXPRewardTransport" parent="Unit" Race="Zerg">
         <Occlusion value="Show"/>
@@ -36709,9 +37445,6 @@
         <Model value="Assets\Units\Zerg\OverSeer_CollectionSkin_Webby_DeathRagdoll\OverSeer_CollectionSkin_Webby_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="Overseer_Webby_Collection_Portrait" parent="Portrait" Race="Zerg"/>
-    <CModel id="Phoenix_Taldarim_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
-        <PhysicsDeathMotionFactor value="1.200000,0.200000"/>
-    </CModel>
     <CModel id="Phoenix_Taldarim_Collection" parent="Phoenix">
         <Model value="Assets\Units\Protoss\Phoenix_Taldarim_Collection\Phoenix_Taldarim_Collection.m3"/>
     </CModel>
@@ -36741,6 +37474,38 @@
     </CModel>
     <CModel id="Phoenix_Taldarim_Collection_Death" parent="PhoenixDeath">
         <Model value="Assets\Units\Protoss\Phoenix_Taldarim_Collection_Death\Phoenix_Taldarim_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Phoenix_Taldarim_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <PhysicsDeathMotionFactor value="1.200000,0.200000"/>
+    </CModel>
+    <CModel id="Phoenix_Purifier_Collection" parent="Phoenix">
+        <Model value="Assets\Units\Protoss\Phoenix_Purifier_Collection\Phoenix_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="Phoenix_Purifier_Collection_WarpIn_Stargate" parent="Unit" Race="Protoss">
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="Air" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 03">
+            <Keys index="Air" value="0"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <Radius value="0.750000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.400000"/>
+        <SelectionRadius value="0.882000"/>
+        <ShadowRadius value="0.882000"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="Phoenix_Purifier_Collection_WarpIn" parent="Phoenix_Purifier_Collection_WarpIn_Stargate"/>
+    <CModel id="Phoenix_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss">
+        <Image value="Assets\Textures\phonenix_purifier_collection_portrait_static.dds"/>
+    </CModel>
+    <CModel id="Phoenix_Purifier_Collection_Death" parent="PhoenixDeath">
+        <Model value="Assets\Units\Protoss\Phoenix_Purifier_Collection_Death\Phoenix_Purifier_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Phoenix_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <PhysicsDeathMotionFactor value="1.200000,0.200000"/>
     </CModel>
     <CModel id="PhotonCannon_Taldarim_Collection" parent="PhotonCannon">
         <Model value="Assets\Buildings\Protoss\PhotonCannon_Taldarim_Collection\PhotonCannon_Taldarim_Collection.m3"/>
@@ -36958,7 +37723,7 @@
     <CModel id="Raven_CovertOps_Collection_DeathRagdoll" parent="RavenDeathRagdoll">
         <Model value="Assets\Units\Terran\Raven_CovertOps_Collection_DeathRagdoll\Raven_CovertOps_Collection_DeathRagdoll.m3"/>
     </CModel>
-    <CModel id="Raven_CovertOps_Collection_Portrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="Raven_CovertOps_Collection_Portrait" parent="Portrait" Race="Terran"/>
     <CModel id="Reaper_BlackOps" parent="Reaper">
         <Model value="Assets\Units\Terran\Reaper_BlackOps\Reaper_BlackOps.m3"/>
     </CModel>
@@ -37008,6 +37773,24 @@
         <Model value="Assets\Units\Zerg\RoachUpgrade_CollectionSkin_Webby\RoachUpgrade_CollectionSkin_Webby.m3"/>
     </CModel>
     <CModel id="Roach_Webby_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Roach_CollectionSkin_Primal" parent="Roach">
+        <Model value="Assets\Units\Zerg\Roach_Primal_Collection\Roach_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="RoachUpgrade_CollectionSkin_Primal" parent="RoachUpgrade">
+        <Model value="Assets\Units\Zerg\RoachUpgrade_Primal_Collection\RoachUpgrade_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="Roach_CollectionSkin_Primal_Death" parent="RoachDeath">
+        <Model value="Assets\Units\Zerg\Roach_Primal_Collection_Death\Roach_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Roach_CollectionSkin_Primal_DeathFire" parent="RoachDeathFire">
+        <Model value="Assets\Units\Zerg\Roach_Primal_Collection_DeathFire\Roach_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="Roach_CollectionSkin_Primal_DeathAcid" parent="RoachDeathAcid">
+        <Model value="Assets\Units\Zerg\Roach_Primal_Collection_DeathAcid\Roach_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="Roach_CollectionSkin_Primal_DeathRagdoll" parent="RoachDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Roach_Primal_Collection_DeathRagdoll\Roach_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
     <CModel id="RoboticsFacilityConstructionDeath" parent="BuildingDeath" Race="Protoss">
         <Model value="Assets\Buildings\Protoss\RoboticsFacility_Construction_Death\RoboticsFacility_Construction_Death.m3"/>
     </CModel>
@@ -37059,6 +37842,9 @@
     <CModel id="SCV_Junker_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Terran"/>
     <CModel id="SCV_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
         <FacialController value="LocalizedData\Facial\SCVPortrait.fxa"/>
+        <Model value="Assets\Portraits\Terran\SCV_HornerHan_Portrait\SCV_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\scv_hornerhan_portrait_static.dds"/>
+        <Lighting value="SCV_HornerHan_Portrait"/>
     </CModel>
     <CModel id="Sentry_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss"/>
     <CModel id="Sentry_Taldarim_Collection" parent="Sentry">
@@ -37320,11 +38106,44 @@
             <Keys index="CustomA" value="1"/>
         </AttachProps>
     </CModel>
-    <CModel id="SiegeTank_CovertOps_Collection" parent="SiegeTank">
-        <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection\SiegeTank_CovertOps_Collection.m3"/>
+    <CModel id="SiegeTank_CovertOps_Collection" parent="Unit" Race="Terran">
+        <!--RequiredAnims value="Assets\Units\Terran\SiegeTank_SwarmAnims\SiegeTank_SwarmAnims.m3a"/>
+        <RequiredAnims value="Assets\Units\Terran\SiegeTankEx2_VoidAnims\SiegeTankEx2_VoidAnims.m3a"/-->
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid08"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="1.250000"/>
+        <ShadowRadius value="1.250000"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="TechPurchaseSiegeTank"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.400000"/>
+        <UnitGlossaryCamera value="Star2CameraMid08"/>
     </CModel>
-    <CModel id="SiegeTank_CovertOps_Collection_Tank" parent="SiegeTankSieged">
-        <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection_Tank\SiegeTank_CovertOps_Collection_Tank.m3"/>
+    <CModel id="SiegeTank_CovertOps_Collection_Tank" parent="Unit" Race="Terran">
+        <RequiredAnims value="Assets\Units\Terran\Tank_SwarmAnims\Tank_SwarmAnims.m3a"/>
+        <AttachProps Id="Ref_Hardpoint">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid08"/>
+        <Radius value="1.000000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="1.250000"/>
+        <ShadowRadius value="1.250000"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="TechPurchaseSiegeTank"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.400000"/>
+        <UnitGlossaryCamera value="Star2CameraMid08"/>
     </CModel>
     <CModel id="SiegeTank_CovertOps_Collection_Death" parent="SiegeTankDeath">
         <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection_Death\SiegeTank_CovertOps_Collection_Death.m3"/>
@@ -37348,22 +38167,22 @@
         <Model value="Assets\Units\Terran\SiegeTank_Junker_Collection\SiegeTank_Junker_Collection.m3"/>
     </CModel>
     <CModel id="SiegeTank_Junker_Collection_Tank" parent="SiegeTankSieged">
-        <Model value="Assets\Units\Terran\SiegeTank_Junker_Collection_Tank\SiegeTank_Junker_Collection_Tank.m3"/>
+        <Model value="Assets\Units\Terran\Tank_Junker_Collection\Tank_Junker_Collection.m3"/>
     </CModel>
     <CModel id="SiegeTank_Junker_Collection_Death" parent="SiegeTankDeath">
         <Model value="Assets\Units\Terran\SiegeTank_Junker_Collection_Death\SiegeTank_Junker_Collection_Death.m3"/>
     </CModel>
     <CModel id="SiegeTank_Junker_Collection_Tank_Death" parent="SiegeTankSiegedDeath">
-        <Model value="Assets\Units\Terran\SiegeTank_Junker_Collection_Tank_Death\SiegeTank_Junker_Collection_Tank_Death.m3"/>
+        <Model value="Assets\Units\Terran\Tank_Junker_Collection_Death\Tank_Junker_Collection_Death.m3"/>
     </CModel>
     <CModel id="SiegeTank_Junker_Collection_Morph" parent="SiegeTankSiegedMorph">
-        <Model value="Assets\Units\Terran\SiegeTank_Junker_Collection_Morph\SiegeTank_Junker_Collection_Morph.m3"/>
+        <Model value="Assets\Units\Terran\SiegeTankMorph_Junker_Collection\SiegeTankMorph_Junker_Collection.m3"/>
     </CModel>
     <CModel id="SiegeTank_Junker_Collection_DeathRagdoll" parent="SiegeTankDeathRagdoll">
         <Model value="Assets\Units\Terran\SiegeTank_Junker_Collection_DeathRagdoll\SiegeTank_Junker_Collection_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="SiegeTank_Junker_Collection_Tank_DeathRagdoll" parent="SiegeTankSiegedDeathRagdoll">
-        <Model value="Assets\Units\Terran\SiegeTank_Junker_Collection_Tank_DeathRagdoll\SiegeTank_Junker_Collection_Tank_DeathRagdoll.m3"/>
+        <Model value="Assets\Units\Terran\Tank_Junker_Collection\Tank_Junker_CollectionTank_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="SiegeTank_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
         <FacialController value="LocalizedData\Facial\SiegeTankPortrait.fxa"/>
@@ -37384,18 +38203,28 @@
         <Model value="Assets\Units\Protoss\Stalker_Taldarim_Collection_DeathRagdoll\Stalker_Taldarim_Collection_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="Stalker_Taldarim_Collection_Portrait" parent="Portrait" Race="Protoss"/>
-    <CModel id="VoidRay_Taldarim_Collection_WarpIn_Stargate" parent="Unit" Race="Protoss">
-        <Occlusion value="Show"/>
-        <Radius value="0.750000"/>
-        <ScaleMax value="0.850000,0.850000,0.850000"/>
-        <ScaleMin value="0.850000,0.850000,0.850000"/>
-        <SelectionOffset value="0.000000,0.000000,-0.750000"/>
-        <SelectionRadius value="0.882000"/>
-        <ShadowRadius value="0.882000"/>
-        <SquibTypeDefault value="Metal"/>
+    <CModel id="Stalker_Purifier_Collection" parent="Stalker">
+        <Model value="Assets\Units\Protoss\Stalker_Purifier_Collection\Stalker_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="Stalker_Purifier_Collection_Placement" parent="StalkerPlacement">
+        <Model value="Assets\Units\Protoss\Stalker_Purifier_Collection_Placement\Stalker_Purifier_Collection_Placement.m3"/>
+    </CModel>
+    <CModel id="Stalker_Purifier_Collection_WarpIn" parent="StalkerWarpIn">
+        <Model value="Assets\Units\Protoss\Stalker_Purifier_Collection_WarpIn\Stalker_Purifier_Collection_WarpIn.m3"/>
+    </CModel>
+    <CModel id="Stalker_Purifier_Collection_BlinkIn" parent="RaceOneShotSpellFX" Race="Protoss"/>
+    <CModel id="Stalker_Purifier_Collection_BlinkOut" parent="RaceOneShotSpellFX" Race="Protoss"/>
+    <CModel id="Stalker_Purifier_Collection_Death" parent="StalkerDeath">
+        <Model value="Assets\Units\Protoss\Stalker_Purifier_Collection_Death\Stalker_Purifier_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Stalker_Purifier_Collection_DeathRagdoll" parent="StalkerDeathRagdoll">
+        <Model value="Assets\Units\Protoss\Stalker_Purifier_Collection_DeathRagdoll\Stalker_Purifier_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Stalker_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss">
+        <Image value="Assets\Textures\stalker_purifier_collection_static.dds"/>
     </CModel>
     <CModel id="CorsairMPWarpInStargate" parent="PersistentSpellFX">
-        <Model value="Assets\Units\Protoss\CorsairWarpInStargate\CorsairWarpInStargate.m3"/>
+        <Model value="Assets\Units\Protoss\Corsair_WarpIn_StarGate\Corsair_WarpIn_StarGate.m3"/>
         <Occlusion value="Show"/>
         <SelectionRadius value="0.750000"/>
         <Radius value="0.750000"/>
@@ -37415,7 +38244,7 @@
         <ShadowRadius value="0.750000"/>
     </CModel>
     <CModel id="ArbiterMPWarpInStargate" parent="PersistentSpellFX">
-        <Model value="Assets\Units\Protoss\ArbiterWarpInStargate\ArbiterWarpInStargate.m3"/>
+        <Model value="Assets\Units\Protoss\Arbiter_WarpIn_StarGate\Arbiter_WarpIn_StarGate.m3"/>
         <Occlusion value="Show"/>
         <SelectionRadius value="0.750000"/>
         <Radius value="0.750000"/>
@@ -37435,6 +38264,9 @@
     </CModel>
     <CModel id="Tempest_TalDarim_Collection_WarpInStargate" parent="TempestWarpInStargate">
         <Model value="Assets\Units\Protoss\Tempest_TalDarim_Collection_WarpInStargate\Tempest_TalDarim_Collection_WarpInStargate.m3"/>
+    </CModel>
+    <CModel id="Tempest_Purifier_Collection_WarpInStargate" parent="TempestWarpInStargate">
+        <Model value="Assets\Units\Protoss\Tempest_Purifier_Collection_WarpIn_Stargate\Tempest_Purifier_Collection_WarpIn_Stargate.m3"/>
     </CModel>
     <CModel id="SlaynSwarmHostSpawnFlyer" parent="Unit">
         <Model value="Assets\Units\Neutral\Slayn_SwarmHostSpawnFlyer\Slayn_SwarmHostSpawnFlyer.m3"/>
@@ -37458,6 +38290,64 @@
         <Model value="Assets\Units\Zerg\SwarmHost_CollectionSkin_Webby_DeathRagdoll\SwarmHost_CollectionSkin_Webby_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="SwarmHost_Webby_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="SwarmHost_CollectionSkin_Primal" parent="SwarmHostMP">
+        <Model value="Assets\Units\Zerg\SwarmHost_Primal_Collection\SwarmHost_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="SwarmHost_CollectionSkin_Primal_Death" parent="SwarmHostMPDeath">
+        <Model value="Assets\Units\Zerg\SwarmHost_Primal_Collection_Death\SwarmHost_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="SwarmHost_CollectionSkin_Primal_DeathFire" parent="SwarmHostMPDeathFire">
+        <Model value="Assets\Units\Zerg\SwarmHost_Primal_Collection_DeathFire\SwarmHost_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="SwarmHost_CollectionSkin_Primal_DeathAcid" parent="SwarmHostMPDeathAcid">
+        <Model value="Assets\Units\Zerg\SwarmHost_Primal_Collection_DeathAcid\SwarmHost_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="SwarmHost_CollectionSkin_Primal_DeathRagdoll" parent="SwarmHostDeathRagdoll">
+        <Model value="Assets\Units\Zerg\SwarmHost_Primal_Collection_DeathRagdoll\SwarmHost_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Locust_CollectionSkin_Primal" parent="LocustMP">
+        <Model value="Assets\Units\Zerg\SwarmHostSpawn_Primal_Collection\SwarmHostSpawn_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="Locust_CollectionSkin_Primal_Death" parent="SwarmHostSpawnDeath">
+        <Model value="Assets\Units\Zerg\SwarmHostSpawn_Primal_Collection_Death\SwarmHostSpawn_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Locust_CollectionSkin_Primal_DeathFire" parent="SwarmHostSpawnDeathFire">
+        <Model value="Assets\Units\Zerg\SwarmHostSpawn_Primal_Collection_DeathFire\SwarmHostSpawn_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="Locust_CollectionSkin_Primal_DeathAcid" parent="SwarmHostSpawnDeathAcid">
+        <Model value="Assets\Units\Zerg\SwarmHostSpawn_Primal_Collection_DeathAcid\SwarmHostSpawn_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="Locust_CollectionSkin_Primal_DeathRagdoll" parent="LocustDeathRagdoll">
+        <Model value="Assets\Units\Zerg\SwarmHostSpawn_Primal_Collection_DeathRagdoll\SwarmHostSpawn_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="LocustFlyer_CollectionSkin_Primal" parent="Unit" Race="Zerg">
+        <Events>
+            <Anim value="Birth"/>
+            <Name value="Locust_EggBurst"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Locust_EggBurst"/>
+        </Events>
+        <PlanetPanelCamera value="Star2CameraMid05"/>
+        <Radius value="0.375000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="Star2CameraMid05"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.375000"/>
+        <TipabilityWidth value="0.375000"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+        <Model value="Assets\Units\Zerg\SwarmHostSpawnFlyer_Primal_Collection\SwarmHostSpawnFlyer_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="LocustFlyer_CollectionSkin_Primal_Death" parent="UnitDeath" Race="Zerg">
+        <LowQualityModel value="ZergSmallUnitDeathLow"/>
+        <Occlusion value="Show"/>
+        <Model value="Assets\Units\Zerg\SwarmHostSpawnFlyer_Primal_Collection_Death\SwarmHostSpawnFlyer_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Locust_Primal_Collection_Portrait" parent="Portrait" Race="Zerg">
+        <Model value="Assets\Portraits\Zerg\SwarmHostSpawn_Primal_Collection_Portrait\SwarmHostSpawn_Primal_Collection_Portrait.m3"/>
+    </CModel>
     <CModel id="Symbiote_CollectionSkin_Webby" parent="Broodling">
         <Model value="Assets\Units\Zerg\Symbiote_CollectionSkin_Webby\Symbiote_CollectionSkin_Webby.m3"/>
     </CModel>
@@ -37492,6 +38382,16 @@
     <CModel id="Tempest_Taldarim_Collection_Placement" parent="Tempest">
         <Model value="Assets\Units\Protoss\Tempest_Taldarim_Collection_Placement\Tempest_Taldarim_Collection_Placement.m3"/>
     </CModel>
+    <CModel id="Tempest_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss"/>
+    <CModel id="Tempest_Purifier_Collection" parent="Tempest">
+        <Model value="Assets\Units\Protoss\Tempest_Purifier_Collection\Tempest_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="Tempest_Purifier_Collection_Death" parent="TempestDeath">
+        <Model value="Assets\Units\Protoss\Tempest_Purifier_Collection_Death\Tempest_Purifier_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Tempest_Purifier_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <PhysicsDeathMotionFactor value="1.200000,0.200000"/>
+    </CModel>
     <CModel id="Tempest_TalDarim_Collection_WarpIn" parent="TempestWarpIn">
         <Model value="Assets\Units\Protoss\Tempest_TalDarim_Collection_WarpIn\Tempest_TalDarim_Collection_WarpIn.m3"/>
     </CModel>
@@ -37519,6 +38419,24 @@
         <EditorCategories value="Race:Terran"/>
         <ScaleMax value="0.500000,0.500000,0.500000"/>
         <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="Thor_Junker_Collection" parent="Thor">
+        <Model value="Assets\Units\Terran\Thor_Junker_Collection\Thor_Junker_Collection.m3"/>
+    </CModel>
+    <CModel id="Thor_Junker_Collection_Death" parent="ThorDeath">
+        <Model value="Assets\Units\Terran\Thor_Junker_Collection_Death\Thor_Junker_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Thor_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
+        <FacialController value="LocalizedData\Facial\ThorPortrait.fxa"/>
+        <Model value="Assets\Portraits\Terran\Thor_HornerHan_Portrait\Thor_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\thor_hornerhan_portrait_static.dds"/>
+    </CModel>
+    <CModel id="Thor_Junker_Collection_Transit" parent="Unit" Race="Terran">
+        <Flags index="Wait" value="0"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+        <SelectionRadius value="0.769000"/>
+        <ShadowRadius value="0.769000"/>
     </CModel>
     <CModel id="Thor_Merc_Collection" parent="Thor">
         <Model value="Assets\Units\Terran\Thor_Merc_Collection\Thor_Merc_Collection.m3"/>
@@ -37691,6 +38609,21 @@
         <Model value="Assets\Units\Zerg\Ultralisk_CollectionSkin_Webby_DeathRagdoll\Ultralisk_CollectionSkin_Webby_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="Ultralisk_Webby_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Ultralisk_CollectionSkin_Primal" parent="Ultralisk">
+        <Model value="Assets\Units\Zerg\Ultralisk_Primal_Collection\Ultralisk_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="Ultralisk_CollectionSkin_Primal_Death" parent="UltraliskDeath">
+        <Model value="Assets\Units\Zerg\Ultralisk_Primal_Collection_Death\Ultralisk_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Ultralisk_CollectionSkin_Primal_DeathFire" parent="UltraliskDeathFire">
+        <Model value="Assets\Units\Zerg\Ultralisk_Primal_Collection_DeathFire\Ultralisk_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="Ultralisk_CollectionSkin_Primal_DeathAcid" parent="UltraliskDeathAcid">
+        <Model value="Assets\Units\Zerg\Ultralisk_Primal_Collection_DeathAcid\Ultralisk_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="Ultralisk_CollectionSkin_Primal_DeathRagdoll" parent="UltraliskDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Ultralisk_Primal_Collection_DeathRagdoll\Ultralisk_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
     <CModel id="Viking_MercFighter_Collection" parent="VikingFighter">
         <Model value="Assets\Units\Terran\Viking_MercFighter_Collection\Viking_MercFighter_Collection.m3"/>
     </CModel>
@@ -37747,7 +38680,7 @@
         <Model value="Assets\Units\Zerg\Viper_CollectionSkin_Webby\Viper_CollectionSkin_Webby.m3"/>
     </CModel>
     <CModel id="Viper_CollectionSkin_Webby_Death" parent="ViperDeath">
-        <Model value="Assets\Units\Zerg\Viper_CollectionSkin_Webby_Death\Viper_CollectionSkin_Webby_Death.m3"/>
+        <Model value="Assets\Units\Zerg\Viper_CollectionSkin_Webby\Viper_CollectionSkin_Webby.m3"/>
     </CModel>
     <CModel id="Viper_CollectionSkin_Webby_DeathRagdoll" parent="ViperDeathRagdoll">
         <Model value="Assets\Units\Zerg\Viper_CollectionSkin_Webby_DeathRagdoll\Viper_CollectionSkin_Webby_DeathRagdoll.m3"/>
@@ -37767,6 +38700,36 @@
     </CModel>
     <CModel id="VoidRay_Taldarim_Collection_DeathRagdoll" parent="VoidRayDeathRagdoll">
         <Model value="Assets\Units\Protoss\VoidRay_Taldarim_Collection_DeathRagdoll\VoidRay_Taldarim_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="VoidRay_Taldarim_Collection_WarpIn_Stargate" parent="Unit" Race="Protoss">
+        <Occlusion value="Show"/>
+        <Radius value="0.750000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.750000"/>
+        <SelectionRadius value="0.882000"/>
+        <ShadowRadius value="0.882000"/>
+        <SquibTypeDefault value="Metal"/>
+    </CModel>
+    <CModel id="VoidRay_Purifier_Collection" parent="VoidRay">
+        <Model value="Assets\Units\Protoss\VoidRay_Purifier_Collection\VoidRay_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="VoidRay_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss"/>
+    <CModel id="VoidRay_Purifier_Collection_Death" parent="VoidRayDeath">
+        <Model value="Assets\Units\Protoss\VoidRay_Purifier_Collection_Death\VoidRay_Purifier_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="VoidRay_Purifier_Collection_DeathRagdoll" parent="VoidRayDeathRagdoll">
+        <Model value="Assets\Units\Protoss\VoidRay_Purifier_Collection_DeathRagdoll\VoidRay_Purifier_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="VoidRay_Purifier_Collection_WarpIn_Stargate" parent="Unit" Race="Protoss">
+        <Occlusion value="Show"/>
+        <Radius value="0.750000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.750000"/>
+        <SelectionRadius value="0.882000"/>
+        <ShadowRadius value="0.882000"/>
+        <SquibTypeDefault value="Metal"/>
     </CModel>
     <CModel id="WarpGate_Taldarim_Collection_Death" parent="WarpgateDeath">
         <Model value="Assets\Buildings\Protoss\WarpGate_Taldarim_Collection_Death\WarpGate_Taldarim_Collection_Death.m3"/>
@@ -37837,6 +38800,25 @@
     </CModel>
     <CModel id="WarpPrism_Taldarim_Collection_WarpIn" parent="WarpPrismWarpIn">
         <Model value="Assets\Units\Protoss\WarpPrism_Taldarim_Collection_WarpIn\WarpPrism_Taldarim_Collection_WarpIn.m3"/>
+    </CModel>
+    <CModel id="WarpPrism_Purifier_Collection" parent="WarpPrism">
+        <Model value="Assets\Units\Protoss\WarpPrism_Purifier_Collection\WarpPrism_Purifier_Collection.m3"/>
+    </CModel>
+    <CModel id="WarpPrism_Purifier_Collection_Death" parent="WarpPrismDeath">
+        <Model value="Assets\Units\Protoss\WarpPrism_Purifier_Collection_Death\WarpPrism_Purifier_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="WarpPrism_Purifier_Collection_OpenDeath" parent="WarpPrismOpenDeath">
+        <Model value="Assets\Units\Protoss\WarpPrism_Purifier_Collection_OpenDeath\WarpPrism_Purifier_Collection_OpenDeath.m3"/>
+    </CModel>
+    <CModel id="WarpPrism_Purifier_Collection_DeathRagdoll" parent="WarpPrismDeathRagdoll">
+        <Model value="Assets\Units\Protoss\WarpPrism_Purifier_Collection_DeathRagdoll\WarpPrism_Purifier_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="WarpPrism_Purifier_Collection_Open_DeathRagdoll" parent="WarpPrismPhasingDeathRagdoll">
+        <Model value="Assets\Units\Protoss\WarpPrism_Purifier_Collection_OpenDeathRagdoll\WarpPrism_Purifier_Collection_OpenDeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="WarpPrism_Purifier_Collection_Portrait" parent="Portrait" Race="Protoss"/>
+    <CModel id="WarpPrism_Purifier_Collection_WarpIn" parent="WarpPrismWarpIn">
+        <Model value="Assets\Units\Protoss\WarpPrism_Purifier_Collection_WarpIn\WarpPrism_Purifier_Collection_WarpIn.m3"/>
     </CModel>
     <CModel id="WidowMineBurrowedSplat" parent="BurrowedSplat">
         <Model value="Assets\Splats\WidowMineBurrowedSplat\WidowMineBurrowedSplat.m3"/>
@@ -37918,6 +38900,36 @@
         <Model value="Assets\Units\Zerg\Zergling_CollectionSkin_Webby_DeathRagdoll\Zergling_CollectionSkin_Webby_DeathRagdoll.m3"/>
     </CModel>
     <CModel id="Zergling_Webby_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Zergling_CollectionSkin_Primal" parent="Zergling">
+        <Model value="Assets\Units\Zerg\Zergling_Primal_Collection\Zergling_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="Zergling_CollectionSkin_Primal_Death" parent="ZerglingDeath">
+        <Model value="Assets\Units\Zerg\Zergling_Primal_Collection_Death\Zergling_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Zergling_CollectionSkin_Primal_DeathFire" parent="ZerglingDeathFire">
+        <Model value="Assets\Units\Zerg\Zergling_Primal_Collection_DeathFire\Zergling_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="Zergling_CollectionSkin_Primal_DeathAcid" parent="ZerglingDeathAcid">
+        <Model value="Assets\Units\Zerg\Zergling_Primal_Collection_DeathAcid\Zergling_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="Zergling_CollectionSkin_Primal_DeathEviscerate" parent="ZerglingDeathEviscerate">
+        <Model value="Assets\Units\Zerg\Zergling_Primal_Collection_DeathEviscerate\Zergling_Primal_Collection_DeathEviscerate.m3"/>
+    </CModel>
+    <CModel id="ZerglingUpgrade_CollectionSkin_Primal" parent="ZerglingUpgrade">
+        <Model value="Assets\Units\Zerg\ZerglingUpgrade_Primal_Collection\ZerglingUpgrade_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="ZerglingUpgrade_CollectionSkin_Primal_Death" parent="ZerglingUpgradeDeath">
+        <Model value="Assets\Units\Zerg\ZerglingUpgrade_Primal_Collection_Death\ZerglingUpgrade_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="ZerglingUpgrade_CollectionSkin_Primal_DeathFire" parent="ZerglingUpgradeDeathFire">
+        <Model value="Assets\Units\Zerg\ZerglingUpgrade_Primal_Collection_DeathFire\ZerglingUpgrade_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="ZerglingUpgrade_CollectionSkin_Primal_DeathEviscerate" parent="ZerglingUpgradeDeathEviscerate">
+        <Model value="Assets\Units\Zerg\ZerglingUpgrade_Primal_Collection_DeathEviscerate\ZerglingUpgrade_Primal_Collection_DeathEviscerate.m3"/>
+    </CModel>
+    <CModel id="Zergling_CollectionSkin_Primal_DeathRagdoll" parent="ZerglingDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Zergling_Primal_Collection_DeathRagdoll\Zergling_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
     <CModel id="WidowMine_Junker_Collection" parent="Unit" Race="Terran">
         <Occlusion value="Show"/>
         <PlanetPanelCamera value="Star2CameraMid06"/>
@@ -37933,11 +38945,12 @@
             <Anim value="Unload,00"/>
             <Name value="HH_WidowMine_Land"/>
             <Type value="Sound"/>
-            <Time value="0.03000"/>
+            <Time value="0.030000"/>
             <Payload value="HH_WidowMine_Land"/>
         </Events>
     </CModel>
-    <CModel id="WidowMine_Junker_Collection_BurrowDeath" parent="UnitDeath" Race="Terran">
+    <CModel id="WidowMine_Junker_Collection_Death_Burrow" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\WidowMine_Junker_Collection_BurrowDeath\WidowMine_Junker_Collection_BurrowDeath.m3"/>
         <LowQualityModel value="TerranSmallUnitDeathLow"/>
         <Occlusion value="Show"/>
     </CModel>
@@ -37946,7 +38959,11 @@
         <Occlusion value="Show"/>
     </CModel>
     <CModel id="WidowMine_Junker_Collection_DeathRagdoll" parent="UnitDeathRagdoll" Race="Terran"/>
-    <CModel id="WidowMine_Junker_Collection_Portrait" parent="Portrait" Race="Terran"/>
+    <CModel id="WidowMine_Junker_Collection_Portrait" parent="Portrait" Race="Terran">
+        <Model value="Assets\Portraits\Terran\WidowMine_HornerHan_Portrait\WidowMine_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\widowmine_hornerhan_portrait_static.dds"/>
+        <Lighting value="WidowMine_HornerHan_Portrait"/>
+    </CModel>
     <CModel id="Reaper_Junker_Collection" parent="Unit" Race="Terran">
         <RequiredAnims value="Assets\Units\Terran\Reaper_SwarmAnims\Reaper_SwarmAnims.m3a"/>
         <Occlusion value="Show"/>
@@ -38008,7 +39025,9 @@
     </CModel>
     <CModel id="GeneralDavisMoebiusLabPortrait" parent="Portrait" Race="Terran">
         <Model value="Assets\Portraits\Terran\GeneralDavis_MoebiusLab_PortraitBackground\GeneralDavis_MoebiusLab_PortraitBackground.m3"/>
+        <Flags index="Download" value="1"/>
         <Flags index="Facial" value="1"/>
+        <Flags index="VariationFallback" value="0"/>
         <Image value="Assets\Textures\GeneralDavis_MoebiusLab_Portrait_Static.dds"/>
         <FacialController value="LocalizedData\Facial\SMX3_GeneralDavis.fxa"/>
     </CModel>
@@ -38016,8 +39035,8 @@
         <Model value="Assets\Portraits\Terran\GeneralDavis_MoebiusLab_Portrait\GeneralDavis_MoebiusLab_Portrait.m3"/>
         <RequiredAnims value="Assets\StoryModeCharacters\Terran\SMX3_GeneralDavis_RequiredAnims\SMX3_GeneralDavis_RequiredAnims.m3a"/>
         <RequiredAnims value="Assets\Portraits\Terran\GeneralDavis_MoebiusLab_PortraitAnims\GeneralDavis_MoebiusLab_PortraitAnims.m3a"/>
-        <Flags index="Facial" value="1"/>
         <FacialController value="LocalizedData\Facial\SMX3_GeneralDavis.fxa"/>
+        <Flags index="Download" value="1"/>
     </CModel>
     <CModel id="BattleCruiser_Junker_Collection" parent="Battlecruiser">
         <Model value="Assets\Units\Terran\BattleCruiser_Junker_Collection_MP\BattleCruiser_Junker_Collection_MP.m3"/>
@@ -38034,6 +39053,9 @@
     </CModel>
     <CModel id="BattleCruiser_Junker_Collection_Portrait" parent="FXAPortrait" Race="Terran">
         <FacialController value="LocalizedData\Facial\BattlecruiserPortrait.fxa"/>
+        <Model value="Assets\Portraits\Terran\Battlecruiser_HornerHan_Portrait\Battlecruiser_HornerHan_Portrait.m3"/>
+        <Image value="Assets\Textures\battlecruiser_hornerhan_portrait_static.dds"/>
+        <Lighting value="Battlecruiser_HornerHan_Portrait"/>
     </CModel>
     <CModel id="BattleCruiser_Junker_Collection_Hyperjump_In" parent="RaceImpactFX" Race="Terran">
         <Flags index="Wait" value="1"/>
@@ -38053,9 +39075,18 @@
     <CModel id="BattleCruiser_Junker_Collection_YamatoTacticalJump_Placement" parent="RacePersistentSpellFX" Race="Terran">
         <Flags index="Wait" value="1"/>
     </CModel>
-    <CModel id="DarkTemplar_Purifier_Collection" parent="DarkTemplar">
-        <Model value="Assets\Units\Protoss\DarkTemplar_Purifier_Collection\DarkTemplar_Purifier_Collection.m3"/>
-        <VariationCount value="1"/>
+    <CModel id="DarkTemplar_Purifier_Collection" parent="Unit" Race="Protoss">
+        <RequiredAnims value="Assets\Units\Protoss\DarkTemplar_00_SwarmAnims\DarkTemplar_00_SwarmAnims.m3a"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid05"/>
+        <Radius value="0.400000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="LightArmor"/>
+        <TechPurchaseCamera value="Star2CameraMid05"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
     </CModel>
     <CModel id="DarkTemplar_Purifier_Collection_Death" parent="DarkTemplarDeath">
         <Model value="Assets\Units\Protoss\DarkTemplar_Purifier_Collection_Death\DarkTemplar_Purifier_Collection_Death.m3"/>
@@ -38069,25 +39100,114 @@
     <CModel id="BroodLord_CollectionSkin_Primal" parent="BroodLord">
         <Model value="Assets\Units\Zerg\BroodLord_Primal_Collection\BroodLord_Primal_Collection.m3"/>
     </CModel>
+    <CModel id="Broodlord_CollectionSkin_Primal_Death" parent="BroodLordDeath">
+        <Model value="Assets\Units\Zerg\BroodLord_Primal_Collection_Death\BroodLord_Primal_Collection_Death.m3"/>
+        <VariationCount value="1"/>
+    </CModel>
+    <CModel id="Broodlord_CollectionSkin_Primal_DeathRagdoll" parent="BroodLordDeathRagdoll">
+        <Model value="Assets\Units\Zerg\BroodLord_Primal_Collection_DeathRagdoll\BroodLord_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Broodlord_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
     <CModel id="Symbiote_CollectionSkin_Primal" parent="Broodling">
         <Model value="Assets\Units\Zerg\Symbiote_Primal_Collection\Symbiote_Primal_Collection.m3"/>
     </CModel>
+    <CModel id="Symbiote_CollectionSkin_Primal_Death" parent="BroodlingDeath">
+        <Model value="Assets\Units\Zerg\Symbiote_Primal_Collection_Death\Symbiote_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Symbiote_CollectionSkin_Primal_DeathFire" parent="BroodlingDeathFire">
+        <Model value="Assets\Units\Zerg\Symbiote_Primal_Collection_DeathFire\Symbiote_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="Symbiote_CollectionSkin_Primal_DeathAcid" parent="BroodlingDeathAcid">
+        <Model value="Assets\Units\Zerg\Symbiote_Primal_Collection_DeathAcid\Symbiote_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="Symbiote_CollectionSkin_Primal_DeathRagdoll" parent="BroodlingDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Symbiote_Primal_Collection_DeathRagdoll\Symbiote_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Symbiote_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
     <CModel id="Infestor_CollectionSkin_Primal" parent="Infestor">
         <Model value="Assets\Units\Zerg\Infestor_Primal_Collection\Infestor_Primal_Collection.m3"/>
     </CModel>
-    <CModel id="Overlord_CollectionSkin_Primal" parent="Infestor">
+    <CModel id="Infestor_CollectionSkin_Primal_Death" parent="InfestorDeath">
+        <Model value="Assets\Units\Zerg\Infestor_Primal_Collection_Death\Infestor_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Infestor_CollectionSkin_Primal_DeathFire" parent="InfestorDeathFire">
+        <Model value="Assets\Units\Zerg\Infestor_Primal_Collection_DeathFire\Infestor_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="Infestor_CollectionSkin_Primal_DeathAcid" parent="InfestorDeathAcid">
+        <Model value="Assets\Units\Zerg\Infestor_Primal_Collection_DeathAcid\Infestor_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="Infestor_CollectionSkin_Primal_DeathRagdoll" parent="InfestorDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Infestor_Primal_Collection_DeathRagdoll\Infestor_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Infestor_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Overlord_CollectionSkin_Primal" parent="Overlord">
         <Model value="Assets\Units\Zerg\Overlord_Primal_Collection\Overlord_Primal_Collection.m3"/>
     </CModel>
-    <CModel id="Overseer_CollectionSkin_Primal" parent="Infestor">
+    <CModel id="Overlord_CollectionSkin_Primal_Death" parent="OverlordDeath">
+        <Model value="Assets\Units\Zerg\Overlord_Primal_Collection_Death\Overlord_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Overlord_CollectionSkin_Primal_DeathRagdoll" parent="OverlordDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Overlord_Primal_Collection_DeathRagdoll\Overlord_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="OverlordTransport_CollectionSkin_Primal" parent="OverlordTransport">
+        <Model value="Assets\Units\Zerg\OverlordTransport_Primal_Collection\OverlordTransport_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="OverlordTransport_CollectionSkin_Primal_Death" parent="OverlordTransportDeath">
+        <Model value="Assets\Units\Zerg\OverlordTransport_Primal_Collection_Death\OverlordTransport_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Overlord_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Overseer_CollectionSkin_Primal" parent="Overseer">
         <Model value="Assets\Units\Zerg\Overseer_Primal_Collection\Overseer_Primal_Collection.m3"/>
     </CModel>
-    <CModel id="Queen_CollectionSkin_Primal" parent="Infestor">
+    <CModel id="Overseer_CollectionSkin_Primal_Death" parent="OverseerDeath">
+        <Model value="Assets\Units\Zerg\Overseer_Primal_Collection_Death\Overseer_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Overseer_CollectionSkin_Primal_DeathRagdoll" parent="OverseerDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Overseer_Primal_Collection_DeathRagdoll\Overseer_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Overseer_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Queen_CollectionSkin_Primal" parent="Queen">
         <Model value="Assets\Units\Zerg\Queen_Primal_Collection\Queen_Primal_Collection.m3"/>
     </CModel>
-    <CModel id="Ravager_CollectionSkin_Primal" parent="Infestor">
+    <CModel id="Queen_CollectionSkin_Primal_Death" parent="QueenDeath">
+        <Model value="Assets\Units\Zerg\Queen_Primal_Collection_Death\Queen_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Queen_CollectionSkin_Primal_DeathFire" parent="QueenDeathFire">
+        <Model value="Assets\Units\Zerg\Queen_Primal_Collection_DeathFire\Queen_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="Queen_CollectionSkin_Primal_DeathAcid" parent="QueenDeathAcid">
+        <Model value="Assets\Units\Zerg\Queen_Primal_Collection_DeathAcid\Queen_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="Queen_CollectionSkin_Primal_DeathRagdoll" parent="QueenDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Queen_Primal_Collection_DeathRagdoll\Queen_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Queen_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Ravager_CollectionSkin_Primal" parent="Ravager">
         <Model value="Assets\Units\Zerg\Ravager_Primal_Collection\Ravager_Primal_Collection.m3"/>
     </CModel>
-    <CModel id="Viper_CollectionSkin_Primal" parent="Infestor">
+    <CModel id="Ravager_CollectionSkin_Primal_Death" parent="RavagerDeath">
+        <Model value="Assets\Units\Zerg\Ravager_Primal_Collection_Death\Ravager_Primal_Collection_Death.m3"/>
+    </CModel>
+    <CModel id="Ravager_CollectionSkin_Primal_DeathFire" parent="RavagerDeathFire">
+        <Model value="Assets\Units\Zerg\Ravager_Primal_Collection_DeathFire\Ravager_Primal_Collection_DeathFire.m3"/>
+    </CModel>
+    <CModel id="Ravager_CollectionSkin_Primal_DeathAcid" parent="RavagerDeathAcid">
+        <Model value="Assets\Units\Zerg\Ravager_Primal_Collection_DeathAcid\Ravager_Primal_Collection_DeathAcid.m3"/>
+    </CModel>
+    <CModel id="Ravager_CollectionSkin_Primal_DeathRagdoll" parent="RavagerDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Ravager_Primal_Collection_DeathRagdoll\Ravager_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="Ravager_Primal_Collection_Portrait" parent="Portrait" Race="Zerg"/>
+    <CModel id="Viper_CollectionSkin_Primal" parent="Viper">
         <Model value="Assets\Units\Zerg\Viper_Primal_Collection\Viper_Primal_Collection.m3"/>
+    </CModel>
+    <CModel id="Viper_CollectionSkin_Primal_DeathRagdoll" parent="ViperDeathRagdoll">
+        <Model value="Assets\Units\Zerg\Viper_Primal_Collection_DeathRagdoll\Viper_Primal_Collection_DeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="UI_Screen_MainMenuReBrand" parent="SMSET">
+        <Model value="Assets\UI\Glues\UI_Screen_MainMenuReBrand\UI_Screen_MainMenuReBrand.m3"/>
+    </CModel>
+    <CModel id="UI_Screen_MainMenuReBrandLow" parent="SMSET">
+        <Model value="Assets\UI\Glues\UI_Screen_MainMenuReBrand\UI_Screen_MainMenuReBrand_Low.m3"/>
     </CModel>
 </Catalog>

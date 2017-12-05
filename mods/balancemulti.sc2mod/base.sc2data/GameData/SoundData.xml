@@ -48,4 +48,55 @@
     <CSound id="ShieldBattery_Recharge_Loop">
         <DupeMuteCount value="5"/>
     </CSound>
+    <CSound id="Viking_MorphToAssault">
+        <AssetArray index="0" File="Assets\Sounds\Terran\Viking\Viking_MorphToAssault0.wav" Offset="22500,22500"/>
+        <OffsetFadeIn Volume="-96.000000"/>
+        <OffsetFadeIn Time="80"/>
+    </CSound>
+    <CSound id="Doodad_CompoundMansion_Valerian_Monitor" parent="Ambience_Object">
+        <AssetArray File="Assets\Sounds\Valerian_Speech_MonitorFutz_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valerian_Speech_MonitorFutz_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valerian_Speech_MonitorFutz_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Valerian_Speech_MonitorFutz_04.wav" FacialGroup=""/>
+        <DupeMuteCount value="3"/>
+        <LoopCount value="-1"/>
+        <Volume value="-12.000000,-12.000000"/>
+        <VolumeRolloffPoints Distance="5.000000"/>
+        <VolumeRolloffPoints Distance="12.000000" Volume="-96.000000"/>
+    </CSound>
+    <CSound id="Doodad_SpacePlatformSign_SuperNova" parent="Ambience_Object">
+        <AssetArray>
+            <File value="Assets\Music\Music_Club_LostViking_Boss_Loop.wav"/>
+            <LoopCount value="-1"/>
+            <Pitch value="-12.000000,-12.000000"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <AssetArray>
+            <File value="Assets\Music\Music_Club_LostViking_Game1_Loop.wav"/>
+            <LoopCount value="-1"/>
+            <Pitch value="-1.000000,-1.000000"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <AssetArray File="Assets\Music\Music_Club_LostViking_Game2_Loop.wav" LoopCount="-1" FacialGroup=""/>
+        <AssetArray>
+            <File value="Assets\Music\Music_Club_MuleParty2_Loop.wav"/>
+            <LoopCount value="-1"/>
+            <Pitch value="-2.000000,-2.000000"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <AssetArray>
+            <File value="Assets\Music\Music_Club_PsiOps_Loop.wav"/>
+            <LoopCount value="-1"/>
+            <Pitch value="-1.000000,-1.000000"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <DupeMuteCount value="2"/>
+        <VolumeRolloffPoints Distance="8.000000"/>
+        <VolumeRolloffPoints Distance="12.000000" Volume="-96.000000"/>
+        <Spread value="30.000000"/>
+        <Volume value="-7.000000,-7.000000"/>
+    </CSound>
+    <CSound id="Slayn_Brazier_Fire">
+        <DupeDestroyCount value="32"/>
+    </CSound>
 </Catalog>

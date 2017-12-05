@@ -15698,7 +15698,7 @@
         <autoResizeX/>
     </control>
     
-    <control label="PreviewerQuickLaunch">
+    <control label="PreviewerSearchHistory">
         <pos>2,22</pos>
         <size>2,20</size>
         <autoResizeX/>

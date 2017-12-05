@@ -883,12 +883,6 @@
             <Button Requirements=""/>
         </InfoArray>
     </CAbilTrain>
-    <CAbilMorph id="MorphToHellionTank">
-        <CmdButtonArray index="Execute" State="Restricted" Requirements="HaveArmory"/>
-    </CAbilMorph>
-    <CAbilMorph id="MorphToHellion">
-        <CmdButtonArray index="Execute" State="Restricted" Requirements="HaveArmory"/>
-    </CAbilMorph>
     <CAbilEffectTarget id="Vortex">
         <Effect index="0" value="VortexKillSet"/>
         <TargetFilters value="Visible;Player,Ally,Massive,Structure,Missile,Stasis,Dead,Invulnerable"/>

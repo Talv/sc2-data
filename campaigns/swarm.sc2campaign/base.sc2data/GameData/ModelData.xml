@@ -14863,7 +14863,7 @@
     </CModel>
     <CModel id="SwarmHostSplitA" parent="Unit" Race="Zerg">
         <Model value="Assets\Units\Zerg\SwarmHostEx1A\SwarmHostEx1A.m3"/>
-        <RequiredAnims value="Assets\Units\Zerg\SwarmHost_RequiredAnims\SwarmHost_RequiredAnims.m3a"/>
+        <RequiredAnims value="Assets\Units\Zerg\SwarmHost_Campaign_RequiredAnims\SwarmHost_Campaign_RequiredAnims.m3a"/>
         <Occlusion value="Show"/>
         <SelectionRadius value="1.000000"/>
         <AnimBlendTime value="0.400000"/>
@@ -14888,7 +14888,7 @@
     </CModel>
     <CModel id="SwarmHostSplitB" parent="Unit" Race="Zerg">
         <Model value="Assets\Units\Zerg\SwarmHostEx1B\SwarmHostEx1B.m3"/>
-        <RequiredAnims value="Assets\Units\Zerg\SwarmHost_RequiredAnims\SwarmHost_RequiredAnims.m3a"/>
+        <RequiredAnims value="Assets\Units\Zerg\SwarmHost_Campaign_RequiredAnims\SwarmHost_Campaign_RequiredAnims.m3a"/>
         <Occlusion value="Show"/>
         <SelectionRadius value="1.000000"/>
         <AnimBlendTime value="0.400000"/>

@@ -447,6 +447,8 @@
         <On Terms="TimerExpired; TimerName Refresh" Send="TimerSet 0.500000 Refresh"/>
         <On Terms="ActorCreation" Send="SetTintColor"/>
         <On Terms="ActorCreation" Send="HaloSetColorFromAllianceType Enemy"/>
+        <On Terms="ActorCreation; Option Shader Low" Send="SetTintColor 255,0,0"/>
+        <On Terms="ActorCreation; Option Shader Low" Send="SetOpacity 0.200000"/>
         <On Terms="SupporterDestruction" Send="Destroy"/>
         <On Terms="ActorCreation" Target="BlipVisual" Send="SetOpacity 0.000000 0.000000 SuperRadar"/>
         <On Terms="ActorDestruction" Target="BlipVisual" Send="SetOpacity 1.000000 0.000000 SuperRadar"/>
@@ -6512,7 +6514,7 @@
         <On Terms="AbilMorph.*.Start; MorphFrom OverseerSiegeMode" Target="OverseerOverwatchMode" Send="Destroy"/>
         <Macros value="PhysicsDeathsSwarmAir"/>
         <Macros value="PhysicsDeathsVoidAir"/>
-        <DeathArray index="Normal" ModelLink="OverseerDeath" SoundLink=""/>
+        <DeathArray index="Normal" ModelLink="OverseerDeath" SoundLink="Overseer_Death"/>
         <DeathActorModel value="UnitDeathModelWithDeathMotionFlier"/>
         <DeathCustoms>
             <ActorModel value="OverseerDeathRagdoll"/>
@@ -18411,6 +18413,8 @@
         <On Terms="UnitCreation.HHStarport" Send="Create"/>
         <On Terms="UnitCreation.HHStarportFlying" Send="Create"/>
         <On Terms="UnitCreation.HHMercCompound" Send="Create"/>
+        <On Terms="UnitCreation.HHBomberPlatform" Send="Create"/>
+        <On Terms="UnitCreation.HHStarport" Send="Create"/>
     </CActorStateMonitor>
     <CActorStateMonitor id="TerranFlamesLargeBuilding">
         <On Terms="AbilMorph.*.Start; MorphTo DrakkenLaserDrillCoop" Send="Create"/>
@@ -20231,8 +20235,8 @@
         <Rate value="45.000000"/>
     </CActorSiteOpRotator>
     <CActorModel id="VespeneDroneModel" parent="ModelAnimationStyleContinuous">
-        <On Terms="Effect.VespeneDroneCP.Start; At Target" Send="Create"/>
-        <On Terms="Effect.VespeneDroneCastCP.Start; At Target" Send="Create"/>
+        <On Terms="Effect.VespeneDroneCP.Start; At Target; !ValidatePlayer IsHornerCoopCommander" Send="Create"/>
+        <On Terms="Effect.VespeneDroneCastCP.Start; At Target; !ValidatePlayer IsHornerCoopCommander" Send="Create"/>
         <On Terms="ActorCreation" Send="Create VespeneHarvesterSpawn"/>
         <On Terms="ActorCreation" Send="TimerSet 1.350000 BirthSoundDelayDestroy"/>
         <On Terms="ActorCreation" Send="TimerSet 2.000000 ActivateSoundDelay"/>
@@ -20251,6 +20255,27 @@
         <Remove Terms="ActorOrphan" Send="Destroy"/>
         <Host Subject="_Unit"/>
         <HostSiteOps Ops="SOpAttachOrigin SOpMoveUpBy3 VespeneDroneModelRotator SOpMoveByDot75"/>
+    </CActorModel>
+    <CActorModel id="VespeneDroneModelHornerHan" parent="ModelAnimationStyleContinuous">
+        <On Terms="Effect.VespeneDroneCP.Start; At Target; ValidatePlayer IsHornerCoopCommander" Send="Create"/>
+        <On Terms="Effect.VespeneDroneCastCP.Start; At Target; ValidatePlayer IsHornerCoopCommander" Send="Create"/>
+        <On Terms="ActorCreation" Send="Create VespeneHarvesterSpawn"/>
+        <On Terms="ActorCreation" Send="TimerSet 1.350000 BirthSoundDelayDestroy"/>
+        <On Terms="ActorCreation" Send="TimerSet 2.000000 ActivateSoundDelay"/>
+        <On Terms="TimerExpired; TimerName BirthSoundDelayDestroy" Target="VespeneHarvesterSpawn" Send="Destroy"/>
+        <On Terms="TimerExpired; TimerName ActivateSoundDelay" Send="Create SOAHarvestBeamPickupVespene"/>
+        <On Terms="ActorCreation" Send="TimerSet 3.000000 VespeneBeamDelay"/>
+        <On Terms="TimerExpired; TimerName VespeneBeamDelay" Send="Create VespeneDroneBeam"/>
+        <On Terms="Effect.VespeneDroneCP.Stop; At Target" Send="ModelSwap VespeneDroneDeathModel"/>
+        <On Terms="Effect.VespeneDroneCastCP.Stop; At Target" Send="ModelSwap VespeneDroneDeathModel"/>
+        <On Terms="ModelSwap" Send="$Death"/>
+        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
+        <On Terms="Effect.VespeneDroneCP.Stop; At Target" Target="VespeneDroneBeam" Send="AnimBracketStop BSD"/>
+        <On Terms="Effect.VespeneDroneCastCP.Stop; At Target" Target="VespeneDroneBeam" Send="AnimBracketStop BSD"/>
+        <Remove Terms="ActorOrphan" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOrigin SOpMoveUpBy4 VespeneDroneModelRotator SOpMoveByDot75"/>
+        <Model value="VespeneDroneModel"/>
     </CActorModel>
     <CActorBeamSimple id="VespeneDroneBeam" parent="BeamSimpleAnimationStyleContinuous">
         <HostLaunch Subject="::Creator" Actor="Find"/>
@@ -22264,7 +22289,19 @@
         <On Terms="AbilMorph.*.Start; MorphFrom ObserverSiegeMode; MorphTo Observer" Target="ObserverObservationMode" Send="Destroy"/>
         <On Terms="AbilMorph.*.Start; MorphFrom ObserverSiegeMode; MorphTo Observer" Send="AnimBracketStop Work"/>
     </CActorUnit>
+    <CActorSound id="Observer_SiegeMode_MorphTo_AS" parent="SoundOneShot">
+        <Sound value="Observer_SiegeMode_Start"/>
+    </CActorSound>
+    <CActorSound id="Observer_SiegeMode_MorphFrom_AS" parent="SoundOneShot">
+        <Sound value="Observer_SiegeMode_Stop"/>
+    </CActorSound>
+    <CActorSound id="Observer_SiegeMode_Loop_AS" parent="SoundContinuous">
+        <Sound value="Observer_SiegeMode_Loop"/>
+    </CActorSound>
     <CActorModel id="ObserverObservationMode" parent="ModelAnimationStyleContinuous">
+        <On Terms="ActorCreation" Send="Create Observer_SiegeMode_Loop_AS"/>
+        <On Terms="ActorCreation" Send="Create Observer_SiegeMode_MorphTo_AS"/>
+        <On Terms="ActorDestruction" Send="Create Observer_SiegeMode_MorphFrom_AS"/>
         <Host Subject="_Selectable"/>
         <HostSiteOps Ops="SOpAttachCenter"/>
         <Inherits index="BaseModelScale" value="1"/>
@@ -41669,6 +41706,7 @@
         <LaunchAssets Sound="SJMercAATower_AttackLaunch"/>
     </CActorAction>
     <CActorUnit id="HHMercStarportCargo" parent="GenericUnitMinimal" unitName="HHMercStarportCargo">
+        <UnitIcon value="Assets\Textures\btn-unit-collection-interceptor-junker.dds"/>
         <Model value="Invisible"/>
     </CActorUnit>
     <CActorSiteOpBankerUnit id="SOpBankerHHMercStarportUpgraded" parent="SOpBankerUnit">
@@ -42578,6 +42616,7 @@
         <HostSiteOps Ops="SOpBankerWraith"/>
         <Aliases value="_UnitLarge"/>
         <Macros value="HHMattModelMacro"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
     </CActorUnit>
     <CActorMissile id="HHWraithAttackMissile" parent="GenericAttackMissile" unitName="HHWraithWeapon"/>
     <CActorAction id="HHWraithAttack" parent="GenericAttack" effectImpact="HHWraithU" effectLaunch="HHWraithLaunchMissile">
@@ -43018,10 +43057,10 @@
         <GroupIcon>
             <Image value="Assets\Textures\Wireframe-Terran-Battlecruiser.dds"/>
         </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-terran-battlecruiser.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-collection-battlecruiser-covertops.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
         <NameOffset value="110"/>
-        <UnitIcon value="Assets\Textures\btn-unit-terran-battlecruiser.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-collection-battlecruiser-covertops.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Terran-Battlecruiser.dds"/>
         </Wireframe>
@@ -43252,9 +43291,19 @@
         <On Terms="Upgrade.HHVikingPiercingAttacks.Add" Send="AnimGroupApply Upgrade"/>
         <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimPlay Visor Morph,End"/>
         <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="PortraitAnimSetTimeFrom Visor MorphStart"/>
+        <On Terms="ModelEvent; ModelEventName VikingLandShock" Send="Create VikingLandShock"/>
         <Aliases value="_UnitLarge"/>
         <Macros value="HHMattModelMacro"/>
     </CActorUnit>
+    <CActorModel id="VikingLandShock" parent="ModelAnimationStyleOneShot">
+        <Model value="HHBomberBoosterShock"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Host Subject="_HHBomber"/>
+        <HostSiteOps Ops="SOpShadow" HoldPosition="1" HoldRotation="1"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+    </CActorModel>
     <CActorUnit id="HHFighterMorphModel" parent="GenericUnitBaseMorphTransition" unitName="HHFighterMorphModel">
         <Model value="HHVikingMorph"/>
         <DeathArray index="Normal" ModelLink="VikingFighterDeath" SoundLink="Viking_Explode"/>
@@ -43426,9 +43475,9 @@
         <GroupIcon>
             <Image value="Assets\Textures\wireframe-collection-covertops_raven.dds"/>
         </GroupIcon>
-        <HeroIcon value="Assets\Textures\btn-unit-terran-raven.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-collection-raven-covertops.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"/>
-        <UnitIcon value="Assets\Textures\btn-unit-terran-raven.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-collection-raven-covertops.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\wireframe-collection-covertops_raven.dds"/>
         </Wireframe>
@@ -44678,5 +44727,19 @@
     <CActorModel id="ParasiticBombDotState">
         <MaxScale value="2.500000"/>
     </CActorModel>
+    <CActorModel id="SentryChronoBeamImpact">
+        <On Terms="ActorCreation; ValidateUnit IsAssaultGalleon" Send="SetScale 0.600000"/>
+    </CActorModel>
     <CActorRange id="StukovInfestedDiamondbackSnareRange" parent="RangeAbil" abil="StukovInfestedDiamondbackSnare"/>
+    <CActorRange id="StukovInfestedSiegeTankSiegedRange">
+        <Weapon value="StukovInfestedSiegeTank"/>
+        <On Terms="SelectionLocalUpdate.StukovInfestedSiegeTank.Start; ValidateUnit StukovInfestedSiegeTankAmmoGT0" Send="Create"/>
+        <On Terms="Behavior.StukovInfestedSiegeTankAmmo.On; ValidateUnitType IsSISiegeTankSieged" Send="Create"/>
+        <On Terms="SelectionLocalUpdate.StukovInfestedSiegeTank.StartEditorGround" Send="Create"/>
+        <On Terms="SelectionLocalUpdate.StukovInfestedSiegeTank.StartEditorFlyer" Send="Create"/>
+        <On Terms="SelectionLocalUpdate.StukovInfestedSiegeTank.Stop" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphTo StukovInfestedSiegeTank; Selected; ValidateUnit StukovInfestedSiegeTankAmmoGT0" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo StukovInfestedSiegeTankUprooted" Send="Destroy"/>
+        <On Terms="WeaponStop.*.AttackStop; !ValidateUnit StukovInfestedSiegeTankAmmoGT0" Send="Destroy"/>
+    </CActorRange>
 </Catalog>

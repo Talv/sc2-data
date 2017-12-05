@@ -4450,7 +4450,7 @@
         <Behavior value="DehakaPrimalMutation"/>
     </CEffectApplyBehavior>
     <CEffectEnumArea id="DehakaMendingAuraSearch">
-        <SearchFilters value="-;Neutral,Enemy,Structure,Missile,UnderConstruction,Dead,MapBoss"/>
+        <SearchFilters value="-;Neutral,Enemy,Structure,Missile,UnderConstruction,Dead"/>
         <AreaArray Radius="10" Effect="DehakaMendingAuraSearchImpactSet"/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
     </CEffectEnumArea>
@@ -4458,7 +4458,7 @@
         <EffectArray value="DehakaMendingAuraSwitch"/>
         <EffectArray value="DehakaMendingAuraTargetAB"/>
         <ValidatorArray value="LifeNotFull"/>
-        <ValidatorArray value="TargetIsNotNonCommanderAlly"/>
+        <ValidatorArray value="NotUnrepairable"/>
     </CEffectSet>
     <CEffectSwitch id="DehakaMendingAuraSwitch">
         <CaseArray Validator="DehakaMendingAuraLevel1" Effect="DehakaMendingAuraHealA"/>
@@ -6376,6 +6376,7 @@
         <EditorCategories value="Race:Protoss"/>
         <EffectArray value="ArbiterMPCloakingFieldApply"/>
         <EffectArray value="CloakedReduceDamageApplyBehavior"/>
+        <ValidatorArray value="CoopUnitCloakingValidators"/>
     </CEffectSet>
     <CEffectSet id="CarrierRepairDroneHealSet">
         <ValidatorArray value="NotUnrepairable"/>
@@ -6864,7 +6865,7 @@
         <AreaArray index="0" Radius="0.9687" Fraction="1"/>
         <AreaArray index="1" Radius="1.2812" Fraction="0.5"/>
         <AreaArray index="2" Radius="1.75" Fraction="0.25"/>
-        <SearchFilters value="Ground;Self,Player,Ally,Structure,Missile,Stasis,Dead,Invulnerable"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectDamage id="WarbotALeft">
         <Amount value="15"/>
@@ -7026,6 +7027,9 @@
         <EditorCategories value=""/>
         <Effect value="ZagaraVoidCoopMassFrenzyAB"/>
     </CEffectEnumTransport>
+    <CEffectApplyBehavior id="CloakingField">
+        <ValidatorArray value="CoopUnitCloakingValidators"/>
+    </CEffectApplyBehavior>
     <CEffectEnumArea id="DarkShrineCloakSearch">
         <EditorCategories value=""/>
         <ValidatorArray value="HaveVorazunCommander"/>
@@ -7042,6 +7046,8 @@
         <EditorCategories value="Race:Protoss"/>
         <EffectArray value="DarkShrineCloakAB"/>
         <EffectArray value="CloakedReduceDamageApplyBehavior"/>
+        <ValidatorArray value="CoopUnitCloakingValidators"/>
+        <ValidatorArray value="CliffLevelEqualOrLesser"/>
     </CEffectSet>
     <CEffectApplyBehavior id="DarkShrineEnergyCheckAB">
         <ValidatorArray value="DarkTemplarRecall"/>
@@ -7075,8 +7081,7 @@
         <!--EffectArray value="VoidDetectorRadarAB"/-->
         <!--EffectArray value="DarkPylonEnergyRegenAB"/-->
         <!--EffectArray value="VorazunCloakedDodgeInitialAB"/-->
-        <ValidatorArray value="IsNotDarkPylon"/>
-        <ValidatorArray value="IsNotShakurasTemple"/>
+        <ValidatorArray value="CoopUnitCloakingValidators"/>
         <ValidatorArray value="CliffLevelEqualOrLesser"/>
     </CEffectSet>
     <CEffectApplyBehavior id="DarkPylonCloakAB">
@@ -7123,6 +7128,7 @@
     <CEffectSet id="SOACloakingFieldSet">
         <EffectArray value="SOACloakingFieldAB"/>
         <EffectArray value="VorazunCloakingFieldDodgeInitialAB"/>
+        <ValidatorArray value="CoopUnitCloakingValidators"/>
     </CEffectSet>
     <CEffectApplyBehavior id="SOACloakingFieldAB">
         <EditorCategories value=""/>
@@ -20248,7 +20254,8 @@
         <EffectArray value="FenixArbiterCloakingFieldAB"/>
         <EffectArray value="DarkPylonCloakDamageBoostAB"/>
         <EffectArray value="DarkPylonCloakShieldRegenAB"/>
-        <ValidatorArray value="TargetIsNotNonCommanderAlly"/>
+        <!--ValidatorArray value="TargetIsNotNonCommanderAlly"/-->
+        <ValidatorArray value="CoopUnitCloakingValidators"/>
     </CEffectSet>
     <CEffectApplyBehavior id="FenixArbiterCloakingFieldAB">
         <EditorCategories value="Race:Protoss"/>

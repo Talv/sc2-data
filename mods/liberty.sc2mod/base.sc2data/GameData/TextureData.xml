@@ -1441,4 +1441,37 @@
     <CTexture id="Decal_Spray_0031_01">
         <File value="Assets\Textures\decal_spray_0031_01.dds"/>
     </CTexture>
+    <CTexture id="Decal_Spray_0032_01">
+        <File value="Assets\Textures\decal_spray_0032_01.dds"/>
+    </CTexture>
+    <CTexture id="Decal_Spray_0033_01">
+        <File value="Assets\Textures\decal_spray_0033_01.dds"/>
+    </CTexture>
+    <CTexture id="Decal_Spray_0034_01">
+        <File value="Assets\Textures\decal_spray_0034_01.dds"/>
+    </CTexture>
+    <CTexture id="Decal_Spray_0035_01">
+        <File value="Assets\Textures\decal_spray_0035_01.dds"/>
+    </CTexture>
+    <CTexture id="Decal_Spray_0036_01">
+        <File value="Assets\Textures\decal_spray_0036_01.dds"/>
+    </CTexture>
+    <CTexture id="Decal_Spray_0037_01">
+        <File value="Assets\Textures\decal_spray_0037_01.dds"/>
+    </CTexture>
+    <CTexture id="Decal_Spray_0038_01">
+        <File value="Assets\Textures\decal_spray_0038_01.dds"/>
+    </CTexture>
+    <CTexture id="Decal_Spray_0039_01">
+        <File value="Assets\Textures\decal_spray_0039_01.dds"/>
+    </CTexture>
+    <CTexture id="Decal_Spray_0040_01">
+        <File value="Assets\Textures\decal_spray_0040_01.dds"/>
+    </CTexture>
+    <CTexture id="Decal_Spray_0041_01">
+        <File value="Assets\Textures\decal_spray_0041_01.dds"/>
+    </CTexture>
+    <CTexture id="Decal_Spray_0042_01">
+        <File value="Assets\Textures\decal_spray_0042_01.dds"/>
+    </CTexture>
 </Catalog>

@@ -1071,8 +1071,15 @@
         <TrialAllowedSinglePlayerMaps value="TZeratul04.SC2Map"/>
         <TrialAllowedSinglePlayerMaps value="TArcade.SC2Map"/>
         <TrialAllowedSinglePlayerMaps value="TTutorial01.SC2Map"/>
+        <TrialAllowedSinglePlayerMaps value="AdvancedCommand.SC2Map"/>
+        <TrialAllowedSinglePlayerMaps value="Economy.SC2Map"/>
+        <TrialAllowedSinglePlayerMaps value="ProtossCombat.SC2Map"/>
+        <TrialAllowedSinglePlayerMaps value="ProtossPsionics.SC2Map"/>
+        <TrialAllowedSinglePlayerMaps value="RushDefense.SC2Map"/>
         <TrialAllowedSinglePlayerMaps value="TerranCombat.SC2Map"/>
         <TrialAllowedSinglePlayerMaps value="TerranCovertOps.SC2Map"/>
+        <TrialAllowedSinglePlayerMaps value="ZergCombat.SC2Map"/>
+        <TrialAllowedSinglePlayerMaps value="ZergInfestation.SC2Map"/>
         <TrialAllowedSinglePlayerMaps value="SC2Tutorial.SC2Map"/>
         <TrialAllowedSinglePlayerMaps value="SC2TutorialTransitionNova.SC2Map"/>
         <TrialAllowedSinglePlayerMaps value="VoidPrologue01.SC2Map"/>

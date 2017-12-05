@@ -12170,10 +12170,10 @@
         <UnitIcon value="Assets\Textures\btn-unit-terran-ghost.dds"/>
         <HeroIcon value="Assets\Textures\btn-unit-terran-ghost.dds"/>
         <GroupIcon>
-            <Image value="Assets\Textures\wireframe-ghostfemale.dds"/>
+            <Image value="Assets\Textures\wireframe-terran-ghost.dds"/>
         </GroupIcon>
         <Wireframe>
-            <Image value="Assets\Textures\wireframe-ghostfemale.dds"/>
+            <Image value="Assets\Textures\wireframe-terran-ghost.dds"/>
         </Wireframe>
         <AbilSoundArray AbilCmd="GhostCloak,On" Sound="GhostAlternate_CloakOnVO"/>
         <AbilSoundArray AbilCmd="EMP,Execute" Sound="GhostAlternate_EmpVO"/>
@@ -14895,7 +14895,7 @@
         <On Terms="AbilTransport.WarpPrismTransport.CargoLoad" Target="ColossusAttackImpactSiteReverse" Send="Destroy"/>
         <On Terms="AbilTransport.WarpPrismTransport.CargoLoad" Target="ColossusAttackBeamReverse" Send="Destroy"/>
         <On Terms="AbilTransport.WarpPrismTransport.CargoLoad" Target="ColossusAttackBeamImpactReverse" Send="Destroy"/>
-        <DeathArray index="Normal" ModelLink="ColossusDeath" SoundLink="Colossus_Explode"/>
+        <DeathArray index="Normal" ModelLink="ColossusDeath"/>
         <DeathCustoms ModelLink="ProtossLargeUnitDeathLow" Name="AntiGravProtoss"/>
         <DeathCustoms ModelLink="HallucinationColossusDeath" SoundLink="Sentry_HallucinationDeathLarge" Name="Hallucination"/>
         <PortraitModel value="ColossusPortrait"/>
@@ -15809,7 +15809,7 @@
     <!-- Immortal .............................................................................. -->
     <!--                                                                                         -->
     <CActorUnit id="Immortal" parent="GenericUnitBase" unitName="Immortal">
-        <DeathArray index="Normal" ModelLink="ImmortalDeath" SoundLink="Immortal_Explode"/>
+        <DeathArray index="Normal" ModelLink="ImmortalDeath"/>
         <PortraitModel value="ImmortalPortrait"/>
         <PlacementModel value="ImmortalPlacement"/>
         <PlacementSound value="Protoss_BuildingPlacementSmall"/>
@@ -16697,7 +16697,7 @@
     <!--                                                                                         -->
     <CActorUnit id="Stalker" parent="GenericUnitBase" unitName="Stalker">
         <ModelFlags index="OutlineEmitter" value="1"/>
-        <DeathArray index="Normal" ModelLink="StalkerDeath" SoundLink="Stalker_Explode"/>
+        <DeathArray index="Normal" ModelLink="StalkerDeath"/>
         <BuildModel value="StalkerWarpIn"/>
         <PortraitModel value="StalkerPortrait"/>
         <WalkAnimMoveSpeed value="3.1328"/>
@@ -21777,18 +21777,18 @@
         <On Terms="UnitBirth.*.Normal" Send="AnimSetPaused GL_BSD_A"/>
     </CActorEventMacro>
     <CActorSound id="Protoss_PowerDownLarge" parent="SoundOneShot">
-        <On Terms="BehaviorLevel.PowerUserQueue.Start; Level 0; ValidateUnit NotDeadOrConstruction; IsStatus Created 0" Send="Create"/>
+        <On Terms="BehaviorLevel.PowerUserQueue.Start; Level 0; ValidateUnit NotDeadOrConstruction" Send="Create"/>
     </CActorSound>
     <CActorSound id="Protoss_PowerUpLarge" parent="SoundOneShot">
-        <On Terms="BehaviorLevel.PowerUserQueue.Stop; Level 0; ValidateUnit NotDeadOrConstruction; IsStatus Created 0" Send="Create"/>
+        <On Terms="BehaviorLevel.PowerUserQueue.Stop; Level 0; ValidateUnit NotDeadOrConstruction" Send="Create"/>
     </CActorSound>
     <CActorSound id="Protoss_PowerDownSmall" parent="SoundOneShot">
-        <On Terms="BehaviorLevel.PowerUserQueueSmall.Start; Level 0; ValidateUnit NotDeadOrConstruction; IsStatus Created 0" Send="Create"/>
-        <On Terms="BehaviorLevel.PowerUserBaseDefenseSmall.Start; Level 0; ValidateUnit NotDeadOrConstruction; IsStatus Created 0" Send="Create"/>
+        <On Terms="BehaviorLevel.PowerUserQueueSmall.Start; Level 0; ValidateUnit NotDeadOrConstruction" Send="Create"/>
+        <On Terms="BehaviorLevel.PowerUserBaseDefenseSmall.Start; Level 0; ValidateUnit NotDeadOrConstruction" Send="Create"/>
     </CActorSound>
     <CActorSound id="Protoss_PowerUpSmall" parent="SoundOneShot">
-        <On Terms="BehaviorLevel.PowerUserQueueSmall.Stop; Level 0; ValidateUnit NotDeadOrConstruction; IsStatus Created 0" Send="Create"/>
-        <On Terms="BehaviorLevel.PowerUserBaseDefenseSmall.Stop; Level 0; ValidateUnit NotDeadOrConstruction; IsStatus Created 0" Send="Create"/>
+        <On Terms="BehaviorLevel.PowerUserQueueSmall.Stop; Level 0; ValidateUnit NotDeadOrConstruction" Send="Create"/>
+        <On Terms="BehaviorLevel.PowerUserBaseDefenseSmall.Stop; Level 0; ValidateUnit NotDeadOrConstruction" Send="Create"/>
     </CActorSound>
     <CActorEventMacro id="ChargingAnim">
         <On Terms="Behavior.Charging.Create" Send="AnimGroupApply Spell"/>

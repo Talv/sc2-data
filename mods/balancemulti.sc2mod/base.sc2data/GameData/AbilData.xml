@@ -34,9 +34,11 @@
         <Flags index="AutoCastOn" value="1"/>
     </CAbilEffectTarget>
     <CAbilResearch id="FactoryTechLabResearch">
+        <InfoArray index="Research5">
+            <Resource index="Minerals" value="75"/>
+            <Resource index="Vespene" value="75"/>
+        </InfoArray>
         <InfoArray index="Research7" Time="110" Upgrade="SmartServos">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="ResearchSmartServos" Requirements="LearnSmartServos">
                 <Flags index="ShowInGlossary" value="1"/>
             </Button>
@@ -49,8 +51,8 @@
             </Button>
         </InfoArray>
         <InfoArray index="Research9" Time="110" Upgrade="CycloneRapidFireLaunchers">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
+            <Resource index="Minerals" value="75"/>
+            <Resource index="Vespene" value="75"/>
             <Button DefaultButtonFace="ResearchCycloneRapidFireLaunchers" Requirements="LearnCycloneRapidFireLaunchers">
                 <Flags index="ShowInGlossary" value="1"/>
             </Button>
@@ -130,6 +132,7 @@
         <CmdButtonArray index="Execute">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
+        <Range index="0" value="7"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="KD8Charge">
         <Cost index="0">
@@ -178,6 +181,12 @@
         <!--UnloadCargoEffect value="MedivacUnloadCargoSetEffect"/-->
         <UnloadCargoEffect value="SiegeTankUnloadDelayAB"/>
     </CAbilTransport>
+    <CAbilMorph id="MorphToBroodLord">
+        <Flags index="WaitUntilStopped" value="0"/>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToOverseer">
+        <Flags index="WaitUntilStopped" value="0"/>
+    </CAbilMorph>
     <CAbilMorph id="MorphToSwarmHostBurrowedMP">
         <AbilSetId value="BrwD"/>
         <CmdButtonArray index="Execute" Requirements="UseBurrow"/>
@@ -299,6 +308,9 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorphPlacement>
+    <CAbilTrain id="StargateTrain">
+        <InfoArray index="Train9" Time="60"/>
+    </CAbilTrain>
     <CAbilResearch id="StarportTechLabResearch">
         <InfoArray index="Research1">
             <Resource index="Minerals" value="100"/>
@@ -469,6 +481,7 @@
         <Flags index="Produce" value="1"/>
         <Flags index="ShowProgress" value="1"/>
         <Flags index="SuppressMovement" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
         <Cost>
             <Resource index="Minerals" value="25"/>
             <Resource index="Vespene" value="25"/>
@@ -598,13 +611,6 @@
         <ValidatedArray index="Cast" value="0"/>
         <ValidatedArray index="Channel" value="0"/>
     </CAbilEffectTarget>
-    <CAbilMorph id="WidowMineBurrow">
-        <InfoArray index="0" Unit="WidowMineBurrowed" RandomDelayMax="0.5">
-            <SectionArray index="Abils">
-                <DurationArray index="Delay" value="3"/>
-            </SectionArray>
-        </InfoArray>
-    </CAbilMorph>
     <CAbilBuild id="ZergBuild">
         <InfoArray index="Build12" Unit="LurkerDenMP" Time="120">
             <Button DefaultButtonFace="MutateintoLurkerDen" Requirements="HaveHydraliskDen"/>

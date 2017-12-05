@@ -3380,6 +3380,7 @@
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="Invulnerable" value="1"/>
         <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
         <PlaneArray index="Ground" value="1"/>
         <Collide index="Structure" value="1"/>
         <Collide index="ForceField" value="1"/>
@@ -6847,11 +6848,10 @@
         <GlossaryWeakArray value="Marauder"/>
         <GlossaryWeakArray value="Ultralisk"/>
         <GlossaryWeakArray value="Immortal"/>
-        <HotkeyCategory value="Unit/Category/ZergEvolved"/>
+        <HotkeyCategory value="Unit/Category/ZergUnits"/>
         <KillDisplay value="Always"/>
         <RankDisplay value="Always"/>
         <Description value="Button/Tooltip/Ravager"/>
-        <HotkeyAlias value="Ravager"/>
     </CUnit>
     <CUnit id="RavagerAbathurBurrowed">
         <DeathRevealRadius value="3"/>
@@ -6912,13 +6912,13 @@
         <MinimapRadius value="0.75"/>
         <EditorCategories value="ObjectType:Unit,ObjectFamily:FactionEvolved"/>
         <LeaderAlias value="Ravager"/>
-        <HotkeyAlias value="Ravager"/>
+        <HotkeyAlias value="RavagerAbathur"/>
         <KillDisplay value="Always"/>
         <RankDisplay value="Always"/>
         <Description value="Button/Tooltip/Ravager"/>
         <SelectAlias value="RavagerAbathur"/>
         <SubgroupAlias value="RavagerAbathur"/>
-        <HotkeyCategory value="Unit/Category/ZergEvolved"/>
+        <HotkeyCategory value="Unit/Category/ZergUnits"/>
     </CUnit>
     <CUnit id="RavagerAbathurCocoon">
         <DeathRevealRadius value="3"/>
@@ -13457,9 +13457,9 @@
             <LayoutButtons index="18" Face="Raven" Type="AbilCmd" AbilCmd="StarportTrain,Train3" Row="0" Column="2"/>
             <LayoutButtons Face="VikingFighter" Type="AbilCmd" AbilCmd="StarportTrain,Train5" Row="0" Column="0"/>
             <LayoutButtons Face="TrainLiberatorNova" Type="AbilCmd" AbilCmd="StarportTrainNova,Train3" Row="0" Column="0"/>
-            <LayoutButtons Face="TrainRavenNova" Type="AbilCmd" AbilCmd="StarportTrainNova,Train2" Row="0" Column="1"/>
+            <LayoutButtons Face="TrainBansheeNova" Type="AbilCmd" AbilCmd="StarportTrainNova,Train1" Row="0" Column="1"/>
             <LayoutButtons Face="BuildScienceVessel" Type="AbilCmd" AbilCmd="StarportTrain,Train9" Row="0" Column="2"/>
-            <LayoutButtons Face="TrainBansheeNova" Type="AbilCmd" AbilCmd="StarportTrainNova,Train1" Row="0" Column="2"/>
+            <LayoutButtons Face="TrainRavenNova" Type="AbilCmd" AbilCmd="StarportTrainNova,Train2" Row="0" Column="2"/>
             <LayoutButtons Face="OrbitalDropPodsPassive" Type="Passive" Requirements="HaveOrbitalDropPods" Row="1" Column="0"/>
             <LayoutButtons Face="MasteryNovaArmyAttackSpeedAppend" Type="Passive" Requirements="HaveMasteryNovaArmyAttackSpeed" Row="1" Column="0"/>
             <LayoutButtons Face="MasteryNovaArmyOOCRegenSpeedAppend" Type="Passive" Requirements="HaveMasteryNovaArmyOOCRegenSpeed" Row="1" Column="1"/>
@@ -21113,6 +21113,7 @@
         <FlagArray index="PreventDestroy" value="1"/>
         <FlagArray index="Invulnerable" value="1"/>
         <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
         <FlagArray index="TreatStructureAsUnitForSelection" value="1"/>
         <PlaneArray index="Ground" value="1"/>
         <Attributes index="Structure" value="1"/>
@@ -24232,6 +24233,7 @@
         <Collide index="Structure" value="1"/>
         <Attributes index="Mechanical" value="1"/>
         <Attributes index="Structure" value="1"/>
+        <Attributes index="MapBoss" value="1"/>
         <LifeStart value="2000"/>
         <LifeMax value="2000"/>
         <LifeArmor value="3"/>
@@ -28531,6 +28533,7 @@
         <FlagArray index="UseLineOfSight" value="1"/>
         <FlagArray index="Invulnerable" value="1"/>
         <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
         <PlaneArray index="Ground" value="1"/>
         <Collide index="Structure" value="1"/>
         <Attributes index="Biological" value="1"/>
@@ -31574,6 +31577,7 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+        <BehaviorArray Link="AllUnitBehaviorController"/>
     </CUnit>
     <CUnit id="HHStarport">
         <TechAliasArray value="Alias_Starport"/>
@@ -33201,7 +33205,7 @@
             <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
             <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="MorphToHellion" Type="AbilCmd" AbilCmd="MorphToHHHellion,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="MorphToHHHellion" Type="AbilCmd" AbilCmd="MorphToHHHellion,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="HHHellionDeathFear" Type="Passive" Requirements="HaveHHHellionFearDeath" Row="2" Column="2"/>
             <LayoutButtons Face="HHHellionAttackDoT" Type="Passive" Requirements="HaveHHHellionAttackDoT" Row="2" Column="3"/>
             <LayoutButtons Face="HHMSOAttackSpeed" Type="Passive" Requirements="HaveHHSOBuff" Row="1" Column="4"/>

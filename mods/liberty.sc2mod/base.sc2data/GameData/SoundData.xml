@@ -488,6 +488,18 @@
         <Pan value="-0.500000,0.500000"/>
         <PlayDelay value="0,10000"/>
     </CSound>
+    <CSound id="Ambience_ReBrand_MainMenu" parent="Ambience_Map">
+        <AssetArray File="Assets\Sounds\Ambience_VoidMainMenu_Quad.ogg" FacialGroup=""/>
+        <Flags index="Download" value="1"/>
+        <Flags index="Wait" value="1"/>
+        <Category value="User22"/>
+        <OffsetFadeIn index="1" Time="2000"/>
+        <SpeakerMix index="Center" value="0.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <SustainFade index="1" Time="1000" Volume="-96.000000"/>
+        <Volume value="-16.000000,-16.000000"/>
+    </CSound>
     <CSound id="Ambience_WarChestMenu" parent="Ambience_Map">
         <AssetArray File="Assets\Sounds\Ambience_WarChest_Loop.ogg" FacialGroup=""/>
         <Flags index="Download" value="1"/>
@@ -600,6 +612,179 @@
         <Pitch value="-2.000000,-2.000000"/>
         <Volume value="-12.000000,-11.000000"/>
     </CSound>
+    <CSound id="CS_MainMenu_ReBrand_Marine_Vx_Exert_02" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_Marine_VxFx_Die_01.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Volume value="-6.000000,-6.000000"/>
+        <Category value="User23"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_Artanis_Montage_02" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_Artanis_Mntg_pt2.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <SpeakerMix index="FrontLeft" value="0.500000"/>
+        <SpeakerMix index="FrontRight" value="0.500000"/>
+        <SpeakerMix index="BackLeft" value="0.000000"/>
+        <SpeakerMix index="BackRight" value="0.000000"/>
+        <SpeakerMix index="SideLeft" value="0.000000"/>
+        <SpeakerMix index="SideRight" value="0.000000"/>
+        <Volume value="-10.000000,-10.000000"/>
+        <Category value="User23"/>
+        <Chance value="84"/>
+        <Pitch value="-2.000000,-1.000000"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_Marine_Vx_Exert_01" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_Marine_VxFx_Exert.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Volume value="-4.000000,-4.000000"/>
+        <Category value="User23"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_Artanis_Montage_01" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_Artanis_Mntg_pt1.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <SpeakerMix index="LFE" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Category value="User23"/>
+        <Chance value="84"/>
+        <Pitch value="-2.000000,-1.000000"/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_Marine_Vx_Exert_03" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_Marine_VxFx_Die_02.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Volume value="-6.000000,-6.000000"/>
+        <Category value="User23"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_Marine_Vx_Exert_04" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_Marine_VxFx_Die_03.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Category value="User23"/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_Marine_WeaponFire" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_Marine_WeaponFire.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <SpeakerMix index="LFE" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Category value="User23"/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_ZergMarine_Montage_02" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_ZergMarine_Mntg_pt2.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <SpeakerMix index="Center" value="0.700000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Volume value="-10.000000,-10.000000"/>
+        <Category value="User23"/>
+        <Chance value="80"/>
+        <Pitch value="-1.000000,0.000000"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_Zerg_RockDebris" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_Zerg_RockDebris.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <SpeakerMix index="Center" value="0.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Volume value="-4.000000,-4.000000"/>
+        <Category value="User23"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_TO_Music" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_Mx.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <Category value="Music"/>
+        <SpeakerMix index="Center" value="0.000000"/>
+        <SpeakerMix index="BackLeft" value="0.500000"/>
+        <SpeakerMix index="BackRight" value="0.500000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Volume value="1.000000,1.000000"/>
+    </CSound>
     <CSound id="CS_MainMenu_Horner_MvVx_Tassel_LCR" parent="CutScene">
         <AssetArray index="0">
             <File value="Assets\Sounds\Horner_MM_Horner_MvVx_Tassel.ogg"/>
@@ -638,6 +823,78 @@
         <Chance value="80"/>
         <Pitch value="-1.000000,-1.000000"/>
         <Volume value="-12.000000,-10.000000"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_BG_Music" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Music\ZergSC2-05.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <AssetArray File="Assets\Music\ZSwarm_Music_GS Terran8.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\ZSwarm_Music_GS_109.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\ZSwarm_Music_DangerAlert_LivePitchGrain.ogg" FacialGroup=""/>
+        <Category value="Music"/>
+        <SpeakerMix index="Center" value="0.000000"/>
+        <SpeakerMix index="BackLeft" value="0.500000"/>
+        <SpeakerMix index="BackRight" value="0.500000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Volume value="2.000000,2.000000"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_Artanis_Open" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_Artanis_Open.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <SpeakerMix index="LFE" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Category value="User23"/>
+        <Volume value="-2.000000,-2.000000"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_Zerg_VxFx" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_Zerg_VxFx_01.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <SpeakerMix index="LFE" value="1.000000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Category value="User23"/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="CS_MainMenu_ReBrand_ZergMarine_Montage_01" parent="CutScene">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\CS_ReBrand_ZergMarine_Mntg_pt1.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <PortraitModel value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <SpeakerMix index="Center" value="0.700000"/>
+        <SpeakerMix index="BackLeft" value="1.000000"/>
+        <SpeakerMix index="BackRight" value="1.000000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Volume value="-8.000000,-8.000000"/>
+        <Category value="User23"/>
+        <Pitch value="-1.000000,0.000000"/>
     </CSound>
     <CSound id="Day9Announcer_AddOnComplete" parent="ACVO_TerranAlert">
         <AssetArray TemplateParam="Day9Announcer_AddOnComplete00"/>
@@ -3834,6 +4091,7 @@
         <SpeakerMix index="SideLeft" value="0.125000"/>
         <SpeakerMix index="SideRight" value="0.125000"/>
         <Volume value="1.000000,1.000000"/>
+        <Category value="Music"/>
     </CSound>
     <CSound id="Music_Takeover_Abathur_BG" parent="MUSIC">
         <AssetArray File="Assets\Music\ZZerus02MissionIntro.ogg" FacialGroup=""/>
@@ -3937,7 +4195,6 @@
     <CSound id="Music_Takeover_Dehaka" parent="MUSIC">
         <Volume value="6.000000,6.000000"/>
         <AssetArray File="Assets\Music\Music_DehakaMainMenuTakeover.ogg" Offset="1000000,1000000" FacialGroup=""/>
-        <AssetArray File="Assets\Music\Directorate Menace A.ogg" FacialGroup=""/>
         <OffsetFadeIn Volume="-96.000000"/>
         <OffsetFadeIn Time="100"/>
         <SpeakerMix index="FrontLeft" value="1.400000"/>
@@ -9895,7 +10152,7 @@
         <AssetArray File="Assets\Music\nDLC03_Music_Cue03.ogg" FacialGroup=""/>
         <OffsetFadeIn Volume="-96.000000"/>
         <OffsetFadeIn Time="3000"/>
-        <Volume value="-4.000000,-4.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
     </CSound>
     <CSound id="MainMenu_Takeover_Stukov_BG_HyperJump" parent="SetPiece">
         <AssetArray File="Assets\Sounds\Uni\UI\6Ch_Badge_Impact_Base_02.ogg" FacialGroup=""/>
@@ -29386,6 +29643,7 @@
     <CSound id="Hellion02_Ready_NP" parent="TerranAck">
         <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Hellion\Hellion02_NeuralParasiteReady00.ogg" FacialAnim="Hellion_NeuralParasiteReady00"/>
         <Volume value="-1.000000,-1.000000"/>
+        <Pitch value="-0.500000,-0.500000"/>
     </CSound>
     <CSound id="Hellion02_What" parent="TerranAck">
         <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Hellion\Hellion02_What00.ogg" FacialAnim="Hellion_What00"/>
@@ -30394,6 +30652,37 @@
             <SyncPoints value="0"/>
             <SyncPoints value="19320000"/>
         </AssetArray>
+        <AssetArray File="Assets\Music\ZSwarm_Music_Kaldir3.ogg" FacialGroup="">
+            <SyncPoints value="19320000"/>
+            <SyncPoints value="19320000"/>
+        </AssetArray>
+        <AssetArray File="Assets\Music\ZSwarm_Music_Kaldir4.ogg" FacialGroup="">
+            <SyncPoints value="19320000"/>
+            <SyncPoints value="19320000"/>
+        </AssetArray>
+        <AssetArray File="Assets\Music\ZSwarm_Music_Titan_Suspended.ogg" FacialGroup="">
+            <SyncPoints value="19320000"/>
+            <SyncPoints value="19320000"/>
+        </AssetArray>
+        <AssetArray File="Assets\Music\MissionMusic\Music_LowTensionInspriational_NoGuitarsNoHorns.ogg" FacialGroup="">
+            <SyncPoints value="19320000"/>
+            <SyncPoints value="19320000"/>
+        </AssetArray>
+        <AssetArray File="Assets\Music\MissionMusic\Music_TragicBattlefieldNoMelodies.ogg" FacialGroup="">
+            <SyncPoints value="19320000"/>
+            <SyncPoints value="19320000"/>
+        </AssetArray>
+        <AssetArray File="Assets\Music\ZKorhal02MusicCutscene03_PsiDestroyerDefeated.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\ZKorhal01MusicCutscene00_PreMission.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\ZSpace01MusicCutscene02_MissionIntro.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\MissionMusic\LibertyMusicMysteryStinger_A.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\MissionMusic\LibertyMusicMysteryStinger_C.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\MissionMusic\THanson02OutroMusic.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\ZI_MUSIC_NoDrums.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\ZChar03MusicIntro.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\Wings in Space A.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\Wings in Space E.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Music\Wings in Space H.ogg" FacialGroup=""/>
         <Volume value="-4.000000,-4.000000"/>
     </CSound>
     <CSound id="LoadingMusic" parent="MUSIC">
@@ -38771,6 +39060,7 @@
             <FacialGroup value="zVO_TerranHellion_HellionSiege_001"/>
             <FacialFile value="LocalizedData\Sounds\VO\zVO_TerranHellion_HellionSiege_001.fxe"/>
         </AssetArray>
+        <Pitch value="-1.000000,-1.000000"/>
     </CSound>
     <CSound id="HellionTank02_What_NP" parent="TerranAck">
         <AssetArray>
@@ -44060,11 +44350,11 @@
         <AssetArray File="Assets\Sounds\Horner_MM_Open_MX_Z01_StringsOnly.ogg" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Horner_MM_Open_MX_Menace_A.ogg" FacialGroup=""/>
         <SpeakerMix index="Center" value="0.000000"/>
-        <SpeakerMix index="BackLeft" value="0.250000"/>
-        <SpeakerMix index="BackRight" value="0.250000"/>
+        <SpeakerMix index="BackLeft" value="0.500000"/>
+        <SpeakerMix index="BackRight" value="0.500000"/>
         <SpeakerMix index="SideLeft" value="0.125000"/>
         <SpeakerMix index="SideRight" value="0.125000"/>
-        <Volume value="-1.000000,-1.000000"/>
+        <Category value="Music"/>
     </CSound>
     <CSound id="Music_TO_Horner_Themes_LoopStart" parent="CutScene">
         <AssetArray index="0">
@@ -44083,7 +44373,7 @@
         <SpeakerMix index="BackRight" value="0.250000"/>
         <SpeakerMix index="SideLeft" value="0.125000"/>
         <SpeakerMix index="SideRight" value="0.125000"/>
-        <Volume value="-2.000000,-2.000000"/>
+        <Category value="Music"/>
     </CSound>
     <CSound id="CS_MM_Horner_OpenSpace_ShipFlyBy" parent="CutScene">
         <AssetArray index="0">

@@ -1211,4 +1211,8 @@
     <CValidatorUnitType id="LabMineralField750">
         <Value value="LabMineralField750"/>
     </CValidatorUnitType>
+    <CValidatorPlayerRequirement id="HaveSmartServos">
+        <Value value="HaveSmartServos"/>
+        <Find value="1"/>
+    </CValidatorPlayerRequirement>
 </Catalog>

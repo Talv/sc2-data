@@ -9452,7 +9452,9 @@
     <CModel id="FemaleDominionOfficer1Portrait" parent="FXAPortrait" Race="Terran"/>
     <CModel id="Scientist1Portrait" parent="FXAPortrait" Race="Terran"/>
     <CModel id="Scientist2Portrait" parent="FXAPortrait" Race="Terran"/>
-    <CModel id="ScientistFemalePortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="ScientistFemalePortrait" parent="FXAPortrait" Race="Terran">
+        <Flags index="Download" value="1"/>
+    </CModel>
     <CModel id="ScienceVesselPortrait" parent="FXAPortrait" Race="Terran"/>
     <CModel id="VulturePortrait" parent="FXAPortrait" Race="Terran"/>
     <CModel id="HerculesPortrait" parent="FXAPortrait" Race="Terran"/>

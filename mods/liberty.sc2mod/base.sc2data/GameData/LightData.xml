@@ -95,6 +95,26 @@
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
     </CLight>
+    <CLight id="Archon_Purifier_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="Archon_Purifier_Collection_Portrait" AmbientColor="0.160784,0.007843,0.000000" Colorize="1">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="3.680000"/>
+            <Param index="ColorizationContrast" value="1.060000"/>
+            <Param index="ColorizationHue" value="0.080000"/>
+            <Param index="ColorizationSaturation" value="0.220000"/>
+            <Param index="ColorizationBlend" value="0.300000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.992157,0.701961,0.411765"/>
+                <ColorMultiplier value="23.714001"/>
+                <SpecColorMultiplier value="3.273000"/>
+                <Direction value="0.000000,-0.829037,-0.559193"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="1.000000,0.882353,0.800000" ColorMultiplier="0.724000" Direction="-0.662406,-0.094628,-0.743145"/>
+            <DirectionalLight index="Back" Color="0.925490,0.749020,0.223529" ColorMultiplier="0.631000" Direction="0.201653,0.967788,-0.150743"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
+    </CLight>
     <CLight id="Avernus" parent="default">
         <ToDInfoArray index="0" AmbientColor="0.188235,0.215686,0.286275" Colorize="1">
             <Param index="HDRExposure" value="1.500000"/>
@@ -493,6 +513,26 @@
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
     </CLight>
+    <CLight id="DarkTemplar_Purifier_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="DarkTemplar_Purifier_Collection_Portrait" AmbientColor="0.145098,0.086275,0.011765" Colorize="1">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="ColorizationContrast" value="1.060000"/>
+            <Param index="ColorizationHue" value="0.080000"/>
+            <Param index="ColorizationSaturation" value="0.220000"/>
+            <Param index="ColorizationBlend" value="0.300000"/>
+            <Param index="ShadowPenumbraSize" value="0.091000"/>
+            <DirectionalLight index="Key">
+                <Color value="1.000000,0.937255,0.839216"/>
+                <ColorMultiplier value="2.600000"/>
+                <SpecColorMultiplier value="4.027000"/>
+                <Direction value="0.815905,-0.377001,-0.438371"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="1.000000,1.000000,1.000000" ColorMultiplier="0.794000" Direction="-0.752481,0.428686,0.500000"/>
+            <DirectionalLight index="Back" Color="0.372549,0.501961,0.945098" ColorMultiplier="0.631000" Direction="-0.471479,-0.219254,-0.854187"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
+    </CLight>
     <CLight id="Drone_Primal_Collection_Portrait" parent="default">
         <ToDInfoArray index="0" Id="LarvaPortrait" AmbientColor="0.219608,0.137255,0.129412">
             <Param index="HDRExposure" value="1.480000"/>
@@ -527,6 +567,42 @@
             <DirectionalLight index="Back" Color="1.000000,0.501961,0.250980" ColorMultiplier="2.089000" Direction="0.385175,-0.679134,-0.624834"/>
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
+    </CLight>
+    <CLight id="Ghost_Eidolon_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="Ghost_Eidolon_Collection_Portrait" AmbientColor="0.000000,0.000000,0.000000" OperatorHDR="3">
+            <Param index="HDRExposure" value="1.475000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.054902,0.537255,0.721569"/>
+                <ColorMultiplier value="1.259000"/>
+                <SpecColorMultiplier value="1.000000"/>
+                <Direction value="0.310371,0.365847,-0.877397"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.937255,0.054902,0.054902" ColorMultiplier="0.537000" Direction="0.871787,0.397113,-0.286859"/>
+            <DirectionalLight index="Back" Color="0.313726,0.874510,0.992157" ColorMultiplier="0.832000" Direction="-0.339663,0.876157,0.342020"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsTerran"/>
+    </CLight>
+    <CLight id="Ghost_Junker_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="Ghost_Junker_Collection_Portrait" AmbientColor="0.282353,0.282353,0.282353" Colorize="1">
+            <Param index="HDRExposure" value="1.500000"/>
+            <Param index="HDRWhitePoint" value="1.850000"/>
+            <Param index="TerrainSpecularExp" value="11.210000"/>
+            <Param index="TerrainHDRSpecular" value="3.750000"/>
+            <Param index="CreepSpecularExp" value="30.000000"/>
+            <Param index="CreepHDRSpecMultiplier" value="3.000000"/>
+            <Param index="ColorizationContrast" value="1.066000"/>
+            <Param index="ColorizationHue" value="0.001000"/>
+            <Param index="ColorizationBlend" value="0.300000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.721569,0.776471,0.913726"/>
+                <ColorMultiplier value="0.880000"/>
+                <SpecColorMultiplier value="3.890000"/>
+                <Direction value="0.579437,0.739780,-0.342020"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.541176,0.592157,0.705882" ColorMultiplier="2.692000" Direction="-0.898395,-0.322734,0.297875"/>
+            <DirectionalLight index="Back" Color="0.239216,0.231373,0.282353" ColorMultiplier="1.928000" Direction="-0.903859,-0.000000,-0.427831"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsTerran"/>
     </CLight>
     <CLight id="Glevig_Primal_Collection_Portrait" parent="default">
         <ToDInfoArray index="0" Id="BroodLordPortrait" AmbientColor="0.188235,0.105882,0.000000">
@@ -687,6 +763,40 @@
             <DirectionalLight index="Back" Color="0.831373,0.474510,0.239216" ColorMultiplier="3.350000" Direction="-0.665038,-0.073891,0.743145"/>
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsTerran"/>
+    </CLight>
+    <CLight id="HighTemplar_Purifier_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0">
+            <Id value="HighTemplar_Purifier_Collection_Portrait"/>
+            <AmbientColor value="0.172549,0.172549,0.113725"/>
+            <AmbientEnvironmentMultiplier value="0.092000"/>
+            <Colorize value="1"/>
+            <Param index="HDRExposure" value="1.850000"/>
+            <Param index="HDRBloomThreshold" value="1.350000"/>
+            <Param index="HDRWhitePoint" value="1.850000"/>
+            <Param index="HDRSpecMultiplier" value="0.430000"/>
+            <Param index="HDREmisMultiplier" value="2.330000"/>
+            <Param index="TerrainSpecularExp" value="11.210000"/>
+            <Param index="TerrainHDRSpecular" value="3.750000"/>
+            <Param index="CreepSpecularExp" value="30.000000"/>
+            <Param index="CreepHDRSpecMultiplier" value="3.000000"/>
+            <Param index="ColorizationInputLow" value="0.040000"/>
+            <Param index="ColorizationInputGamma" value="1.008000"/>
+            <Param index="ColorizationOutputLow" value="0.102000"/>
+            <Param index="ColorizationBrightness" value="1.111000"/>
+            <Param index="ColorizationContrast" value="1.169000"/>
+            <Param index="ColorizationHue" value="0.001000"/>
+            <Param index="ColorizationBlend" value="0.300000"/>
+            <Param index="ShadowPenumbraSize" value="0.115000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.976471,0.819608,0.682353"/>
+                <ColorMultiplier value="1.122000"/>
+                <SpecColorMultiplier value="0.507000"/>
+                <Direction value="0.740582,-0.061668,-0.669131"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.937255,0.474510,0.168627" ColorMultiplier="1.698000" Direction="-0.456221,-0.228160,0.860120"/>
+            <DirectionalLight index="Back" Color="0.537255,0.266667,0.000000" ColorMultiplier="1.820000" Direction="-0.644456,0.713233,0.275637"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
     </CLight>
     <CLight id="HydraliskPortrait" parent="default">
         <ToDInfoArray index="0" AmbientColor="0.113725,0.062745,0.000000">
@@ -1762,6 +1872,38 @@
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
     </CLight>
+    <CLight id="Observer_Purifier_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="ObserverPortrait" AmbientColor="0.188235,0.105882,0.000000">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <DirectionalLight index="Key">
+                <Color value="1.000000,0.878431,0.756863"/>
+                <ColorMultiplier value="1.500000"/>
+                <SpecularColor value="0.988235,0.666667,0.427451"/>
+                <SpecColorMultiplier value="2.265000"/>
+                <Direction value="0.654969,-0.084484,-0.750919"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.549020,0.627451,0.941176" ColorMultiplier="0.440000" Direction="-0.863642,0.414530,-0.286859"/>
+            <DirectionalLight index="Back" Color="0.988235,0.847059,0.654902" ColorMultiplier="2.210000" Direction="-0.485565,-0.756345,-0.438371"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
+    </CLight>
+    <CLight id="Phoenix_Purifier_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="PhoenixPortrait" AmbientColor="0.188235,0.105882,0.000000">
+            <Param index="HDRExposure" value="2.725000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <DirectionalLight index="Key">
+                <Color value="1.000000,0.792157,0.572549"/>
+                <ColorMultiplier value="1.500000"/>
+                <SpecularColor value="1.000000,0.909804,0.815686"/>
+                <SpecColorMultiplier value="2.512000"/>
+                <Direction value="0.693986,0.155379,-0.703023"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.184314,0.490196,1.000000" ColorMultiplier="0.440000" Direction="-0.863642,0.414530,-0.286859"/>
+            <DirectionalLight index="Back" Color="0.109804,0.600000,1.000000" ColorMultiplier="2.210000" Direction="-0.485565,-0.756345,-0.438371"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
+    </CLight>
     <CLight id="RTTChannel1HoloPortrait" parent="default">
         <ToDInfoArray index="0">
             <Id value="ZealotShakurasPortrait"/>
@@ -2439,6 +2581,33 @@
         </ToDInfoArray>
         <EditorCategories value="LightGroup:UI"/>
     </CLight>
+    <CLight id="WarChestSkinPreview_Purifier" parent="default">
+        <ToDInfoArray index="0">
+            <Id value="SkinPreview_Purifier"/>
+            <AmbientColor value="0.149020,0.141176,0.227451"/>
+            <AmbientEnvironmentMultiplier value="0.966000"/>
+            <OperatorHDR value="3"/>
+            <Param index="HDRExposure" value="1.475000"/>
+            <Param index="HDREmisMultiplier" value="2.850000"/>
+            <Param index="HDRGain" value="0.000000"/>
+            <Param index="HDRScale" value="0.000000"/>
+            <Param index="AOOcclusionRadius" value="1.000000"/>
+            <Param index="AONoOcclusion" value="0.900000"/>
+            <Param index="AOOcclusionPower" value="2.000000"/>
+            <Param index="AODetailOcclusionRadius" value="0.010000"/>
+            <Param index="AODetailNoOcclusion" value="0.060000"/>
+            <Param index="AODetailOcclusionPower" value="4.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.556863,0.800000,0.721569"/>
+                <ColorMultiplier value="15.849000"/>
+                <SpecColorMultiplier value="2.754000"/>
+                <Direction value="0.984501,-0.024576,0.173648"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.313726,0.827451,1.000000" ColorMultiplier="5.000000" Direction="-0.959487,-0.144424,-0.241922"/>
+            <DirectionalLight index="Back" Color="0.764706,0.670588,0.737255" ColorMultiplier="0.603000" Direction="0.079187,0.811983,-0.578285"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:UI"/>
+    </CLight>
     <CLight id="WarChestSkinPreview_Webby" parent="default">
         <ToDInfoArray index="0">
             <Id value="SkinPreview_Webby"/>
@@ -2466,9 +2635,63 @@
         </ToDInfoArray>
         <EditorCategories value="LightGroup:UI"/>
     </CLight>
+    <CLight id="WarChestSkinPreview_Primal" parent="default">
+        <ToDInfoArray index="0">
+            <Id value="SkinPreview_Primal"/>
+            <AmbientColor value="0.149020,0.141176,0.227451"/>
+            <AmbientEnvironmentMultiplier value="0.966000"/>
+            <OperatorHDR value="3"/>
+            <Param index="HDRExposure" value="1.475000"/>
+            <Param index="HDREmisMultiplier" value="2.850000"/>
+            <Param index="HDRGain" value="0.000000"/>
+            <Param index="HDRScale" value="0.000000"/>
+            <Param index="AOOcclusionRadius" value="1.000000"/>
+            <Param index="AONoOcclusion" value="0.900000"/>
+            <Param index="AOOcclusionPower" value="2.000000"/>
+            <Param index="AODetailOcclusionRadius" value="0.010000"/>
+            <Param index="AODetailNoOcclusion" value="0.060000"/>
+            <Param index="AODetailOcclusionPower" value="4.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.556863,0.800000,0.721569"/>
+                <ColorMultiplier value="19.275000"/>
+                <SpecColorMultiplier value="2.754000"/>
+                <Direction value="0.896884,0.390349,0.207912"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.317647,0.827451,1.000000" ColorMultiplier="7.499000" Direction="-0.843775,-0.523978,-0.116151"/>
+            <DirectionalLight index="Back" Color="0.764706,0.670588,0.737255" ColorMultiplier="0.603000" Direction="0.079187,0.811983,-0.578285"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:UI"/>
+    </CLight>
     <CLight id="WarChestSkinPreview_CovertOps" parent="default">
         <ToDInfoArray index="0">
             <Id value="SkinPreview_CovertOps"/>
+            <AmbientColor value="0.149020,0.141176,0.227451"/>
+            <AmbientEnvironmentMultiplier value="0.966000"/>
+            <OperatorHDR value="3"/>
+            <Param index="HDRExposure" value="1.475000"/>
+            <Param index="HDREmisMultiplier" value="2.850000"/>
+            <Param index="HDRGain" value="0.000000"/>
+            <Param index="HDRScale" value="0.000000"/>
+            <Param index="AOOcclusionRadius" value="1.000000"/>
+            <Param index="AONoOcclusion" value="0.900000"/>
+            <Param index="AOOcclusionPower" value="2.000000"/>
+            <Param index="AODetailOcclusionRadius" value="0.010000"/>
+            <Param index="AODetailNoOcclusion" value="0.060000"/>
+            <Param index="AODetailOcclusionPower" value="4.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.556863,0.800000,0.721569"/>
+                <ColorMultiplier value="19.275000"/>
+                <SpecColorMultiplier value="2.754000"/>
+                <Direction value="0.942957,0.035566,0.331009"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.313726,0.827451,1.000000" ColorMultiplier="5.000000" Direction="-0.954605,-0.000000,-0.297874"/>
+            <DirectionalLight index="Back" Color="0.764706,0.670588,0.737255" ColorMultiplier="0.603000" Direction="0.079187,0.811983,-0.578285"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:UI"/>
+    </CLight>
+    <CLight id="WarChestSkinPreview_Junker" parent="default">
+        <ToDInfoArray index="0">
+            <Id value="SkinPreview_Junker"/>
             <AmbientColor value="0.149020,0.141176,0.227451"/>
             <AmbientEnvironmentMultiplier value="0.966000"/>
             <OperatorHDR value="3"/>
@@ -2527,6 +2750,26 @@
             </DirectionalLight>
             <DirectionalLight index="Fill" Color="0.537255,0.858824,0.972549" ColorMultiplier="2.500000" Direction="-0.501172,-0.373154,0.780758"/>
             <DirectionalLight index="Back" Color="1.000000,0.819608,0.301961" ColorMultiplier="0.400000" Direction="0.300825,0.537162,0.788011"/>
+        </ToDInfoArray>
+    </CLight>
+    <CLight id="Stalker_Purifier_Collection_Portrait" parent="default">
+        <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
+        <ToDInfoArray index="0" Id="StalkerPortrait" AmbientColor="0.160784,0.007843,0.000000" Colorize="1">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="3.490000"/>
+            <Param index="ColorizationContrast" value="1.060000"/>
+            <Param index="ColorizationHue" value="0.080000"/>
+            <Param index="ColorizationSaturation" value="0.220000"/>
+            <Param index="ColorizationBlend" value="0.300000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.992157,0.701961,0.411765"/>
+                <ColorMultiplier value="2.851000"/>
+                <SpecColorMultiplier value="4.416000"/>
+                <Direction value="0.177139,-0.354201,-0.918239"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="1.000000,0.882353,0.800000" ColorMultiplier="1.318000" Direction="0.348039,0.773340,-0.529919"/>
+            <DirectionalLight index="Back" Color="0.211765,0.376471,0.937255" ColorMultiplier="0.631000" Direction="-0.975430,-0.220001,0.011693"/>
         </ToDInfoArray>
     </CLight>
     <CLight id="SymbiotePortrait" parent="default">
@@ -4603,6 +4846,22 @@
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
     </CLight>
+    <CLight id="WarpPrism_Purifier_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="WarpPrismPortrait" AmbientColor="0.176471,0.000000,0.094118">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="15.580000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.956863,0.827451,0.647059"/>
+                <ColorMultiplier value="1.350000"/>
+                <SpecColorMultiplier value="3.846000"/>
+                <Direction value="-0.085138,0.628041,-0.773509"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" ColorMultiplier="0.390000" Direction="-0.314456,0.917928,-0.241922"/>
+            <DirectionalLight index="Back" Color="0.439216,0.070588,0.003922" ColorMultiplier="0.500000" Direction="-0.738852,0.475064,-0.477925"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
+    </CLight>
     <CLight id="WidowMine_HornerHan_Portrait" parent="default">
         <ToDInfoArray index="0" Id="BelShir" AmbientColor="0.470588,0.494118,0.305882" Colorize="1">
             <Param index="HDRExposure" value="1.500000"/>
@@ -5784,6 +6043,38 @@
             <DirectionalLight index="Key" ColorMultiplier="3.055000" SpecColorMultiplier="0.490000"/>
         </ToDInfoArray>
     </CLight>
+    <CLight id="OraclePurifierPortrait">
+        <ToDInfoArray index="0">
+            <Id value="OraclePurifierPortrait"/>
+            <AmbientColor value="0.160784,0.007843,0.000000"/>
+            <OperatorHDR value="1"/>
+            <Colorize value="1"/>
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="3.490000"/>
+            <Param index="HDRGain" value="1.000000"/>
+            <Param index="HDRScale" value="1.000000"/>
+            <Param index="ColorizationContrast" value="1.060000"/>
+            <Param index="ColorizationHue" value="0.080000"/>
+            <Param index="ColorizationSaturation" value="0.220000"/>
+            <Param index="ColorizationBlend" value="0.300000"/>
+            <Param index="AOOcclusionRadius" value="0.100000"/>
+            <Param index="AONoOcclusion" value="0.020000"/>
+            <Param index="AOOcclusionPower" value="1.970000"/>
+            <Param index="AODetailOcclusionRadius" value="0.023000"/>
+            <Param index="AODetailNoOcclusion" value="0.015000"/>
+            <Param index="AODetailOcclusionPower" value="3.610000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.992157,0.701961,0.411765"/>
+                <ColorMultiplier value="3.508000"/>
+                <SpecColorMultiplier value="1.841000"/>
+                <Direction value="-0.942446,0.333552,-0.023211"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="1.000000,0.882353,0.800000" ColorMultiplier="2.065000" Direction="0.521373,0.750157,0.406737"/>
+            <DirectionalLight index="Back" Color="0.211765,0.376471,0.937255" ColorMultiplier="1.259000" Direction="-0.121666,-0.453432,-0.882948"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
+    </CLight>
     <CLight id="SwarmHostSpawnPortrait" parent="default">
         <ToDInfoArray index="0" AmbientColor="0.164706,0.494118,0.207843" Colorize="1">
             <Param index="HDRExposure" value="1.480000"/>
@@ -5825,6 +6116,26 @@
                 <Direction value="0.798895,-0.599174,0.052510"/>
             </DirectionalLight>
             <DirectionalLight index="Back" Color="0.521569,0.803922,1.000000" ColorMultiplier="0.851000" Direction="-0.880286,-0.460007,-0.116151"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
+    </CLight>
+    <CLight id="Tempest_Purifier_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="Tempest_Purifier_Collection_Portrait" AmbientColor="0.160784,0.007843,0.000000" Colorize="1">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="3.490000"/>
+            <Param index="ColorizationContrast" value="1.060000"/>
+            <Param index="ColorizationHue" value="0.080000"/>
+            <Param index="ColorizationSaturation" value="0.220000"/>
+            <Param index="ColorizationBlend" value="0.300000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.992157,0.701961,0.411765"/>
+                <ColorMultiplier value="4.027000"/>
+                <SpecColorMultiplier value="4.416000"/>
+                <Direction value="0.918570,0.283291,0.275637"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="1.000000,0.882353,0.800000" ColorMultiplier="2.065000" Direction="-0.621350,0.733449,-0.275638"/>
+            <DirectionalLight index="Back" Color="0.211765,0.376471,0.937255" ColorMultiplier="1.259000" Direction="-0.675125,-0.551601,-0.489839"/>
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
     </CLight>
@@ -5986,6 +6297,20 @@
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsTerran"/>
     </CLight>
+    <CLight id="Banshee_Junker_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="Banshee_Junker_Collection_Portrait" AmbientColor="0.200000,0.184314,0.282353" OperatorHDR="3">
+            <Param index="HDRExposure" value="1.475000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.992157,0.847059,0.650980"/>
+                <ColorMultiplier value="1.000000"/>
+                <SpecColorMultiplier value="1.000000"/>
+                <Direction value="0.113580,0.702039,-0.703023"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.980392,0.752941,0.337255" ColorMultiplier="1.972000" Direction="0.820169,-0.295602,-0.489839"/>
+            <DirectionalLight index="Back" Color="1.000000,0.725490,0.309804" ColorMultiplier="0.327000" Direction="-0.366314,0.930418,-0.011694"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsTerran"/>
+    </CLight>
     <CLight id="BattleCruiser_Merc_Collection_Portrait" parent="default">
         <ToDInfoArray index="0" AmbientColor="0.031373,0.180392,0.000000" DirectionalLightShadows="0" Colorize="1">
             <Param index="HDRExposure" value="1.500000"/>
@@ -6096,6 +6421,25 @@
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
     </CLight>
+    <CLight id="Colossus_Purifier_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="ImmortalPortrait" AmbientColor="0.094118,0.007843,0.101961">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDREmisMultiplier" value="2.000000"/>
+            <Param index="CreepSpecularExp" value="40.000000"/>
+            <Param index="CreepHDRSpecMultiplier" value="5.900000"/>
+            <DirectionalLight index="Key">
+                <Color value="1.000000,0.964706,0.831373"/>
+                <ColorMultiplier value="1.972000"/>
+                <SpecularColor value="0.882353,0.847059,0.803922"/>
+                <SpecColorMultiplier value="1.259000"/>
+                <Direction value="0.154757,0.475447,-0.866026"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.901961,0.921569,1.000000" ColorMultiplier="2.750000" Direction="-0.051128,-0.177953,0.982710"/>
+            <DirectionalLight index="Back" Color="0.803922,0.584314,0.364706" ColorMultiplier="0.507000" Direction="-0.954532,-0.011829,0.297875"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
+    </CLight>
     <CLight id="Corruptor_Webby_Collection_Portrait" parent="default">
         <ToDInfoArray index="0" Id="CorruptorPortrait" AmbientColor="0.968627,0.674510,0.968627">
             <Param index="HDRExposure" value="1.100000"/>
@@ -6148,6 +6492,33 @@
             </DirectionalLight>
             <DirectionalLight index="Fill" Color="0.313726,0.756863,1.000000" ColorMultiplier="0.933000" Direction="0.719340,0.000000,-0.694659"/>
             <DirectionalLight index="Back" Color="0.313726,0.874510,0.992157" ColorMultiplier="2.786000" Direction="-0.880461,-0.152715,0.448851"/>
+        </ToDInfoArray>
+    </CLight>
+    <CLight id="Cyclone_Junker_Collection_Portrait">
+        <EditorCategories value="LightGroup:PortraitsUnitsTerran"/>
+        <ToDInfoArray index="0" Id="Cyclone_Junker_Collection_Portrait" AmbientColor="0.227451,0.137255,0.156863" OperatorHDR="1">
+            <Param index="HDRExposure" value="1.600000"/>
+            <Param index="HDRBloomThreshold" value="1.500000"/>
+            <Param index="HDREmisMultiplier" value="2.000000"/>
+            <Param index="HDRGain" value="1.000000"/>
+            <Param index="HDRScale" value="1.000000"/>
+            <Param index="CreepSpecularExp" value="40.000000"/>
+            <Param index="CreepHDRSpecMultiplier" value="5.900000"/>
+            <Param index="AOOcclusionRadius" value="0.100000"/>
+            <Param index="AONoOcclusion" value="0.020000"/>
+            <Param index="AOOcclusionPower" value="1.970000"/>
+            <Param index="AODetailOcclusionRadius" value="0.023000"/>
+            <Param index="AODetailNoOcclusion" value="0.015000"/>
+            <Param index="AODetailOcclusionPower" value="3.610000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.992157,0.866667,0.784314"/>
+                <ColorMultiplier value="1.120000"/>
+                <SpecularColor value="0.792157,0.956863,0.992157"/>
+                <SpecColorMultiplier value="1.161000"/>
+                <Direction value="-0.106552,0.596970,0.795156"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.203922,0.894118,0.105882" ColorMultiplier="0.519000" Direction="0.010426,-0.711091,0.703022"/>
+            <DirectionalLight index="Back" Color="0.803922,0.200000,0.184314" ColorMultiplier="1.445000" Direction="0.547148,-0.576977,-0.606405"/>
         </ToDInfoArray>
     </CLight>
     <CLight id="DarkTemplar_Taldarim_Collection_Portrait" parent="default">
@@ -6515,6 +6886,29 @@
             <DirectionalLight index="Back" Color="0.376471,0.886275,0.929412" ColorMultiplier="0.813000" Direction="0.169392,0.776904,0.606405"/>
         </ToDInfoArray>
     </CLight>
+    <CLight id="Liberator_Junker_Collection_Portrait">
+        <EditorCategories value="LightGroup:PortraitsUnitsTerran"/>
+        <ToDInfoArray index="0" Id="Liberator_Junker_Collection_Portrait" AmbientColor="0.176471,0.000000,0.094118" OperatorHDR="1">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRGain" value="1.000000"/>
+            <Param index="HDRScale" value="1.000000"/>
+            <Param index="AOOcclusionRadius" value="0.100000"/>
+            <Param index="AONoOcclusion" value="0.020000"/>
+            <Param index="AOOcclusionPower" value="1.970000"/>
+            <Param index="AODetailOcclusionRadius" value="0.023000"/>
+            <Param index="AODetailNoOcclusion" value="0.015000"/>
+            <Param index="AODetailOcclusionPower" value="3.610000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.956863,0.827451,0.647059"/>
+                <ColorMultiplier value="1.350000"/>
+                <SpecColorMultiplier value="2.818000"/>
+                <Direction value="-0.164596,0.648571,0.743145"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.992157,0.921569,0.666667" ColorMultiplier="0.390000" Direction="0.249879,0.901644,-0.352985"/>
+            <DirectionalLight index="Back" Color="0.439216,0.066667,0.003922" ColorMultiplier="0.500000" Direction="0.851406,0.523993,0.023211"/>
+        </ToDInfoArray>
+    </CLight>
     <CLight id="Locust_Webby_Collection_Portrait" parent="default">
         <ToDInfoArray index="0" Id="ViperPortrait" AmbientColor="0.231373,0.176471,0.235294" OperatorHDR="3">
             <Param index="HDRExposure" value="1.475000"/>
@@ -6626,6 +7020,32 @@
             <DirectionalLight index="Back" Color="0.082353,0.121569,0.200000" ColorMultiplier="3.055000" Direction="-0.453587,0.598446,-0.660395"/>
         </ToDInfoArray>
     </CLight>
+    <CLight id="Marauder_Junker_Collection_Portrait">
+        <EditorCategories value="LightGroup:PortraitsUnitsTerran"/>
+        <ToDInfoArray index="0" Id="Marauder_Junker_Collection_Portrait" AmbientColor="0.219608,0.137255,0.129412" OperatorHDR="1">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="0.540000"/>
+            <Param index="HDREmisMultiplier" value="1.900000"/>
+            <Param index="HDRGain" value="1.000000"/>
+            <Param index="HDRScale" value="1.000000"/>
+            <Param index="CreepSpecularExp" value="40.000000"/>
+            <Param index="AOOcclusionRadius" value="0.100000"/>
+            <Param index="AONoOcclusion" value="0.020000"/>
+            <Param index="AOOcclusionPower" value="1.970000"/>
+            <Param index="AODetailOcclusionRadius" value="0.023000"/>
+            <Param index="AODetailNoOcclusion" value="0.015000"/>
+            <Param index="AODetailOcclusionPower" value="3.610000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.984314,0.937255,0.776471"/>
+                <ColorMultiplier value="1.148000"/>
+                <SpecColorMultiplier value="1.679000"/>
+                <Direction value="0.632074,0.659581,-0.406736"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.000000,0.501961,1.000000" ColorMultiplier="0.335000" Direction="-0.839889,-0.446201,-0.309017"/>
+            <DirectionalLight index="Back" Color="0.501961,0.247059,0.247059" ColorMultiplier="0.245000" Direction="0.010646,0.677691,0.735270"/>
+        </ToDInfoArray>
+    </CLight>
     <CLight id="Marine_Merc_Collection_Portrait" parent="default">
         <ToDInfoArray index="0" AmbientColor="0.039216,0.266667,0.345098" DirectionalLightShadows="0" Colorize="1">
             <Param index="HDRExposure" value="1.500000"/>
@@ -6692,6 +7112,33 @@
             </DirectionalLight>
             <DirectionalLight index="Fill" Color="0.600000,0.600000,0.674510" ColorMultiplier="8.414000" Direction="-0.811514,-0.536925,-0.230559"/>
             <DirectionalLight index="Back" Color="0.082353,0.121569,0.200000" ColorMultiplier="3.055000" Direction="0.618004,-0.335130,0.711168"/>
+        </ToDInfoArray>
+    </CLight>
+    <CLight id="Marine_Junker_Collection_Portrait">
+        <EditorCategories value="LightGroup:PortraitsUnitsTerran"/>
+        <ToDInfoArray index="0" Id="Marine_Junker_Collection_Portrait" AmbientColor="0.219608,0.137255,0.129412" OperatorHDR="1">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="0.540000"/>
+            <Param index="HDREmisMultiplier" value="1.900000"/>
+            <Param index="HDRGain" value="1.000000"/>
+            <Param index="HDRScale" value="1.000000"/>
+            <Param index="CreepSpecularExp" value="40.000000"/>
+            <Param index="AOOcclusionRadius" value="0.100000"/>
+            <Param index="AONoOcclusion" value="0.020000"/>
+            <Param index="AOOcclusionPower" value="1.970000"/>
+            <Param index="AODetailOcclusionRadius" value="0.023000"/>
+            <Param index="AODetailNoOcclusion" value="0.015000"/>
+            <Param index="AODetailOcclusionPower" value="3.610000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.984314,0.937255,0.776471"/>
+                <ColorMultiplier value="0.920000"/>
+                <SpecularColor value="0.988235,0.756863,0.552941"/>
+                <SpecColorMultiplier value="6.310000"/>
+                <Direction value="0.417239,-0.011290,-0.908727"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.000000,0.501961,1.000000" ColorMultiplier="0.335000" Direction="-0.498926,-0.206050,-0.841794"/>
+            <DirectionalLight index="Back" Color="0.501961,0.247059,0.247059" ColorMultiplier="0.977000" Direction="-0.050440,0.786395,-0.615661"/>
         </ToDInfoArray>
     </CLight>
     <CLight id="Medivac_Merc_Collection_Portrait" parent="default">
@@ -6765,6 +7212,35 @@
             <DirectionalLight index="Back" Color="0.231373,0.564706,0.976471" ColorMultiplier="0.841000" Direction="0.903667,-0.018614,0.427831"/>
         </ToDInfoArray>
     </CLight>
+    <CLight id="Medivac_Junker_Collection_Portrait">
+        <EditorCategories value="LightGroup:PortraitsUnitsTerran"/>
+        <ToDInfoArray index="0" Id="Medivac_Junker_Collection_Portrait" AmbientColor="0.180392,0.058824,0.074510" OperatorHDR="1">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRGain" value="1.000000"/>
+            <Param index="HDRScale" value="1.000000"/>
+            <Param index="AOOcclusionRadius" value="0.100000"/>
+            <Param index="AONoOcclusion" value="0.020000"/>
+            <Param index="AOOcclusionPower" value="1.970000"/>
+            <Param index="AODetailOcclusionRadius" value="0.023000"/>
+            <Param index="AODetailNoOcclusion" value="0.015000"/>
+            <Param index="AODetailOcclusionPower" value="3.610000"/>
+            <DirectionalLight index="Key">
+                <Color value="1.000000,0.800000,0.501961"/>
+                <ColorMultiplier value="3.758000"/>
+                <SpecularColor value="1.000000,0.886275,0.701961"/>
+                <SpecColorMultiplier value="0.676000"/>
+                <Direction value="0.307226,-0.797024,-0.519966"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill">
+                <Color value="1.000000,0.501961,0.000000"/>
+                <ColorMultiplier value="0.813000"/>
+                <SpecColorMultiplier value="108.389999"/>
+                <Direction value="0.205257,0.697854,0.686199"/>
+            </DirectionalLight>
+            <DirectionalLight index="Back" Color="0.000000,0.000000,0.627451" ColorMultiplier="0.367000" Direction="0.478128,0.692828,0.539800"/>
+        </ToDInfoArray>
+    </CLight>
     <CLight id="Mothership_Taldarim_Collection_Portrait" parent="default">
         <ToDInfoArray index="0">
             <Id value="MothershipTaldarimCollectionPortrait"/>
@@ -6790,6 +7266,21 @@
             </DirectionalLight>
             <DirectionalLight index="Fill" Color="0.411765,0.411765,0.470588" ColorMultiplier="4.074000" Direction="0.600647,0.252859,0.758476"/>
             <DirectionalLight index="Back" Color="0.623529,0.301961,0.301961" ColorMultiplier="4.074000" Direction="-0.668793,-0.021251,0.743145"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
+    </CLight>
+    <CLight id="Mothership_Purifier_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="BelShir" AmbientColor="0.160784,0.007843,0.000000" Colorize="1">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="3.490000"/>
+            <Param index="ColorizationContrast" value="1.060000"/>
+            <Param index="ColorizationHue" value="0.080000"/>
+            <Param index="ColorizationSaturation" value="0.220000"/>
+            <Param index="ColorizationBlend" value="0.300000"/>
+            <DirectionalLight index="Key" ColorMultiplier="1.202000" SpecColorMultiplier="0.977000" Direction="-0.535773,0.615251,0.578285"/>
+            <DirectionalLight index="Fill" Color="1.000000,0.882353,0.800000" ColorMultiplier="1.318000" Direction="0.766773,0.402565,-0.500000"/>
+            <DirectionalLight index="Back" Color="0.211765,0.376471,0.937255" ColorMultiplier="0.631000" Direction="-0.450454,0.885212,0.116151"/>
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
     </CLight>
@@ -6881,6 +7372,28 @@
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
     </CLight>
+    <CLight id="Queen_Primal_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="ZergBuilding" AmbientColor="0.470588,0.494118,0.305882" Colorize="1">
+            <Param index="HDRExposure" value="1.500000"/>
+            <Param index="HDRWhitePoint" value="1.850000"/>
+            <Param index="TerrainSpecularExp" value="11.210000"/>
+            <Param index="TerrainHDRSpecular" value="3.750000"/>
+            <Param index="CreepSpecularExp" value="30.000000"/>
+            <Param index="CreepHDRSpecMultiplier" value="3.000000"/>
+            <Param index="ColorizationContrast" value="1.066000"/>
+            <Param index="ColorizationHue" value="0.001000"/>
+            <Param index="ColorizationBlend" value="0.300000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.937255,0.933333,0.811765"/>
+                <ColorMultiplier value="1.080000"/>
+                <SpecColorMultiplier value="1.250000"/>
+                <Direction value="0.724693,-0.124265,-0.677775"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.211765,0.529412,0.529412" ColorMultiplier="1.500000" Direction="-0.463854,-0.769851,0.438371"/>
+            <DirectionalLight index="Back" Color="0.082353,0.121569,0.200000" ColorMultiplier="1.400000" Direction="-0.668793,-0.021251,0.743145"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
+    </CLight>
     <CLight id="Ravager_Webby_Collection_Portrait" parent="default">
         <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
         <ToDInfoArray index="0" Id="MothershipCorePortrait" AmbientColor="0.180392,0.058824,0.074510">
@@ -6900,6 +7413,23 @@
                 <Direction value="-0.890521,0.445357,0.092892"/>
             </DirectionalLight>
             <DirectionalLight index="Back" Color="0.000000,0.000000,0.627451" ColorMultiplier="0.422000" Direction="0.010376,0.743072,0.669131"/>
+        </ToDInfoArray>
+    </CLight>
+    <CLight id="Ravager_Primal_Collection_Portrait" parent="default">
+        <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
+        <ToDInfoArray index="0" Id="ZerglingPortrait" AmbientColor="0.243137,0.129412,0.000000">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDREmisMultiplier" value="3.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.819608,0.996078,0.772549"/>
+                <ColorMultiplier value="1.380000"/>
+                <SpecularColor value="0.643137,0.996078,0.913725"/>
+                <SpecColorMultiplier value="4.416000"/>
+                <Direction value="0.385534,0.363563,-0.848048"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="1.000000,0.501961,0.000000" ColorMultiplier="2.541000" Direction="-0.479392,-0.873816,-0.081417"/>
+            <DirectionalLight index="Back" Color="0.066667,0.933333,0.607843" ColorMultiplier="0.589000" Direction="-0.214850,0.800714,0.559193"/>
         </ToDInfoArray>
     </CLight>
     <CLight id="RavagerPortrait" parent="default">
@@ -7126,6 +7656,28 @@
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
     </CLight>
+    <CLight id="SiegeTank_Junker_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="BelShir" AmbientColor="0.341176,0.207843,0.058824" Colorize="1">
+            <Param index="HDRExposure" value="1.500000"/>
+            <Param index="HDRWhitePoint" value="1.850000"/>
+            <Param index="TerrainSpecularExp" value="11.210000"/>
+            <Param index="TerrainHDRSpecular" value="3.750000"/>
+            <Param index="CreepSpecularExp" value="30.000000"/>
+            <Param index="CreepHDRSpecMultiplier" value="3.000000"/>
+            <Param index="ColorizationContrast" value="1.066000"/>
+            <Param index="ColorizationHue" value="0.001000"/>
+            <Param index="ColorizationBlend" value="0.300000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.843137,0.992157,0.984314"/>
+                <ColorMultiplier value="0.385000"/>
+                <SpecColorMultiplier value="0.019000"/>
+                <Direction value="0.105648,0.634046,-0.766044"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="1.000000,0.501961,0.000000" ColorMultiplier="1.500000" Direction="-0.463854,-0.769851,0.438371"/>
+            <DirectionalLight index="Back" Color="0.000000,0.250980,0.501961" ColorMultiplier="4.842000" Direction="0.760324,-0.276435,-0.587785"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsTerran"/>
+    </CLight>
     <CLight id="SiegeTank_Commando_Collection_Portrait" parent="default">
         <ToDInfoArray index="0" Id="SiegeTank_Commando_Collection_Portrait" AmbientColor="0.301961,0.094118,0.007843" Colorize="1">
             <Param index="HDRExposure" value="1.480000"/>
@@ -7255,6 +7807,29 @@
             <DirectionalLight index="Back" Color="1.000000,0.843137,0.725490" ColorMultiplier="0.153000" Direction="-0.809238,0.492605,0.320117"/>
         </ToDInfoArray>
     </CLight>
+    <CLight id="Thor_Junker_Collection_Portrait">
+        <EditorCategories value="LightGroup:PortraitsUnitsTerran"/>
+        <ToDInfoArray index="0" Id="Thor_Junker_Collection_Portrait" AmbientColor="0.176471,0.000000,0.094118" OperatorHDR="1">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRGain" value="1.000000"/>
+            <Param index="HDRScale" value="1.000000"/>
+            <Param index="AOOcclusionRadius" value="0.100000"/>
+            <Param index="AONoOcclusion" value="0.020000"/>
+            <Param index="AOOcclusionPower" value="1.970000"/>
+            <Param index="AODetailOcclusionRadius" value="0.023000"/>
+            <Param index="AODetailNoOcclusion" value="0.015000"/>
+            <Param index="AODetailOcclusionPower" value="3.610000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.956863,0.827451,0.647059"/>
+                <ColorMultiplier value="1.350000"/>
+                <SpecColorMultiplier value="1.202000"/>
+                <Direction value="-0.258168,0.314299,-0.913545"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.992157,0.921569,0.666667" ColorMultiplier="0.390000" Direction="-0.314456,0.917928,-0.241922"/>
+            <DirectionalLight index="Back" Color="0.439216,0.070588,0.003922" ColorMultiplier="0.500000" Direction="-0.738852,0.475064,-0.477925"/>
+        </ToDInfoArray>
+    </CLight>
     <CLight id="Ultralisk_Webby_Collection_Portrait" parent="default">
         <ToDInfoArray index="0" Id="LarvaPortrait" AmbientColor="0.219608,0.137255,0.129412">
             <Param index="HDRExposure" value="1.480000"/>
@@ -7332,6 +7907,20 @@
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
     </CLight>
+    <CLight id="Viper_Primal_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="ViperPortrait" AmbientColor="0.231373,0.176471,0.235294" OperatorHDR="3">
+            <Param index="HDRExposure" value="1.475000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.862745,0.670588,0.980392"/>
+                <ColorMultiplier value="1.000000"/>
+                <SpecColorMultiplier value="3.126000"/>
+                <Direction value="-0.295795,0.887641,-0.352985"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.000000,0.509804,1.000000" ColorMultiplier="2.018000" Direction="0.801560,-0.597464,0.023211"/>
+            <DirectionalLight index="Back" Color="1.000000,0.839216,0.658824" ColorMultiplier="0.260000" Direction="0.560535,0.788457,-0.253252"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
+    </CLight>
     <CLight id="VoidRay_Taldarim_Collection_Portrait" parent="default">
         <ToDInfoArray index="0" Id="VoidRayTaldarimCollectionPortrait" AmbientColor="0.337255,0.105882,0.043137">
             <Param index="HDRExposure" value="1.480000"/>
@@ -7345,6 +7934,26 @@
             </DirectionalLight>
             <DirectionalLight index="Fill" Color="1.000000,0.737255,0.501961" ColorMultiplier="0.646000" Direction="0.406722,0.552673,0.727413"/>
             <DirectionalLight index="Back" Color="1.000000,0.501961,0.250980" ColorMultiplier="2.089000" Direction="0.385175,-0.679134,-0.624834"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
+    </CLight>
+    <CLight id="VoidRay_Purifier_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="StalkerPortrait" AmbientColor="0.160784,0.007843,0.000000" Colorize="1">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="3.490000"/>
+            <Param index="ColorizationContrast" value="1.060000"/>
+            <Param index="ColorizationHue" value="0.080000"/>
+            <Param index="ColorizationSaturation" value="0.220000"/>
+            <Param index="ColorizationBlend" value="0.300000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.992157,0.701961,0.411765"/>
+                <ColorMultiplier value="6.607000"/>
+                <SpecColorMultiplier value="1.035000"/>
+                <Direction value="-0.355949,0.255870,0.898794"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="1.000000,0.882353,0.800000" ColorMultiplier="1.318000" Direction="0.700629,0.404509,-0.587785"/>
+            <DirectionalLight index="Back" Color="0.211765,0.376471,0.937255" ColorMultiplier="0.631000" Direction="-0.877189,0.019140,-0.479764"/>
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsProtoss"/>
     </CLight>
@@ -7448,5 +8057,160 @@
             <DirectionalLight index="Back" Color="0.501961,0.247059,0.247059" ColorMultiplier="3.055000" Direction="-0.819056,-0.128260,0.559193"/>
         </ToDInfoArray>
         <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
+    </CLight>
+    <CLight id="Corruptor_Primal_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="Corruptor_Primal_Collection_Portrait" AmbientColor="0.219608,0.137255,0.129412">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="0.540000"/>
+            <Param index="HDREmisMultiplier" value="1.900000"/>
+            <Param index="CreepSpecularExp" value="40.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.556863,0.929412,0.647059"/>
+                <ColorMultiplier value="1.189000"/>
+                <SpecularColor value="1.000000,0.929412,0.784314"/>
+                <SpecColorMultiplier value="2.985000"/>
+                <Direction value="0.672465,0.588492,-0.448851"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.003922,0.992157,0.701961" ColorMultiplier="0.335000" Direction="-0.773588,-0.533463,-0.342020"/>
+            <DirectionalLight index="Back" Color="0.121569,0.619608,0.376471" ColorMultiplier="0.141000" Direction="-0.752481,0.428686,0.500000"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
+    </CLight>
+    <CLight id="Broodlord_Primal_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="Broodlord_Primal_Collection_Portrait" AmbientColor="0.219608,0.137255,0.129412">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="0.540000"/>
+            <Param index="HDREmisMultiplier" value="1.900000"/>
+            <Param index="CreepSpecularExp" value="40.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.756863,0.984314,0.666667"/>
+                <ColorMultiplier value="1.303000"/>
+                <SpecularColor value="1.000000,0.929412,0.784314"/>
+                <SpecColorMultiplier value="2.985000"/>
+                <Direction value="0.140898,0.775312,-0.615661"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.003922,0.996078,0.701961" ColorMultiplier="0.335000" Direction="-0.691290,-0.549286,-0.469472"/>
+            <DirectionalLight index="Back" Color="0.125490,0.623529,0.376471" ColorMultiplier="0.141000" Direction="-0.528904,0.380756,0.758476"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
+    </CLight>
+    <CLight id="Infestor_Primal_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="Infestor_Primal_Collection_Portrait" AmbientColor="0.219608,0.137255,0.129412">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="0.540000"/>
+            <Param index="HDREmisMultiplier" value="1.900000"/>
+            <Param index="CreepSpecularExp" value="40.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.639216,0.870588,0.847059"/>
+                <ColorMultiplier value="2.018000"/>
+                <SpecularColor value="1.000000,0.929412,0.784314"/>
+                <SpecColorMultiplier value="2.985000"/>
+                <Direction value="-0.072180,0.987634,-0.139173"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.200000,0.800000,0.501961" ColorMultiplier="0.335000" Direction="-0.569173,0.761939,-0.309017"/>
+            <DirectionalLight index="Back" Color="0.235294,0.509804,0.356863" ColorMultiplier="0.141000" Direction="-0.665760,-0.737070,0.116151"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
+    </CLight>
+    <CLight id="Overlord_Primal_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="Overlord_Primal_Collection_Portrait" AmbientColor="0.219608,0.137255,0.129412">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="0.540000"/>
+            <Param index="HDREmisMultiplier" value="1.900000"/>
+            <Param index="CreepSpecularExp" value="40.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.560784,0.803922,0.623529"/>
+                <ColorMultiplier value="1.641000"/>
+                <SpecularColor value="1.000000,0.929412,0.784314"/>
+                <SpecColorMultiplier value="2.985000"/>
+                <Direction value="0.825566,0.313109,-0.469472"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.200000,0.800000,0.501961" ColorMultiplier="0.335000" Direction="-0.786514,0.521372,-0.331008"/>
+            <DirectionalLight index="Back" Color="0.250980,0.490196,0.345098" ColorMultiplier="0.141000" Direction="-0.521373,-0.786514,0.331009"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
+    </CLight>
+    <CLight id="Overseer_Primal_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="Overseer_Primal_Collection_Portrait" AmbientColor="0.219608,0.137255,0.129412">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="0.540000"/>
+            <Param index="HDREmisMultiplier" value="1.900000"/>
+            <Param index="CreepSpecularExp" value="40.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.709804,0.874510,0.482353"/>
+                <ColorMultiplier value="2.188000"/>
+                <SpecularColor value="1.000000,0.929412,0.784314"/>
+                <SpecColorMultiplier value="2.985000"/>
+                <Direction value="-0.258040,0.907661,-0.331008"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.403922,0.737255,0.262745" ColorMultiplier="0.912000" Direction="-0.479612,0.808081,-0.342020"/>
+            <DirectionalLight index="Back" Color="0.333333,0.494118,0.239216" ColorMultiplier="0.750000" Direction="0.854715,-0.484954,0.185152"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
+    </CLight>
+    <CLight id="Symbiote_Primal_Collection_Portrait" parent="default">
+        <ToDInfoArray index="0" Id="Symbiote_Primal_Collection_Portrait" AmbientColor="0.219608,0.137255,0.129412">
+            <Param index="HDRExposure" value="1.480000"/>
+            <Param index="HDRBloomThreshold" value="1.950000"/>
+            <Param index="HDRSpecMultiplier" value="0.540000"/>
+            <Param index="HDREmisMultiplier" value="1.900000"/>
+            <Param index="CreepSpecularExp" value="40.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.729412,0.811765,0.541176"/>
+                <ColorMultiplier value="1.603000"/>
+                <SpecularColor value="1.000000,0.929412,0.784314"/>
+                <SpecColorMultiplier value="9.120000"/>
+                <Direction value="-0.516386,0.836101,-0.185153"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="0.466667,0.666667,0.329412" ColorMultiplier="0.708000" Direction="-0.579753,0.781492,-0.230559"/>
+            <DirectionalLight index="Back" Color="0.329412,0.494118,0.239216" ColorMultiplier="1.047000" Direction="0.854715,-0.484954,0.185152"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:PortraitsUnitsZerg"/>
+    </CLight>
+    <CLight id="MainMenuReBrand" parent="default">
+        <ToDInfoArray index="0">
+            <Id value="MainMenuReBrand"/>
+            <AmbientColor value="0.243137,0.133333,0.000000"/>
+            <OperatorHDR value="4"/>
+            <DirectionalLightShadows value="0"/>
+            <Colorize value="1"/>
+            <Param index="HDRExposure" value="1.000000"/>
+            <Param index="HDRWhitePoint" value="1.850000"/>
+            <Param index="TerrainSpecularExp" value="11.210000"/>
+            <Param index="TerrainHDRSpecular" value="3.750000"/>
+            <Param index="CreepSpecularExp" value="30.000000"/>
+            <Param index="CreepHDRSpecMultiplier" value="3.000000"/>
+            <Param index="ColorizationInputLow" value="0.046000"/>
+            <Param index="ColorizationInputHigh" value="0.919000"/>
+            <Param index="ColorizationHue" value="-0.338000"/>
+            <Param index="ColorizationSaturation" value="0.258000"/>
+            <Param index="ColorizationBlend" value="0.194000"/>
+            <DirectionalLight index="Key" ColorMultiplier="0.000000" SpecColorMultiplier="0.507000" Direction="0.859625,-0.105092,-0.500000"/>
+            <DirectionalLight index="Fill" Color="1.000000,1.000000,1.000000" ColorMultiplier="0.000000" Direction="0.768174,0.503062,0.396026"/>
+            <DirectionalLight index="Back" Color="0.082353,0.121569,0.200000" ColorMultiplier="0.000000" Direction="-0.668793,-0.021251,0.743145"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:UI"/>
+    </CLight>
+    <CLight id="MainMenuReBrand_Low" parent="default">
+        <ToDInfoArray index="0" Id="MainMenuReBrand_Low" AmbientColor="0.000000,0.000000,0.000000">
+            <Param index="HDRExposure" value="1.000000"/>
+            <Param index="HDRGain" value="0.000000"/>
+            <Param index="HDRScale" value="0.000000"/>
+            <DirectionalLight index="Key">
+                <Color value="0.854902,0.941177,1.000000"/>
+                <ColorMultiplier value="0.000000"/>
+                <SpecularColor value="1.000000,0.803922,0.619608"/>
+                <SpecColorMultiplier value="0.000000"/>
+                <Direction value="0.130342,0.961501,0.241922"/>
+            </DirectionalLight>
+            <DirectionalLight index="Fill" Color="1.000000,0.784314,0.521569" ColorMultiplier="0.000000" Direction="-0.677058,-0.724786,-0.127584"/>
+            <DirectionalLight index="Back" Color="1.000000,0.784314,0.521569" ColorMultiplier="0.000000" Direction="0.692220,-0.700484,-0.173648"/>
+        </ToDInfoArray>
+        <EditorCategories value="LightGroup:UI"/>
     </CLight>
 </Catalog>

@@ -72,20 +72,30 @@
     </CUpgrade>
     <CUpgrade id="ProtossShieldsLevel1">
         <AffectedUnitArray value="PylonOvercharged"/>
+        <AffectedUnitArray value="ShieldBattery"/>
         <EffectArray Reference="Unit,PylonOvercharged,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,PylonOvercharged,ShieldArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,ShieldBattery,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Unit,ShieldBattery,ShieldArmorLevel" Value="1"/>
+        <EffectArray Operation="Set" Reference="Unit,ShieldBattery,ShieldArmor" Value="1"/>
         <!--EffectArray Operation="Set" Reference="Actor,PylonOvercharged,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/-->
     </CUpgrade>
     <CUpgrade id="ProtossShieldsLevel2">
         <AffectedUnitArray value="PylonOvercharged"/>
         <EffectArray Reference="Unit,PylonOvercharged,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,PylonOvercharged,ShieldArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Actor,ShieldBattery,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Unit,ShieldBattery,ShieldArmorLevel" Value="2"/>
+        <EffectArray Operation="Set" Reference="Unit,ShieldBattery,ShieldArmor" Value="2"/>
         <!--EffectArray Operation="Set" Reference="Actor,PylonOvercharged,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/-->
     </CUpgrade>
     <CUpgrade id="ProtossShieldsLevel3">
         <AffectedUnitArray value="PylonOvercharged"/>
         <EffectArray Reference="Unit,PylonOvercharged,ShieldArmorLevel" Value="1"/>
         <EffectArray Reference="Unit,PylonOvercharged,ShieldArmor" Value="1"/>
+        <EffectArray Operation="Set" Reference="Unit,ShieldBattery,ShieldArmorLevel" Value="3"/>
+        <EffectArray Operation="Set" Reference="Unit,ShieldBattery,ShieldArmor" Value="3"/>
+        <EffectArray Operation="Set" Reference="Actor,ShieldBattery,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
         <!--EffectArray Operation="Set" Reference="Actor,PylonOvercharged,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/-->
     </CUpgrade>
     <CUpgrade id="RavagerRange">
@@ -118,8 +128,11 @@
     </CUpgrade>
     <CUpgrade id="TerranBuildingArmor">
         <AffectedUnitArray value="BypassArmorDrone"/>
+        <AffectedUnitArray value="RavenRepairDrone"/>
         <EffectArray Reference="Unit,BypassArmorDrone,LifeArmorLevel" Value="2"/>
         <EffectArray Reference="Unit,BypassArmorDrone,LifeArmor" Value="2"/>
+        <EffectArray Reference="Unit,RavenRepairDrone,LifeArmorLevel" Value="2"/>
+        <EffectArray Reference="Unit,RavenRepairDrone,LifeArmor" Value="2"/>
     </CUpgrade>
     <CUpgrade id="TerranInfantryWeaponsLevel1">
         <EffectArray index="8" Value="0"/>

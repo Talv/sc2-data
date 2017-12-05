@@ -3586,7 +3586,6 @@
     <!--                                                                                         -->
     <CActorUnit id="Stalker">
         <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
-        <DeathArray index="Normal" SoundLink=""/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Stalker_Land"/>
         <Macros value="TerrainSquibAnimations"/>
         <Macros value="PhysicsDeathsSwarmGround"/>
@@ -3657,7 +3656,6 @@
     <!--                                                                                         -->
     <CActorUnit id="Immortal">
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Immortal_Land"/>
-        <DeathArray index="Normal" SoundLink=""/>
         <Macros value="TerrainSquibAnimations"/>
         <Macros value="PhysicsDeathsSwarmGround"/>
         <DeathCustoms ModelLink="ImmortalDeathRagdoll" Name="RagdollBasic">
@@ -3709,7 +3707,6 @@
     <!--                                                                                         -->
     <CActorUnit id="Colossus">
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Colossus_Land"/>
-        <DeathArray index="Normal" SoundLink=""/>
         <Macros value="TerrainSquibAnimations"/>
         <Macros value="PhysicsDeathsSwarmGround"/>
         <DeathCustoms ActorModel="ColossusDeathRagdoll" ModelLink="ColossusDeathRagdoll" Name="RagdollBasic">

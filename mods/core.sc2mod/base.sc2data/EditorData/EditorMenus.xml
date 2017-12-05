@@ -3614,7 +3614,13 @@ EDITOR NAVIGATION FOR EASIER SEARCHING:
     <item><command>TriggerMoveUp</command></item>
     <item><command>TriggerMoveDown</command></item>
 </menu>
-    
+
+<menu label="TriggerEditor.Hotkeys.CustomScript">
+    <item>
+      <submenu>ScintillaHotkeys</submenu>
+    </item>
+</menu>
+
 <menu label="TriggerEditor.Hotkeys.ParameterValue">
     <item><command>CopyAsText</command></item>
     <item><command>Copy</command></item>

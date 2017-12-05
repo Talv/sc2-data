@@ -96,15 +96,6 @@
         <Type value="Primary"/>
         <RequiredCount value="5"/>
     </CObjective>
-    <CObjective id="CHorner04Primary01" parent="AC_DefaultObjective">
-        <Type value="Primary"/>
-    </CObjective>
-    <CObjective id="CHorner04Primary012" parent="AC_DefaultObjective">
-        <Type value="Primary"/>
-    </CObjective>
-    <CObjective id="CHorner04Primary013" parent="AC_DefaultObjective">
-        <Type value="Primary"/>
-    </CObjective>
     <CObjective id="AC_KorhalRift_Primary05" parent="AC_DefaultObjective">
         <Type value="Primary"/>
         <RequiredCount value="15"/>

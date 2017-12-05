@@ -234,6 +234,7 @@
         <Mode value="2D"/>
         <Pitch value="-2.000000,0.000000"/>
         <Volume value="-6.000000,-6.000000"/>
+        <Flags index="Download" value="1"/>
     </CSound>
     <CSound id="Event_Balius_Morph_EngineOff" parent="Movement">
         <EditorCategories value="Race:Terran"/>
@@ -243,6 +244,7 @@
         <Mode value="2D"/>
         <Pitch value="-4.000000,-2.000000"/>
         <Volume value="-6.000000,-6.000000"/>
+        <Flags index="Download" value="1"/>
     </CSound>
     <CSound id="Event_HybridDominatorCoopBoss_Fight_QuadSplit" parent="Other">
         <AssetArray File="Assets\Sounds\Vanish2D_04.wav" FacialGroup=""/>
@@ -508,6 +510,7 @@
     <CSound id="Event_Balius_ReturnFlight_toRepair" parent="Movement">
         <EditorCategories value="Race:Terran"/>
         <AssetArray File="Assets\Sounds\PnP_Balius_Fighter_RepairReturn_FlyOut_Alt.ogg" FacialGroup=""/>
+        <Flags index="Download" value="1"/>
         <Flags index="Stream" value="1"/>
         <DupeDestroyCount value="10"/>
         <DupeMuteCount value="6"/>
@@ -626,6 +629,7 @@
         <Volume value="-15.000000,-11.000000"/>
         <VolumeRolloffPoints Distance="4.000000"/>
         <VolumeRolloffPoints Distance="20.000000" Volume="-35.040001"/>
+        <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound id="Repair_Bot_MetalClunk" parent="Ambience_Object">
         <AssetArray File="Assets\Sounds\SteamVent_Door_Med_01.wav" FacialGroup=""/>
@@ -715,6 +719,7 @@
         <Volume value="-25.000000,-21.000000"/>
         <VolumeRolloffPoints Distance="5.000000"/>
         <VolumeRolloffPoints Distance="20.000000" Volume="-37.540001"/>
+        <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound id="Repair_Bot_Mech_Latch" parent="Combat">
         <AssetArray File="Assets\Sounds\Sabo_Drone_LatchMech_02a.wav" FacialGroup=""/>
@@ -1776,6 +1781,8 @@
         <LoopCount value="0"/>
         <Pitch value="-4.000000,-4.000000"/>
         <Volume value="-10.000000,-10.000000"/>
+        <Flags index="Download" value="1"/>
+        <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound id="AdeptFenixTails_AttackImpact" parent="Combat">
         <EditorCategories value="Race:Protoss"/>
@@ -1930,6 +1937,7 @@
         <AssetArray File="Assets\Sounds\Hybrid_Dom_Boss_MirrorImage_Death_02.wav" FacialGroup=""/>
         <Pitch value="-1.000000,0.000000"/>
         <Spread value="15.000000"/>
+        <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound id="Terran_Structure_Destruction_Metal_Ronk" parent="Ambience_Object">
         <EditorCategories value="Race:Terran"/>
@@ -1938,6 +1946,7 @@
         <Flags index="AutoUnload" value="1"/>
         <Flags index="Download" value="1"/>
         <Flags index="Wait" value="1"/>
+        <Flags index="VariationFallback" value="0"/>
         <PanLevel value="0.000000"/>
         <Pitch value="-4.000000,-2.000000"/>
         <SpeakerMix index="Center" value="0.250000"/>
@@ -10683,22 +10692,10 @@
         <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound id="RaynorBattleCruiser_Attack" parent="TerranAck">
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack00.ogg"/>
-            <FacialAnim value="Raynor_Attack00"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack01.ogg"/>
-            <FacialAnim value="Raynor_Attack01"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack02.ogg"/>
-            <FacialAnim value="Raynor_Attack02"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack03.ogg"/>
-            <FacialAnim value="Raynor_Attack03"/>
-        </AssetArray>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack00.ogg" FacialAnim="Raynor_Attack00"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack01.ogg" FacialAnim="Raynor_Attack01"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack02.ogg" FacialAnim="Raynor_Attack02"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack03.ogg" FacialAnim="Raynor_Attack03"/>
         <Volume value="-1.000000,-1.000000"/>
         <Flags index="VariationFallback" value="0"/>
     </CSound>
@@ -10715,102 +10712,42 @@
         <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound id="RaynorBattleCruiser_Help" parent="TerranAck">
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Help00.ogg"/>
-            <FacialAnim value="Raynor_Help00"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Help01.ogg"/>
-            <FacialAnim value="Raynor_Help01"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Help02.ogg"/>
-            <FacialAnim value="Raynor_Help02"/>
-        </AssetArray>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Help00.ogg" FacialAnim="Raynor_Help00"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Help01.ogg" FacialAnim="Raynor_Help01"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Help02.ogg" FacialAnim="Raynor_Help02"/>
         <Volume value="-1.000000,-1.000000"/>
         <Category value="Alert"/>
         <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound id="RaynorBattleCruiser_Ready" parent="Ready">
         <EditorCategories value="Race:Terran"/>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Ready00.ogg"/>
-            <FacialAnim value="Raynor_Ready00"/>
-        </AssetArray>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Ready00.ogg" FacialAnim="Raynor_Ready00"/>
         <Volume value="-1.000000,-1.000000"/>
         <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound id="RaynorBattleCruiser_Pissed" parent="Pissed">
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed00.ogg"/>
-            <FacialAnim value="Raynor_Pissed00"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed01.ogg"/>
-            <FacialAnim value="Raynor_Pissed01"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed02.ogg"/>
-            <FacialAnim value="Raynor_Pissed02"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed03.ogg"/>
-            <FacialAnim value="Raynor_Pissed03"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed04.ogg"/>
-            <FacialAnim value="Raynor_Pissed04"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed05.ogg"/>
-            <FacialAnim value="Raynor_Pissed05"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed07.ogg"/>
-            <FacialAnim value="Raynor_Pissed07"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed08.ogg"/>
-            <FacialAnim value="Raynor_Pissed08"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed09.ogg"/>
-            <FacialAnim value="Raynor_Pissed09"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed10.ogg"/>
-            <FacialAnim value="Raynor_Pissed10"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed11.ogg"/>
-            <FacialAnim value="Raynor_Pissed11"/>
-        </AssetArray>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed00.ogg" FacialAnim="Raynor_Pissed00"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed01.ogg" FacialAnim="Raynor_Pissed01"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed02.ogg" FacialAnim="Raynor_Pissed02"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed03.ogg" FacialAnim="Raynor_Pissed03"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed04.ogg" FacialAnim="Raynor_Pissed04"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed05.ogg" FacialAnim="Raynor_Pissed05"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed07.ogg" FacialAnim="Raynor_Pissed07"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed08.ogg" FacialAnim="Raynor_Pissed08"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed09.ogg" FacialAnim="Raynor_Pissed09"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed10.ogg" FacialAnim="Raynor_Pissed10"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed11.ogg" FacialAnim="Raynor_Pissed11"/>
         <EditorCategories value="Race:Terran"/>
         <Volume value="-1.000000,-1.000000"/>
         <Flags index="Download" value="1"/>
         <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound id="RaynorBattleCruiser_What" parent="TerranAck">
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_What00.ogg"/>
-            <FacialAnim value="Raynor_What00"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_What01.ogg"/>
-            <FacialAnim value="Raynor_What01"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_What02.ogg"/>
-            <FacialAnim value="Raynor_What02"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_What03.ogg"/>
-            <FacialAnim value="Raynor_What03"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_What04.ogg"/>
-            <FacialAnim value="Raynor_What04"/>
-        </AssetArray>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_What00.ogg" FacialAnim="Raynor_What00"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_What01.ogg" FacialAnim="Raynor_What01"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_What02.ogg" FacialAnim="Raynor_What02"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_What03.ogg" FacialAnim="Raynor_What03"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_What04.ogg" FacialAnim="Raynor_What04"/>
         <Volume value="-1.000000,-1.000000"/>
         <Flags index="VariationFallback" value="0"/>
     </CSound>
@@ -10836,25 +10773,10 @@
             <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Yes04.ogg"/>
             <FacialAnim value="Raynor_Yes04"/>
         </AssetArray-->
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Yes05.ogg"/>
-            <Volume value="-2.000000,-2.000000"/>
-            <FacialAnim value="Raynor_Yes05"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Yes06.ogg"/>
-            <Volume value="-2.000000,-2.000000"/>
-            <FacialAnim value="Raynor_Yes06"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack04.ogg"/>
-            <FacialAnim value="Raynor_Attack04"/>
-        </AssetArray>
-        <AssetArray>
-            <File value="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed06.ogg"/>
-            <Volume value="-2.000000,-2.000000"/>
-            <FacialAnim value="Raynor_Pissed06"/>
-        </AssetArray>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Yes05.ogg" Volume="-2.000000,-2.000000" FacialAnim="Raynor_Yes05"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Yes06.ogg" Volume="-2.000000,-2.000000" FacialAnim="Raynor_Yes06"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Attack04.ogg" FacialAnim="Raynor_Attack04"/>
+        <AssetArray File="LocalizedData\Sounds\VO\RaynorBattleCruiser_Pissed06.ogg" Volume="-2.000000,-2.000000" FacialAnim="Raynor_Pissed06"/>
         <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound id="SOA_DeployFenixStart">
@@ -14627,6 +14549,8 @@
         <LoopCount value="0"/>
         <Pitch value="-2.000000,0.000000"/>
         <Volume value="-10.000000,-10.000000"/>
+        <Flags index="Download" value="1"/>
+        <Flags index="VariationFallback" value="0"/>
     </CSound>
     <CSound id="AC_Alarm_LavaRising_2D_Event" parent="Ambience_Map">
         <AssetArray File="Assets\Sounds\AC_Alarm_LavaRising_05_Extended.ogg" FacialGroup=""/>
@@ -23954,58 +23878,18 @@
     <CSound id="acAttackWave_Dehaka_225" parent="ACVO_Priority" Portrait="DehakaCoopPortrait" Subtitle="acAttackWave" Speaker="Dehaka" Actor="DehakaCoopPortrait" Line="00225"/>
     <CSound id="acAttackWave_Dehaka_226" parent="ACVO_Priority" Portrait="DehakaCoopPortrait" Subtitle="acAttackWave" Speaker="Dehaka" Actor="DehakaCoopPortrait" Line="00226"/>
     <CSound id="acAttackWave_Han_235" parent="ACVO_Priority" Portrait="SMX1MiraHanPortrait" Subtitle="acAttackWave" Speaker="Han" Line="00235">
-        <AssetArray index="0">
-            <File value="LocalizedData\Sounds\VO\acAttackWave_Han_235.ogg"/>
-            <FacialAnim value="acAttackWave_Han_235"/>
-            <FacialGroup value="acAttackWave_Han_235"/>
-            <FacialFile value="LocalizedData\Sounds\VO\acAttackWave_Han_235.fxe"/>
-            <PortraitModel value="SMX1MiraHanPortrait"/>
-            <PortraitActor value=""/>
-            <Speaker value="Character/Name/"/>
-            <Subtitle value="Conversation/acAttackWave/Line00235"/>
-        </AssetArray>
         <Flags index="NeedsUpdate" value="1"/>
         <Flags index="NeedsTTS" value="1"/>
     </CSound>
     <CSound id="acAttackWave_Han_236" parent="ACVO_Priority" Portrait="SMX1MiraHanPortrait" Subtitle="acAttackWave" Speaker="Han" Line="00236">
-        <AssetArray index="0">
-            <File value="LocalizedData\Sounds\VO\acAttackWave_Han_236.ogg"/>
-            <FacialAnim value="acAttackWave_Han_236"/>
-            <FacialGroup value="acAttackWave_Han_236"/>
-            <FacialFile value="LocalizedData\Sounds\VO\acAttackWave_Han_236.fxe"/>
-            <PortraitModel value="SMX1MiraHanPortrait"/>
-            <PortraitActor value=""/>
-            <Speaker value="Character/Name/"/>
-            <Subtitle value="Conversation/acAttackWave/Line00236"/>
-        </AssetArray>
         <Flags index="NeedsUpdate" value="1"/>
         <Flags index="NeedsTTS" value="1"/>
     </CSound>
     <CSound id="acAttackWave_Han_240" parent="ACVO_Priority" Portrait="SMX1MiraHanPortrait" Subtitle="acAttackWave" Speaker="Han" Line="00240">
-        <AssetArray index="0">
-            <File value="LocalizedData\Sounds\VO\acAttackWave_Han_240.ogg"/>
-            <FacialAnim value="acAttackWave_Han_240"/>
-            <FacialGroup value="acAttackWave_Han_240"/>
-            <FacialFile value="LocalizedData\Sounds\VO\acAttackWave_Han_240.fxe"/>
-            <PortraitModel value="SMX1MiraHanPortrait"/>
-            <PortraitActor value=""/>
-            <Speaker value="Character/Name/"/>
-            <Subtitle value="Conversation/acAttackWave/Line00240"/>
-        </AssetArray>
         <Flags index="NeedsUpdate" value="1"/>
         <Flags index="NeedsTTS" value="1"/>
     </CSound>
     <CSound id="acAttackWave_Horner_241" parent="ACVO_Priority" Portrait="HornerPortrait" Subtitle="acAttackWave" Speaker="Horner" Line="00241">
-        <AssetArray index="0">
-            <File value="LocalizedData\Sounds\VO\acAttackWave_Horner_241.ogg"/>
-            <FacialAnim value="acAttackWave_Horner_241"/>
-            <FacialGroup value="acAttackWave_Horner_241"/>
-            <FacialFile value="LocalizedData\Sounds\VO\acAttackWave_Horner_241.fxe"/>
-            <PortraitModel value="HornerPortrait"/>
-            <PortraitActor value=""/>
-            <Speaker value="Character/Name/"/>
-            <Subtitle value="Conversation/acAttackWave/Line00241"/>
-        </AssetArray>
         <Flags index="NeedsUpdate" value="1"/>
         <Flags index="NeedsTTS" value="1"/>
     </CSound>
@@ -42929,106 +42813,22 @@
         <Flags index="NeedsTTS" value="1"/>
     </CSound>
     <CSound id="acVictory_Stukov_071" parent="ACVO_Priority" Portrait="InfestedStukovPortrait" Subtitle="acVictory" Speaker="Stukov" Actor="InfestedStukovPortrait" Line="00071">
-        <AssetArray index="0">
-            <File value="LocalizedData\Sounds\VO\acVictory_Stukov_071.ogg"/>
-            <FacialAnim value="acVictory_Stukov_071"/>
-            <FacialGroup value="acVictory_Stukov_071"/>
-            <FacialFile value="LocalizedData\Sounds\VO\acVictory_Stukov_071.fxe"/>
-            <PortraitModel value="InfestedStukovPortrait"/>
-            <PortraitActor value="InfestedStukovPortrait"/>
-            <Speaker value="Character/Name/"/>
-            <Subtitle value="Conversation/acVictory/Line00071"/>
-        </AssetArray>
         <Flags index="NeedsUpdate" value="1"/>
         <Flags index="NeedsTTS" value="1"/>
     </CSound>
     <CSound id="acVictory_Stukov_072" parent="ACVO_Priority" Portrait="InfestedStukovPortrait" Subtitle="acVictory" Speaker="Stukov" Actor="InfestedStukovPortrait" Line="00072">
-        <AssetArray index="0">
-            <File value="LocalizedData\Sounds\VO\acVictory_Stukov_072.ogg"/>
-            <FacialAnim value="acVictory_Stukov_072"/>
-            <FacialGroup value="acVictory_Stukov_072"/>
-            <FacialFile value="LocalizedData\Sounds\VO\acVictory_Stukov_072.fxe"/>
-            <PortraitModel value="InfestedStukovPortrait"/>
-            <PortraitActor value="InfestedStukovPortrait"/>
-            <Speaker value="Character/Name/"/>
-            <Subtitle value="Conversation/acVictory/Line00072"/>
-        </AssetArray>
         <Flags index="NeedsUpdate" value="1"/>
         <Flags index="NeedsTTS" value="1"/>
     </CSound>
-    <CSound id="acVictory_ProtossAI_077" parent="ACVO_Priority" Portrait="FenixEx2Portrait" Subtitle="acVictory" Speaker="ProtossAI" Actor="FenixEx2Portrait" Line="00077">
-        <AssetArray index="0">
-            <File value="LocalizedData\Sounds\VO\acVictory_ProtossAI_077.ogg"/>
-            <FacialAnim value="acVictory_ProtossAI_077"/>
-            <FacialGroup value="acVictory_ProtossAI_077"/>
-            <FacialFile value="LocalizedData\Sounds\VO\acVictory_ProtossAI_077.fxe"/>
-            <PortraitModel value="FenixEx2Portrait"/>
-            <PortraitActor value="FenixEx2Portrait"/>
-            <Speaker value="Character/Name/"/>
-            <Subtitle value="Conversation/acVictory/Line00077"/>
-        </AssetArray>
-    </CSound>
-    <CSound id="acVictory_ProtossAI_078" parent="ACVO_Priority" Portrait="FenixEx2Portrait" Subtitle="acVictory" Speaker="ProtossAI" Actor="FenixEx2Portrait" Line="00078">
-        <AssetArray index="0">
-            <File value="LocalizedData\Sounds\VO\acVictory_ProtossAI_078.ogg"/>
-            <FacialAnim value="acVictory_ProtossAI_078"/>
-            <FacialGroup value="acVictory_ProtossAI_078"/>
-            <FacialFile value="LocalizedData\Sounds\VO\acVictory_ProtossAI_078.fxe"/>
-            <PortraitModel value="FenixEx2Portrait"/>
-            <PortraitActor value="FenixEx2Portrait"/>
-            <Speaker value="Character/Name/"/>
-            <Subtitle value="Conversation/acVictory/Line00078"/>
-        </AssetArray>
-    </CSound>
-    <CSound id="acVictory_Dehaka_083" parent="ACVO_Priority" Subtitle="acVictory" Speaker="Dehaka" Line="00083">
-        <AssetArray index="0">
-            <File value="LocalizedData\Sounds\VO\acVictory_Dehaka_083.ogg"/>
-            <FacialAnim value="acVictory_Dehaka_083"/>
-            <FacialGroup value="acVictory_Dehaka_083"/>
-            <FacialFile value="LocalizedData\Sounds\VO\acVictory_Dehaka_083.fxe"/>
-            <PortraitModel value=""/>
-            <PortraitActor value=""/>
-            <Speaker value="Character/Name/"/>
-            <Subtitle value="Conversation/acVictory/Line00083"/>
-        </AssetArray>
-    </CSound>
-    <CSound id="acVictory_Dehaka_084" parent="ACVO_Priority" Subtitle="acVictory" Speaker="Dehaka" Line="00084">
-        <AssetArray index="0">
-            <File value="LocalizedData\Sounds\VO\acVictory_Dehaka_084.ogg"/>
-            <FacialAnim value="acVictory_Dehaka_084"/>
-            <FacialGroup value="acVictory_Dehaka_084"/>
-            <FacialFile value="LocalizedData\Sounds\VO\acVictory_Dehaka_084.fxe"/>
-            <PortraitModel value=""/>
-            <PortraitActor value=""/>
-            <Speaker value="Character/Name/"/>
-            <Subtitle value="Conversation/acVictory/Line00084"/>
-        </AssetArray>
-    </CSound>
+    <CSound id="acVictory_ProtossAI_077" parent="ACVO_Priority" Portrait="FenixEx2Portrait" Subtitle="acVictory" Speaker="ProtossAI" Actor="FenixEx2Portrait" Line="00077"/>
+    <CSound id="acVictory_ProtossAI_078" parent="ACVO_Priority" Portrait="FenixEx2Portrait" Subtitle="acVictory" Speaker="ProtossAI" Actor="FenixEx2Portrait" Line="00078"/>
+    <CSound id="acVictory_Dehaka_083" parent="ACVO_Priority" Subtitle="acVictory" Speaker="Dehaka" Line="00083"/>
+    <CSound id="acVictory_Dehaka_084" parent="ACVO_Priority" Subtitle="acVictory" Speaker="Dehaka" Line="00084"/>
     <CSound id="acVictory_Han_089" parent="ACVO_Priority" Portrait="SMX1MiraHanPortrait" Subtitle="acVictory" Speaker="Han" Line="00089">
         <Flags index="NeedsUpdate" value="1"/>
         <Flags index="NeedsTTS" value="1"/>
-        <AssetArray index="0">
-            <File value="LocalizedData\Sounds\VO\acVictory_Han_089.ogg"/>
-            <FacialAnim value="acVictory_Han_089"/>
-            <FacialGroup value="acVictory_Han_089"/>
-            <FacialFile value="LocalizedData\Sounds\VO\acVictory_Han_089.fxe"/>
-            <PortraitModel value="SMX1MiraHanPortrait"/>
-            <PortraitActor value=""/>
-            <Speaker value="Character/Name/"/>
-            <Subtitle value="Conversation/acVictory/Line00089"/>
-        </AssetArray>
     </CSound>
     <CSound id="acVictory_Han_090" parent="ACVO_Priority" Portrait="SMX1MiraHanPortrait" Subtitle="acVictory" Speaker="Han" Line="00090">
-        <AssetArray index="0">
-            <File value="LocalizedData\Sounds\VO\acVictory_Han_090.ogg"/>
-            <FacialAnim value="acVictory_Han_090"/>
-            <FacialGroup value="acVictory_Han_090"/>
-            <FacialFile value="LocalizedData\Sounds\VO\acVictory_Han_090.fxe"/>
-            <PortraitModel value="SMX1MiraHanPortrait"/>
-            <PortraitActor value=""/>
-            <Speaker value="Character/Name/"/>
-            <Subtitle value="Conversation/acVictory/Line00090"/>
-        </AssetArray>
         <Flags index="NeedsUpdate" value="1"/>
         <Flags index="NeedsTTS" value="1"/>
     </CSound>

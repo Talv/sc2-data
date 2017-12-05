@@ -566,7 +566,7 @@ Actor=CommandUIHarnessAttackProtoss,CommandUIHarnessAttackTerran,CommandUIHarnes
 [Commander]
 default=CCommander
 path=Assets\Textures\.dds
-asset=UI_commanderportrait_##id##,UI_commandertraiticon_##id##,ui_homepanel_commander_##id##,ui_loading_coop_hero_##id##
+asset=SC2_UI_Coop_Detail_Background_##id##,UI_commanderportrait_##id##,ui_homepanel_commander_##id##,ui_loading_coop_hero_##id##
 Actor=CommandUIHarnessAttackProtoss,CommandUIHarnessAttackTerran,CommandUIHarnessAttackZerg,CommandUIHarnessConfirmProtoss,CommandUIHarnessConfirmTerran,CommandUIHarnessConfirmZerg,CommandUIHarnessMoveProtoss,CommandUIHarnessMoveTerran,CommandUIHarnessMoveZerg,CommandUIHarnessRallyProtoss,CommandUIHarnessRallyTerran,CommandUIHarnessRallyZerg,TerrainMgr
 
 [Conversation]
@@ -705,7 +705,7 @@ Button=Cancel
 Model=MinimapPing
 parent=CoreDflt
 id=Dflt
-Campaign=HeartOfTheSwarm,LegacyOfTheVoid,LegacyOfTheVoidEpilogue,LegacyOfTheVoidPrologue,NovaDLC1,NovaDLC2,NovaDLC3,WingsOfLiberty
+Campaign=HeartOfTheSwarm,HeartOfTheSwarmCollectorLicense,LegacyOfTheVoid,LegacyOfTheVoidCollectorLicense,LegacyOfTheVoidEpilogue,LegacyOfTheVoidPrologue,NovaDLC1,NovaDLC2,NovaDLC3,WingsOfLiberty,WingsOfLibertyCollectorLicense
 Model=PingObjective
 
 [Herd]

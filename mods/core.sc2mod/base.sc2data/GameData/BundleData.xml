@@ -8,5 +8,6 @@
         <ReleaseDate Month="1" Day="1" Year="2014"/>
         <ShortName value="Bundle/ShortName/##id##"/>
         <StoreTypeName value="UI/StoreTypeName/Bundle"/>
+        <Flags index="SuppressDiscount" value="0"/>
     </CBundle>
 </Catalog>

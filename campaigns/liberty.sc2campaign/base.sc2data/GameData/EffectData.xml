@@ -4534,7 +4534,7 @@
         <AreaArray Radius="1.25" Fraction="0.25"/>
         <ExcludeArray Value="Outer"/>
         <ExcludeArray Value="Target"/>
-        <SearchFilters value="Ground;Self,Structure,Missile,Stasis,Dead,Invulnerable"/>
+        <SearchFilters value="Ground;Self,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <SearchFlags index="CallForHelp" value="1"/>
         <SearchFlags index="OffsetByUnitRadius" value="1"/>
     </CEffectDamage>

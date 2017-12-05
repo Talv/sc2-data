@@ -99,4 +99,23 @@
     <CSound id="Slayn_Brazier_Fire">
         <DupeDestroyCount value="32"/>
     </CSound>
+    <CSound id="Observer_SiegeMode_Start" parent="Spell">
+        <AssetArray File="Assets\Sounds\Observer_Stationary_Scan_Start_01.wav" FacialGroup=""/>
+        <Pitch value="-4.000000,-2.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="Observer_SiegeMode_Stop" parent="Spell">
+        <AssetArray File="Assets\Sounds\Observer_Stationary_Off_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Observer_Stationary_On_02.wav" FacialGroup=""/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="Observer_SiegeMode_Loop" parent="Spell">
+        <AssetArray File="Assets\Sounds\Observer_Stationary_Scan_Lp_01.wav" LoopCount="-1" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Observer_Stationary_Scan_Lp_02.wav" LoopCount="-1" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Observer_Stationary_Scan_Lp_03.wav" LoopCount="-1" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Observer_Stationary_Scan_Lp_04.wav" LoopCount="-1" FacialGroup=""/>
+        <Volume value="-14.000000,-14.000000"/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="18.000000" Volume="-96.000000"/>
+    </CSound>
 </Catalog>

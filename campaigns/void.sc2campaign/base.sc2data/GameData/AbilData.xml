@@ -1614,7 +1614,7 @@
         <Flags index="Transient" value="1"/>
         <Cost>
             <Vital index="Energy" value="75"/>
-            <Cooldown Link="GuardianShield" TimeUse="30"/>
+            <Cooldown Link="GuardianShield" TimeUse="15"/>
         </Cost>
         <!--Flags index="AutoCastOn" value="1"/-->
         <AutoCastFilters value="Visible;Neutral,Enemy"/>
