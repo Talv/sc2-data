@@ -4,6 +4,16 @@
         <Icon value="Assets\Textures\btn-ability-protoss-wormholetransit-color.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-protoss-wormholetransit-color.dds"/>
     </CButton>
+    <CButton id="RapidReignitionSystem">
+        <Icon value="Assets\Textures\btn-upgrade-terran-highcapacityfueltanks.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-highcapacityfueltanks.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchRapidReignitionSystem">
+        <Icon value="Assets\Textures\btn-upgrade-terran-highcapacityfueltanks.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-highcapacityfueltanks.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
     <CButton id="ShieldBattery">
         <Icon value="Assets\Textures\btn-building-protoss-shieldbattery.dds"/>
         <AlertIcon value="Assets\Textures\btn-building-protoss-shieldbattery.dds"/>
@@ -68,16 +78,6 @@
         <Icon value="Assets\Textures\btn-unit-protoss-observer.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-protoss-observer.dds"/>
         <EditorCategories value="Race:Protoss"/>
-    </CButton>
-    <CButton id="MorphtoOverseerSiege">
-        <Icon value="Assets\Textures\btn-ability-zerg-viper-ocularparasite.dds"/>
-        <AlertIcon value="Assets\Textures\btn-ability-zerg-viper-ocularparasite.dds"/>
-        <EditorCategories value="Race:Zerg"/>
-    </CButton>
-    <CButton id="MorphtoOverseerNormal">
-        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
-        <AlertIcon value="Assets\Textures\btn-command-cancel.dds"/>
-        <EditorCategories value="Race:Zerg"/>
     </CButton>
     <CButton id="ResearchSmartServos">
         <Icon value="Assets\Textures\btn-upgrade-terran-transformationservos.dds"/>
@@ -166,5 +166,48 @@
         <AlertIcon value="Assets\Textures\btn-upgrade-karax-fortificationbarrier.dds"/>
         <EditorCategories value="Race:Protoss"/>
         <Placeholder value="1"/>
+    </CButton>
+    <CButton id="AdeptPiercingUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-resonatingglaives-orange.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-protoss-resonatingglaives-orange.dds"/>
+    </CButton>
+    <CButton id="AdeptResearchPiercingUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-resonatingglaives-orange.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-protoss-resonatingglaives-orange.dds"/>
+    </CButton>
+    <CButton id="UpgradeBuildingArmorLevel1"/>
+    <CButton id="ResearchCarrierCapacity">
+        <Icon value="Assets\Textures\btn-unit-protoss-interceptor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-protoss-interceptor.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Placeholder value="1"/>
+    </CButton>
+    <CButton id="CarrierCapacity">
+        <Icon value="Assets\Textures\btn-unit-protoss-interceptor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-protoss-interceptor.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Placeholder value="1"/>
+    </CButton>
+    <CButton id="CarrierLeashRangeUpgrade">
+        <Icon value="Assets\Textures\btn-ability-protoss-phasemine-zeratul.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-phasemine-zeratul.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Placeholder value="1"/>
+    </CButton>
+    <CButton id="ResearchCarrierLeashRangeUpgrade">
+        <Icon value="Assets\Textures\btn-ability-protoss-phasemine-zeratul.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-phasemine-zeratul.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Placeholder value="1"/>
+    </CButton>
+    <CButton id="DrillClaws">
+        <Icon value="Assets\Textures\BTN-Upgrade-Terran-ResearchDrillingClaws.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Upgrade-Terran-ResearchDrillingClaws.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="NydusWormIncreasedArmorPassive">
+        <Icon value="Assets\Textures\btn-ability-zerg-armoraura.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-armoraura.dds"/>
+        <EditorCategories value="Race:Zerg"/>
     </CButton>
 </Catalog>

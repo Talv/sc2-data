@@ -109,14 +109,41 @@
                 <Action type="SetState" frame="$GlueUI" group="ContentFeedState" state="Horner"/>
             </State>
 
+            <State name="Tychus">
+                <When type="Property" frame="$this" ActiveCutscene="Cutscenes\MainMenu_Tychus.SC2Cutscene"/>
+                <Action type="SetState" frame="$GlueUI" group="ContentFeedState" state="Tychus"/>
+            </State>
+
             <State name="WCS2017">
                 <!-- "WCS 2017" in the Background Model pulldown -->
                 <When type="Property" frame="$this" ActiveCutscene="Cutscenes/MainMenuWCS2017.SC2Cutscene"/>
                 <Action type="SetState" frame="$GlueUI" group="ContentFeedState" state="WCS2017"/>
             </State>
 
+            <State name="Rebrand">
+                <!-- "Rebrand" in the Background Model pulldown -->
+                <When type="Property" frame="$this" ActiveCutscene="Cutscenes/MainMenuReBrand.SC2Cutscene"/>
+                <Action type="SetState" frame="$GlueUI" group="ContentFeedState" state="Rebrand"/>
+            </State>
+
+            <State name="VideoTakeOver">
+                <When type="Property" frame="$this" ActiveCutscene="Cutscenes/MainMenu_VideoTakeOver.SC2Cutscene"/>
+                <Action type="SetState" frame="$GlueUI" group="ContentFeedState" state="VideoTakeOver"/>
+            </State>
+
             <State name="Default">
                 <Action type="SetState" frame="$GlueUI" group="ContentFeedState" state="Default"/>
+            </State>
+            
+            <State name="8thAnniversary">
+                <When type="Property" frame="$this" ActiveCutscene="Cutscenes/MainMenu_MarSaraBar.SC2Cutscene"/>
+                <Action type="SetState" frame="$GlueUI" group="ContentFeedState" state="8thAnniversary"/>
+            </State>
+
+            <State name="WCS2018">
+                <!-- "WCS 2018" in the Background Model pulldown -->
+                <When type="Property" frame="$this" ActiveCutscene="Cutscenes/MainMenuWCS2018.SC2Cutscene"/>
+                <Action type="SetState" frame="$GlueUI" group="ContentFeedState" state="WCS2018"/>
             </State>
         </StateGroup>
 

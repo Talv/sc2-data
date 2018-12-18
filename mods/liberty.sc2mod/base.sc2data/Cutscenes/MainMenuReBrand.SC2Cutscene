@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CutsceneState cutsceneVersion="1.300000">
-    <CCutsceneNodeDirector guid="10183135179133738225" name="Director" interactive="1">
+    <CCutsceneNodeDirector guid="10183135179133738225" name="Director" interactive="1" waitForResources="1">
         <CCutsceneNodeActiveLight guid="11807549562231276525" name="Active Light">
             <CCutsceneElementActiveLight guid="6635792559761265925" lightGUID="0" lightID="MainMenuReBrand" lightIndex="0" blendTime="0"/>
         </CCutsceneNodeActiveLight>

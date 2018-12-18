@@ -142,6 +142,7 @@
     <VoiceOver>             <Value>Hero</Value>             </VoiceOver>
 
     <Alert>                 <Value>Interface</Value>        </Alert>
+    <RaceBannerPack>        <Value>Interface</Value>        </RaceBannerPack>
     <Camera>                <Value>Interface</Value>        </Camera>
     <ConsoleSkin>           <Value>Interface</Value>        </ConsoleSkin>
     <Cursor>                <Value>Interface</Value>        </Cursor>
@@ -164,6 +165,7 @@
     <ItemContainer>         <Value>Advanced</Value>         </ItemContainer>
     <Kinetic>               <Value>Advanced</Value>         </Kinetic>
     <PortraitPack>          <Value>Advanced</Value>         </PortraitPack>
+    <PremiumMap>            <Value>Advanced</Value>         </PremiumMap>
     <Race>                  <Value>Advanced</Value>         </Race>
     <RequirementNode>       <Value>Advanced</Value>         </RequirementNode>
     <Reward>                <Value>Advanced</Value>         </Reward>
@@ -181,6 +183,7 @@
     <VoicePack>             <Value>Advanced</Value>         </VoicePack>
     <WarChest>              <Value>Advanced</Value>         </WarChest>
     <WarChestSeason>        <Value>Advanced</Value>         </WarChestSeason>
+    <StimPack>              <Value>Advanced</Value>         </StimPack>
 </ObjectTypeCategories>
 
 <!-- Object Effects used with placed objects in the Terrain Editor -->

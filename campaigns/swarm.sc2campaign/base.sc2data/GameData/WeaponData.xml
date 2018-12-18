@@ -64,7 +64,7 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="AcidSporesAir">
         <EditorCategories value="Race:Zerg"/>
-        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-airattacks-level0.dds"/>
         <DisplayEffect value="AcidSporesAirDamage"/>
         <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="6"/>
@@ -142,7 +142,7 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="PrimalViperAir">
         <EditorCategories value="Race:Zerg"/>
-        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-airattacks-level0.dds"/>
         <DisplayEffect value="PrimalViperAirDamage"/>
         <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="6"/>
@@ -584,7 +584,7 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="PrimalBaseWeapon">
         <EditorCategories value="Race:Zerg"/>
-        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-airattacks-level0.dds"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <DisplayEffect value="PrimalBaseWeaponDamage"/>
         <Range value="6"/>
@@ -681,9 +681,6 @@
         <DamagePoint value="0"/>
         <RandomDelayMin value="-0.13"/>
         <RandomDelayMax value="0.1875"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSRandom"/>
-        </AcquireTargetSorts>
     </CWeaponLegacy>
     <CWeaponLegacy id="GehennaCruiserAir">
         <EditorCategories value="Race:Terran"/>
@@ -706,9 +703,6 @@
         <DamagePoint value="0"/>
         <RandomDelayMin value="-0.13"/>
         <RandomDelayMax value="0.1875"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSRandom"/>
-        </AcquireTargetSorts>
     </CWeaponLegacy>
     <CWeaponLegacy id="PrimalFlyer">
         <EditorCategories value="Race:Zerg"/>
@@ -821,7 +815,7 @@
     <CWeaponLegacy id="AcidSpores">
         <EditorCategories value="Race:Zerg"/>
         <DisplayEffect value="AcidSporesDamage"/>
-        <Icon value="Assets\Textures\btn-upgrade-zerg-missileattacks-level0.dds"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-airattacks-level0.dds"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="9"/>
         <Period value="3"/>
@@ -1817,9 +1811,6 @@
         <DamagePoint value="0"/>
         <RandomDelayMin value="-0.13"/>
         <RandomDelayMax value="0.1875"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSRandom"/>
-        </AcquireTargetSorts>
     </CWeaponLegacy>
     <CWeaponLegacy id="HyperionKorhalAir">
         <EditorCategories value="Race:Terran"/>
@@ -1838,9 +1829,6 @@
         <DamagePoint value="0"/>
         <RandomDelayMin value="-0.13"/>
         <RandomDelayMax value="0.1875"/>
-        <AcquireTargetSorts>
-            <SortArray value="TSRandom"/>
-        </AcquireTargetSorts>
     </CWeaponLegacy>
     <CWeaponLegacy id="Dehaka">
         <EditorCategories value="Race:Zerg"/>

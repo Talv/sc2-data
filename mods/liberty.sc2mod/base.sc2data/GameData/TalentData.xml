@@ -141,6 +141,36 @@
     <CTalent id="CommanderHornerLevel13" parent="CommanderDefaultSettings"/>
     <CTalent id="CommanderHornerLevel14" parent="CommanderDefaultSettings"/>
     <CTalent id="CommanderHornerLevel15" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel01" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel02" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel03" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel04" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel05" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel06" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel07" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel08" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel09" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel10" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel11" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel12" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel13" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel14" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderTychusLevel15" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel01" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel02" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel03" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel04" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel05" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel06" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel07" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel08" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel09" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel10" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel11" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel12" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel13" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel14" parent="CommanderDefaultSettings"/>
+    <CTalent id="CommanderZeratulLevel15" parent="CommanderDefaultSettings"/>
     <CTalent id="CommanderSwannArmoryUpgradePack" parent="CommanderDefaultSettings"/>
     <CTalent id="CommanderSwannImmortalityProtocol" parent="CommanderDefaultSettings"/>
     <CTalent id="CommanderSwannFactoryTechLabUpgradesPack" parent="CommanderDefaultSettings">
@@ -241,6 +271,7 @@
     <CTalent id="MasteryArtanisStartingAndMaxSoAEnergy" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryArtanisStartingResources" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryArtanisWarpChargeCooldown" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryArtanisEnergyRegenCooldown" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryKaraxBuildingVital" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryKaraxChronoBoostSpeed" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryKaraxMaxEnergy" parent="CommanderDefaultSettings"/>
@@ -259,6 +290,7 @@
     <CTalent id="MasteryKerriganInstantRevive" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryKerriganImmobilizationDamage" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryKerriganMutatingCarapaceLifeDegradation" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryKerriganPrimarySpeedDamage" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryRaynorBuildingHealth" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryRaynorDropPodHaste" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryRaynorDuskWingCooldown" parent="CommanderDefaultSettings"/>
@@ -267,6 +299,7 @@
     <CTalent id="MasteryRaynorMechAttackSpeed" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryRaynorMedicSecondaryHeal" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryRaynorResearchSpeed" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryRaynorResearchCost" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryRaynorStimDuration" parent="CommanderDefaultSettings"/>
     <CTalent id="MasterySwannBuildingHealth" parent="CommanderDefaultSettings"/>
     <CTalent id="MasterySwannCombatDrop" parent="CommanderDefaultSettings"/>
@@ -302,12 +335,14 @@
     <CTalent id="MasteryNovaNukeAndHoloDecoyCooldown" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryNovaOdinDuration" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryNovaWeaponAttackSpeed" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryNovaWeaponAttackDamage" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryNovaReviveTimer" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryNovaEnergyRegen" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryNovaGriffinCooldown" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryNovaDroneCooldown" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryNovaArmyOOCRegenSpeed" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryNovaArmyAttackSpeed" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryNovaPrimaryAbilityImprovement" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryStukovUnitMoveSpeed" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryStukovUnitRegenSpeed" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryStukovBroodlingSpawnRate" parent="CommanderDefaultSettings"/>
@@ -332,9 +367,22 @@
     <CTalent id="MasteryDehakaDoubleHealEssence" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryDehakaConsumeHealing" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryHornerLPSHeal" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryHornerBomberRadius" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryHornerBetterDeathRattle" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryHornerMSOBonus" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryHornerDoubleSalvageChance" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryHornerAirStrikeDistance" parent="CommanderDefaultSettings"/>
     <CTalent id="MasteryHornerMagMineUpgrades" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryTychusCommanderAttackSpeed" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryTychusGrenadeCooldown" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryTychusUpgradesIncrease" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryTychusHeroCooldown" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryTychusMedivacBuff" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryTychusOdinCooldown" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryZeratulArtifactFragmentSpawnRate" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryZeratulAvatarCooldown" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryZeratulCombatUnitAttackSpeed" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryZeratulLegendaryLegionCost" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryZeratulSupportCalldownCooldownReduction" parent="CommanderDefaultSettings"/>
+    <CTalent id="MasteryZeratulZeratulAttackSpeed" parent="CommanderDefaultSettings"/>
 </Catalog>

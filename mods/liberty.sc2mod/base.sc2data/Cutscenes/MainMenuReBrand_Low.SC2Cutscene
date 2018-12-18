@@ -2,7 +2,7 @@
 <CutsceneState cutsceneVersion="1.300000">
     <CCutsceneNodeDirector guid="12226509552897709345" name="Director" interactive="1" waitForResources="1">
         <CCutsceneNodeActiveCamera guid="10592255921036154145" name="Active Camera">
-            <CCutsceneElementActiveCamera guid="6000085370713363745" cameraIndex="0" objectGuid="9969597010143302945"/>
+            <CCutsceneElementActiveCamera guid="6000085370713363745" cameraIndex="0" objectGuid="10230911037709167635"/>
         </CCutsceneNodeActiveCamera>
         <CCutsceneNodeActiveLight guid="10810324244016354593" name="Active Light">
             <CCutsceneElementActiveLight guid="8020118909336376609" lightGUID="0" lightID="MainMenuReBrand_Low" lightIndex="0" blendTime="0"/>

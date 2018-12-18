@@ -744,6 +744,11 @@
         <Flags index="UpgradeCheat" value="0"/>
         <AffectedUnitArray value="Ultralisk"/>
     </CUpgrade>
+    <CUpgrade id="Confetti">
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <Flags index="UpgradeCheat" value="0"/>
+        <LeaderAlias value=""/>
+    </CUpgrade>
     <CUpgrade id="GhostMoebiusReactor">
         <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
@@ -1829,7 +1834,7 @@
         <Icon value="Assets\Textures\btn-upgrade-zerg-adrenalglands.dds"/>
         <EditorCategories value="Race:Zerg,UpgradeType:Talents"/>
         <ScoreResult value="BuildOrder"/>
-        <EffectArray Reference="Weapon,Claws,Period" Value="-0.109000"/>
+        <EffectArray Reference="Weapon,Claws,RateMultiplier" Value="0.2"/>
         <ScoreAmount value="400"/>
         <Alert value="ResearchComplete"/>
         <Flags index="TechTreeCheat" value="1"/>

@@ -6799,12 +6799,18 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="SOAThermalLance"/>
         <SharedFlags index="TargetCursorVisibleInBlackMask" value="1"/>
         <CursorEffect value="SOAThermalLanceSearchWithModel"/>
+        <Cost>
+            <Cooldown TimeUse="0.25"/>
+        </Cost>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="SOAThermalLanceTargetingDummy">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
         <Range value="500"/>
         <Arc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="SOAThermalLance" Requirements="HaveSOAThermalLance"/>
+        <Cost>
+            <Cooldown TimeUse="0.25"/>
+        </Cost>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="ZergCocoonPickup">
         <Effect index="0" value="RemoveZergCocoonBuff"/>

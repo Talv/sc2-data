@@ -672,7 +672,7 @@
                 <Anchor relative="$parent/DiscountPercentageTab"/>
                 <Visible val="False"/>
                 <FormatText val="@UI/ScreenCollection/DiscountPercentFormat"/>
-                <Replacement index="0" val="{$parent/$parent/StoreCacheFrame/@DiscountPercent}"/>
+                <Replacement index="0" val="{$parent/$parent/StoreCacheFrame/@CatalogDiscountPercent}"/>
             </Frame>
             
             <Frame type="Label" name="DiscountPercentageLabelShadow">
@@ -705,7 +705,7 @@
         
         <Frame type="Label" name="TitleLabel">
             <Options val="TooltipIfTruncated"/>
-            <AutoSizeClamps maxHeight="41"/>
+            <AutoSizeClamps maxHeight="60"/>
         </Frame>
                 
         <!-- SelectedState -->
@@ -740,7 +740,7 @@
             <DefaultState val="NotDiscounted"/>
             <State name="DiscountedWithTextOverflow">
                 <When type="StateGroup" frame="$this" PurchasableState="Purchasable"/>
-                <When type="Property" frame="StoreCacheFrame" operator="NotEqual" DiscountPercent="0"/>
+                <When type="Property" frame="StoreCacheFrame" operator="NotEqual" CatalogDiscountPercent="0"/>
                 <When type="Property" frame="BundleCacheFrame" SuppressDiscount="false"/>
                 <When type="Property" frame="DummySubtitleLabel" IsTextTruncated="True"/>
                 <Action type="SetProperty" frame="DiscountTabContainer" Visible="False"/>
@@ -748,7 +748,7 @@
             </State>
             <State name="Discounted">
                 <When type="StateGroup" frame="$this" PurchasableState="Purchasable"/>
-                <When type="Property" frame="StoreCacheFrame" operator="NotEqual" DiscountPercent="0"/>
+                <When type="Property" frame="StoreCacheFrame" operator="NotEqual" CatalogDiscountPercent="0"/>
                 <When type="Property" frame="BundleCacheFrame" SuppressDiscount="false"/>
                 <Action type="SetProperty" frame="DiscountTabContainer" Visible="True"/>
                 <Action type="SetProperty" frame="OriginalPriceLabel" Visible="True"/>
@@ -920,7 +920,7 @@
         <Frame type="TextFormatFrame" name="FormattedCostText">
             <Anchor relative="$parent/SubtitleLabel"/>
             <FormatText val="@UI/ScreenCollection/WarChest/FeaturedPageDescription"/>
-            <Replacement index="0" val="{$parent/StoreCacheFrame/@CostText}"/>
+            <Replacement index="0" val="{$parent/CurrencyPriceText/@Text}"/>
             
             <StateGroup name="TextState">
                 <DefaultState val="Normal"/>
@@ -961,6 +961,8 @@
             
                 <State name="Visible">
                     <When type="Property" frame="$parent/WarChestInfo" WarChestFullyPurchased="False"/>
+                    <When type="Property" frame="$parent/WarChestInfo" PurchaseEndTimeRemaining="604800" operator="LessThanOrEqual"/>
+                    <When type="Property" frame="$parent/WarChestInfo" PurchaseEndTimeRemaining="0" operator="GreaterThan"/>
                     <Action type="SetProperty" frame="$this" Visible="True"/>
                 </State>
                 
@@ -968,6 +970,21 @@
                     <Action type="SetProperty" frame="$this" Visible="False"/>
                 </State>
             </StateGroup>
+        </Frame>
+        
+        <Frame type="Label" name="CurrencyLabel">
+            <StateGroup name="VisibilityState">
+                <State name="Visible">
+                    <Action type="SetProperty" Visible="False"/>
+                </State>
+            </StateGroup>
+        </Frame>
+        
+        <Frame type="TextFormatFrame" name="CurrencyPriceText">
+            <Anchor relative="$parent/FormattedCostText"/>
+            <FormatText val="%0% %1%"/>
+            <Replacement val="{$parent/StoreCacheFrame/@CurrencyText}" index="0"/>
+            <Replacement val="{$parent/StoreCacheFrame/@CostText}" index="1"/>
         </Frame>
         
         <!-- LockedState -->

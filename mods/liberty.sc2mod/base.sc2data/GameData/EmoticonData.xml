@@ -573,4 +573,136 @@
         <Image TextureSheet="EmoticonsSheet2" Index="68"/>
         <RequiredReward value="Emoticon_RaynorSkull"/>
     </CEmoticon>
+    <CEmoticon id="twitch">
+        <Image TextureSheet="EmoticonsSheet2" Index="69"/>
+        <RequiredReward value="Emoticon_Twitch"/>
+    </CEmoticon>
+    <CEmoticon id="nwace">
+        <Image TextureSheet="EmoticonsSheet2" Index="70"/>
+        <RequiredReward value="Emoticon_NationWarsAce"/>
+    </CEmoticon>
+    <CEmoticon id="nwallkill">
+        <Image TextureSheet="EmoticonsSheet2" Index="71"/>
+        <RequiredReward value="Emoticon_NationWarsAllKill"/>
+    </CEmoticon>
+    <CEmoticon id="nwezpz">
+        <Image TextureSheet="EmoticonsSheet2" Index="72"/>
+        <RequiredReward value="Emoticon_NationWarsEZPZ"/>
+    </CEmoticon>
+    <CEmoticon id="nwwallez">
+        <Image TextureSheet="EmoticonsSheet2" Index="73"/>
+        <RequiredReward value="Emoticon_NationWarsWallez"/>
+    </CEmoticon>
+    <CEmoticon id="gameheart">
+        <Image TextureSheet="EmoticonsSheet2" Index="74"/>
+        <Hidden value="1"/>
+    </CEmoticon>
+    <CEmoticon id="lul">
+        <Image TextureSheet="EmoticonsSheet2" Index="75"/>
+        <RequiredReward value="Emoticon_LUL"/>
+    </CEmoticon>
+    <CEmoticon id="axiom">
+        <Image TextureSheet="EmoticonsSheet2" Index="76"/>
+        <RequiredReward value="Emoticon_Axiom"/>
+    </CEmoticon>
+    <CEmoticon id="tophat">
+        <Image TextureSheet="EmoticonsSheet2" Index="77"/>
+        <RequiredReward value="Emoticon_TopHat"/>
+    </CEmoticon>
+    <CEmoticon id="pointright">
+        <Image TextureSheet="EmoticonsSheet2" Index="78"/>
+        <RequiredReward value="Emoticon_PointRight"/>
+    </CEmoticon>
+    <CEmoticon id="pointleft">
+        <Image TextureSheet="EmoticonsSheet2" Index="79"/>
+        <RequiredReward value="Emoticon_PointLeft"/>
+    </CEmoticon>
+    <CEmoticon id="pineapple">
+        <Image TextureSheet="EmoticonsSheet2" Index="80"/>
+        <RequiredReward value="Emoticon_Pineapple"/>
+    </CEmoticon>
+    <CEmoticon id="cheeseburger">
+        <Image TextureSheet="EmoticonsSheet2" Index="81"/>
+        <RequiredReward value="Emoticon_Cheeseburger"/>
+    </CEmoticon>
+    <CEmoticon id="potato">
+        <Image TextureSheet="EmoticonsSheet2" Index="82"/>
+        <RequiredReward value="Emoticon_Potato"/>
+    </CEmoticon>
+    <CEmoticon id="doubleproxy">
+        <Image TextureSheet="EmoticonsSheet2" Index="83"/>
+        <RequiredReward value="Emoticon_DoubleProxy"/>
+    </CEmoticon>
+    <CEmoticon id="dropperlord">
+        <Image TextureSheet="EmoticonsSheet2" Index="84"/>
+        <RequiredReward value="Emoticon_Dropperlord"/>
+    </CEmoticon>
+    <CEmoticon id="warpprism">
+        <Image TextureSheet="EmoticonsSheet2" Index="85"/>
+        <RequiredReward value="Emoticon_WarpPrism"/>
+    </CEmoticon>
+    <CEmoticon id="medivac">
+        <Image TextureSheet="EmoticonsSheet2" Index="86"/>
+        <RequiredReward value="Emoticon_Medivac"/>
+    </CEmoticon>
+    <CEmoticon id="dead">
+        <Image TextureSheet="EmoticonsSheet2" Index="87"/>
+        <RequiredReward value="Emoticon_Dead"/>
+    </CEmoticon>
+    <CEmoticon id="skeleton">
+        <Image TextureSheet="EmoticonsSheet2" Index="88"/>
+        <RequiredReward value="Emoticon_Skeleton"/>
+    </CEmoticon>
+    <CEmoticon id="cantlook">
+        <Image TextureSheet="EmoticonsSheet2" Index="89"/>
+        <RequiredReward value="Emoticon_CantLook"/>
+    </CEmoticon>
+    <CEmoticon id="bwegg">
+        <Image TextureSheet="EmoticonsSheet2" Index="90"/>
+        <RequiredReward value="Emoticon_BWEgg"/>
+    </CEmoticon>
+    <CEmoticon id="bwhydralisk">
+        <Image TextureSheet="EmoticonsSheet2" Index="91"/>
+        <RequiredReward value="Emoticon_BWHydralisk"/>
+    </CEmoticon>
+    <CEmoticon id="bwmutalisk">
+        <Image TextureSheet="EmoticonsSheet2" Index="92"/>
+        <RequiredReward value="Emoticon_BWMutalisk"/>
+    </CEmoticon>
+    <CEmoticon id="warpin">
+        <Image TextureSheet="EmoticonsSheet2" Index="93"/>
+        <RequiredReward value="Emoticon_WarpIn"/>
+    </CEmoticon>
+    <CEmoticon id="reaper">
+        <Image TextureSheet="EmoticonsSheet2" Index="94"/>
+        <RequiredReward value="Emoticon_Reaper"/>
+    </CEmoticon>
+    <CEmoticon id="tychus">
+        <Image TextureSheet="EmoticonsSheet2" Index="95"/>
+        <RequiredReward value="Emoticon_Tychus"/>
+    </CEmoticon>
+    <CEmoticon id="bongo">
+        <Image TextureSheet="EmoticonsSheet2" Index="96"/>
+        <RequiredReward value="Emoticon_BongoProbe"/>
+    </CEmoticon>
+    <CEmoticon id="mic">
+        <Image TextureSheet="EmoticonsSheet2" Index="97"/>
+        <RequiredReward value="Emoticon_Mic"/>
+    </CEmoticon>
+    <CEmoticon id="seethis">
+        <Image TextureSheet="EmoticonsSheet2" Index="98"/>
+        <RequiredReward value="Emoticon_SeeThis"/>
+    </CEmoticon>
+    <CEmoticon id="rainbarf">
+        <Image TextureSheet="EmoticonsSheet2" Index="99"/>
+        <RequiredReward value="Emoticon_RainbowBarf"/>
+    </CEmoticon>
+    <CEmoticon id="zeratul">
+        <Image TextureSheet="EmoticonsSheet3" Index="0"/>
+        <RequiredReward value="Emoticon_Zeratul"/>
+    </CEmoticon>
+    <CEmoticon id="artifact">
+        <Image TextureSheet="EmoticonsSheet3" Index="1"/>
+        <RequiredReward value="Emoticon_Artifact"/>
+    </CEmoticon>
 </Catalog>

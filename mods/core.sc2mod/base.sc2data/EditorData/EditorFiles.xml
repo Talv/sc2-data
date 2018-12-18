@@ -193,6 +193,7 @@
 <file label="DataPhysicsMaterial"       ><dir>TextureDir</dir>UI-EditorIcon-DataEditor_AdvancedValues</file>
 <file label="DataPortraitPack"          ><dir>TextureDir</dir>UI-EditorIcon-DataEditor_AdvancedValues</file>
 <file label="DataPreload"               ><dir>TextureDir</dir>UI-EditorIcon-DataEditor_AdvancedValues</file>
+<file label="DataPremiumMap"            ><dir>ImageDir</dir>MainToolbar/TestDocument</file>
 <file label="DataRace"                  ><dir>TextureDir</dir>UI-EditorIcon-DataEditor_AdvancedValues</file>
 <file label="DataRequirement"           ><dir>TextureDir</dir>UI-EditorIcon-Data_Types_Requirements</file>
 <file label="DataRequirementNode"       ><dir>TextureDir</dir>UI-EditorIcon-Data_Types_Requirements</file>
@@ -231,6 +232,8 @@
 <file label="DataWarChest"              ><dir>TextureDir</dir>UI-EditorIcon-DataEditor_AdvancedValues</file>
 <file label="DataWarChestSeason"        ><dir>TextureDir</dir>UI-EditorIcon-DataEditor_AdvancedValues</file>
 <file label="DataWeapon"                ><dir>TextureDir</dir>UI-EditorIcon-Data_Types_Weapons</file>
+
+<file label="DataStimPack"              ><dir>TextureDir</dir>UI-EditorIcon-DataEditor_AdvancedValues</file>
 
 <file label="TriggerDefaultLabel"           ><dir>TextureDir</dir>UI-EditorIcon-TriggerCategories_Triggers</file>
 <file label="TriggerEvent"                  ><dir>TextureDir</dir>UI-EditorIcon-TriggerCategories_Event</file>

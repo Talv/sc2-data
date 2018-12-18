@@ -46,7 +46,6 @@
 <Asset path="assets\sounds\zerg\baneling\baneling_ready2.ogg" Type="Sound"/>
 <Asset path="assets\textures\sgthammer_interior_portrait_emiss.lvl0" Type="Image"/>
 <Asset path="assets\textures\xelnaga_curb_temple_emmi.lvl0" Type="Image"/>
-<Asset path="assets\textures\tutorialresourceshighlight.dds" Type="Image"/>
 <Asset path="assets\textures\infestedcolonistportrait_static.dds" Type="Image"/>
 <Asset path="assets\sounds\zerg\ultralisk\ultralisk_attackimpact1.wav" Type="Sound"/>
 <Asset path="assets\sounds\zerg\baneling\baneling_ready1.ogg" Type="Sound"/>
@@ -79,6 +78,8 @@
 <Achievement id="CommanderFenixCarrier"/>
 <Achievement id="CommanderDehakaLevelUp"/>
 <Achievement id="CommanderHornerSupply"/>
+<Achievement id="CommanderTychusUltimateTime"/>
+<Achievement id="CommanderZeratulArtifactRush"/>
 <Actor id="SYSTEM_ActorConfig"/>
 <Actor id="PortraitActor"/>
 <Actor id="TriggerRegion"/>
@@ -92,6 +93,9 @@
 <Actor id="LaserDrillCoopConcentratedBeamRegion"/>
 <Actor id="MutatorLaserDrillBeamRegion"/>
 <Actor id="HHBomberAreaBombWarning"/>
+<Actor id="Heavens_COOP_GearDeliveryBeam_Source"/>
+<Actor id="Heavens_COOP_GearDeliveryBeam_Target"/>
+<Actor id="TychusOdinDeathTimeOut"/>
 <Behavior id="PermanentlyInvulnerable"/>
 <Behavior id="PermanentlyUncommandable"/>
 <Behavior id="MULETimedLife"/>
@@ -144,6 +148,9 @@
 <Behavior id="MutatorSideStep"/>
 <Behavior id="MutatorEvolve"/>
 <Behavior id="MutatorHouseHunters"/>
+<Behavior id="TriggerDamageMultiplier"/>
+<Behavior id="TriggerQueueableRate"/>
+<Behavior id="TriggerAttackRate"/>
 <Behavior id="NydusNetworkConjoined"/>
 <Behavior id="NydusWormConjoined"/>
 <Behavior id="GreaterNydusWormConjoined"/>
@@ -166,6 +173,23 @@
 <Behavior id="HHBomberPlatformAreaBombDisabler"/>
 <Behavior id="HHSupplyDepotInitialStun"/>
 <Behavior id="HHBomberPlatformAreaBombTopBarDummyTimer"/>
+<Behavior id="TychusFirebatOilBombed"/>
+<Behavior id="TychusFirebatOilFire"/>
+<Behavior id="TychusMedicTransportGroundUnits"/>
+<Behavior id="TychusMedicDefensiveMatrix"/>
+<Behavior id="TychusHeroSubGroup"/>
+<Behavior id="ZeratulPhotonCannonProjectionCaster"/>
+<Behavior id="ZeratulDarkTemplarRetreatCooldown"/>
+<Behavior id="ZeratulPurificationNovaTargetedMainTargetImmunity"/>
+<Behavior id="ZeratulPhotonCannonProjection"/>
+<Behavior id="ZeratulTopBarTimedLife"/>
+<Behavior id="ZeratulPhaseProjectionChanneling"/>
+<Behavior id="ZeratulDarkTemplarRetreatRegen"/>
+<Behavior id="ZeratulPurificationNovaCasterFinder"/>
+<Behavior id="ZeratulPurificationNovaSmallOrbSearchBuff"/>
+<Behavior id="ZeratulProphecyCooldownTracker"/>
+<Behavior id="ZeratulTopBarWarpingIn"/>
+<Effect id="TimedLifeFate"/>
 <Effect id="CopyTargetSelectionAndControlGroups"/>
 <Effect id="GuardianShieldPersistent"/>
 <Effect id="PointDefenseDroneReleaseCreateUnit"/>
@@ -197,6 +221,8 @@
 <Effect id="SOAMapWideChronoSearch"/>
 <Effect id="HHBomberPlatformAreaBombReturnSet"/>
 <Effect id="HHWidowMineBlossomIssueOrderSet"/>
+<Effect id="DrakkenLaserDrillSpotterCallForHelp"/>
+<Effect id="ItemKnockbackBy3"/>
 <Effect id="DehakaGlevigFirebreathSetAutocast"/>
 <Effect id="DehakaMurvarAcidPukeSetAutocast"/>
 <Effect id="DehakaMurvarSpawnCreepersSetAutocast"/>
@@ -225,6 +251,8 @@
 <Effect id="MutatorMissileNukeLaunch"/>
 <Effect id="MutatorPolarityMimic"/>
 <Effect id="TriggerCopyBehaviorToMagazine"/>
+<Effect id="TriggerInheritRateIterateMagazine"/>
+<Effect id="ItemKnockbackBy2"/>
 <Effect id="BiomassPickupLM"/>
 <Effect id="BiomassPickupFullLM"/>
 <Effect id="HybridNukeDamageSmall"/>
@@ -263,6 +291,24 @@
 <Effect id="HHHellionStimDeathSetUpgrade"/>
 <Effect id="KillMagazine"/>
 <Effect id="ReanimateCleanupTargetBehaviorsSet"/>
+<Effect id="TychusFirebatOilFireSearchTrigger"/>
+<Effect id="TychusMedicTransportAirUnitsRB"/>
+<Effect id="TychusMedicTransportUnhideUnitsSet"/>
+<Effect id="TychusMedicTransportCancelUnloadSet"/>
+<Effect id="TychusHeroTrainChargeAdd"/>
+<Effect id="TychusWarhoundTurretChargeAdd"/>
+<Effect id="TychusWarhoundTurretChargeRemove"/>
+<Effect id="TychusReaperBombChargeAdd"/>
+<Effect id="TychusReaperBombChargeRemove"/>
+<Effect id="TychusHeroChargeAdd"/>
+<Effect id="TychusHeroChargeRemove"/>
+<Effect id="TychusHeroLevel1ChargeAdd"/>
+<Effect id="TychusHeroLevel1ChargeRemove"/>
+<Effect id="TychusResearchCenterCopyRally"/>
+<Effect id="ZeratulEntropicBlastCyanImpactSpawnSet"/>
+<Effect id="ZeratulDarkTemplarRetreatBlinkTrigger"/>
+<Effect id="ZeratulMapWideStasisSet"/>
+<Effect id="ZeratulTradeTarget"/>
 <Light id="MutatorVeryDark"/>
 <Map id="COOP_Placeholder"/>
 <Model id="StaticPortrait"/>
@@ -273,10 +319,11 @@
 <Model id="BeaconDetectPing"/>
 <Model id="BeaconClaimPing"/>
 <Model id="TalkIcon"/>
-<Model id="HybridWarpInEffect"/>
-<Model id="TalkIconRing"/>
 <Model id="PingDiamond"/>
+<Model id="PingTriangle"/>
+<Model id="TalkIconRing"/>
 <Model id="DisintegrationState"/>
+<Model id="HybridWarpInEffect"/>
 <Model id="DarkTemplarChampionBlinkIn"/>
 <Model id="DarkTemplarChampionBlinkOut"/>
 <Model id="SOA_Calldown_UI"/>
@@ -284,11 +331,12 @@
 <Model id="PingMissileStandard"/>
 <Model id="PingViewArea"/>
 <Model id="PingHyperion_AC"/>
+<Model id="PingAvatarForm"/>
+<Model id="PingAvatarEssence"/>
 <Sound id="UI_TerranHint" Variations="0"/>
 <Sound id="TUIWarning" Variations="0"/>
 <Sound id="UI_GenericError"/>
 <Sound id="Medivac_Unload" Variations="0"/>
-<Sound id="TutorialExecutor00143"/>
 <Sound id="Alert_ProtossNeedMoreFood"/>
 <Sound id="UI_MissionComplete" Variations="3"/>
 <Sound id="Music_MuleParty"/>
@@ -315,6 +363,8 @@
 <Sound id="ChristmasGiftEnemy"/>
 <Sound id="ChristmasGiftPing"/>
 <Sound id="ChristmasGiftAlly"/>
+<Sound id="ZeratulCommander_AbilityReady"/>
+<Sound id="ZeratulCommander_AbilitySelected"/>
 <Sound id="HornerHan_BomberPlatformBuild"/>
 <Sound id="HornerHan_BomberPlatformReady"/>
 <Sound id="HornerHan_CallFleet"/>
@@ -422,8 +472,28 @@
 <Sound id="SwannCommander_LaserDrill"/>
 <Sound id="VorazunCommander_TimeStop"/>
 <Sound id="ZagaraCommander_Roach"/>
+<Sound id="ZeratulCommander_CompleteArtifact"/>
+<Sound id="ZeratulCommander_FindArtifact"/>
+<Sound id="ZeratulCommander_ObtainArtifact"/>
+<Sound id="ZeratulCommander_SelectAbility"/>
 <Sound id="MutatorShoppingSpree"/>
 <Sound id="FenixNameChangeTalandar"/>
+<Sound id="TychusCommander_OutlawDeath"/>
+<Sound id="TychusCommander_RecruitOutlaw"/>
+<Sound id="TychusCommander_ReviveOutlaw"/>
+<Sound id="TychusHeroVO_Death"/>
+<Sound id="TychusCommander_FirebatReady"/>
+<Sound id="TychusCommander_GhostReady"/>
+<Sound id="TychusCommander_HERCReady"/>
+<Sound id="TychusCommander_MarauderReady"/>
+<Sound id="TychusCommander_MedicReady"/>
+<Sound id="TychusCommander_MedivacPlatformReminder"/>
+<Sound id="TychusCommander_MedivacUsed"/>
+<Sound id="TychusCommander_OdinReady"/>
+<Sound id="TychusCommander_OdinUsed"/>
+<Sound id="TychusCommander_ReaperReady"/>
+<Sound id="TychusCommander_SpectreReady"/>
+<Sound id="TychusCommander_WarhoundReady"/>
 <Soundtrack id="Music_ZergRedEnvelope"/>
 <Soundtrack id="Music_RedEnvelope_Intro"/>
 <Soundtrack id="Music_TerranRedEnvelope"/>
@@ -451,6 +521,8 @@
 <Unit id="HydraliskBurrowed"/>
 <Unit id="Overseer"/>
 <Unit id="UltraliskBurrowed"/>
+<Unit id="OverseerSiegeMode"/>
+<Unit id="ShapeCube"/>
 <Unit id="Lurker"/>
 <Unit id="LurkerBurrowed"/>
 <Unit id="InfestedCivilian"/>
@@ -494,7 +566,6 @@
 <Unit id="SIInfestedTrooper"/>
 <Unit id="MutatorLaserDrill"/>
 <Unit id="ArchAngelCoopAssault"/>
-<Unit id="OverseerSiegeMode"/>
 <Unit id="MutatorHybridImmortal"/>
 <Unit id="SIVolatileInfested"/>
 <Unit id="HHBomber"/>
@@ -526,14 +597,22 @@
 <Unit id="CreepTumorStukov"/>
 <Unit id="EssencePickup"/>
 <Unit id="HHScrapPickup"/>
-<Upgrade id="MasteryStukovMechAttackSpeed"/>
-<Upgrade id="MasteryAlarakUnitAttackSpeed"/>
-<Upgrade id="MasteryNovaWeaponAttackSpeed"/>
-<Upgrade id="MasteryNovaArmyAttackSpeed"/>
-<Upgrade id="MasteryFenixSuitAttackSpeed"/>
-<Upgrade id="MasteryFenixChampionAttackSpeed"/>
+<Unit id="ZeratulArtifactPickup1"/>
+<Unit id="ZeratulArtifactPickup2"/>
+<Unit id="ZeratulArtifactPickup3"/>
+<Unit id="ZeratulXelNagaChargedCrystalCyan"/>
+<Unit id="CoopCasterZeratulSpecialization"/>
+<Unit id="PurificationOrbSmall"/>
+<Unit id="ProphecyCamera"/>
+<Unit id="ProphecyArtifactHintUnit"/>
+<Unit id="ProphecyArtifactMineralPickup"/>
+<Unit id="ProphecyArtifactVespenePickup"/>
 <Upgrade id="MasteryFenixReducedResearchCosts"/>
-<Upgrade id="MasteryDehakaAttackSpeed"/>
 <User id="TechUnit"/>
 <User id="PresetCoopPlayerTeams"/>
+<Weapon id="CoopGlaiveWurm"/>
+<Weapon id="ZagaraHunterKiller"/>
+<Weapon id="ZagaraHunterKillerMelee"/>
+<Weapon id="ZagaraAcidSaliva"/>
+<Weapon id="ZagaraRoachMelee"/>
 </Preload>

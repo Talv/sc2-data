@@ -120,6 +120,19 @@
         <ValueTable value="HornerMagMineDamage"/>
         <ValueTable value="HornerScrapCollected"/>
         <ValueTable value="PartAndParcelCollection"/>
+        <ValueTable value="CradleOfDeathDamageDealttoConstructs"/>
+        <ValueTable value="TychusFirebatOilDamage"/>
+        <ValueTable value="TychusGhostDominatedDamage"/>
+        <ValueTable value="TychusGrenadeDamage"/>
+        <ValueTable value="TychusHERCImpactDuration"/>
+        <ValueTable value="TychusMarauderHeal"/>
+        <ValueTable value="TychusMedicHeal"/>
+        <ValueTable value="TychusOdinDamage"/>
+        <ValueTable value="TychusReaperBombDamage"/>
+        <ValueTable value="TychusSpectrePulseDamage"/>
+        <ValueTable value="TychusWarhoundTurretDamage"/>
+        <ValueTable value="ZeratulDamage"/>
+        <ValueTable value="ZeratulShieldRestore"/>
         <Flags index="Hidden" value="1"/>
     </CScoreResultScore>
 </Catalog>

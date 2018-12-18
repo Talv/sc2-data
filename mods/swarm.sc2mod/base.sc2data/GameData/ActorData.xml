@@ -332,16 +332,7 @@
             <Image value="Assets\Textures\wireframe-general-destructableice-4x4.dds"/>
         </Wireframe>
     </CActorUnit>
-    <CActorModel id="TerrainSquibHarnessContinuous">
-        <On Terms="ActorCreation" Send="StatusSet LoopingSound 0"/>
-        <On Terms="ModelEvent; ModelEventName WaterRippleSmallWalk" Send="Create WaterWalkSmall"/>
-        <On Terms="ModelEvent; ModelEventName WaterRippleMediumWalk" Send="Create WaterWalkMedium"/>
-        <On Terms="ModelEvent; ModelEventName WaterRippleLargeWalk" Send="Create WaterWalkLarge"/>
-        <On Terms="ModelEvent; ModelEventName WaterRippleVehicleWalk; IsStatus LoopingSound 0" Send="Create WaterWalkVehicle"/>
-        <On Terms="ModelEvent; ModelEventName WaterRippleVehicleWalk; IsStatus LoopingSound 0" Send="StatusSet LoopingSound 1"/>
-        <On Terms="ModelEvent; ModelEventName WaterRippleVehicleStand; IsStatus LoopingSound 1" Target="WaterWalkVehicle" Send="Destroy"/>
-        <On Terms="ModelEvent; ModelEventName WaterRippleVehicleStand; IsStatus LoopingSound 1" Send="StatusSet LoopingSound 0"/>
-    </CActorModel>
+    <CActorModel id="ViperDeathAddition" parent="ModelAnimationStyleOneShot"/>
     <CActorSound id="WaterWalkSmall" parent="SoundOneShot">
         <Sound value="FS_WaterWalk"/>
     </CActorSound>
@@ -436,33 +427,6 @@
         <HostOffset Subject="SpineCrawler" Scope="Caster"/>
         <HostOffsetSiteOps Ops="SOpAttachWeaponSoft"/>
     </CActorSiteOpHostedOffset>
-    <!-- NOTE:  This does not prevent blood impacts from physics bodies in non-ragdoll deaths.
-         Those are minor enough that we are leaving them in. -->
-    <CActorModel id="UnitDeathRagdollBloodPrevent" parent="UnitDeathRagdoll">
-        <Macros value="PhysicsImpactBloodPrevent"/>
-    </CActorModel>
-    <CActorModel id="SpineCrawlerHurlDeathRagdoll" parent="UnitDeathRagdoll">
-        <!-- Start the victim ragdoll attached to the tentacle. -->
-        <Host Subject="SpineCrawler" Scope="Caster"/>
-        <HostSiteOps Ops="SOpAttachWeaponSoft SOpSpineCrawlerDeathOffset"/>
-        <!-- We need to not inherit TeamColor, or the death picks up the teamColor of the killing
-             Spine Crawler when it attaches.  We'll still get the teamColor via the defaults that
-             get set up for models based on player id.  -->
-        <Inherits index="TeamColor" value="0"/>
-        <Remove Terms="ActorCreation" Send="RefClear ::Host"/>
-        <!-- After being dragged for 0.3 second, release the ragdoll model, sending it flying.
-             Play Death to activate the physics. -->
-        <On Terms="ActorCreation" Send="TimerSet 0.300000 TentacleDetach"/>
-        <On Terms="TimerExpired; TimerName TentacleDetach" Send="RefClear ::Host"/>
-        <On Terms="TimerExpired; TimerName TentacleDetach" Send="HostSiteOpsSet ::Host"/>
-        <On Terms="TimerExpired; TimerName TentacleDetach" Send="$Death"/>
-    </CActorModel>
-    <CActorModel id="SpineCrawlerHurlDeathRagdollBloodPrevent" parent="SpineCrawlerHurlDeathRagdoll">
-        <Macros value="PhysicsImpactBloodPrevent"/>
-    </CActorModel>
-    <CActorModel id="SpineCrawlerHurlDeathRagdollWithTeamColor" parent="SpineCrawlerHurlDeathRagdoll">
-        <Remove Terms="ActorCreation" Send="SetTeamColor {0,0,0 0.000000} {0,0,0 0.000000}"/>
-    </CActorModel>
     <CActorModel id="ConfirmationLocalGround">
         <Remove Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
         <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce 0.500000 AsDuration"/>
@@ -1021,52 +985,6 @@
         <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
     </CActorUnit>
     <CActorSound id="Mule_Land" parent="SoundOneShot"/>
-    <!--                                                                                         -->
-    <!-- Marine                                                                                  -->
-    <!--                                                                                         -->
-    <CActorUnit id="Marine">
-        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
-        <Macros value="PhysicsDeathsSwarmGround"/>
-        <Macros value="TerrainSquibAnimations"/>
-        <DeathCustoms ActorModel="MarineDeathRagdoll" ModelLink="MarineDeathRagdoll" Name="RagdollBasic">
-            <!-- Reducing blood on Terran units, for now... -->
-            <BodySquibs Name="None"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Fire"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Fire"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="MarineDeathRagdoll" Name="RagdollSpineCrawlerHurl">
-            <BodySquibs Name="None"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
-        <TerrainSquibs>
-            <MovementDistance value="0.150000,0.150000"/>
-            <IdlePeriod value="0.100000,0.250000"/>
-            <RangeUp value="0.600000"/>
-            <RangeDown value="0.600000"/>
-            <AttachQuery Methods="AMFilterCenter"/>
-            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
-        </TerrainSquibs>
-        <On Terms="UnitHeightUpdate.*.Land" Send="Create Marine_Land"/>
-        <!--On Terms="UnitMovementUpdate.*.Walk; PassChance 1.000000" Send="AnimPlay Flail Flail PlayForever"/>
-        <On Terms="UnitMovementUpdate.*.Stand" Send="AnimClear Flail"/-->
-    </CActorUnit>
-    <!-- Needed for model swaps for MP -->
-    <CActorModel id="MarineDeathRagdoll" parent="UnitDeathRagdollBloodPrevent"/>
-    <CActorSound id="Marine_Land" parent="SoundOneShot"/>
     <!-- Basic ragdoll attack                                                                    -->
     <CActorSiteOpRotationRandom id="MarineForceDirectionRandomizer">
         <YawHalfAngle value="30.000000"/>
@@ -1250,9 +1168,9 @@
     <CActorUnit id="GhostAlternate">
         <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
         <Macros value="PhysicsDeathsSwarmGround"/>
-        <!--DeathCustoms ActorModel="UnitDeathRagdollBloodPrevent" ModelLink="GhostDeathRagdoll" Name="RagdollBasic"-->
-        <!-- Reducing blood on Terran units, for now... -->
-        <!--BodySquibs Name="None"/>
+        <DeathCustoms ActorModel="UnitDeathRagdollBloodPrevent" ModelLink="GhostAlternateDeathRagdoll" Name="RagdollBasic">
+            <!-- Reducing blood on Terran units, for now... -->
+            <BodySquibs Name="None"/>
         </DeathCustoms>
         <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
         <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
@@ -1268,12 +1186,12 @@
             <BodySquibs Name="Acid"/>
         </DeathCustoms>
         <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="GhostDeathRagdoll" Name="RagdollSpineCrawlerHurl">
+        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="GhostAlternateDeathRagdoll" Name="RagdollSpineCrawlerHurl">
             <BodySquibs Name="None"/>
         </DeathCustoms>
         <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
         <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/-->
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
         <TerrainSquibs>
             <MovementDistance value="0.150000,0.150000"/>
             <IdlePeriod value="0.100000,0.250000"/>
@@ -1705,7 +1623,6 @@
         <On Terms="UnitPortrait.*.Configure" Target="::PortraitGameSelf" Send="AnimClear Visor 0.000000"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Hellion_Land"/>
         <UnitFlags index="StandAnimBirthVariation" value="0"/>
-        <PortraitModel value="HellionMorphPortrait"/>
         <PortraitActor value="HellionPortrait"/>
         <GroupIcon>
             <Image index="0" value="Assets\Textures\Wireframe-Terran-hellionex1.dds"/>
@@ -1789,7 +1706,7 @@
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Hellion_Land"/>
         <UnitFlags index="StandAnimBirthVariation" value="0"/>
         <DeathArray index="Normal" ModelLink="HellionTankDeath" SoundLink="Hellion_Explode"/>
-        <PortraitModel value="HellionMorphPortrait"/>
+        <PortraitModel value="HellionPortrait"/>
         <PortraitActor value="HellionPortrait"/>
         <WalkAnimMoveSpeed value="2.25"/>
         <BarOffset value="50"/>
@@ -1872,15 +1789,15 @@
         <!-- On Terms="Effect.HellionTankDamage.Start; At Target; !ValidateEffect HasHighCapacityBarrels; ValidateUnitType IsStructureTarget" Send="Create"/-->
         <On Terms="Effect.HellionTankDamage.Start; At Target; ValidateUnitType IsStructureTarget" Send="Create"/>
     </CActorModel>
-    <!--CActorModel id="HellionTankAttackUpgradedFireAdditionStructure" parent="ModelAnimationStyleOneShot">
-        <Model value="HellionTankAttackUpgradedFireAddition"/>
-        <Host Subject="_Unit"/>
-        <HostSiteOps Ops="SOpAttachRandomDamage"/>
-        <On Terms="Effect.HellionTankDamage.Start; At Target; ValidateEffect HasHighCapacityBarrels; ValidateUnitType IsStructureTarget" Send="Create"/>
-    </CActorModel-->
+    <!--CActorModel id="HellionTankAttackUpgradedFireAdditionStructure" parent="ModelAnimationStyleOneShot">-->
+    <!--        <Model value="HellionTankAttackUpgradedFireAddition"/>-->
+    <!--        <Host Subject="_Unit"/>-->
+    <!--        <HostSiteOps Ops="SOpAttachRandomDamage"/>-->
+    <!--        <On Terms="Effect.HellionTankDamage.Start; At Target; ValidateEffect HasHighCapacityBarrels; ValidateUnitType IsStructureTarget" Send="Create"/>-->
+    <!--    </CActorModel-->
     <CActorUnit id="HellionMorphModel" parent="GenericUnitBaseMorphTransition" unitName="TankModeMorphModel">
         <Model value="HellionTankMorph"/>
-        <PortraitModel value="HellionMorphPortrait"/>
+        <PortraitModel value="HellionPortrait"/>
         <PortraitActor value="HellionPortrait"/>
         <On Terms="AbilMorph.*.Start; MorphTo Hellion" Send="Create"/>
         <On Terms="AbilMorph.*.Start; MorphTo Hellion" Send="AnimPlay End Morph,End"/>
@@ -1913,7 +1830,7 @@
     <CActorUnit id="HellionTankMorphModel" parent="GenericUnitBaseMorphTransition" unitName="SiegeModeMorphModel">
         <Model value="HellionTankMorph"/>
         <PortraitActor value="HellionPortrait"/>
-        <PortraitModel value="HellionMorphPortrait"/>
+        <PortraitModel value="HellionPortrait"/>
         <On Terms="AbilMorph.*.Start; MorphTo HellionTank" Send="Create"/>
         <On Terms="AbilMorph.*.Start; MorphTo HellionTank" Send="AnimPlay Start Morph,Start"/>
         <On Terms="AbilMorph.*.Finish; MorphFrom HellionTank" Send="Destroy"/>
@@ -3270,7 +3187,9 @@
         <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
         <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
     </CActorUnit>
-    <CActorSound id="Observer_Land" parent="SoundOneShot"/>
+    <CActorSound id="Observer_Land" parent="SoundOneShot">
+        <Filter index="Enemy" value="1"/>
+    </CActorSound>
     <!--                                                                                         -->
     <!-- Probe                                                                                   -->
     <!--                                                                                         -->
@@ -5802,60 +5721,9 @@
     </CActorUnit>
     <CActorSound id="Broodling_Land" parent="SoundOneShot"/>
     <!--                                                                                         -->
-    <!-- Zergling                                                                                -->
-    <!--                                                                                         -->
-    <CActorUnit id="Zergling">
-        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
-        <!--Model value="ZerglingEx1"/-->
-        <On Terms="UnitBirth.Zergling" Send="TerrainSquibActivateGroup RippleStandard"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo Zergling; MorphFrom ZerglingBurrowed" Send="TerrainSquibActivateGroup RippleStandard"/>
-        <On Terms="AbilMorph.*.Finish; MorphTo ZerglingBurrowed; MorphFrom Zergling" Send="TerrainSquibDeactivate"/>
-        <On Terms="UnitHeightUpdate.*.Land" Send="Create Zergling_Land"/>
-        <!-- <SoundArray index="Movement" value="zZergling_moveLoop"/> -->
-        <Macros value="TerrainSquibAnimations"/>
-        <Macros value="PhysicsDeathsSwarmGround"/>
-        <DeathCustoms ActorModel="ZerglingDeathRagdoll" ModelLink="ZerglingDeathRagdoll" Name="RagdollBasic">
-            <BodySquibs Name="BloodReduced"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Fire"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Fire"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
-            <BodySquibs Name="Acid"/>
-        </DeathCustoms>
-        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms ActorModel="ZerglingSpineCrawlerHurlDeathRagdoll" ModelLink="ZerglingDeathRagdoll" Name="RagdollSpineCrawlerHurl"/>
-        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
-        <TerrainSquibs>
-            <GroupName value="RippleStandard"/>
-            <MovementDistance value="0.250000,0.250000"/>
-            <IdlePeriod value="0.200000,0.400000"/>
-            <RangeUp value="1.000000"/>
-            <RangeDown value="1.000000"/>
-            <AttachQuery Methods="AMFilterCenter"/>
-            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleTiny"/>
-        </TerrainSquibs>
-        <MovementHerdNode value="HerdNode_ZergSmall"/>
-    </CActorUnit>
-    <!-- Needed for model swaps for MP -->
-    <CActorModel id="ZerglingDeathRagdoll" parent="UnitDeathRagdoll"/>
-    <CActorModel id="ZerglingSpineCrawlerHurlDeathRagdoll" parent="SpineCrawlerHurlDeathRagdoll"/>
-    <CActorSound id="Zergling_Land" parent="SoundOneShot"/>
-    <!--                                                                                         -->
     <!-- Baneling                                                                             -->
     <!--                                                                                         -->
     <CActorUnit id="Baneling">
-        <DeathArray index="Normal" ModelLink="BanelingEx1Death"/>
-        <Model value="BanelingEx1"/>
         <Macros value="TerrainSquibAnimations"/>
         <!-- No ragdoll deaths for this guy b/c he does damage when he gets killed so we need to
              make that clear to people at all times. -->
@@ -6269,7 +6137,7 @@
         <Macros value="UnloadDropAnim"/>
         <Macros value="PhysicsDeathsSwarmGround"/>
         <DeathCustoms ModelLink="ZergLargeUnitDeathLow" Name="AntiGravZerg"/>
-        <DeathCustoms ActorModel="SwarmHostDeathRagdoll" ModelLink="SwarmHostDeathRagdoll" Name="RagdollBasic"/>
+        <DeathCustoms ActorModel="SwarmHostMPDeathRagdoll" ModelLink="SwarmHostMPDeathRagdoll" Name="RagdollBasic"/>
         <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
         <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
             <BodySquibs Name="Fire"/>
@@ -6290,7 +6158,7 @@
         <DeathArray index="Normal" ModelLink="SwarmHostMPDeath" SoundLink="BroodLord_Explode" VoiceLink="SwarmHost_Death"/>
         <DeathArray index="Disintegrate" ModelLink="SwarmHostMPDeathAcid" SoundLink="Uni_DeathFXAcid" VoiceLink="SwarmHost_Death"/>
         <DeathArray index="Fire" ModelLink="SwarmHostMPDeathFire" SoundLink="Uni_DeathFXFire" VoiceLink="SwarmHost_Death"/>
-        <PortraitModel value="EggMonsterPortrait"/>
+        <PortraitModel value="SwarmHostPortrait"/>
         <PlacementSound value="Zerg_BuildingPlacement"/>
         <MovementHerdNode value="HerdNode_ZergLarge"/>
         <BarWidth value="80"/>
@@ -6333,6 +6201,9 @@
         <Aliases value="_UnitLarge"/>
     </CActorUnit>
     <CActorModel id="SwarmHostDeathRagdoll" parent="UnitDeathRagdoll">
+        <On Terms="ActorCreation" Send="Create SwarmHostDeathRagdollDetonationForce"/>
+    </CActorModel>
+    <CActorModel id="SwarmHostMPDeathRagdoll" parent="UnitDeathRagdoll">
         <On Terms="ActorCreation" Send="Create SwarmHostDeathRagdollDetonationForce"/>
     </CActorModel>
     <CActorForceSphere id="SwarmHostDeathRagdollDetonationForce" parent="DeathRagdollDetonationForce">
@@ -6415,14 +6286,14 @@
         <On Terms="WeaponStart.LocustMPMelee.AttackStart" Send="AnimBracketStart AttackMelee Spell,A"/>
         <On Terms="WeaponStop.LocustMPMelee.AttackStop" Send="AnimBracketStop AttackMelee"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Locust_Land"/>
-        <DeathArray index="Normal" ModelLink="SwarmHostSpawnDeath" SoundLink="Locust_Death"/>
-        <DeathArray index="Disintegrate" ModelLink="SwarmHostSpawnDeathAcid" SoundLink="Uni_DeathFXAcid"/>
-        <DeathArray index="Fire" ModelLink="SwarmHostSpawnDeathFire" SoundLink="Uni_DeathFXFire"/>
+        <DeathArray index="Normal" ModelLink="LocustMPDeath" SoundLink="Locust_Death"/>
+        <DeathArray index="Disintegrate" ModelLink="LocustMPDeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Fire" ModelLink="LocustMPDeathFire" SoundLink="Uni_DeathFXFire"/>
         <Macros value="ZergBurrowMobileAnimMacro"/>
         <Macros value="ZergSmallBurrowEffects"/>
         <Macros value="PhysicsDeathsSwarmGround"/>
         <Macros value="TerrainSquibAnimations"/>
-        <DeathCustoms ModelLink="LocustDeathRagdoll" Name="RagdollBasic">
+        <DeathCustoms ModelLink="LocustMPDeathRagdoll" Name="RagdollBasic">
             <BodySquibs Name="BloodReduced"/>
         </DeathCustoms>
         <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
@@ -6439,7 +6310,7 @@
             <BodySquibs Name="Acid"/>
         </DeathCustoms>
         <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdoll" ModelLink="LocustDeathRagdoll" Name="RagdollSpineCrawlerHurl"/>
+        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdoll" ModelLink="LocustMPDeathRagdoll" Name="RagdollSpineCrawlerHurl"/>
         <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
         <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
         <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
@@ -6447,7 +6318,7 @@
              appear in a higher ratio of deaths overall.  -->
         <DeathCustomData Name="RagdollBasic" SyncPassChance="65"/>
         <WalkAnimMoveSpeed value="2.25"/>
-        <PortraitModel value="SwarmHostSpawnPortrait"/>
+        <PortraitModel value="LocustMPPortrait"/>
         <BarWidth value="36"/>
         <BarOffset value="45"/>
         <UnitIcon value="Assets\Textures\btn-unit-zerg-locust.dds"/>
@@ -7379,7 +7250,9 @@
         <On Terms="Abil.ViperConsumeStructure.SourceChannelStart" Send="AnimGroupApply Channel"/>
         <On Terms="Abil.ViperConsumeStructure.SourceChannelStop" Send="AnimGroupRemove Channel"/>
         <On Terms="UnitDeathCustomize" Send="SetTeamColor 255,255,255"/>
-        <On Terms="UnitDeathCustomize; Option Model Low" Send="DeathCustomize Low"/>
+        <On Terms="UnitDeathCustomize; Option Model Low; ModelName Viper_Mecha" Send="DeathCustomize LowMecha"/>
+        <On Terms="UnitDeathCustomize; Option Model Low; !ModelName Viper_Mecha" Send="DeathCustomize Low"/>
+        <On Terms="UnitDeath" Send="Create ViperDeathAddition"/>
         <DeathArray index="Normal" SoundLink="Zerg_ExplosionMedium" VoiceLink="LairViper_Death"/>
         <PhysicsMatchKeysOrdered value="BasicAir,Basic"/>
         <DeathCustoms>
@@ -7401,6 +7274,7 @@
         <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
         <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
         <DeathCustoms ModelLink="ZergMediumUnitDeathLow" Name="Low"/>
+        <DeathCustoms ModelLink="ZergMediumUnitDeath_Mecha" Name="LowMecha"/>
         <PortraitModel value="ViperPortrait"/>
         <BarOffset value="70"/>
         <NameOffset value="70"/>
@@ -8662,10 +8536,10 @@
         <UnitFlags index="ShowBlobShadow" value="0"/>
         <BarWidth value="200"/>
         <GroupIcon>
-            <Image value="Assets\Textures\Wireframe-General-Destructiblerocks-4x4.dds"/>
+            <Image value="Assets\Textures\wireframe-neutral-destructiblecitydebris4x4.dds"/>
         </GroupIcon>
         <Wireframe>
-            <Image value="Assets\Textures\Wireframe-General-Destructiblerocks-4x4.dds"/>
+            <Image value="Assets\Textures\wireframe-neutral-destructiblecitydebris4x4.dds"/>
         </Wireframe>
         <HighlightTooltip value="Unit/Name/DestructibleRock4x4HighlightTooltip"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
@@ -9982,15 +9856,6 @@
     <CActorUnit id="DestructibleDebris6x6">
         <DeathArray index="Normal" SoundLink=""/>
     </CActorUnit>
-    <CActorModel id="GuardianShieldImpact">
-        <On Terms="ActorCreation; ValidateUnit IsViper" Send="SetScale 0.600000"/>
-        <On Terms="ActorCreation; ValidateUnit IsTempest" Send="SetScale 0.600000"/>
-        <On Terms="ActorCreation; ValidateUnit IsMothershipCore" Send="SetScale 0.500000"/>
-        <On Terms="ActorCreation; ValidateUnit IsOracle" Send="SetScale 0.500000"/>
-        <On Terms="ActorCreation; ValidateUnit IsWarHound" Send="SetScale 0.700000"/>
-        <On Terms="ActorCreation; ValidateUnit IsHellionTank" Send="SetScale 0.700000"/>
-        <On Terms="ActorCreation; ValidateUnit IsWidowMineBurrowed" Send="HostSiteOpsSet ::Host SOpAttachOrigin"/>
-    </CActorModel>
     <CActorSimple id="CombatVisibilityClearer">
         <On Terms="Effect.MothershipMassRecallTeleport.Start; At Target" Send="Create"/>
         <On Terms="Effect.MothershipCoreMassRecallTeleport.Start; At Target" Send="Create"/>
@@ -10063,12 +9928,6 @@
     <CActorUnit id="XelNaga_Caverns_Floating_BridgeV12Out" parent="XelNaga_Caverns_Floating_BridgeOut" unitNameAlt="XelNaga_Caverns_Floating_BridgeV12" unitName="XelNaga_Caverns_Floating_BridgeV12Out">
         <MinimapIcon value=""/>
     </CActorUnit>
-    <CActorModel id="PylonPlacementModel" parent="PlacementModel">
-        <On Terms="ActorCreation; PlayerHasReward PylonSkin; ModelIsLowQuality" Send="ModelSwap PylonXPR"/>
-    </CActorModel>
-    <CActorModel id="PylonPlaceholderModel" parent="PlaceholderModel">
-        <On Terms="ActorCreation; PlayerHasReward PylonSkin; ModelIsLowQuality" Send="ModelSwap PylonXPR"/>
-    </CActorModel>
     <CActorUnit id="LabMineralField750" parent="MineralBase" unitName="LabMineralField750">
         <On Terms="BehaviorLevel.MineralFieldMinerals750.Start; Level 0" Send="AnimGroupApply A"/>
         <On Terms="BehaviorLevel.MineralFieldMinerals750.Stop; Level 0" Send="AnimGroupRemove A"/>

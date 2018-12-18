@@ -118,6 +118,10 @@
         <value>PortraitsBuildings</value>
         <value>Effects</value>
         <value>PortraitsUnitsCritter</value>
+        <value>C3PortraitsUnitsProtoss</value>
+        <value>C3PortraitsUnitsTerran</value>
+        <value>C3PortraitsUnitsZerg</value>
+        <value>C3UI</value>
     </category>
     <category name="DoodadType">
         <value>Blocker</value>
@@ -184,6 +188,8 @@
         <value>FactionMarauder</value>
         <value>FactionCovertOps</value>
         <value>FactionRaider</value>
+        <value>FactionOutlaw</value>
+        <value>FactionXelNaga</value>
     </category>
     <group name="CutScene"/>
     <group name="Conversation"/>

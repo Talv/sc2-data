@@ -28,15 +28,74 @@
         </InfoArray>
         <Name value="Abil/Name/SITerranAddOns"/>
     </CAbilBuild>
+    <CAbilAttack id="AttackWithNeutralScanAirGround" parent="attack">
+        <Name value="Abil/Name/AttackWithNeutralScanAirGround"/>
+        <TargetMessage value="Abil/TargetMessage/AttackWithNeutralScanAirGround"/>
+        <AcquireFilters value="-;Player,Ally,Dead,Hidden,Invulnerable,Benign,Dazed"/>
+    </CAbilAttack>
+    <CAbilEffectTarget id="CoopTurnToAbility">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Range value="500"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Turn"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="DarkPylonMorph">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SOADarkPylon" State="Restricted" Requirements="HasDarkPylonMorph"/>
+        <Flags index="Automatic" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <InfoArray Unit="DarkPylon"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="HyperjumpNoVision">
+        <AbilSetId value="FleetwideJump"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="HyperjumpCreatePrecursor"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <Range value="500"/>
+        <CastIntroTime value="0"/>
+        <CastOutroTime value="1.2624"/>
+        <ShowProgressArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <ProgressButtonArray index="Channel" value="Hyperjump"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Hyperjump">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="KerriganVoidCoopEconDrop1Pickup">
+        <AutoCastFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="KerriganVoidCoopEconDrop2Pickup">
+        <AutoCastFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="KerriganVoidCoopEconDrop3Pickup">
+        <AutoCastFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="KerriganVoidCoopEconDrop4Pickup">
+        <AutoCastFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="KerriganVoidCoopEconDrop5Pickup">
+        <AutoCastFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="KerriganVoidCoopEconDropLT1Pickup">
+        <AutoCastFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="LockOn">
+        <Effect index="0" value="LockOnInitialSet"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="MorphToHellion">
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToHellionTank">
+        <CmdButtonArray index="Execute" Requirements=""/>
+    </CAbilMorph>
     <CAbilArmMagazine id="CarrierAiurHanger">
         <InfoArray index="Ammo1">
-            <Resource index="Minerals" value="15"/>
             <Cooldown Link="Abil/##id##"/>
-        </InfoArray>
-    </CAbilArmMagazine>
-    <CAbilArmMagazine id="CarrierHangar">
-        <InfoArray index="Ammo1">
-            <Resource index="Minerals" value="15"/>
         </InfoArray>
     </CAbilArmMagazine>
     <CAbilEffectTarget id="HHBattlecruiserHyperjump">
@@ -46,6 +105,7 @@
         <Flags index="AllowMovement" value="1"/>
         <Flags index="BestUnit" value="0"/>
         <Flags index="NoDeceleration" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
         <Cost>
             <Charge Link="Abil/FleetwideJump"/>
             <Cooldown Link="Abil/FleetwideJump" TimeUse="60"/>
@@ -74,6 +134,11 @@
         <Arc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="PnPSingleTargetLockOn2"/>
     </CAbilEffectTarget>
+    <CAbilBehavior id="OracleWeapon">
+        <Cost index="0">
+            <Vital index="Energy" value="0"/>
+        </Cost>
+    </CAbilBehavior>
     <CAbilEffectTarget id="PnPSingleTargetLockOn">
         <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
         <Effect index="0" value="PnPSingleTargetLockOnPersistentSet"/>
@@ -88,6 +153,7 @@
         <Flags index="AllowMovement" value="1"/>
         <Flags index="BestUnit" value="0"/>
         <Flags index="NoDeceleration" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
         <Cost>
             <Cooldown TimeUse="60"/>
         </Cost>
@@ -124,7 +190,7 @@
         <AutoCastValidatorArray value="NotHaveTargetLock"/>
         <AutoCastValidatorArray value="NotInterceptor"/>
         <CastOutroTime value="0.5"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="TargetLock"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HHNomadTargetLock"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="ObserverTargetLock">
         <AbilSetId value="TargetLock"/>
@@ -951,6 +1017,9 @@
             <Cooldown TimeUse="90"/>
         </Cost>
         <CmdButtonArray index="Execute" State="Restricted" Requirements="Use330mmBarrageCannons"/>
+        <Range index="0" value="10"/>
+        <CastIntroTime index="0" value="0.5"/>
+        <FinishTime index="0" value="0.5"/>
     </CAbilEffectTarget>
     <CAbilInteract id="ACGlobalShareUnit">
         <Flags index="AutoCast" value="1"/>
@@ -987,7 +1056,15 @@
         <InfoArray index="Research2" Time="60" Upgrade="overlordspeed">
             <Resource index="Minerals" value="50"/>
             <Resource index="Vespene" value="50"/>
-            <Button DefaultButtonFace="overlordspeed" Requirements="LearnPneumatizedCarapace">
+            <Button DefaultButtonFace="overlordspeed" State="Restricted" Requirements="LearnPneumatizedCarapace">
+                <Flags index="ShowInGlossary" value="1"/>
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research3" Time="60" Upgrade="OverlordspeedCoop">
+            <Resource index="Minerals" value="50"/>
+            <Resource index="Vespene" value="50"/>
+            <Button DefaultButtonFace="overlordspeed" Requirements="LearnPneumatizedCarapaceCoop">
                 <Flags index="ShowInGlossary" value="1"/>
                 <Flags index="ToSelection" value="1"/>
             </Button>
@@ -1081,7 +1158,7 @@
             <Vital index="Energy" value="25"/>
             <Cooldown TimeUse="2"/>
         </Cost>
-        <TargetFilters value="Visible;Enemy,Structure,Missile,Uncommandable,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Enemy,Structure,Missile,Uncommandable,Dead,Hidden"/>
         <Range value="5"/>
         <Arc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="DefensiveMatrixTargetDrone">
@@ -1460,7 +1537,7 @@
     </CAbilEffectInstant>
     <CAbilEffectInstant id="AlarakEmpower">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
-        <Effect index="0" value="AlarakEmpowerCaster"/>
+        <Effect index="0" value="AlarakEmpowerMe"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="AlarakEmpower" State="Restricted"/>
         <Cost>
             <Cooldown Location="Player" TimeUse="240"/>
@@ -1670,6 +1747,7 @@
     <CAbilEffectTarget id="BlinkSlayer" parent="Blink">
         <!--Effect index="0" value="VoidStalkerBlinkSet"/-->
         <CmdButtonArray index="Execute" Requirements="UseBlinkSlayer"/>
+        <Effect index="0" value="PhaseBlinkSet"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="BlinkShakuras"/>
     <CAbilEffectTarget id="BlinkShieldRestore">
@@ -1958,7 +2036,9 @@
         <Cost>
             <Cooldown TimeUse="15"/>
         </Cost>
-        <CmdButtonArray index="Execute" DefaultButtonFace="NovaOdinAnnihilate"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="NovaOdinAnnihilate">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
     </CAbilEffectTarget>
     <CAbilTransport id="NydusCanalTransport">
         <Flags index="CargoDeath" value="0"/>
@@ -1997,12 +2077,13 @@
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
         <InfoArray Unit="WarpPrismPhasingTaldarim">
             <SectionArray index="Actor">
-                <DurationArray index="Duration" value="1"/>
+                <DurationArray index="Duration" value="0.75"/>
             </SectionArray>
             <SectionArray index="Stats">
-                <DurationArray index="Duration" value="1"/>
+                <DurationArray index="Duration" value="0.75"/>
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
@@ -2045,6 +2126,26 @@
     </CAbilTrain>
     <CAbilWarpTrain id="RoboticsFacilityWarpTrain">
         <InfoArray index="Train1" Unit="WarpPrismTaldarim"/>
+        <InfoArray index="Train6">
+            <Charge>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Train7">
+            <Charge>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Train8">
+            <Charge>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Train9">
+            <Charge>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+        </InfoArray>
     </CAbilWarpTrain>
     <CAbilEffectTarget id="SOAMothershipBlink">
         <Cost index="0">
@@ -2188,9 +2289,26 @@
     <!--        <CmdButtonArray index="Execute" DefaultButtonFace="SpawnLocustNest"/>-->
     <!--    </CAbilEffectTarget-->
     <CAbilResearch id="CyberneticsCoreResearch">
-        <InfoArray index="Research7" Time="60">
-            <Button State="Available" Requirements="LearnWarpGateandNotArtanis"/>
+        <InfoArray index="Research4">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
         </InfoArray>
+        <InfoArray index="Research5">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+        </InfoArray>
+        <InfoArray index="Research6">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+        </InfoArray>
+        <InfoArray index="Research7" Time="60">
+            <Button Requirements="LearnWarpGateandNotArtanis"/>
+        </InfoArray>
+        <!--InfoArray index="Research8" Time="60" Upgrade="ZeratulSentryEnergyRegen">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchZeratulSentryEnergyRegen" State="Restricted" Requirements="LearnZeratulSentryEnergyRegen"/>
+        </InfoArray-->
         <InfoArray index="Research12" Time="100" Upgrade="SentryResearchShieldRepairDouble">
             <Resource index="Minerals" value="150"/>
             <Resource index="Vespene" value="150"/>
@@ -2226,6 +2344,16 @@
             <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="ResearchAlarakHavocAbilityRange" State="Restricted" Requirements="LearnAlarakHavocAbilityRange"/>
         </InfoArray>
+        <!--InfoArray index="Research24" Time="60" Upgrade="ZeratulBlinkStalker">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchZeratulBlinkStalker" State="Restricted" Requirements="LearnZeratulBlinkStalkerUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research25" Time="60" Upgrade="ZeratulStalkerBlinkShieldRestore">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchZeratulStalkerBlinkBuff" State="Restricted" Requirements="LearnZeratulStalkerBlinkUpgrade"/>
+        </InfoArray-->
     </CAbilResearch>
     <CAbilEffectTarget id="DarkArchonConfusion">
         <Cost index="0">
@@ -2243,6 +2371,7 @@
             <Cooldown TimeUse="30"/>
         </Cost>
         <CmdButtonArray index="Execute" State="Restricted" Requirements="HaveDarkArchonMindControl"/>
+        <Range index="0" value="9"/>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="DarkTemplarShadowFury">
         <CmdButtonArray index="Execute" Requirements="HaveResearchShadowFury"/>
@@ -2251,6 +2380,18 @@
         <CmdButtonArray index="Execute" State="Restricted" Requirements="HaveResearchVoidStasis"/>
     </CAbilEffectTarget>
     <CAbilResearch id="ForgeResearch">
+        <InfoArray index="Research7">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+        </InfoArray>
+        <InfoArray index="Research8">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+        </InfoArray>
+        <InfoArray index="Research9">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+        </InfoArray>
         <InfoArray index="Research10" Time="120" Upgrade="KaraxTurretRange">
             <Resource index="Minerals" value="200"/>
             <Resource index="Vespene" value="200"/>
@@ -2290,6 +2431,41 @@
             <Resource index="Minerals" value="25"/>
             <Resource index="Vespene" value="25"/>
             <Button DefaultButtonFace="AStrongHeart" Requirements="LearnAStrongHeart"/>
+        </InfoArray>
+        <InfoArray index="Research18" Time="160" Upgrade="ProtossGroundWeaponsLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ProtossAlarakWeaponsLevel1" State="Restricted" Requirements="LearnProtossWeapons1"/>
+        </InfoArray>
+        <InfoArray index="Research19" Time="190" Upgrade="ProtossGroundWeaponsLevel2">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ProtossAlarakWeaponsLevel2" State="Restricted" Requirements="LearnProtossWeapons2"/>
+        </InfoArray>
+        <InfoArray index="Research20" Time="220" Upgrade="ProtossGroundWeaponsLevel3">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ProtossAlarakWeaponsLevel3" State="Restricted" Requirements="LearnProtossWeapons3"/>
+        </InfoArray>
+        <InfoArray index="Research21" Time="160" Upgrade="ProtossGroundArmorsLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ProtossAlarakArmorLevel1" State="Restricted" Requirements="LearnProtossArmor1"/>
+        </InfoArray>
+        <InfoArray index="Research22" Time="190" Upgrade="ProtossGroundArmorsLevel2">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ProtossAlarakArmorLevel2" State="Restricted" Requirements="LearnProtossArmor2"/>
+        </InfoArray>
+        <InfoArray index="Research23" Time="220" Upgrade="ProtossGroundArmorsLevel3">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ProtossAlarakArmorLevel3" State="Restricted" Requirements="LearnProtossArmor3"/>
+        </InfoArray>
+        <InfoArray index="Research24" Time="60" Upgrade="DarkPylonMorph">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchZeratulDarkPylon" State="Restricted" Requirements="LearnDarkPylonMorph"/>
         </InfoArray>
     </CAbilResearch>
     <CAbilResearch id="GhostAcademyResearch">
@@ -2428,7 +2604,7 @@
         <Cost>
             <Cooldown TimeUse="10"/>
         </Cost>
-        <Range value="9"/>
+        <Range value="12"/>
         <CursorEffect value="RavagerCorrosiveBileAoeCursorDummy"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="RavagerAbathurCorrosiveBile"/>
     </CAbilEffectTarget>
@@ -2655,6 +2831,7 @@
     <CAbilBehavior id="DuskWingBansheeCloakingField">
         <Flags index="ToggledOn" value="1"/>
         <CmdButtonArray index="On" Requirements="NotNovaCommander"/>
+        <BehaviorArray index="0" value="DuskWingBansheeCloak"/>
     </CAbilBehavior>
     <CAbilEffectTarget id="EnterWormhole">
         <CmdButtonArray index="Execute" State="Restricted" Requirements="HaveOracleWormhole"/>
@@ -2722,11 +2899,7 @@
         <CmdButtonArray index="Execute">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
-        <Flags index="RequireTargetVision" value="1"/>
     </CAbilEffectTarget>
-    <CAbilEffectInstant id="ImmortalOverload">
-        <CmdButtonArray index="Execute" Requirements="HaveResearchImmortalBarrier"/>
-    </CAbilEffectInstant>
     <CAbilEffectTarget id="LightningBomb">
         <CmdButtonArray index="Execute" State="Restricted" Requirements="HaveTempestDisintegration"/>
     </CAbilEffectTarget>
@@ -2750,6 +2923,7 @@
     <CAbilTransport id="OverlordTransport">
         <Flags index="CargoDeath" value="0"/>
         <DeathUnloadEffect value="CoopCargoDeathDummy"/>
+        <LoadCargoBehavior value="TransportDummy"/>
     </CAbilTransport>
     <CAbilEffectTarget id="PhoenixDoubleGravitonBeam">
         <Cost index="0">
@@ -2855,6 +3029,7 @@
     </CAbilEffectTarget>
     <CAbilEffectTarget id="PsiStorm">
         <CmdButtonArray index="Execute" Requirements="UsePsiStorm"/>
+        <AbilSetId value="PsiStorm"/>
     </CAbilEffectTarget>
     <CAbilEffectInstant id="KerriganVoidCoopCrushingGripWave">
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
@@ -3163,17 +3338,17 @@
     </CAbilTransport>
     <CAbilResearch id="TemplarArchivesResearch">
         <InfoArray index="Research5" Time="60">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
         </InfoArray>
-        <InfoArray index="Research6" Time="90" Upgrade="HighTemplarKhaydarinAmulet">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
+        <InfoArray index="Research6" Time="60" Upgrade="HighTemplarKhaydarinAmulet">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="ResearchHighTemplarEnergyUpgrade" State="Restricted" Requirements="LearnHighTemplarEnergyUpgrade"/>
         </InfoArray>
-        <InfoArray index="Research7" Time="120" Upgrade="HealingPsionicStorm">
-            <Resource index="Minerals" value="200"/>
-            <Resource index="Vespene" value="200"/>
+        <InfoArray index="Research7" Time="90" Upgrade="HealingPsionicStorm">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="ResearchHealingPsionicStorm" State="Restricted" Requirements="LearnHealingPsionicStorm2"/>
         </InfoArray>
         <InfoArray index="Research8" Time="60" Upgrade="AlarakHighTemplarPsionicOrbTravelDistance">
@@ -3218,7 +3393,7 @@
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <Flags index="AllowMovement" value="1"/>
-        <TargetFilters value="Visible;Enemy,Structure,Missile,Uncommandable,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Enemy,Structure,Missile,Uncommandable,Dead,Hidden"/>
         <Range value="9"/>
         <Arc value="360"/>
     </CAbilEffectTarget>
@@ -3346,7 +3521,9 @@
             <Resource index="Minerals" value="50"/>
             <Resource index="Vespene" value="50"/>
         </InfoArray>
-        <InfoArray index="Research6" Time="90">
+        <InfoArray index="Research6" Time="60">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button State="Restricted"/>
         </InfoArray>
         <InfoArray index="Research7" Time="60">
@@ -3397,9 +3574,9 @@
             <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="ResearchImprovedSiegeMode" State="Restricted" Requirements="LearnImprovedSiegeMode"/>
         </InfoArray>
-        <InfoArray index="Research17" Time="120" Upgrade="CycloneLockOnDamageUpgrade">
-            <Resource index="Minerals" value="200"/>
-            <Resource index="Vespene" value="200"/>
+        <InfoArray index="Research17" Time="90" Upgrade="CycloneLockOnDamageUpgrade">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="ResearchCycloneLockOnDamageUpgrade" State="Restricted" Requirements="LearnCycloneLockOnDamageUpgrade"/>
         </InfoArray>
         <InfoArray index="Research18" Time="90" Upgrade="NovaUnitLockdown">
@@ -3422,9 +3599,9 @@
             <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="ResearchSiegeTankJumpJets" Requirements="LearnSiegeTankJumpJets"/>
         </InfoArray>
-        <InfoArray index="Research22" Time="60" Upgrade="HellbatJumpJetAssault">
-            <Resource index="Minerals" value="100"/>
-            <Resource index="Vespene" value="100"/>
+        <InfoArray index="Research22" Time="90" Upgrade="HellbatJumpJetAssault">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="ResearchHellbatJumpJetAssault" Requirements="LearnHellbatJumpJetAssault"/>
         </InfoArray>
         <InfoArray index="Research30" Time="60" Upgrade="AresClassWeaponsSystem">
@@ -3782,7 +3959,9 @@
     </CAbilEffectInstant>
     <CAbilResearch id="LairResearch">
         <InfoArray index="Research2">
-            <Button State="Available"/>
+            <Resource index="Minerals" value="50"/>
+            <Resource index="Vespene" value="50"/>
+            <Button State="Restricted"/>
         </InfoArray>
         <InfoArray index="Research3" Time="60">
             <Resource index="Minerals" value="100"/>
@@ -3798,6 +3977,11 @@
             <Resource index="Minerals" value="150"/>
             <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="EvolveQueenClassicImprovedEnsnare" State="Restricted" Requirements="LearnQueenClassicEnsareUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research7" Time="60" Upgrade="OverlordspeedCoop">
+            <Resource index="Minerals" value="50"/>
+            <Resource index="Vespene" value="50"/>
+            <Button DefaultButtonFace="overlordspeed" Requirements="LearnPneumatizedCarapaceCoop"/>
         </InfoArray>
     </CAbilResearch>
     <CAbilTrain id="LarvaTrain">
@@ -3980,6 +4164,16 @@
             <Button DefaultButtonFace="WarpInWarpGate" State="Suppressed" Requirements="HaveCoopArtanisUpgrade"/>
         </InfoArray>
     </CAbilBuild>
+    <CAbilBuild id="NexusBuild">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <FlagArray index="IgnoreUnitCost" value="1"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <InfoArray index="Build1" Unit="AutomatedAssimilatorZeratul" Time="30">
+            <Button DefaultButtonFace="AutomatedAssimilatorZeratul" State="Restricted"/>
+            <ValidatorArray value="HasVespene"/>
+        </InfoArray>
+        <Range value="7"/>
+    </CAbilBuild>
     <CAbilEffectTarget id="PsiStormShakuras">
         <CmdButtonArray index="Execute" Requirements="HaveResearchCripplingPsionicStorm"/>
     </CAbilEffectTarget>
@@ -3988,16 +4182,18 @@
             <Button State="Available"/>
         </InfoArray>
         <InfoArray index="Research3">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button State="Available"/>
         </InfoArray>
         <InfoArray index="Research5" Time="110" Upgrade="HotSRoachDamage">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="EvolveHydriodicBile" Requirements="LearnHydriodicBile"/>
         </InfoArray>
         <InfoArray index="Research6" Time="110" Upgrade="HotSRoachShield">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="EvolveAdaptivePlating" Requirements="LearnAdaptivePlating"/>
         </InfoArray>
         <InfoArray index="Research7" Time="90" Upgrade="RavagerCorrosiveBileRadiusIncrease">
@@ -4017,18 +4213,27 @@
         </InfoArray>
     </CAbilResearch>
     <CAbilResearch id="RoboticsBayResearch">
+        <!--InfoArray index="Research1" Time="60" Upgrade="ZeratulWarpPrismCloak">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ZeratulResearchWarpPrismCloak" State="Restricted" Requirements="LearnZeratulWarpPrismCloak"/>
+        </InfoArray-->
         <InfoArray index="Research2" Time="60">
             <Resource index="Minerals" value="50"/>
             <Resource index="Vespene" value="50"/>
-            <Button State="Available"/>
         </InfoArray>
         <InfoArray index="Research3" Time="60">
             <Resource index="Minerals" value="50"/>
             <Resource index="Vespene" value="50"/>
         </InfoArray>
+        <!--InfoArray index="Research4" Time="60" Upgrade="ZeratulWarpPrismRecall">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ZeratulResearchWarpPrismRecall" State="Restricted" Requirements="LearnZeratulWarpPrismRecall"/>
+        </InfoArray-->
         <InfoArray index="Research6" Time="90">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button State="Available"/>
         </InfoArray>
         <InfoArray index="Research9" Time="60" Upgrade="ImmortalResearchBarrierAdvanced">
@@ -4047,8 +4252,8 @@
             <Button DefaultButtonFace="ResearchImprovedScatterCannon" State="Restricted" Requirements="ResearchImprovedScatterCannon"/>
         </InfoArray>
         <InfoArray index="Research12" Time="120" Upgrade="ColossusFireBeam">
-            <Resource index="Minerals" value="200"/>
-            <Resource index="Vespene" value="200"/>
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="ResearchFireBeam" State="Restricted" Requirements="LearnFireBeam"/>
         </InfoArray>
         <InfoArray index="Research13" Time="60" Upgrade="ReaverIncreasedScarabCount">
@@ -4101,7 +4306,22 @@
             <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="ResearchFenixWarbringerColossusPowerShot" State="Restricted" Requirements="LearnFenixWarbringerColossusPowerShot"/>
         </InfoArray>
-        <!--InfoArray index="Research21" Time="120" Upgrade="ColossusIceBeam">
+        <!--InfoArray index="Research24" Time="90" Upgrade="ZeratulImmortalRange">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchZeratulImmortalRange" State="Restricted" Requirements="LearnZeratulImmortalRange"/>
+        </InfoArray>
+        <InfoArray index="Research25" Time="60" Upgrade="ZeratulReaverDamage">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchZeratulReaverDamage" State="Restricted" Requirements="LearnZeratulReaverDamage"/>
+        </InfoArray>
+        <InfoArray index="Research26" Time="90" Upgrade="ZeratulReaverHangarBuildTime">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ZeratulReaverHangarBuildTime" State="Restricted" Requirements="LearnZeratulReaverHangarBuildTime"/>
+        </InfoArray>
+        <InfoArray index="Research21" Time="120" Upgrade="ColossusIceBeam">
             <Resource index="Minerals" value="200"/>
             <Resource index="Vespene" value="200"/>
             <Button DefaultButtonFace="ResearchColossusIceBeam" State="Restricted" Requirements="LearnColossusIceBeam"/>
@@ -4199,12 +4419,6 @@
     <CAbilEffectInstant id="SelfRepair">
         <CmdButtonArray index="Execute" Requirements="HaveThorSelfRepair"/>
     </CAbilEffectInstant>
-    <CAbilEffectInstant id="SoASuperShield">
-        <Cost index="0">
-            <Vital index="Energy" value="50"/>
-            <Cooldown TimeStart="300" TimeUse="300"/>
-        </Cost>
-    </CAbilEffectInstant>
     <CAbilResearch id="SpawningPoolResearch">
         <InfoArray index="Research1" Time="60">
             <Resource index="Minerals" value="150"/>
@@ -4246,12 +4460,18 @@
             <Button State="Restricted"/>
         </InfoArray>
         <InfoArray index="Research4">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button State="Restricted"/>
         </InfoArray>
         <InfoArray index="Research5">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
             <Button State="Restricted"/>
         </InfoArray>
         <InfoArray index="Research6">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
             <Button State="Restricted"/>
         </InfoArray>
         <InfoArray index="Research7" Time="90" Upgrade="HotSViciousGlaive">
@@ -4288,6 +4508,16 @@
             <Resource index="Minerals" value="100"/>
             <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="ResearchAbathurMutaliskHealthScalingUpgrade" Requirements="LearnAbathurMutaliskHealthScalingUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research14" Time="90" Upgrade="KerriganViciousGlaive">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="EvolveKerriganViciousGlaive" State="Restricted" Requirements="LearnKerriganViciousGlaive"/>
+        </InfoArray>
+        <InfoArray index="Research15" Time="120" Upgrade="KerriganSeveringGlave">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="EvolveSeveringGlave" State="Restricted" Requirements="LearnKerriganSunderingGlaive"/>
         </InfoArray>
     </CAbilResearch>
     <CAbilBuild id="StarportAddOns">
@@ -4468,8 +4698,8 @@
     <CAbilWarpTrain id="StarportTrainNova">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <InfoArray index="Train1" Unit="Banshee_BlackOpsSpawnerUnit">
-            <Resource index="Minerals" value="750"/>
-            <Resource index="Vespene" value="500"/>
+            <Resource index="Minerals" value="700"/>
+            <Resource index="Vespene" value="375"/>
             <Charge>
                 <CountMax value="5"/>
                 <CountStart value="1"/>
@@ -4552,12 +4782,13 @@
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
         <Flags index="BestUnit" value="1"/>
         <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
         <InfoArray Unit="WarpPrismTaldarim">
             <SectionArray index="Actor">
-                <DurationArray index="Duration" value="1"/>
+                <DurationArray index="Duration" value="0.75"/>
             </SectionArray>
             <SectionArray index="Stats">
-                <DurationArray index="Duration" value="1"/>
+                <DurationArray index="Duration" value="0.75"/>
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
@@ -5207,11 +5438,31 @@
             <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="ResearchDarkArchonFullStartingEnergy" State="Restricted" Requirements="LearnDarkArchonFullStartingEnergy"/>
         </InfoArray>
-        <InfoArray index="Research6" Time="100" Upgrade="DarkTemplarResearchShadowDash">
+        <InfoArray index="Research6" Time="90" Upgrade="DarkTemplarResearchShadowDash">
             <Resource index="Minerals" value="150"/>
             <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="ResearchShadowDash" State="Restricted" Requirements="LearnShadowDash"/>
         </InfoArray>
+        <!--InfoArray index="Research7" Time="90" Upgrade="ZeratulZealotBlinkHeal">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchZeratulZealotBlinkHeal" State="Restricted" Requirements="LearnZeratulZealotBlinkHealUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research9" Time="90" Upgrade="ZeratulDarkTemplarShadowFury">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchZeratulDarkTemplarShadowFury" State="Restricted" Requirements="LearnZeratulDarkTemplarShadowFury"/>
+        </InfoArray>
+        <InfoArray index="Research10" Time="90" Upgrade="ZeratulZealotDarkTemplar">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchZeratulZealotDarkTemplar" State="Restricted" Requirements="LearnZeratulZealotDarkTemplar"/>
+        </InfoArray>
+        <InfoArray index="Research11" Time="90" Upgrade="ZeratulBlinkDarkTemplar">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchZeratulBlinkDarkTemplar" State="Restricted" Requirements="LearnZeratulBlinkDarkTemplarUpgrade"/>
+        </InfoArray-->
     </CAbilResearch>
     <CAbilResearch id="UltraliskCavernResearch">
         <InfoArray index="Research3" Time="60">
@@ -6126,6 +6377,9 @@
     <CAbilTransport id="VoidSeekerTransport">
         <Flags index="CargoDeath" value="0"/>
         <DeathUnloadEffect value="CoopCargoDeathDummy"/>
+        <UnloadCargoEffect value="VoidSeekerTransportUnloadDummy"/>
+        <UnloadTransportEffect value="ZeratulVoidSeekerMaxAcceleration"/>
+        <UnloadPeriod value="0"/>
     </CAbilTransport>
     <CAbilEffectTarget id="VoidSentryBlackHole">
         <Cost index="0">
@@ -6341,6 +6595,21 @@
             <Cooldown Link="WarpGateTrain"/>
             <Button DefaultButtonFace="SentryFenix" State="Restricted" Requirements="HaveCyberneticsCore"/>
         </InfoArray>
+        <InfoArray index="Train16">
+            <Charge>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Train17">
+            <Charge>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+        </InfoArray>
+        <InfoArray index="Train18">
+            <Charge>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+        </InfoArray>
         <!--InfoArray index="Train12" Time="5" Unit="Supplicant">
             <Charge>
                 <CountMax value="1"/>
@@ -6371,6 +6640,7 @@
         <Range value="6"/>
         <Flags index="CargoDeath" value="0"/>
         <DeathUnloadEffect value="CoopCargoDeathDummy"/>
+        <LoadCargoBehavior value="TransportDummy"/>
     </CAbilTransport>
     <CAbilMorph id="NovaBoombotBurrow">
         <AbilSetId value="BrwD"/>
@@ -6805,6 +7075,12 @@
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="Yamato">
+        <TargetFilters value="-;Player,Ally"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="ZealotPurifierReviveDeath">
+        <Flags index="IgnoreUnitCost" value="1"/>
+    </CAbilMorph>
     <CAbilBuild id="ZergBuild">
         <InfoArray index="Build4">
             <Button State="Restricted"/>
@@ -6888,19 +7164,13 @@
         <Effect index="0" value="InstantSeekerMissileLaunchMissile"/>
         <Flags index="AllowMovement" value="1"/>
         <Cost>
-            <Charge>
-                <CountMax value="1"/>
-                <CountStart value="1"/>
-                <CountUse value="1"/>
-                <TimeStart value="45"/>
-                <TimeUse value="45"/>
-            </Charge>
+            <Vital index="Energy" value="75"/>
         </Cost>
         <TargetFilters value="Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="10"/>
         <Arc value="29.9926"/>
         <ArcSlop value="0"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="InstantHunterSeekerMissile"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="InstantHunterSeekerMissile" Requirements="UseInstantHunterSeekerMissile"/>
     </CAbilEffectTarget>
     <CAbilBuild id="VorazunProtossBuild">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
@@ -8247,18 +8517,18 @@
             <Button DefaultButtonFace="TerranInfantryWeaponsLevel3" Requirements="SILearnInfantryWeapon3"/>
         </InfoArray>
         <InfoArray index="Research4" Time="160" Upgrade="SIInfantryArmorLevel1">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="TerranInfantryArmorLevel1" Requirements="SILearnInfantryArmor1"/>
         </InfoArray>
         <InfoArray index="Research5" Time="190" Upgrade="SIInfantryArmorLevel2">
-            <Resource index="Minerals" value="225"/>
-            <Resource index="Vespene" value="225"/>
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
             <Button DefaultButtonFace="TerranInfantryArmorLevel2" Requirements="SILearnInfantryArmor2"/>
         </InfoArray>
         <InfoArray index="Research6" Time="220" Upgrade="SIInfantryArmorLevel3">
-            <Resource index="Minerals" value="300"/>
-            <Resource index="Vespene" value="300"/>
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
             <Button DefaultButtonFace="TerranInfantryArmorLevel3" Requirements="SILearnInfantryArmor3"/>
         </InfoArray>
         <InfoArray index="Research12" Time="60" Upgrade="SIBunkerArmor">
@@ -8564,7 +8834,7 @@
         <Effect index="0" value="ZagaraVoidCoopMassFrenzySearch"/>
         <Cost>
             <Vital index="Energy" value="25"/>
-            <Cooldown Link="ZagaraVoidCoopMassFrenzy" Location="Player" TimeUse="120"/>
+            <Cooldown Link="ZagaraVoidCoopMassFrenzy" Location="Player" TimeUse="90"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="ZagaraVoidCoopMassFrenzy" State="Restricted"/>
         <Flags index="Transient" value="1"/>
@@ -8931,6 +9201,21 @@
         <TargetMessage value="Abil/TargetMessage/AttackWithNeutralScan"/>
         <AcquireFilters value="Ground;Player,Ally,Dead,Hidden,Invulnerable,Benign,Dazed"/>
     </CAbilAttack>
+    <CAbilAttack id="AttackFriend">
+        <TargetMessage value="Abil/TargetMessage/AttackFriend"/>
+        <AcquireFilters value="-;Self,Neutral,Dead,Hidden,Invulnerable,Benign"/>
+        <SmartFilters value="-;Self"/>
+        <MinAttackSpeedMultiplier value="0.25"/>
+        <MaxAttackSpeedMultiplier value="128"/>
+        <SmartPriority value="13"/>
+    </CAbilAttack>
+    <CAbilAttack id="BileLauncherZagaraAttack">
+        <MinAttackSpeedMultiplier value="0.25"/>
+        <MaxAttackSpeedMultiplier value="128"/>
+        <CmdButtonArray index="Execute">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+    </CAbilAttack>
     <CAbilResearch id="evolutionchamberresearch">
         <InfoArray index="Research1">
             <Button State="Restricted"/>
@@ -8940,6 +9225,18 @@
         </InfoArray>
         <InfoArray index="Research3">
             <Button State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Research4">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+        </InfoArray>
+        <InfoArray index="Research5">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+        </InfoArray>
+        <InfoArray index="Research6">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
         </InfoArray>
         <InfoArray index="Research10" Upgrade="AberrationArmorAura">
             <Resource index="Minerals" value="150"/>
@@ -8955,6 +9252,21 @@
             <Resource index="Minerals" value="100"/>
             <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="EvolveBioMechanicalTransfusion" State="Restricted" Requirements="LearnBioMechanicalTransfusion"/>
+        </InfoArray>
+        <InfoArray index="Research13" Time="160" Upgrade="ZagaraGroundAttacksLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ZergGroundAttacksLevel1" State="Restricted" Requirements="LearnZagaraGroundAttack1"/>
+        </InfoArray>
+        <InfoArray index="Research14" Time="190" Upgrade="ZagaraGroundAttacksLevel2">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ZergGroundAttacksLevel2" State="Restricted" Requirements="LearnZagaraGroundAttack2"/>
+        </InfoArray>
+        <InfoArray index="Research15" Time="220" Upgrade="ZagaraGroundAttacksLevel3">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ZergGroundAttacksLevel3" State="Restricted" Requirements="LearnZagaraGroundAttack3"/>
         </InfoArray>
         <InfoArray index="Research20" Time="60" Upgrade="VoidCoopHeroicFortitude">
             <Resource index="Minerals" value="100"/>
@@ -9010,7 +9322,7 @@
         <Cost>
             <Resource index="Minerals" value="100"/>
         </Cost>
-        <TargetFilters value="-;Missile,Stasis,Dead,Hidden"/>
+        <TargetFilters value="-;Neutral,Enemy,Missile,Stasis,Dead,Hidden"/>
         <Range value="500"/>
         <Arc value="360"/>
         <CancelableArray index="Channel" value="1"/>
@@ -9233,13 +9545,13 @@
             <Button DefaultButtonFace="ResearchSolarEfficiencyLevel1" Requirements="LearnSolarEfficiencyLevel1"/>
         </InfoArray>
         <InfoArray index="Research2" Time="120" Upgrade="SolarEfficiencyLevel2">
-            <Resource index="Minerals" value="300"/>
-            <Resource index="Vespene" value="300"/>
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
             <Button DefaultButtonFace="ResearchSolarEfficiencyLevel2" Requirements="LearnSolarEfficiencyLevel2"/>
         </InfoArray>
         <InfoArray index="Research3" Time="180" Upgrade="SolarEfficiencyLevel3">
-            <Resource index="Minerals" value="400"/>
-            <Resource index="Vespene" value="400"/>
+            <Resource index="Minerals" value="300"/>
+            <Resource index="Vespene" value="300"/>
             <Button DefaultButtonFace="ResearchSolarEfficiencyLevel3" State="Restricted" Requirements="LearnSolarEfficiencyLevel3"/>
         </InfoArray>
         <InfoArray index="Research4" Time="90" Upgrade="SOARepairBeamExtraTarget">
@@ -10485,7 +10797,7 @@
         </Cost>
         <Range value="0.5"/>
         <Arc value="360"/>
-        <AutoCastFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign,Summoned"/>
+        <AutoCastFilters value="-;Ally,Neutral,Enemy,Structure,User1,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign,Summoned"/>
         <AutoCastValidatorArray value="PickupCheckCoop"/>
         <FinishTime value="0.125"/>
         <Marker Link="Abil/BiomassBuffPickup"/>
@@ -10505,7 +10817,7 @@
         </Cost>
         <Range value="5"/>
         <Arc value="360"/>
-        <AutoCastFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign,Summoned"/>
+        <AutoCastFilters value="-;Ally,Neutral,Enemy,Structure,User1,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign,Summoned"/>
         <AutoCastValidatorArray value="PickupCheckCoop"/>
         <FinishTime value="0.125"/>
         <Marker Link="Abil/BiomassBuffPickup"/>
@@ -10847,16 +11159,6 @@
     </CAbilEffectTarget>
     <CAbilEffectTarget id="NovaCoopCasterSummonOdin">
         <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
-        <Cost>
-            <Resource index="Minerals" value="1000"/>
-            <Charge>
-                <CountMax value="1"/>
-                <CountUse value="1"/>
-                <Location value="Player"/>
-                <TimeStart value="600"/>
-                <TimeUse value="240"/>
-            </Charge>
-        </Cost>
         <Placeholder value="Odin"/>
         <Range value="500"/>
         <Arc value="360"/>
@@ -10864,6 +11166,9 @@
         <ProducedUnitArray value="Odin"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="NovaCoopCasterSummonOdin"/>
         <PlaceUnit value="Odin"/>
+        <Cost>
+            <Cooldown TimeStart="600" TimeUse="240"/>
+        </Cost>
     </CAbilEffectTarget>
     <CAbilBehavior id="NovaGriffinBombingRunActivate">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -10881,6 +11186,9 @@
         <Range value="500"/>
         <Arc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="NovaGriffinBombingRun"/>
+        <Cost>
+            <Cooldown TimeUse="0.25"/>
+        </Cost>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="NovaGriffinBombingRunExecute">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -10892,6 +11200,9 @@
         <Arc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="NovaGriffinBombingRun"/>
         <CursorEffect value="NovaGriffinBombingRunDummySearch"/>
+        <Cost>
+            <Cooldown TimeUse="0.25"/>
+        </Cost>
     </CAbilEffectTarget>
     <CAbilTransport id="GriffinTransport">
         <AbilSetId value="ULdM"/>
@@ -11020,7 +11331,7 @@
         <AbilCmd value="attack,Execute"/>
         <TargetType value="UnitOrPoint"/>
         <Cost>
-            <Cooldown Link="HellbatCharge" Location="Unit" TimeUse="2"/>
+            <Cooldown Link="HellbatCharge" Location="Unit" TimeUse="5"/>
         </Cost>
         <Effect value="HellbatLeap"/>
         <AutoCastValidatorArray value="CasterNotHoldingPosition"/>
@@ -11544,11 +11855,12 @@
                 <TimeUse value="90"/>
             </Charge>
         </Cost>
-        <TargetFilters value="Structure;Neutral,Enemy,Summoned"/>
+        <TargetFilters value="-;Neutral,Enemy,Summoned"/>
         <Range value="500"/>
         <RangeSlop value="0"/>
         <Arc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="AlarakStructureOvercharge"/>
+        <SmartValidatorArray value="IsStructureorWarpPrismPhasing"/>
     </CAbilEffectTarget>
     <CAbilMorph id="SiegeTank_BlackOpsSiege">
         <AbilSetId value="SiegeMode"/>
@@ -11675,7 +11987,7 @@
     <CAbilEffectTarget id="Medivac_BlackOpsHeal">
         <Alignment value="Positive"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
-        <TargetFilters value="Visible;Self,Enemy,Structure,Missile,Uncommandable,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Self,Enemy,Structure,Missile,Uncommandable,UnderConstruction,Dead,Hidden,Invulnerable"/>
         <Range value="4"/>
         <Arc value="14.9963"/>
         <AutoCastRange value="6"/>
@@ -11705,17 +12017,22 @@
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
         <Flags index="AbortOnAllianceChange" value="0"/>
         <Flags index="AllowMovement" value="1"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
         <Flags index="Chase" value="1"/>
         <Effect index="0" value="Banshee_BlackOpsAirstrikeSet"/>
         <Alignment value="Negative"/>
         <Cost>
-            <Cooldown TimeUse="60"/>
+            <Cooldown TimeUse="15"/>
         </Cost>
-        <Range value="6"/>
+        <Range value="7"/>
         <TrackingArc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Banshee_BlackOpsAirstrike" Requirements="HaveBansheeAirstrike"/>
         <Arc value="360"/>
         <CursorEffect value="Banshee_BlackOpsAirstrikeSearch"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Structure,Missile,Hidden,Invulnerable"/>
+        <AutoCastRange value="7"/>
+        <AutoCastValidatorArray value="BlackOpsAirstrikeMinimum3EnemyTargets"/>
     </CAbilEffectTarget>
     <CAbilMorph id="MutatorHybridImmortalDeathMorph">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
@@ -11959,7 +12276,7 @@
         <Flags index="NoDeceleration" value="1"/>
         <Flags index="ReExecutable" value="1"/>
         <Flags index="Smart" value="1"/>
-        <TargetFilters value="Visible;Self,Enemy,Structure,Missile,Uncommandable,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Self,Enemy,Structure,Missile,Uncommandable,UnderConstruction,Dead,Hidden,Invulnerable"/>
         <TargetSorts RequestCount="1">
             <SortArray value="TSAlliancePassive"/>
             <SortArray value="TSLifeFraction"/>
@@ -13945,6 +14262,7 @@
         <Flags index="Rally" value="1"/>
         <Flags index="ShowProgress" value="1"/>
         <Flags index="SuppressMovement" value="1"/>
+        <Flags index="Transient" value="1"/>
         <InfoArray Unit="DehakaMutaliskReviveEgg" RallyResetPhase="Delay">
             <SectionArray index="Abils">
                 <DurationArray index="Delay" value="0.5"/>
@@ -15776,28 +16094,28 @@
             <Button DefaultButtonFace="DehakaLearnPrimalWeaponsLevel1" Requirements="LearnDehakaPrimalWeapons1"/>
         </InfoArray>
         <InfoArray index="Research2" Time="190" Upgrade="DehakaPrimalWeaponsLevel2">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
             <Button DefaultButtonFace="DehakaLearnPrimalWeaponsLevel2" Requirements="LearnDehakaPrimalWeapons2"/>
         </InfoArray>
         <InfoArray index="Research3" Time="220" Upgrade="DehakaPrimalWeaponsLevel3">
-            <Resource index="Minerals" value="200"/>
-            <Resource index="Vespene" value="200"/>
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
             <Button DefaultButtonFace="DehakaLearnPrimalWeaponsLevel3" Requirements="LearnDehakaPrimalWeapons3"/>
         </InfoArray>
         <InfoArray index="Research4" Time="160" Upgrade="DehakaPrimalArmorLevel1">
-            <Resource index="Minerals" value="150"/>
-            <Resource index="Vespene" value="150"/>
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
             <Button DefaultButtonFace="DehakaLearnPrimalArmorLevel1" Requirements="LearnDehakaPrimalArmor1"/>
         </InfoArray>
         <InfoArray index="Research5" Time="190" Upgrade="DehakaPrimalArmorLevel2">
-            <Resource index="Minerals" value="225"/>
-            <Resource index="Vespene" value="225"/>
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
             <Button DefaultButtonFace="DehakaLearnPrimalArmorLevel2" Requirements="LearnDehakaPrimalArmor2"/>
         </InfoArray>
         <InfoArray index="Research6" Time="220" Upgrade="DehakaPrimalArmorLevel3">
-            <Resource index="Minerals" value="300"/>
-            <Resource index="Vespene" value="300"/>
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
             <Button DefaultButtonFace="DehakaLearnPrimalArmorLevel3" Requirements="LearnDehakaPrimalArmor3"/>
         </InfoArray>
     </CAbilResearch>
@@ -15942,7 +16260,7 @@
         </CmdButtonArray>
         <CursorEffect value="HHBomberAreaBombSearchArea"/>
         <Cost>
-            <Cooldown Link="Abil/HHBomberPlatformAreaBombTopBarDummyTimer" TimeUse="60"/>
+            <Cooldown TimeUse="60"/>
         </Cost>
         <IgnoreFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Invulnerable"/>
     </CAbilEffectTarget>
@@ -16050,6 +16368,7 @@
             <Cooldown Link="Abil/HHWidowMineAttack" Location="Unit" TimeUse="40"/>
         </Cost>
         <Effect index="0" value="HHWidowMineAttack"/>
+        <PrepEffect value="HHWidowMineTargetingBeamDummy"/>
     </CAbilEffectTarget>
     <CAbilMorph id="HHWidowMineBurrow">
         <AbilSetId value="BrwD"/>
@@ -16060,7 +16379,9 @@
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
         <ActorKey value="BurrowDown"/>
         <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreCollision" value="0"/>
         <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
         <Flags index="SuppressMovement" value="1"/>
         <InfoArray Unit="HHWidowMineBurrowed" RandomDelayMax="0.5">
             <SectionArray index="Actor">
@@ -16210,7 +16531,7 @@
     </CAbilArmMagazine>
     <CAbilEffectTarget id="HHMagneticMineAttack">
         <Cost>
-            <Cooldown TimeUse="2.5"/>
+            <Cooldown TimeUse="1.5"/>
         </Cost>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
         <Flags index="AutoCast" value="1"/>
@@ -16342,10 +16663,10 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown"/>
         <InfoArray Unit="HHMagneticMine" RandomDelayMax="0.3703">
             <SectionArray index="Actor">
-                <DurationArray index="Duration" value="15"/>
+                <DurationArray index="Duration" value="10"/>
             </SectionArray>
             <SectionArray index="Stats">
-                <DurationArray index="Delay" value="15"/>
+                <DurationArray index="Delay" value="10"/>
             </SectionArray>
         </InfoArray>
         <Flags index="AutoCast" value="1"/>
@@ -16573,6 +16894,9 @@
         <QueueSize value="1"/>
         <Flags index="Passive" value="1"/>
     </CAbilQueue>
+    <CAbilQueue id="que5">
+        <Flags index="Passive" value="1"/>
+    </CAbilQueue>
     <CAbilQueue id="que8passive">
         <EditorCategories value="Race:Neutral,AbilityorEffectType:Structures"/>
         <QueueCount value="2"/>
@@ -16655,9 +16979,7 @@
         </CmdButtonArray>
         <Flags index="Toggle" value="1"/>
         <Flags index="Transient" value="1"/>
-        <Cost>
-            <Vital index="Energy" value="25"/>
-        </Cost>
+        <Cost/>
         <BehaviorArray value="WraithCloak"/>
     </CAbilBehavior>
     <CAbilBehavior id="HHYamatoShots">
@@ -16831,6 +17153,9 @@
         <Arc value="360"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="HornerAirFleet" State="Restricted"/>
         <CursorEffect value="HornerAirFleetSearch"/>
+        <Cost>
+            <Cooldown TimeUse="0.25"/>
+        </Cost>
     </CAbilEffectTarget>
     <CAbilEffectTarget id="HornerAirFleetExecute">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -16842,6 +17167,9 @@
         <Arc value="360"/>
         <CursorEffect value="NovaGriffinBombingRunDummySearch"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="HornerAirFleet"/>
+        <Cost>
+            <Cooldown TimeUse="0.25"/>
+        </Cost>
     </CAbilEffectTarget>
     <CAbilAugment id="HHHellionRocket">
         <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
@@ -16914,10 +17242,10 @@
         <Cost>
             <Cooldown TimeUse="0.5"/>
         </Cost>
-        <Range value="2"/>
+        <Range value="3"/>
         <Arc value="360"/>
-        <AutoCastFilters value="Ground;Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Benign"/>
-        <AutoCastRange value="2"/>
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Benign"/>
+        <AutoCastRange value="3"/>
         <AutoCastValidatorArray value="PickupCheck"/>
         <FinishTime value="3"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="PickupMinerals50"/>
@@ -16931,10 +17259,10 @@
         <Cost>
             <Cooldown TimeUse="0.5"/>
         </Cost>
-        <Range value="2"/>
+        <Range value="3"/>
         <Arc value="360"/>
-        <AutoCastFilters value="Ground;Neutral,Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Benign"/>
-        <AutoCastRange value="2"/>
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Benign"/>
+        <AutoCastRange value="3"/>
         <AutoCastValidatorArray value="PickupCheck"/>
         <FinishTime value="3"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="PickupMinerals50"/>
@@ -16948,12 +17276,116 @@
         <Cost>
             <Cooldown TimeUse="0.5"/>
         </Cost>
-        <Range value="2"/>
+        <Range value="3"/>
         <Arc value="360"/>
-        <AutoCastFilters value="Ground;Neutral,Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Benign"/>
-        <AutoCastRange value="2"/>
+        <AutoCastFilters value="-;Structure,Missile,Destructible,Stasis,Dead,Hidden,Benign"/>
+        <AutoCastRange value="3"/>
         <AutoCastValidatorArray value="PickupCheck"/>
         <FinishTime value="3"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="PickupMinerals50"/>
+    </CAbilEffectTarget>
+    <CAbilQueue id="que5NoCancel">
+        <OrderArray index="0">
+            <DisplayType value="Confirm"/>
+            <Color value="255,0,255,0"/>
+            <Model value="Assets\UI\Cursors\WayPointConfirmSwarm\WayPointConfirmSwarm.m3"/>
+            <LineTexture value="Assets\Textures\WayPointLine.dds"/>
+        </OrderArray>
+        <EditorCategories value="Race:Neutral,AbilityorEffectType:Structures"/>
+        <CmdButtonArray index="CancelLast">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="CancelSlot">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+        <QueueCount value="5"/>
+        <QueueSize value="5"/>
+    </CAbilQueue>
+    <CAbilEffectTarget id="InstantSeekerMissile_BlackOps">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoTooltipPriority value="1"/>
+        <Effect index="0" value="InstantSeekerMissileLaunchMissile"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeStart value="45"/>
+                <TimeUse value="45"/>
+            </Charge>
+        </Cost>
+        <TargetFilters value="Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="10"/>
+        <Arc value="29.9926"/>
+        <ArcSlop value="0"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="InstantHunterSeekerMissile"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="DummyPayloadAbilityToGoal">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Cooldown TimeUse="1"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="OrderPayloadToTarget" Requirements="HavePayload"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="DummyPayloadAbilityRetreat">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Cooldown TimeUse="1"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="OrderPayloadToRetreat" Requirements="HavePayload"/>
+    </CAbilEffectInstant>
+    <CAbilTrain id="BuildPayload">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Flags index="WaitForFood" value="0"/>
+        <Range value="3"/>
+        <InfoArray index="Train1" Time="20">
+            <Button DefaultButtonFace="ConstructingNuclearPayload">
+                <Flags index="IgnoreUser" value="1"/>
+            </Button>
+            <Unit value="CODFlatbedTruck"/>
+            <Flags index="IgnorePlacement" value="1"/>
+        </InfoArray>
+        <Alert value=""/>
+    </CAbilTrain>
+    <CAbilEffectInstant id="DummyPayloadSelect">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Cost>
+            <Cooldown TimeUse="1"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SelectPayload" Requirements="HavePayload"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="CODXelNagaConstructChaseBeam">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="CODXelNagaConstructChaseBeamInitialCP"/>
+        <TargetFilters value="Visible;Self,Missile,Item,Uncommandable,Stasis,Dead,Hidden"/>
+        <Range value="500"/>
+        <Arc value="4.9987"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="XelNagaConstructChaseBeam"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="CODXelNagaConstructMissiles">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="CODXelNagaConstructMissilesCP"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="DeferCooldown" value="1"/>
+        <Cost>
+            <Cooldown TimeStart="3" TimeUse="4"/>
+        </Cost>
+        <TargetFilters value="Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetSorts RequestCount="1">
+            <SortArray value="TSCODXelNagaConstructMissiles"/>
+            <SortArray value="TSRandom"/>
+        </TargetSorts>
+        <Range value="8"/>
+        <Arc value="360"/>
+        <ArcSlop value="360"/>
+        <AutoCastRange value="8"/>
+        <CastIntroTime value="0.5"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <ProgressButtonArray index="Channel" value="AmonTentacleB"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AmonTentacleB"/>
     </CAbilEffectTarget>
 </Catalog>
