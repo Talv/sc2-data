@@ -295,6 +295,7 @@
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
         <BehaviorArray Link="FastEnablerGatewayMorphingPowerSource"/>
+        <BehaviorArray Link="MorphingintoWarpGate"/>
         <SubgroupPriority value="24"/>
     </CUnit>
     <CUnit id="InfestorTerranBurrowed">
@@ -401,7 +402,6 @@
                 <Column value="1"/>
             </LayoutButtons>
             <LayoutButtons index="8" Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowDroneDown,Execute" Row="2" Column="3"/>
-            <LayoutButtons Face="Spray" Type="AbilCmd" AbilCmd="SprayZerg,Execute" Row="1" Column="2"/>
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowDroneDown,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowZerglingDown,Execute" Row="2" Column="3"/>
             <LayoutButtons Face="BurrowDown" Type="AbilCmd" AbilCmd="BurrowBanelingDown,Execute" Row="2" Column="3"/>
@@ -424,6 +424,7 @@
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowInfestorTerranUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowInfestorUp,Execute" Row="2" Column="4"/>
             <LayoutButtons Face="BurrowUp" Type="AbilCmd" AbilCmd="BurrowUltraliskUp,Execute" Row="2" Column="4"/>
+            <LayoutButtons Face="Spray" Type="AbilCmd" AbilCmd="SprayZerg,Execute" Row="2" Column="2"/>
         </CardLayouts>
         <CardLayouts index="2" CardId="ZBl2">
             <LayoutButtons Face="MutateintoLurkerDen" Type="AbilCmd" AbilCmd="ZergBuild,Build12" Row="0" Column="2"/>
@@ -462,7 +463,6 @@
     <CUnit id="Extractor">
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
-        <SubgroupPriority value="1"/>
     </CUnit>
     <CUnit id="FactoryReactor">
         <Collide index="Locust" value="1"/>
@@ -806,8 +806,6 @@
         <CostResource index="Minerals" value="15"/>
         <ScoreMake value="15"/>
         <ScoreKill value="15"/>
-        <ShieldsStart value="35"/>
-        <ShieldsMax value="35"/>
     </CUnit>
     <CUnit id="Lair">
         <Food value="6"/>
@@ -1124,7 +1122,7 @@
                 <Row value="2"/>
                 <Column value="1"/>
             </LayoutButtons>
-            <LayoutButtons Face="Spray" Type="AbilCmd" AbilCmd="SprayProtoss,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="Spray" Type="AbilCmd" AbilCmd="SprayProtoss,Execute" Row="2" Column="3"/>
         </CardLayouts>
         <CardLayouts index="1" CardId="PBl1">
             <LayoutButtons index="3" Face="Forge" Type="AbilCmd" AbilCmd="ProtossBuild,Build5" Row="1" Column="1"/>
@@ -1306,7 +1304,6 @@
     <CUnit id="Refinery">
         <Collide index="Locust" value="1"/>
         <Collide index="Phased" value="1"/>
-        <SubgroupPriority value="1"/>
     </CUnit>
     <CUnit id="RoachBurrowed">
         <AbilArray index="1" Link="stop"/>
@@ -1368,7 +1365,7 @@
         <SubgroupPriority value="58"/>
         <AbilArray Link="SprayTerran"/>
         <CardLayouts index="0">
-            <LayoutButtons Face="Spray" Type="AbilCmd" AbilCmd="SprayTerran,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="Spray" Type="AbilCmd" AbilCmd="SprayTerran,Execute" Row="2" Column="3"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="SensorTower">
@@ -2345,121 +2342,6 @@
     <CUnit id="XelNagaDestructibleRampBlocker8W">
         <FlagArray index="Destructible" value="0"/>
     </CUnit>
-    <CUnit id="OverlordTransport">
-        <DeathRevealRadius value="3"/>
-        <ReviveType value="Overlord"/>
-        <Facing value="45"/>
-        <Race value="Zerg"/>
-        <Mob value="Multiplayer"/>
-        <TechAliasArray value="Alias_Overlord"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="AISupport" value="1"/>
-        <PlaneArray index="Air" value="1"/>
-        <Collide index="Flying" value="1"/>
-        <Response value="Flee"/>
-        <Attributes index="Armored" value="1"/>
-        <Attributes index="Biological" value="1"/>
-        <LifeStart value="200"/>
-        <LifeMax value="200"/>
-        <LifeRegenRate value="0.2734"/>
-        <LifeArmorName value="Unit/LifeArmorName/ZergAirArmor"/>
-        <Mover value="Fly"/>
-        <Speed value="0.6445"/>
-        <Acceleration value="1.0625"/>
-        <LateralAcceleration value="46.0625"/>
-        <StationaryTurningRate value="999.8437"/>
-        <TurningRate value="999.8437"/>
-        <Sight value="11"/>
-        <Height value="3.75"/>
-        <VisionHeight value="4"/>
-        <Food value="8"/>
-        <CostCategory value="Economy"/>
-        <CostResource index="Minerals" value="100"/>
-        <AttackTargetPriority value="20"/>
-        <DamageDealtXP value="1"/>
-        <DamageTakenXP value="1"/>
-        <KillXP value="20"/>
-        <AbilArray Link="stop"/>
-        <AbilArray Link="OverlordTransport"/>
-        <AbilArray Link="move"/>
-        <AbilArray Link="MorphToOverseer"/>
-        <AbilArray Link="GenerateCreep"/>
-        <CardLayouts>
-            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
-            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
-            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="MorphToOverseer" Type="AbilCmd" AbilCmd="MorphToOverseer,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="MorphToOverseer,Cancel" Row="2" Column="4"/>
-            <LayoutButtons Face="GenerateCreep" Type="AbilCmd" AbilCmd="GenerateCreep,On" Row="2" Column="1"/>
-            <LayoutButtons Face="OverlordTransportLoad" Type="AbilCmd" AbilCmd="OverlordTransport,Load" Row="2" Column="2"/>
-            <LayoutButtons Face="OverlordTransportUnload" Type="AbilCmd" AbilCmd="OverlordTransport,UnloadAt" Row="2" Column="3"/>
-            <LayoutButtons Face="StopGenerateCreep" Type="AbilCmd" AbilCmd="GenerateCreep,Off" Row="2" Column="1"/>
-        </CardLayouts>
-        <Radius value="1"/>
-        <SeparationRadius value="0.75"/>
-        <ScoreMake value="50"/>
-        <ScoreKill value="150"/>
-        <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="73"/>
-        <MinimapRadius value="1"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
-        <AIEvalFactor value="0"/>
-        <HotkeyAlias value="Overlord"/>
-        <HotkeyCategory value="Unit/Category/ZergUnits"/>
-        <BehaviorArray Link="IsTransportOverlord"/>
-    </CUnit>
-    <CUnit id="TransportOverlordCocoon">
-        <DeathRevealRadius value="3"/>
-        <Facing value="45"/>
-        <Race value="Zerg"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="NoScore" value="1"/>
-        <PlaneArray index="Air" value="1"/>
-        <Collide index="Flying" value="1"/>
-        <Attributes index="Biological" value="1"/>
-        <LifeStart value="200"/>
-        <LifeMax value="200"/>
-        <LifeArmor value="2"/>
-        <LifeRegenRate value="0.2734"/>
-        <LifeArmorName value="Unit/LifeArmorName/ZergAirArmor"/>
-        <Mover value="Fly"/>
-        <Speed value="1.875"/>
-        <StationaryTurningRate value="719.4726"/>
-        <TurningRate value="719.4726"/>
-        <Sight value="5"/>
-        <Height value="3.75"/>
-        <VisionHeight value="4"/>
-        <Food value="8"/>
-        <CostResource index="Minerals" value="150"/>
-        <CostResource index="Vespene" value="100"/>
-        <AttackTargetPriority value="10"/>
-        <DamageDealtXP value="1"/>
-        <DamageTakenXP value="1"/>
-        <KillXP value="30"/>
-        <AbilArray Link="MorphToTransportOverlord"/>
-        <AbilArray Link="move"/>
-        <CardLayouts>
-            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
-            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
-            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
-            <LayoutButtons Face="CancelCocoonMorph" Type="AbilCmd" AbilCmd="MorphToTransportOverlord,Cancel" Row="2" Column="4"/>
-        </CardLayouts>
-        <Radius value="0.625"/>
-        <SeparationRadius value="0.625"/>
-        <ScoreKill value="150"/>
-        <SubgroupPriority value="1"/>
-        <MinimapRadius value="1"/>
-        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
-        <AIEvalFactor value="0"/>
-        <HotkeyAlias value=""/>
-    </CUnit>
     <CUnit id="BypassArmorDrone">
         <Race value="Terr"/>
         <Mob value="Multiplayer"/>
@@ -2623,67 +2505,5 @@
         <FlagArray index="Unstoppable" value="1"/>
         <FlagArray index="PlayerRevivable" value="0"/>
         <BehaviorArray Link="DelayedRemove"/>
-    </CUnit>
-    <CUnit id="ShieldBattery">
-        <DeathRevealRadius value="3"/>
-        <Race value="Prot"/>
-        <Mob value="Multiplayer"/>
-        <FlagArray index="Turnable" value="0"/>
-        <FlagArray index="PreventDefeat" value="1"/>
-        <FlagArray index="PreventDestroy" value="1"/>
-        <FlagArray index="PenaltyRevealed" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="TownAlert" value="1"/>
-        <FlagArray index="NoPortraitTalk" value="1"/>
-        <FlagArray index="AIDefense" value="1"/>
-        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
-        <FogVisibility value="Snapshot"/>
-        <PlaneArray index="Ground" value="1"/>
-        <Collide index="Burrow" value="1"/>
-        <Collide index="Ground" value="1"/>
-        <Collide index="Structure" value="1"/>
-        <Collide index="RoachBurrow" value="1"/>
-        <Collide index="ForceField" value="1"/>
-        <Collide index="Locust" value="1"/>
-        <Attributes index="Armored" value="1"/>
-        <Attributes index="Structure" value="1"/>
-        <LifeStart value="150"/>
-        <LifeMax value="150"/>
-        <LifeArmor value="1"/>
-        <LifeArmorName value="Unit/LifeArmorName/ProtossBuildingPlating"/>
-        <EnergyStart value="100"/>
-        <EnergyMax value="100"/>
-        <EnergyRegenRate value="0.5625"/>
-        <ShieldsStart value="150"/>
-        <ShieldsMax value="150"/>
-        <ShieldRegenDelay value="10"/>
-        <ShieldRegenRate value="2"/>
-        <ShieldArmorName value="Unit/ShieldArmorName/ProtossPlasmaShields"/>
-        <Sight value="9"/>
-        <CostCategory value="Technology"/>
-        <CostResource index="Minerals" value="100"/>
-        <AttackTargetPriority value="11"/>
-        <AbilArray Link="BuildInProgress"/>
-        <AbilArray Link="ShieldBatteryRechargeChanneled"/>
-        <AbilArray Link="stop"/>
-        <BehaviorArray Link="PowerUserQueueSmall"/>
-        <CardLayouts>
-            <LayoutButtons Face="ShieldBatteryRecharge" Type="AbilCmd" AbilCmd="ShieldBatteryRechargeChanneled,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
-            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
-        </CardLayouts>
-        <Radius value="1"/>
-        <SeparationRadius value="1"/>
-        <Footprint value="Footprint2x2Contour"/>
-        <PlacementFootprint value="Footprint2x2"/>
-        <ScoreMake value="50"/>
-        <ScoreKill value="150"/>
-        <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="5"/>
-        <MinimapRadius value="0.75"/>
-        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
-        <GlossaryPriority value="201"/>
-        <HotkeyCategory value="Unit/Category/ProtossUnits"/>
-        <GlossaryCategory value="Unit/Category/ProtossUnits"/>
     </CUnit>
 </Catalog>

@@ -486,11 +486,6 @@
         <WhichUnit Value="Caster"/>
         <Value value="LocustMPFlying"/>
     </CValidatorUnitType>
-    <CValidatorPlayerRequirement id="HaveSnowVisualMP">
-        <ResultNoPlayer value="Error"/>
-        <Find value="1"/>
-        <Value value="HaveSnowVisualMP"/>
-    </CValidatorPlayerRequirement>
     <CValidatorUnitCompareCooldown id="WidowMineAttackNotOnCooldown">
         <CooldownLink value="Abil/WidowMineAttack"/>
         <Ability value="WidowMineAttack"/>

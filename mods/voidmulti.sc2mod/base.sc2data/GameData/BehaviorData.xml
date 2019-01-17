@@ -106,6 +106,9 @@
         <Modification LifeArmorBonus="-3" ShieldArmorBonus="-3"/>
         <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
+    <CBehaviorResource id="RawRichVespeneGeyserGas">
+        <HarvestAmount value="8"/>
+    </CBehaviorResource>
     <CBehaviorBuff id="TemporalField">
         <Modification AttackSpeedMultiplier="0.5"/>
     </CBehaviorBuff>
