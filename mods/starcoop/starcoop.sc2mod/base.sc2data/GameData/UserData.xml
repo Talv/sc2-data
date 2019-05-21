@@ -8923,6 +8923,15 @@
             <Int Int="2">
                 <Field Id="minDifficulty" Index="2"/>
             </Int>
+            <Int Int="1">
+                <Field Id="checkPathing"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="checkPathing" Index="1"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="checkPathing" Index="2"/>
+            </Int>
         </Instances>
         <Instances Id="CharThrasher">
             <Fixed Fixed="42">
@@ -26053,6 +26062,212 @@
             </User>
             <User Type="Mutators" Instance="TimeWarp">
                 <Field Id="Mutators" Index="2"/>
+            </User>
+        </Instances>
+        <Instances Id="RadiationZone">
+            <GameLink GameLink="AC_KorhalRift">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/RadiationZone_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="Nukes">
+                <Field Id="Mutators"/>
+            </User>
+            <User Type="Mutators" Instance="InfestedTerranSpawner">
+                <Field Id="Mutators" Index="1"/>
+            </User>
+            <User Type="Mutators" Instance="Plague">
+                <Field Id="Mutators" Index="2"/>
+            </User>
+        </Instances>
+        <Instances Id="InnerPower">
+            <GameLink GameLink="AC_ShakurasTemple">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/InnerPower_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="SpawnBroodlings">
+                <Field Id="Mutators"/>
+            </User>
+            <User Type="Mutators" Instance="OopsAllCasters">
+                <Field Id="Mutators" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="MovingFees">
+            <GameLink GameLink="AC_CradleOfDeath">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/MovingFees_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="OrderCosts">
+                <Field Id="Mutators"/>
+            </User>
+            <User Type="Mutators" Instance="FireFight">
+                <Field Id="Mutators" Index="1"/>
+            </User>
+            <User Type="Mutators" Instance="[Default]">
+                <Field Id="Mutators" Index="2"/>
+            </User>
+        </Instances>
+        <Instances Id="MemorableBoss">
+            <GameLink GameLink="AC_KaldirShuttle">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/MemorableBoss_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="MomentOfSilence">
+                <Field Id="Mutators" Index="1"/>
+            </User>
+            <User Type="Mutators" Instance="HeroesFromTheStorm">
+                <Field Id="Mutators"/>
+            </User>
+        </Instances>
+        <Instances Id="FlipMyBase">
+            <GameLink GameLink="AC_BelshirEscort">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/FlipMyBase_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="MissileBarrage">
+                <Field Id="Mutators"/>
+            </User>
+            <User Type="Mutators" Instance="PurifierBeam">
+                <Field Id="Mutators" Index="1"/>
+            </User>
+            <User Type="Mutators" Instance="StructureSteal">
+                <Field Id="Mutators" Index="2"/>
+            </User>
+        </Instances>
+        <Instances Id="Firewall">
+            <GameLink GameLink="AC_CybrosEscort">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/Firewall_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="LavaBurst">
+                <Field Id="Mutators"/>
+            </User>
+            <User Type="Mutators" Instance="SpiderMines">
+                <Field Id="Mutators" Index="1"/>
+            </User>
+            <User Type="Mutators" Instance="Barrier">
+                <Field Id="Mutators" Index="2"/>
+            </User>
+        </Instances>
+        <Instances Id="DeathAndTaxes">
+            <GameLink GameLink="AC_MeinhoffDayNight">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/DeathAndTaxes_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="OrderCosts">
+                <Field Id="Mutators"/>
+            </User>
+            <User Type="Mutators" Instance="NoResources">
+                <Field Id="Mutators" Index="1"/>
+            </User>
+            <User Type="Mutators" Instance="Plague">
+                <Field Id="Mutators" Index="2"/>
+            </User>
+        </Instances>
+        <Instances Id="ChaosStudios7">
+            <GameLink GameLink="AC_JarbanPointCapture">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/ChaosStudios7_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="CycleRandom">
+                <Field Id="Mutators"/>
+            </User>
+        </Instances>
+        <Instances Id="RubberAndGlue">
+            <GameLink GameLink="AC_KaldirShuttle">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/RubberAndGlue_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="DamageReflect">
+                <Field Id="Mutators"/>
+            </User>
+            <User Type="Mutators" Instance="DamageBounce">
+                <Field Id="Mutators" Index="1"/>
+            </User>
+            <User Type="Mutators" Instance="TemporalField">
+                <Field Id="Mutators" Index="2"/>
+            </User>
+        </Instances>
+        <Instances Id="HellTrain">
+            <GameLink GameLink="AC_TarsonisTrain">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/HellTrain_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="JustDie">
+                <Field Id="Mutators"/>
+            </User>
+            <User Type="Mutators" Instance="FireFight">
+                <Field Id="Mutators" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="InfectionDetected">
+            <GameLink GameLink="AC_CybrosEscort">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/InfectionDetected_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="SpawnBroodlings">
+                <Field Id="Mutators"/>
+            </User>
+            <User Type="Mutators" Instance="InfestedTerranSpawner">
+                <Field Id="Mutators" Index="1"/>
+            </User>
+            <User Type="Mutators" Instance="DeathAOE">
+                <Field Id="Mutators" Index="2"/>
+            </User>
+        </Instances>
+        <Instances Id="OpportunitiesUnleashed">
+            <GameLink GameLink="AC_BelshirEscort">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/OpportunitiesUnleashed_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="UnitSpeed">
+                <Field Id="Mutators"/>
+            </User>
+            <User Type="Mutators" Instance="Barrier">
+                <Field Id="Mutators" Index="1"/>
+            </User>
+            <User Type="Mutators" Instance="OopsAllCasters">
+                <Field Id="Mutators" Index="2"/>
+            </User>
+        </Instances>
+        <Instances Id="OneForAll">
+            <GameLink GameLink="AC_ShakurasTemple">
+                <Field Id="Map"/>
+            </GameLink>
+            <Text Text="UserData/MutatorChallenges/OneForAll_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="HardenedWill">
+                <Field Id="Mutators"/>
+            </User>
+            <User Type="Mutators" Instance="Evolve">
+                <Field Id="Mutators" Index="2"/>
+            </User>
+            <User Type="Mutators" Instance="Inspiration">
+                <Field Id="Mutators" Index="1"/>
             </User>
         </Instances>
     </CUser>

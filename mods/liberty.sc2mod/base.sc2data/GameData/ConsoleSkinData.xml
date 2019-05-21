@@ -51,7 +51,11 @@
         <SkinId value="Primal"/>
     </CConsoleSkin>
     <CConsoleSkin id="ConsoleZerg_Abathur" parent="ConsoleBase" assetname="Abathur_ConsoleZerg" race="Zerg">
-        <ReleaseDate value="7/27/2010"/>
+        <ReleaseDate value="2/19/2019"/>
+        <RequiredReward value="ConsoleZerg_Abathur"/>
+        <SkinId value="Evolved"/>
+        <FeaturedImage value="Assets/Textures/sc2_ui_collection_huds_large_consolezerg_abathur.dds"/>
+        <ThumbnailImage value="Assets/Textures/sc2_ui_collection_huds_thumb_consolezerg_abathur.dds"/>
     </CConsoleSkin>
     <CConsoleSkin id="ConsoleProtoss_Fenix" parent="ConsoleBase" assetname="ConsoleProtoss_Purifier" preview="Fenix_ConsoleProtoss" race="Protoss">
         <Name value="ConsoleSkin/Name/Fenix_ConsoleProtoss"/>
@@ -61,8 +65,13 @@
         <SkinId value="Purifier"/>
     </CConsoleSkin>
     <CConsoleSkin id="ConsoleTerran_Swann" parent="ConsoleBase" assetname="ConsoleTerran_Construction" race="Terran">
-        <ReleaseDate value="1/1/2020"/>
+        <Description value="ConsoleSkin/Description/ConsoleTerran_Swann"/>
+        <RequiredReward value="ConsoleTerran_Swann"/>
+        <ReleaseDate value="4/9/2019"/>
         <Light value="ConsoleTerran_Construction"/>
+        <SkinId value="Machined"/>
+        <ThumbnailImage value="assets/textures/sc2_ui_collection_huds_thumb_consoleterran_machined.dds"/>
+        <FeaturedImage value="assets/textures/sc2_ui_collection_huds_large_consoleterran_machined.dds"/>
     </CConsoleSkin>
     <CConsoleSkin id="ConsoleZerg_Zagara" parent="ConsoleBase" assetname="Zagara_ConsoleZerg" race="Zerg">
         <ReleaseDate value="1/1/2020"/>

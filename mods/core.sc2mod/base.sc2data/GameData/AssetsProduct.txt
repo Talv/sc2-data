@@ -147,6 +147,7 @@ UI/Glues_Battlenet_SmallDropDownArrowNormal=Assets\Textures\UI_Battlenet_Glue_Bl
 UI/Glues_Battlenet_SmallDropDownArrowOver=Assets\Textures\UI_Battlenet_Glue_BlueLargeDropdownArrow_NormalOverPressedOver.dds
 
 UI/Glues_Battlenet_TabsStandard_Background_Gradient=Assets\Textures\UI_Battlenet_Glues_StandardTabs_Gradient_Background.dds
+UI/Glues_Battlenet_TabsStandard_Basic_Mask=Assets\Textures\UI_Battlenet_Glues_StandardTabs_BasicTab_Mask.dds
 UI/Glues_Battlenet_TabsStandard_Left_Mask=Assets\Textures\UI_Battlenet_Glues_StandardTabs_LeftTab_Mask.dds
 UI/Glues_Battlenet_TabsStandard_Left_Border_Inner=Assets\Textures\UI_Battlenet_Glues_StandardTabs_LeftTab_Border_Inner.dds
 UI/Glues_Battlenet_TabsStandard_Left_Border_Outer=Assets\Textures\UI_Battlenet_Glues_StandardTabs_LeftTab_Border_Outer.dds
@@ -2476,3 +2477,77 @@ UI/Game_Console_Timer_Background_Galactic=Assets\Textures\ui_console_timer_backg
 UI/Game_Console_HelperButton_Background_Galactic=Assets\Textures\ui_console_helperbutton_background_galactic.dds
 UI/Game_Console_Chat_Background_Galactic=Assets\Textures\ui_console_chatbar_background_galactic.dds
 UI/Game_Console_Tooltip_Background_Galactic=Assets\Textures\ui_console_tooltip_background_galactic.dds
+
+
+//======================================
+// EVOLVED
+//======================================
+
+// Command Buttons
+UI/ButtonBorderNormal_Evolved=Assets\Textures\ui_console_commandbutton_normal_evolved.dds
+UI/ButtonBorderNormalActive_Evolved=Assets\Textures\ui_console_commandbutton_highlighted_evolved.dds
+UI/ButtonBorderAutocast_Evolved=Assets\Textures\ui_console_commandbutton_normal_evolved.dds
+UI/ButtonBorderAutocastActive_Evolved=Assets\Textures\ui_console_commandbutton_highlighted_evolved.dds
+
+// Control Group Buttons
+UI/Game_Console_Buttons_ControlGroup_Normal_Evolved=Assets\Textures\ui_console_controlgroupbutton_normal_evolved.dds
+UI/Game_Console_Buttons_ControlGroup_Hover_Evolved=Assets\Textures\ui_console_controlgroupbutton_hover_evolved.dds
+UI/Game_Console_Buttons_ControlGroup_Pressed_Evolved=Assets\Textures\ui_console_controlgroupbutton_pressed_evolved.dds
+
+// Menu Buttons
+UI/Game_Console_Buttons_MenuBar_Normal_Evolved=Assets\Textures\ui_console_menubutton_normal_evolved.dds
+UI/Game_Console_Buttons_MenuBar_Hover_Evolved=Assets\Textures\ui_console_menubutton_hover_evolved.dds
+UI/Game_Console_Buttons_MenuBar_Selected_Evolved=Assets\Textures\ui_console_menubutton_selected_evolved.dds
+UI/Game_Console_Buttons_MenuBar_Pressed_Evolved=Assets\Textures\ui_console_menubutton_pressed_evolved.dds
+UI/Game_Console_Buttons_MenuBar_Disabled_Evolved=Assets\Textures\ui_console_menubutton_disabled_evolved.dds
+
+// Minimap Buttons
+UI/Game_Console_Buttons_Minimap_Normal_Evolved=Assets\Textures\ui_console_minimapbutton_normal_evolved.dds
+UI/Game_Console_Buttons_Minimap_Hover_Evolved=Assets\Textures\ui_console_minimapbutton_hover_evolved.dds
+UI/Game_Console_Buttons_Minimap_Selected_Evolved=Assets\Textures\ui_console_minimapbutton_selected_evolved.dds
+UI/Game_Console_Buttons_Minimap_Pressed_Evolved=Assets\Textures\ui_console_minimapbutton_pressed_evolved.dds
+UI/Game_Console_Buttons_Minimap_Disabled_Evolved=Assets\Textures\ui_console_minimapbutton_disabled_evolved.dds
+
+// Background Frames
+UI/Game_Console_MenuBar_Background_Evolved=Assets\Textures\ui_console_menubar_background_evolved.dds
+UI/Game_Console_Timer_Background_Evolved=Assets\Textures\ui_console_timer_background_evolved.dds
+UI/Game_Console_HelperButton_Background_Evolved=Assets\Textures\ui_console_helperbutton_background_evolved.dds
+UI/Game_Console_Chat_Background_Evolved=Assets\Textures\ui_console_chatbar_background_evolved.dds
+UI/Game_Console_Tooltip_Background_Evolved=Assets\Textures\ui_console_tooltip_background_evolved.dds
+
+
+//======================================
+// MACHINED
+//======================================
+
+// Command Buttons
+UI/ButtonBorderNormal_Machined=Assets\Textures\ui_console_commandbutton_normal_machined.dds
+UI/ButtonBorderNormalActive_Machined=Assets\Textures\ui_console_commandbutton_highlighted_machined.dds
+UI/ButtonBorderAutocast_Machined=Assets\Textures\ui_console_commandbutton_normal_machined.dds
+UI/ButtonBorderAutocastActive_Machined=Assets\Textures\ui_console_commandbutton_highlighted_machined.dds
+
+// Control Group Buttons
+UI/Game_Console_Buttons_ControlGroup_Normal_Machined=Assets\Textures\ui_console_controlgroupbutton_normal_machined.dds
+UI/Game_Console_Buttons_ControlGroup_Hover_Machined=Assets\Textures\ui_console_controlgroupbutton_hover_machined.dds
+UI/Game_Console_Buttons_ControlGroup_Pressed_Machined=Assets\Textures\ui_console_controlgroupbutton_pressed_machined.dds
+
+// Menu Buttons
+UI/Game_Console_Buttons_MenuBar_Normal_Machined=Assets\Textures\ui_console_menubutton_normal_machined.dds
+UI/Game_Console_Buttons_MenuBar_Hover_Machined=Assets\Textures\ui_console_menubutton_hover_machined.dds
+UI/Game_Console_Buttons_MenuBar_Selected_Machined=Assets\Textures\ui_console_menubutton_selected_machined.dds
+UI/Game_Console_Buttons_MenuBar_Pressed_Machined=Assets\Textures\ui_console_menubutton_pressed_machined.dds
+UI/Game_Console_Buttons_MenuBar_Disabled_Machined=Assets\Textures\ui_console_menubutton_disabled_machined.dds
+
+// Minimap Buttons
+UI/Game_Console_Buttons_Minimap_Normal_Machined=Assets\Textures\ui_console_minimapbutton_normal_machined.dds
+UI/Game_Console_Buttons_Minimap_Hover_Machined=Assets\Textures\ui_console_minimapbutton_hover_machined.dds
+UI/Game_Console_Buttons_Minimap_Selected_Machined=Assets\Textures\ui_console_minimapbutton_selected_machined.dds
+UI/Game_Console_Buttons_Minimap_Pressed_Machined=Assets\Textures\ui_console_minimapbutton_pressed_machined.dds
+UI/Game_Console_Buttons_Minimap_Disabled_Machined=Assets\Textures\ui_console_minimapbutton_disabled_machined.dds
+
+// Background Frames
+UI/Game_Console_MenuBar_Background_Machined=Assets\Textures\ui_console_menubar_background_machined.dds
+UI/Game_Console_Timer_Background_Machined=Assets\Textures\ui_console_timer_background_machined.dds
+UI/Game_Console_HelperButton_Background_Machined=Assets\Textures\ui_console_helperbutton_background_machined.dds
+UI/Game_Console_Chat_Background_Machined=Assets\Textures\ui_console_chatbar_background_machined.dds
+UI/Game_Console_Tooltip_Background_Machined=Assets\Textures\ui_console_tooltip_background_machined.dds

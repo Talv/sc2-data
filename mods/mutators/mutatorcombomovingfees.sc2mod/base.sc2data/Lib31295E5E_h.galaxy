@@ -1,8 +1,8 @@
 include "TriggerLibs/natives"
 
 //--------------------------------------------------------------------------------------------------
-// Library: Weekly Challenge
+// Library: Moving Fees
 //--------------------------------------------------------------------------------------------------
 // Trigger Declarations
-trigger lib6D0D62BE_gt_Initialization;
+trigger lib31295E5E_gt_Initialization;
 

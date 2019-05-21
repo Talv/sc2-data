@@ -127,6 +127,8 @@
     <Constant name="ColorPrimalLabel" val="120,230,40"/>
     <Constant name="ColorMirasMaraudersLabel" val="212,151,213"/>
     <Constant name="ColorGalacticLabel" val="120,160,255"/>
+    <Constant name="ColorEvolvedLabel" val="200,230,40"/>
+    <Constant name="ColorMachinedLabel" val="255,160,40"/>
     <Constant name="ColorProtossTooltip" val="190,110,170,255"/>
     <Constant name="ColorTerranTooltip" val="190,155,255,190"/>
     <Constant name="ColorZergTooltip" val="190,245,140,70"/>
@@ -137,6 +139,8 @@
     <Constant name="ColorPrimalTooltip" val="190,150,255,60"/>
     <Constant name="ColorMirasMaraudersTooltip" val="190,212,151,213"/>
     <Constant name="ColorGalacticTooltip" val="190,120,160,255"/>
+    <Constant name="ColorEvolvedTooltip" val="190,220,255,60"/>
+    <Constant name="ColorMachinedTooltip" val="190,255,160,60"/>
     <Constant name="ObjectiveCategory" val="ffffff"/>
     <Constant name="ObjectiveNew" val="ffffff"/>
     <Constant name="ObjectiveActive" val="ffffff"/>
@@ -2788,6 +2792,12 @@
     <Style name="MatchmakingLeaguePanel_DetailsCount" template="HeaderTemplate" height="19" textcolor="cce7ff" vjustify="Middle" hjustify="Left" styleflags="Shadow" shadowoffset="1"/>
     <Style name="MatchmakingLeaguePanel_RankedUnlockCount" template="HeaderExtendedTemplate" height="14" textcolor="57d1ff" vjustify="Middle" hjustify="Left" styleflags="Shadow" shadowoffset="1"/>
     
+    <!-- Versus -->
+    <Style name="Versus_AgentsOnLadderOptIn_SectionText" template="StandardTemplate" height="18" textcolor="37ade3" vjustify="Middle" hjustify="Left" styleflags="!Shadow"/>
+    <Style name="Versus_AgentsOnLadderOptIn_SectionTextHighlight" template="StandardTemplate" height="18" textcolor="ffffff" vjustify="Middle" hjustify="Left" styleflags="!Shadow|!Bold"/>
+    <Style name="Versus_AgentsOnLadderOptIn_SectionTextURL" template="StandardTemplate" height="18" textcolor="004eff" vjustify="Middle" hjustify="Left" styleflags="!Shadow"/>
+    <Style name="Versus_AgentsOnLadderOptIn_SectionHeader" template="HeaderExtendedTemplate" height="20" textcolor="cce7ff" vjustify="Middle" hjustify="Left" styleflags="!Shadow"/>
+    
     <!-- Greybox Styles -->
     <Style name="Greybox_StandardTextButtonLarge" font="#FontStandard" height="21" textcolor="a0a0a0" highlightcolor="ffffff" disabledcolor="202020" vjustify="Middle" hjustify="Center" styleflags="!Shadow|Uppercase|Bold" characterSpacing="2"/>
     <Style name="Greybox_StandardTextButtonMedium" template="Greybox_StandardTextButtonLarge" height="16"/>
@@ -3029,4 +3039,62 @@
     <Style name="InfoPaneHeroWeapon_Galactic" template="InfoPaneHeroWeapon" textcolor="#ColorGalacticLabel"/>
     <Style name="InfoPaneHeroArmor_Galactic" template="InfoPaneHeroArmor" textcolor="#ColorGalacticLabel"/>
     <Style name="InfoPaneHeroAttribute_Galactic" template="InfoPaneHeroAttribute" textcolor="#ColorGalacticLabel"/>
+    
+    <!-- Evolved -->
+    <Style name="InfoPaneUnitName_Evolved" template="InfoPaneUnitName" textcolor="#ColorEvolvedLabel"/>
+    <Style name="InfoPaneUnitSubtitle_Evolved" template="InfoPaneUnitSubtitle" textcolor="#ColorEvolvedLabel"/>
+    <Style name="InfoPaneUnitInfo_Evolved" template="InfoPaneUnitInfo" textcolor="#ColorEvolvedLabel"/>
+    <Style name="InfoPaneUnitType_Evolved" template="InfoPaneUnitType" textcolor="#ColorEvolvedLabel"/>
+    <Style name="InfoPaneCargoCurrentCargo_Evolved" template="InfoPaneCargoCurrentCargo" textcolor="#ColorEvolvedLabel"/>
+    <Style name="PageButton_Evolved" template="PageButton" textcolor="#ColorEvolvedLabel"/>
+    <Style name="ProgressActivity_Evolved" template="ProgressActivity" textcolor="#ColorEvolvedLabel"/>
+    <Style name="QueueActivity_Evolved" template="QueueActivity" textcolor="#ColorEvolvedLabel"/>
+    <Style name="MissionTimePanel_Evolved" template="MissionTimePanel" textcolor="#ColorEvolvedLabel"/>
+    <Style name="CommandRow_Evolved" template="CommandRow" textcolor="#ColorEvolvedLabel"/>
+    <Style name="SimpleCommandRow_Evolved" template="SimpleCommandRow" textcolor="#ColorEvolvedLabel"/>
+    <Style name="CommandTargetName_Evolved" template="CommandTargetName" textcolor="#ColorEvolvedLabel"/>
+    <Style name="CommandTargetPrompt_Evolved" template="CommandTargetPrompt" textcolor="#ColorEvolvedLabel"/>
+    <Style name="MenuBarButton_Evolved" template="MenuBarButton" textcolor="#ColorEvolvedLabel"/>
+    <Style name="ControlGroupButtonCount_Evolved" template="ControlGroupButtonCount" textcolor="#ColorEvolvedLabel"/>
+    <Style name="StandardTooltipHeader_Evolved" template="StandardTooltipHeader" textcolor="#ColorEvolvedLabel"/>
+    <Style name="CommandTooltipRequirements_Evolved" template="StandardTemplate" height="20" textcolor="#ColorEvolvedLabel"/>
+    <Style name="StandardTooltip_Evolved" template="StandardTooltip" textcolor="#ColorEvolvedTooltip"/>
+    <Style name="ChatCycle_Evolved" template="ChatCycle" textcolor="#ColorEvolvedTooltip"/>
+    <Style name="APMMeter_Evolved" template="APMMeter" hjustify="Center" textcolor="#ColorEvolvedLabel" glowcolor="#ColorEvolvedLabel"/>
+    <Style name="InfoPaneHeroName_Evolved" template="InfoPaneHeroName" textcolor="#ColorEvolvedLabel"/>
+    <Style name="InfoPaneHeroRank_Evolved" template="InfoPaneHeroRank" textcolor="#ColorEvolvedLabel"/>
+    <Style name="InfoPaneHeroType_Evolved" template="InfoPaneHeroType" textcolor="#ColorEvolvedLabel"/>
+    <Style name="InfoPaneHeroInfo_Evolved" template="InfoPaneHeroInfo" textcolor="#ColorEvolvedLabel"/>
+    <Style name="InfoPaneHeroWeapon_Evolved" template="InfoPaneHeroWeapon" textcolor="#ColorEvolvedLabel"/>
+    <Style name="InfoPaneHeroArmor_Evolved" template="InfoPaneHeroArmor" textcolor="#ColorEvolvedLabel"/>
+    <Style name="InfoPaneHeroAttribute_Evolved" template="InfoPaneHeroAttribute" textcolor="#ColorEvolvedLabel"/>
+    
+    <!-- Machined -->
+    <Style name="InfoPaneUnitName_Machined" template="InfoPaneUnitName" textcolor="#ColorMachinedLabel"/>
+    <Style name="InfoPaneUnitSubtitle_Machined" template="InfoPaneUnitSubtitle" textcolor="#ColorMachinedLabel"/>
+    <Style name="InfoPaneUnitInfo_Machined" template="InfoPaneUnitInfo" textcolor="#ColorMachinedLabel"/>
+    <Style name="InfoPaneUnitType_Machined" template="InfoPaneUnitType" textcolor="#ColorMachinedLabel"/>
+    <Style name="InfoPaneCargoCurrentCargo_Machined" template="InfoPaneCargoCurrentCargo" textcolor="#ColorMachinedLabel"/>
+    <Style name="PageButton_Machined" template="PageButton" textcolor="#ColorMachinedLabel"/>
+    <Style name="ProgressActivity_Machined" template="ProgressActivity" textcolor="#ColorMachinedLabel"/>
+    <Style name="QueueActivity_Machined" template="QueueActivity" textcolor="#ColorMachinedLabel"/>
+    <Style name="MissionTimePanel_Machined" template="MissionTimePanel" textcolor="#ColorMachinedLabel"/>
+    <Style name="CommandRow_Machined" template="CommandRow" textcolor="#ColorMachinedLabel"/>
+    <Style name="SimpleCommandRow_Machined" template="SimpleCommandRow" textcolor="#ColorMachinedLabel"/>
+    <Style name="CommandTargetName_Machined" template="CommandTargetName" textcolor="#ColorMachinedLabel"/>
+    <Style name="CommandTargetPrompt_Machined" template="CommandTargetPrompt" textcolor="#ColorMachinedLabel"/>
+    <Style name="MenuBarButton_Machined" template="MenuBarButton" textcolor="#ColorMachinedLabel"/>
+    <Style name="ControlGroupButtonCount_Machined" template="ControlGroupButtonCount" textcolor="#ColorMachinedLabel"/>
+    <Style name="StandardTooltipHeader_Machined" template="StandardTooltipHeader" textcolor="#ColorMachinedLabel"/>
+    <Style name="CommandTooltipRequirements_Machined" template="StandardTemplate" height="20" textcolor="#ColorMachinedLabel"/>
+    <Style name="StandardTooltip_Machined" template="StandardTooltip" textcolor="#ColorMachinedTooltip"/>
+    <Style name="ChatCycle_Machined" template="ChatCycle" textcolor="#ColorMachinedTooltip"/>
+    <Style name="APMMeter_Machined" template="APMMeter" hjustify="Center" textcolor="#ColorMachinedLabel" glowcolor="#ColorMachinedLabel"/>
+    <Style name="InfoPaneHeroName_Machined" template="InfoPaneHeroName" textcolor="#ColorMachinedLabel"/>
+    <Style name="InfoPaneHeroRank_Machined" template="InfoPaneHeroRank" textcolor="#ColorMachinedLabel"/>
+    <Style name="InfoPaneHeroType_Machined" template="InfoPaneHeroType" textcolor="#ColorMachinedLabel"/>
+    <Style name="InfoPaneHeroInfo_Machined" template="InfoPaneHeroInfo" textcolor="#ColorMachinedLabel"/>
+    <Style name="InfoPaneHeroWeapon_Machined" template="InfoPaneHeroWeapon" textcolor="#ColorMachinedLabel"/>
+    <Style name="InfoPaneHeroArmor_Machined" template="InfoPaneHeroArmor" textcolor="#ColorMachinedLabel"/>
+    <Style name="InfoPaneHeroAttribute_Machined" template="InfoPaneHeroAttribute" textcolor="#ColorMachinedLabel"/>
 </StyleFile>

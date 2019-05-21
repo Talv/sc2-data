@@ -90,6 +90,10 @@
         <Text val="@UI/ScreenCollection/BuyNow"/>
     </Frame>
 
+    <Frame type="ExternalBuyButton" name="ExternalBuyButtonTemplate" template="StandardBattlenetTemplates/BattlenetAlternateButtonTemplate">
+        <Text val="@UI/ScreenCollection/MoreInfo"/>
+    </Frame>
+
     <Frame type="SelectUnlockableButton" name="SelectUnlockableButtonTemplate" template="StandardBattlenetTemplates/BattlenetAlternateButtonTemplate">
         <Text val="@UI/ScreenCollection/Buttons/Equip"/>
 
@@ -342,7 +346,9 @@
             <Anchor side="Top" relative="$parent/Icon" pos="Mid" offset="0"/>
             <Anchor side="Bottom" relative="$parent/Icon" pos="Mid" offset="0"/>
             <Anchor side="Left" relative="$parent/Icon" pos="Max" offset="5"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
             <Style val="@Collection_ActionWarning_Title"/>
+            <Options val="ScaleToPreventTruncation | NoWrapping"/>
         </Frame>
     </Frame>
     
